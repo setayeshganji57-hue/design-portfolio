@@ -59,16 +59,16 @@ try {
     }
     ok(bad.length === 0, `${w}×${h}: all routes load, no horizontal overflow, no broken images ${bad.join('; ')}`);
     if (w >= 1024) {
-      // Every sidebar link must be reachable (scrolling the sidebar if needed).
+      // Every discipline and page link must be reachable on desktop.
       const reachable = await page.evaluate(() => {
-        const links = [...document.querySelectorAll('.sidebar .brand, .sidebar .nav a')];
+        const links = [...document.querySelectorAll('.rail a, .page-nav a')];
         return links.every((a) => {
           a.scrollIntoView({ block: 'nearest' });
           const r = a.getBoundingClientRect();
           return r.height > 0 && r.bottom <= window.innerHeight + 1 && r.top >= 0;
         });
       });
-      ok(reachable, `${w}×${h}: every sidebar link is reachable`);
+      ok(reachable, `${w}×${h}: every discipline and page link is reachable`);
     }
     await page.close();
   }
@@ -128,7 +128,7 @@ try {
   const page = await ctx.newPage();
   const lastReveal = () => page.evaluate(() => JSON.parse(sessionStorage.getItem('lastReveal') || '{}'));
   await page.goto(BASE + '/work/brand-identity');
-  await page.click('.sidebar a[href="/work/motion-film"]');
+  await page.click('.rail a[href="/work/motion-film"]');
   await page.waitForURL('**/work/motion-film');
   await page.waitForTimeout(50);
   const r1 = await lastReveal();
@@ -136,7 +136,7 @@ try {
   await page.waitForTimeout(900);
   ok(!(await page.evaluate(() => document.documentElement.classList.contains('vt-cut'))), 'transition classes are removed afterwards');
 
-  await page.click('.sidebar a[href="/essays"]');
+  await page.click('.page-nav a[href="/essays"]');
   await page.waitForURL('**/essays');
   await page.waitForTimeout(50);
   ok(!(await page.evaluate(() => document.documentElement.classList.contains('vt-cut'))), 'navigating to Essays does not cut (instant)');
@@ -145,7 +145,7 @@ try {
   await page.goto(BASE + '/work/brand-identity');
   const order = ['graphic-illustration', 'digital-ui', 'motion-film', 'interactive-3d'];
   for (const slug of order) {
-    await page.locator(`.sidebar a[href="/work/${slug}"]`).click({ noWaitAfter: true }).catch(() => {});
+    await page.locator(`.rail a[href="/work/${slug}"]`).click({ noWaitAfter: true }).catch(() => {});
     await page.waitForTimeout(60);
   }
   await page.waitForURL('**/work/interactive-3d');
@@ -154,7 +154,7 @@ try {
   ok(h1 === 'Interactive & 3D', `rapid clicks end on the last category (h1: "${h1}")`);
   const stuck = await page.evaluate(() => ({
     cut: document.documentElement.className,
-    current: document.querySelector('.sidebar a[aria-current="page"]')?.getAttribute('href'),
+    current: document.querySelector('.rail a[aria-current="page"]')?.getAttribute('href'),
   }));
   ok(stuck.cut.trim() === '' && stuck.current === '/work/interactive-3d', 'no stuck overlay, nav state matches URL');
 
@@ -162,7 +162,7 @@ try {
   await page.waitForTimeout(800);
   ok(page.url().endsWith('/work/brand-identity') || page.url().endsWith('/work/motion-film'), `back navigates to a previous page (${page.url()})`);
   const backH1 = (await page.textContent('h1'))?.replace(/\s+/g, ' ').trim();
-  const backCurrent = await page.evaluate(() => document.querySelector('.sidebar a[aria-current="page"]')?.textContent?.replace(/\s+/g, ' ').trim());
+  const backCurrent = await page.evaluate(() => document.querySelector('.rail a[aria-current="page"]')?.textContent?.replace(/\s+/g, ' ').trim());
   ok(backCurrent?.endsWith(backH1 ?? '—'), `after back, heading and active nav agree (${backH1})`);
   await page.goForward();
   await page.waitForTimeout(800);
@@ -173,7 +173,7 @@ try {
   const rm = await browser.newContext({ viewport: { width: 1280, height: 800 }, reducedMotion: 'reduce' });
   const rp = await rm.newPage();
   await rp.goto(BASE + '/work/brand-identity');
-  await rp.click('.sidebar a[href="/work/graphic-illustration"]');
+  await rp.click('.rail a[href="/work/graphic-illustration"]');
   await rp.waitForURL('**/work/graphic-illustration');
   await rp.waitForTimeout(30);
   ok(!(await rp.evaluate(() => document.documentElement.classList.contains('vt-cut'))), 'no cut animation with prefers-reduced-motion');

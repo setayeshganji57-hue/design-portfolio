@@ -3,7 +3,7 @@
   "launch": [
     { "slug": "mymaxxi-welcome-days", "category": "graphic-illustration", "status": "published" },
     { "slug": "life-below-water", "category": "graphic-illustration", "status": "published" },
-    { "slug": "sunny-days-between-cubes", "category": "motion-film", "status": "draft", "note": "Film link pending; kept as draft" },
+    { "slug": "sunny-days-between-cubes", "category": "motion-film", "status": "published", "note": "Published with still photographs; the film link is still to come" },
     { "slug": "chronolens", "category": "interactive-3d", "status": "draft", "note": "Contribution details pending" },
     { "slug": "illustrated-book-covers", "category": "graphic-illustration", "status": "draft" },
     { "slug": "illustration-collection", "category": "graphic-illustration", "status": "draft" },

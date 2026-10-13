@@ -44,7 +44,7 @@ const facts: { term: string; value?: string; links?: { href: string; label: stri
 <Base title={d.title} description={description} section={primary.slug} noindex={isDraft} ogImage={coverImage?.src}>
   <article class="project">
     <nav class="crumbs" aria-label="Breadcrumb">
-      <a class="text-link" href={`/work/${primary.slug}`}><span class="arrow" aria-hidden="true">←</span> {primary.title}</a>
+      <a class={`chip band--${primary.slug}`} href={`/work/${primary.slug}`}><span aria-hidden="true">←</span>&nbsp;{primary.title}</a>
     </nav>
 
     {

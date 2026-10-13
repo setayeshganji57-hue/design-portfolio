@@ -6,6 +6,8 @@ import '../styles/global.css';
 import cutScript from '../scripts/cut.js?raw';
 import Nav from '../components/Nav.astro';
 import Footer from '../components/Footer.astro';
+import Rail from '../components/Rail.astro';
+import { categories } from '../config/categories';
 import { site } from '../config/site';
 import { SHOW_DRAFTS } from '../lib/content';
 
@@ -77,31 +79,23 @@ const robots = noindex || SHOW_DRAFTS ? 'noindex, nofollow' : undefined;
     </dialog>
 
     <div class="shell">
-      <aside class="sidebar" aria-label="Site">
-        <a class="brand" href="/" aria-current={current === '/' ? 'page' : undefined}><span>Setayesh</span> <span>Ganji</span></a>
-        <p class="brand-role">{site.role}</p>
-        <Nav current={current} section={section} id="side-nav" />
-        <div class="sidebar-foot">
-          <p><span class="status-dot" aria-hidden="true"></span>{site.availability}</p>
-          <p>{site.location}</p>
-          {site.email ? <a href={`mailto:${site.email}`}>{site.email}</a> : site.links[0] && <a href={site.links[0].url} rel="me noopener" target="_blank">{site.links[0].label}<span class="visually-hidden"> (opens in a new tab)</span></a>}
-        </div>
-      </aside>
+      <Rail current={current} section={section} />
 
-      <main class="main stage" id="content" tabindex="-1">
-        <slot />
-        <Footer current={current} />
-      </main>
-    </div>
+      <div class="page">
+        <header class="page-head">
+          <a class="wordmark" href="/" aria-label={`${site.name}, home`}>{site.name}</a>
+          <nav class="page-nav" aria-label="Pages">
+            <a href="/essays" aria-current={current === '/essays' || current.startsWith('/essays/') ? 'page' : undefined}>Essays</a>
+            <a href="/about" aria-current={current === '/about' ? 'page' : undefined}>About</a>
+            <a href="/contact" aria-current={current === '/contact' ? 'page' : undefined}>Contact</a>
+          </nav>
+        </header>
 
-    <div class="cutline" aria-hidden="true">
-      <span class="cutline-rule"></span>
-      <svg class="cutline-scissors" viewBox="0 0 30 30" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round">
-        <circle cx="6.5" cy="9" r="3.6" />
-        <circle cx="6.5" cy="21" r="3.6" />
-        <path d="M9.6 10.8L27.5 18.2M9.6 19.2L27.5 11.8" />
-        <circle cx="17.6" cy="15" r="0.9" fill="currentColor" stroke="none" />
-      </svg>
+        <main class="main stage" id="content" tabindex="-1">
+          <slot />
+          <Footer current={current} />
+        </main>
+      </div>
     </div>
 
     {SHOW_DRAFTS && <p class="preview-flag" aria-hidden="true">Preview · drafts visible</p>}

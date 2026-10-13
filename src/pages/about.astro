@@ -1,7 +1,7 @@
 ---
 import Base from '../layouts/Base.astro';
-import Media from '../components/Media.astro';
 import Placeholder from '../components/Placeholder.astro';
+import Media from '../components/Media.astro';
 import { site } from '../config/site';
 import { publicFileExists, resolveImage, SHOW_DRAFTS } from '../lib/content';
 
@@ -10,23 +10,22 @@ const cvFiles = site.cv.filter((f) => publicFileExists(f.path));
 const hasLinks = cvFiles.length > 0 || site.links.length > 0;
 ---
 
-<Base title="About" description={`${site.name} — ${site.role}, ${site.location.toLowerCase()}. Education and areas of practice.`}>
-  <div class="about">
-    <div class="about-portrait">
-      {
-        portrait ? (
-          <Media media={{ file: portrait.file, alt: portrait.alt, aspect: '4/5', fit: 'cover' }} sizes="(min-width: 900px) 36vw, 100vw" eager />
-        ) : (
-          <Placeholder label="Portrait to come" aspect="4/5" glyph="SG" />
-        )
-      }
+<Base title="About" description={`${site.name}, ${site.role.toLowerCase()}, ${site.location.toLowerCase()}. Education and areas of practice.`}>
+  <div class="split">
+    <div class="split-head">
+      <h1 class="split-title">About</h1>
+      <div class="about-portrait">
+        {
+          portrait ? (
+            <Media media={{ file: portrait.file, alt: portrait.alt, aspect: '4/5', fit: 'cover' }} sizes="(min-width: 900px) 30vw, 100vw" eager />
+          ) : (
+            <Placeholder label="Portrait to come" aspect="4/5" glyph="SG" />
+          )
+        }
+      </div>
     </div>
 
-    <div class="about-body">
-      <header>
-        <h1 class="display">About</h1>
-      </header>
-
+    <div class="split-body">
       <div class="about-intro">
         {site.about.map((p) => <p>{p}</p>)}
       </div>
@@ -63,7 +62,7 @@ const hasLinks = cvFiles.length > 0 || site.links.length > 0;
               ))}
             </ul>
             {SHOW_DRAFTS && cvFiles.length === 0 && (
-              <p class="draft-note" style="margin-top:1rem"><span><strong>Preview note.</strong> No CV file yet — add it to <code>public/documents/</code> and list it under <code>cv</code> in <code>src/config/site.ts</code>.</span></p>
+              <p class="meta" style="margin-top:0.75rem">Preview note: no CV file yet. Add it to <code>public/documents/</code> and list it under <code>cv</code> in <code>src/config/site.ts</code>.</p>
             )}
           </section>
         )
@@ -72,7 +71,7 @@ const hasLinks = cvFiles.length > 0 || site.links.length > 0;
       <section aria-labelledby="contact-label">
         <h2 class="eyebrow section-label" id="contact-label">Contact</h2>
         <p>{site.availability}</p>
-        <p><a class="text-link" href="/contact">Get in touch <span class="arrow" aria-hidden="true">→</span></a></p>
+        <p style="margin-top:0.75rem"><a class="text-link" href="/contact">Get in touch <span class="arrow" aria-hidden="true">→</span></a></p>
       </section>
     </div>
   </div>

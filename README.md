@@ -5,7 +5,8 @@ It's a static site built with [Astro](https://astro.build) 5 and TypeScript. It 
 
 - **Content** lives in `src/content/` (YAML for projects, Markdown for essays) and `src/config/` (site facts and disciplines).
 - **Layout** lives in `src/components/`, `src/layouts/` and `src/pages/`. Adding or changing content never requires editing these.
-- **Signature motion:** the cut-and-reveal transition is in `src/styles/global.css` (section "Signature: cut-and-reveal") and `src/scripts/cut.js`.
+- **Discipline colours and rail:** the category bands use the `--c-*` tokens in `src/styles/global.css`. The rail is `src/components/Rail.astro`.
+- **Page transition:** a short fade and rise between work pages, in `src/styles/global.css` (section "Page transition") and `src/scripts/cut.js`.
 
 See also:
 - [`docs/CONTENT-CHECKLIST.md`](docs/CONTENT-CHECKLIST.md): every missing asset, text and confirmation.
@@ -179,7 +180,7 @@ Fonts are self-hosted. They are installed from npm (`@fontsource-variable/*`), b
 
 | Role | Font | Licence | Source |
 | --- | --- | --- | --- |
-| Display / name / essay titles / reading text | **Fraunces** (variable: optical size, weight, softness, wonk) by Undercase Type | SIL Open Font License 1.1 | https://github.com/undercasetype/Fraunces · npm `@fontsource-variable/fraunces` |
+| Essay reading text only | **Fraunces** (variable) by Undercase Type | SIL Open Font License 1.1 | https://github.com/undercasetype/Fraunces · npm `@fontsource-variable/fraunces` |
 | Interface / body | **Instrument Sans** (variable: weight, width) by Instrument | SIL Open Font License 1.1 | https://github.com/Instrument/instrument-sans · npm `@fontsource-variable/instrument-sans` |
 
 Fallbacks: Iowan Old Style / Palatino / Georgia for the serif, and Helvetica Neue / Arial / system-ui for the sans. Only the Latin subsets download in practice, through `unicode-range`.
@@ -217,7 +218,8 @@ src/
   content.config.ts  typed schemas for all content
   assets/media/      project images (processed into responsive sizes)
   components/        Nav, Media, Placeholder, VideoEmbed, Blocks, ProjectPreview, Footer
-  layouts/Base.astro page shell: sidebar, mobile menu, metadata, cut line
+  layouts/Base.astro page shell: discipline rail, page header, mobile menu, metadata
+  components/Rail.astro  the five discipline bands with the scissors divider
   lib/               content.ts (queries, draft filtering, media resolution) · logic.ts (pure, tested)
   pages/             routes: / · /work/[category] · /projects/[slug] · /essays · /essays/[slug] · /about · /contact · 404 · sitemap.xml · robots.txt
   scripts/           cut.js (transition logic) · ui.ts (menu, video, loops)

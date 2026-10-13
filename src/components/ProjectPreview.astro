@@ -2,7 +2,7 @@
 import Media from './Media.astro';
 import { contextLabel, type Project } from '../lib/content';
 import { pad2 } from '../lib/logic';
-import type { CategoryLayout } from '../config/categories';
+import { categories, type CategoryLayout } from '../config/categories';
 
 interface Props {
   project: Project;
@@ -16,6 +16,7 @@ const sizes =
   layout === 'stack' ? '(min-width: 1024px) 50vw, 100vw' : '(min-width: 1024px) 38vw, (min-width: 640px) 50vw, 100vw';
 const ctx = contextLabel(d.context);
 const metaLine = [d.year, ctx].filter(Boolean).join(' · ');
+const primary = categories.find((c) => c.slug === d.categories[0]);
 ---
 
 <li class="pp">
@@ -27,6 +28,7 @@ const metaLine = [d.year, ctx].filter(Boolean).join(' · ');
       <span class="num" aria-hidden="true">{pad2(index + 1)}</span>
       <h2 class="pp-title">{d.title}</h2>
       {d.summary && <p class="pp-summary">{d.summary}</p>}
+      {primary && <p><span class={`chip band--${primary.slug}`}>{primary.title}</span></p>}
       {d.tags.length > 0 && <p class="pp-tags">{d.tags.join(' · ')}</p>}
       {metaLine && <p class="meta">{metaLine}</p>}
       {d.status === 'draft' && <p><span class="badge">Draft — preview only</span></p>}

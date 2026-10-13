@@ -30,10 +30,10 @@ Needed:
 - [ ] Original-resolution lesson and step files, if you have them.
 - [ ] Check the overview and lesson descriptions (drafted from the PDF).
 
-### 3. Sunny Days Between Cubes (Motion & Film) · **draft**
-Have: stills and plan diagrams from the PDF, and the description (February 2023).
+### 3. Sunny Days Between Cubes (Motion & Film) · **published with stills**
+Have: stills and plan diagrams from the PDF, and the description (February 2023). The page is published using the stills, as you asked.
 Needed:
-- [ ] **The finished film:** a Vimeo or YouTube link, or a local MP4 file. This is the key missing asset.
+- [ ] **Optional, not blocking:** the finished film as a Vimeo or YouTube link, or a local MP4, to add as a video block later.
 - [ ] A poster frame for the film.
 - [ ] Two or three stills from the film, if the PDF stills are not enough.
 - [ ] Your role and collaborators.
@@ -88,6 +88,7 @@ Needed:
 - [ ] Credit for any photographed mockups.
 
 ### 10. Dream Toy / DRYMTO (Brand Identity) · **draft**, final title pending
+You wrote that the second name already exists on your Behance. Please confirm which name that is.
 Needed:
 - [ ] **Final written title.** The page currently says "Dream Toy", which is a placeholder. Behance spells it "DRYMTO", and you have said it is pronounced "dream talk."
 - [ ] Logo, identity and application files, as originals.
@@ -104,6 +105,12 @@ Needed:
 - [ ] Client attribution, if commissioned, with the client's approval to name them.
 
 ---
+
+## Digital & UI (selection pending)
+
+- [ ] **Trade Memory** and **Hamlogme**: the projects we worked on together. Please send the references (links, files or screenshots). I will not write them up from memory.
+- [ ] Two or three further projects: references to follow.
+- [ ] The nine Behance UI and web projects listed earlier remain unselected.
 
 ## Excluded from launch (drafts until you select them)
 

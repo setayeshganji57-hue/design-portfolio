@@ -20,10 +20,10 @@ const others = categories.filter((c) => c.slug !== category.slug);
 ---
 
 <Base title={category.title} description={category.intro} section={category.slug}>
-  <header class="cat-head">
-    <p class="eyebrow settle">Discipline {pad2(index + 1)} / {pad2(categories.length)}</p>
-    <h1 class="display settle">{category.displayLines.map((l, i) => <>{i > 0 && ' '}<span>{l}</span></>)}</h1>
-    <div class="cat-aside settle-late">
+  <header class={`cat-band band--${category.slug}`}>
+    <p class="eyebrow">Discipline {pad2(index + 1)} / {pad2(categories.length)}</p>
+    <h1 class="display">{category.displayLines.map((l, i) => <>{i > 0 && ' '}<span>{l}</span></>)}</h1>
+    <div class="cat-aside">
       <p class="cat-intro">{category.intro}</p>
       <p class="meta">{projects.length === 0 ? 'In preparation' : `${projects.length} ${projects.length === 1 ? 'project' : 'projects'}`}</p>
     </div>

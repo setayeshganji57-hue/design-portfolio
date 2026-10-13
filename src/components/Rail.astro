@@ -1,0 +1,40 @@
+---
+import { categories } from '../config/categories';
+import { pad2 } from '../lib/logic';
+
+interface Props {
+  /** Normalised path of the current page. */
+  current: string;
+  /** Discipline the current page belongs to (project pages). */
+  section?: string;
+}
+
+const { current, section } = Astro.props;
+
+const state = (slug: string) => {
+  if (current === `/work/${slug}`) return 'page';
+  if (section === slug) return 'true';
+  return undefined;
+};
+---
+
+<nav class="rail" aria-label="Disciplines">
+  <ol>
+    {
+      categories.map((c, i) => (
+        <li>
+          <a class={`band band--${c.slug}`} href={`/work/${c.slug}`} aria-current={state(c.slug)}>
+            <span class="num" aria-hidden="true">{pad2(i + 1)}</span>
+            <span class="band-label">{c.title}</span>
+            <span class="visually-hidden">{c.title}</span>
+          </a>
+        </li>
+      ))
+    }
+  </ol>
+  <svg class="scissors" viewBox="0 0 26 26" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round">
+    <circle cx="6" cy="8" r="3.2" />
+    <circle cx="6" cy="18" r="3.2" />
+    <path d="M8.6 9.8L23 15.2M8.6 16.2L23 10.8" />
+  </svg>
+</nav>

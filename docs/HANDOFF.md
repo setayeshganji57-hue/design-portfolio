@@ -24,7 +24,9 @@ Pages to look at:
 - `/essays` and `/essays/specimen-reading-layout`
 - `/about`, `/contact`, and any unknown URL (the 404 page)
 
-**To see the cut-and-reveal:** in Chrome, Edge or Safari 18.2+, click between disciplines in the sidebar, from the homepage into a discipline, or from a discipline into a project.
+**To see the page transition:** click between disciplines in the colour rail, or from a discipline into a project. Chrome, Edge and Safari 18.2+ show the fade; Firefox navigates instantly.
+
+> **Superseded in part.** The design was revised in the latest round (colour rail, right-hand pages, a fade instead of the sweeping line). `docs/REVIEW.md` is current. The bullets below describe the earlier version.
 
 ## What works
 
@@ -59,7 +61,7 @@ Pages to look at:
   - Artwork keeps its own proportions unless you set a frame.
   - Missing files become labelled placeholders, never broken images.
 - **Video:** YouTube, Vimeo (including unlisted hashes) and local files are supported. It's click-to-load (a poster plus a Play link that works without JS), and nothing third-party loads before the click.
-- **Signature cut-and-reveal:** 560 ms. A 1.5 px burgundy line with a small drawn pair of scissors travels left to right while the incoming content is revealed behind it, and titles and intros settle in.
+- **Earlier version, replaced:** cut-and-reveal, 560 ms. A 1.5 px burgundy line with a small drawn pair of scissors travels left to right while the incoming content is revealed behind it, and titles and intros settle in.
   - It runs only between the homepage, disciplines and projects. Essays, About and Contact open instantly.
   - It's built on cross-document View Transitions. The browser owns URLs, history and interruption, so there's no overlay in the DOM to get stuck.
   - Reduced motion turns it off completely.
@@ -75,7 +77,7 @@ Pages to look at:
 
 What the `npm run e2e` checks cover (headless Chromium 141):
 - every route at 360×740, 768×1024, 1280×800, 1440×900 and 1280×600, with no horizontal overflow and no broken images
-- every sidebar link reachable on desktop sizes
+- every discipline and page link reachable on desktop sizes
 - a 404 for an unknown URL
 - category → category triggers the transition, and Essays doesn't
 - rapid clicks across four categories end on the right URL, heading and active nav, with no leftover transition state
@@ -97,7 +99,7 @@ What the `npm run e2e` checks cover (headless Chromium 141):
 - **Discipline intros** and the homepage line are my wording, describing the disciplines generally. Please edit them.
 - **About** is written in the first person, so no pronoun is assumed. Degree entries say "Master's studies" and "Bachelor's studies", with no dates and no completion claims.
 - **Essays:** "in-progress" essays are listed publicly with title and abstract only. Set them to `draft` instead if you'd rather hide them.
-- **Typefaces:** Fraunces (display, name, reading text) and Instrument Sans (interface). Both are OFL and self-hosted.
+- **Typefaces:** Instrument Sans for headings, name and interface (latest round); Fraunces for essay reading text only. Both are OFL and self-hosted.
 - **Stack:** Astro 5.18 (the mature 5.x line), not the newest major (7.x). I chose it for stability and verified compatibility; upgrading later is optional.
 - **Fix found during testing:** the `@view-transition` opt-in is inlined in `<head>`. When it only lived in the external stylesheet, Chromium skipped about half of the transitions; inlined, they were 100% reliable in testing.
 

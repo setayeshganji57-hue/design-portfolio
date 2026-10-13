@@ -4,14 +4,14 @@ import { site } from '../config/site';
 import { SHOW_DRAFTS } from '../lib/content';
 ---
 
-<Base title="Contact" description={`Contact ${site.name} — ${site.role}. ${site.availability}`}>
-  <div class="contact">
-    <header class="essays-head">
-      <h1 class="display">Contact</h1>
+<Base title="Contact" description={`Contact ${site.name}, ${site.role.toLowerCase()}. ${site.availability}`}>
+  <div class="split">
+    <div class="split-head">
+      <h1 class="split-title">Contact</h1>
       <p class="lede">{site.availability}</p>
-    </header>
+    </div>
 
-    <div class="contact-grid">
+    <div class="split-body">
       <section aria-labelledby="email-label">
         <h2 class="eyebrow section-label" id="email-label">Email</h2>
         {
@@ -19,10 +19,8 @@ import { SHOW_DRAFTS } from '../lib/content';
             <a class="contact-email" href={`mailto:${site.email}`}>{site.email}</a>
           ) : (
             <div class="notice">
-              <p>A direct email address will be listed here shortly. In the meantime, I can be reached through the profile below.</p>
-              {SHOW_DRAFTS && (
-                <p class="meta" style="margin-top:0.6rem">Preview note: set <code>email</code> in <code>src/config/site.ts</code>.</p>
-              )}
+              <p>A direct email address will be listed here shortly. In the meantime, the profile below is the best way to see my work.</p>
+              {SHOW_DRAFTS && <p class="meta" style="margin-top:0.6rem">Preview note: set <code>email</code> in <code>src/config/site.ts</code>.</p>}
             </div>
           )
         }

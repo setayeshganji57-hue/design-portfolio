@@ -45,7 +45,7 @@ const tileSizes = [
   <section class="home-grid" aria-label="Discipline previews">
     {
       tiles.map(({ c, i, count, preview }) => (
-        <a class={`tile tile--${i + 1}`} href={`/work/${c.slug}`}>
+        <a class={`tile tile--${i + 1} band--${c.slug}`} href={`/work/${c.slug}`}>
           <div class="tile-caption">
             <span class="num" aria-hidden="true">{pad2(i + 1)}</span>
             <h2 class="tile-title">{c.title}</h2>
@@ -70,10 +70,5 @@ const tileSizes = [
         </a>
       ))
     }
-    <nav class="home-more" aria-label="More">
-      <a href="/essays"><span class="home-more-title">Essays</span><span class="home-more-text">Thesis and writing</span><span class="arrow" aria-hidden="true">→</span></a>
-      <a href="/about"><span class="home-more-title">About</span><span class="home-more-text">Background and education</span><span class="arrow" aria-hidden="true">→</span></a>
-      <a href="/contact"><span class="home-more-title">Contact</span><span class="home-more-text">Employment and freelance enquiries</span><span class="arrow" aria-hidden="true">→</span></a>
-    </nav>
   </section>
 </Base>
