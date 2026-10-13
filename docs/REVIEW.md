@@ -39,7 +39,7 @@ I recommend a private Cloudflare Pages preview behind Cloudflare Access when you
 | Hamloqmeh: stop work on it | No further changes. It stays published as it is, with its spelling confirmed. |
 | Dreamto | Stays a draft. I can't open its Behance page from this environment (Behance blocks the project page here), so the description is still missing. The spelling question is closed: the title is Dreamto. |
 | Publish the thesis in full | Published as an essay: "The Influence of AI in Startups Communication". The full 99-page PDF is in `public/documents/`, with Open PDF and Download PDF buttons. The PDF's cover reads "The Role of Artificial Intelligence in Enhancing Startup Communication." |
-| Email | Setayesh.gannji@gmail.com, as you wrote it, on the Contact page. Your earlier message spelled it Setayesh.ganji@gmail.com. |
+| Email | Setayeesh.gannji@gmail.com on the Contact page, confirmed by the owner. |
 | Surname | Unchanged. The site uses Ganji. |
 | Reading time | Hidden for essays under three minutes, so the thesis no longer says "1 min read". |
 
@@ -109,8 +109,7 @@ The mobile discipline strip was checked at 390 px. The labels are horizontal on 
 
 ## 6. Decisions I need from you
 
-1. **Email spelling.** Setayesh.gannji@gmail.com is on the site as you wrote it. Your earlier message used Setayesh.ganji@gmail.com. Which is correct?
-2. **Mobile labels.** Horizontal labels on phones are my call for legibility. Tell me if you want vertical text there too.
+1. **Mobile labels.** Horizontal labels on phones are my call for legibility. Tell me if you want vertical text there too.
 
 ## 7. Not verified
 

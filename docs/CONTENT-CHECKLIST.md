@@ -150,7 +150,7 @@ Title: "The Influence of AI in Startups Communication" (as you gave it). The PDF
 
 ## Site-wide
 
-- [x] Email: Setayesh.gannji@gmail.com is on the Contact page, as you wrote it. Your earlier message spelled it Setayesh.ganji@gmail.com. Tell me if that spelling is correct.
+- [x] Email: Setayeesh.gannji@gmail.com is on the Contact page. Confirmed by the owner.
 - [ ] Phone: +39 351 855 7278 is on the Contact page. Confirm it.
 - [ ] LinkedIn is in the profiles list.
 - [x] Surname: the site uses Ganji, as you asked.
