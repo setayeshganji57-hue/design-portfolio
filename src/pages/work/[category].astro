@@ -1,0 +1,57 @@
+---
+import type { GetStaticPaths } from 'astro';
+import Base from '../../layouts/Base.astro';
+import ProjectPreview from '../../components/ProjectPreview.astro';
+import { categories, type Category } from '../../config/categories';
+import { getProjectsIn } from '../../lib/content';
+import { pad2 } from '../../lib/logic';
+
+export const getStaticPaths = (() =>
+  categories.map((category, index) => ({ params: { category: category.slug }, props: { category, index } }))) satisfies GetStaticPaths;
+
+interface Props {
+  category: Category;
+  index: number;
+}
+
+const { category, index } = Astro.props;
+const projects = await getProjectsIn(category.slug);
+const others = categories.filter((c) => c.slug !== category.slug);
+---
+
+<Base title={category.title} description={category.intro} section={category.slug}>
+  <header class="cat-head">
+    <p class="eyebrow settle">Discipline {pad2(index + 1)} / {pad2(categories.length)}</p>
+    <h1 class="display settle">{category.displayLines.map((l, i) => <>{i > 0 && ' '}<span>{l}</span></>)}</h1>
+    <div class="cat-aside settle-late">
+      <p class="cat-intro">{category.intro}</p>
+      <p class="meta">{projects.length === 0 ? 'In preparation' : `${projects.length} ${projects.length === 1 ? 'project' : 'projects'}`}</p>
+    </div>
+  </header>
+
+  <nav class="cat-switch" aria-label="Disciplines">
+    {categories.map((c) => (
+      <a href={`/work/${c.slug}`} aria-current={c.slug === category.slug ? 'page' : undefined}>{c.title}</a>
+    ))}
+  </nav>
+
+  {
+    projects.length > 0 ? (
+      <ol class={`projects projects--${category.layout}`}>
+        {projects.map((project, i) => (
+          <ProjectPreview project={project} index={i} layout={category.layout} />
+        ))}
+      </ol>
+    ) : (
+      <div class="empty">
+        <p class="eyebrow">In preparation</p>
+        <p class="empty-title">Projects for {category.title} are being prepared and will appear here.</p>
+        <div class="empty-links">
+          {others.map((c) => (
+            <a class="text-link" href={`/work/${c.slug}`}>{c.title} <span class="arrow" aria-hidden="true">→</span></a>
+          ))}
+        </div>
+      </div>
+    )
+  }
+</Base>

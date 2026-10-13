@@ -1,0 +1,17 @@
+title: Roman Typography
+status: draft
+categories: [graphic-illustration]
+order: 60
+tags: [Typography]
+cover: { alt: '', aspect: '3/4', fit: contain }
+blocks:
+  - type: image
+    size: full
+    media: { alt: '', aspect: '16/9', fit: contain }
+  - type: pair
+    items:
+      - { alt: '', aspect: '3/4', fit: contain }
+      - { alt: '', aspect: '3/4', fit: contain }
+todo:
+  - Images and short description
+  - Context and year

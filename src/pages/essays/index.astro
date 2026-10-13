@@ -1,0 +1,52 @@
+---
+import Base from '../../layouts/Base.astro';
+import { contextLabel, essayReadingMinutes, essayYear, getListedEssays, getReadableEssays } from '../../lib/content';
+
+const essays = await getListedEssays();
+const readable = new Set((await getReadableEssays()).map((e) => e.id));
+const statusLabel = { draft: 'Draft', 'in-progress': 'In progress', published: undefined } as const;
+---
+
+<Base title="Essays" description="Essays and thesis writing by Setayesh Ganji.">
+  <header class="essays-head">
+    <h1 class="display">Essays</h1>
+    <p class="lede">Writing from my studies and practice — a master’s thesis and essays, published here as they are ready.</p>
+  </header>
+
+  {
+    essays.length > 0 ? (
+      <ol class="essay-list">
+        {essays.map((e) => {
+          const d = e.data;
+          const minutes = essayReadingMinutes(e);
+          const canRead = readable.has(e.id);
+          return (
+            <li class="essay-row">
+              <p class="essay-row-year">{essayYear(e) ?? '—'}</p>
+              <div>
+                <h2 class="essay-row-title">
+                  {canRead ? <a href={`/essays/${e.id}`}>{d.title}</a> : d.title}
+                </h2>
+                {d.abstract && <p class="essay-row-abstract">{d.abstract}</p>}
+              </div>
+              <div class="essay-row-meta">
+                {d.specimen && <span><span class="badge">Specimen — not real writing</span></span>}
+                {!d.specimen && statusLabel[d.status] && <span><span class="badge">{statusLabel[d.status]}</span></span>}
+                <span>{d.kind === 'thesis' ? 'Master’s thesis' : 'Essay'}</span>
+                {contextLabel(d.context) && <span>{contextLabel(d.context)}</span>}
+                <span>{d.language}</span>
+                {minutes > 0 && canRead && <span>{minutes} min read</span>}
+                {d.tags.length > 0 && <span>{d.tags.join(', ')}</span>}
+              </div>
+            </li>
+          );
+        })}
+      </ol>
+    ) : (
+      <div class="empty">
+        <p class="eyebrow">In preparation</p>
+        <p class="empty-title">Essays will be published here once they are ready for the web.</p>
+      </div>
+    )
+  }
+</Base>

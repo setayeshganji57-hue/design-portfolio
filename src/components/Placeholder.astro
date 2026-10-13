@@ -1,0 +1,26 @@
+---
+/**
+ * A clearly identifiable development placeholder, used whenever an image,
+ * video or portrait has not been supplied yet. Never a broken media element.
+ */
+interface Props {
+  label?: string;
+  detail?: string;
+  aspect?: string;
+  glyph?: string;
+  small?: boolean;
+}
+
+const { label = 'Image to come', detail, aspect = '4/3', glyph, small = false } = Astro.props;
+const ratio = aspect.replace('/', ' / ');
+---
+
+<div class:list={['ph', { 'ph--small': small }]} style={`--ratio: ${ratio}`} role="img" aria-label={`Placeholder: ${label}${detail ? ` — ${detail}` : ''}`}>
+  <span class="ph-marks" aria-hidden="true"></span>
+  {glyph && <span class="ph-glyph" aria-hidden="true">{glyph}</span>}
+  <span class="ph-label" aria-hidden="true">
+    <b>Placeholder</b>
+    <span>{label}</span>
+    {detail && <span>{detail}</span>}
+  </span>
+</div>

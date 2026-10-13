@@ -1,0 +1,72 @@
+---
+/**
+ * Click-to-load video. Nothing from YouTube/Vimeo loads until the visitor
+ * presses play. Without JavaScript the button is a normal link to the video.
+ * No URL yet → a labelled placeholder with no play control.
+ */
+import { Image } from 'astro:assets';
+import Placeholder from './Placeholder.astro';
+import { resolveImage, publicFileExists, type Video } from '../lib/content';
+import { parseVideo } from '../lib/logic';
+
+interface Props {
+  video: Video;
+  sizes?: string;
+  eager?: boolean;
+}
+
+const { video, sizes = '(min-width: 1024px) 75vw, 100vw', eager = false } = Astro.props;
+const parsed = parseVideo(video.provider, video.url);
+const usable = parsed && (parsed.provider !== 'local' || publicFileExists(parsed.embedUrl));
+const poster = resolveImage(video.poster?.file);
+const ratio = video.aspect.replace('/', ' / ');
+const providerName = { youtube: 'YouTube', vimeo: 'Vimeo', local: 'video' }[video.provider];
+---
+
+<figure class="media">
+  {
+    !usable ? (
+      <Placeholder label="Video to come" detail={`${providerName} link not supplied yet`} aspect={video.aspect} glyph="▶" />
+    ) : parsed!.provider === 'local' ? (
+      <div class="video" style={`--ratio: ${ratio}`}>
+        <video controls preload="none" playsinline poster={poster?.src} src={parsed!.embedUrl}>
+          <a href={parsed!.embedUrl}>Download the video</a>
+        </video>
+      </div>
+    ) : (
+      <div class="video" style={`--ratio: ${ratio}`} data-video-embed={parsed!.embedUrl} data-video-title={video.title}>
+        {poster ? (
+          <Image
+            class="video-poster"
+            src={poster}
+            alt=""
+            widths={[640, 960, 1280, 1920].filter((w) => w <= poster.width)}
+            sizes={sizes}
+            loading={eager ? 'eager' : 'lazy'}
+          />
+        ) : (
+          <Placeholder label="Poster frame to come" aspect={video.aspect} glyph="▶" />
+        )}
+        <a class="video-play" href={parsed!.watchUrl} data-video-play>
+          <span class="video-play-inner">
+            <span class="video-play-icon" aria-hidden="true">
+              <svg viewBox="0 0 12 14" fill="currentColor"><path d="M0 0l12 7-12 7z" /></svg>
+            </span>
+            <span>
+              Play <span class="visually-hidden">{video.title}</span>
+              <span class="video-play-note" aria-hidden="true">· loads {providerName}</span>
+            </span>
+          </span>
+        </a>
+      </div>
+    )
+  }
+  {
+    (video.caption || video.credit) && (
+      <figcaption class="media-caption">
+        {video.caption}
+        {video.credit && <span class="media-credit">{video.credit}</span>}
+      </figcaption>
+    )
+  }
+</figure>

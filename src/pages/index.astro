@@ -1,0 +1,70 @@
+---
+import Base from '../layouts/Base.astro';
+import Media from '../components/Media.astro';
+import Placeholder from '../components/Placeholder.astro';
+import { categories } from '../config/categories';
+import { site } from '../config/site';
+import { getProjectsIn, resolveImage } from '../lib/content';
+import { pad2 } from '../lib/logic';
+
+const tiles = await Promise.all(
+  categories.map(async (c, i) => {
+    const projects = await getProjectsIn(c.slug);
+    // Preview: the category's own preview image, else the first project cover that has a file.
+    const preview = c.homePreview && resolveImage(c.homePreview.file)
+      ? { file: c.homePreview.file, alt: c.homePreview.alt, position: c.homePreview.position }
+      : projects.find((p) => resolveImage(p.data.cover.file))?.data.cover;
+    return { c, i, count: projects.length, preview };
+  }),
+);
+
+const tileSizes = [
+  '(min-width: 1440px) 42vw, (min-width: 1024px) 48vw, 100vw',
+  '(min-width: 1024px) 28vw, 70vw',
+  '(min-width: 1024px) 32vw, 70vw',
+  '(min-width: 1024px) 40vw, 100vw',
+  '(min-width: 1024px) 45vw, 80vw',
+];
+---
+
+<Base>
+  <h1 class="visually-hidden">{site.name} — {site.role}</h1>
+  <section class="home-intro" aria-label="Introduction">
+    <p class="lede settle">{site.intro}</p>
+    <ul class="home-index" aria-label="Disciplines">
+      {categories.map((c, i) => (
+        <li><a href={`/work/${c.slug}`}><span class="num">{pad2(i + 1)}</span>{c.title}</a></li>
+      ))}
+    </ul>
+  </section>
+
+  <section class="home-grid" aria-label="Discipline previews">
+    {
+      tiles.map(({ c, i, count, preview }) => (
+        <a class={`tile tile--${i + 1}`} href={`/work/${c.slug}`}>
+          <div class="tile-media">
+            {preview ? (
+              <Media
+                media={{ ...preview, aspect: c.homeAspect, fit: 'cover' }}
+                sizes={tileSizes[i]}
+                eager={i < 2}
+                showCaption={false}
+                inLink
+              />
+            ) : (
+              <Placeholder label="Temporary visual" detail={c.title} aspect={c.homeAspect} glyph={pad2(i + 1)} />
+            )}
+          </div>
+          <div class="tile-caption">
+            <span class="num" aria-hidden="true">{pad2(i + 1)}</span>
+            <h2 class="tile-title">{c.title}</h2>
+            <p class="tile-sub">
+              <span>{count === 0 ? 'In preparation' : `${count} ${count === 1 ? 'project' : 'projects'}`}</span>
+              <span class="tile-cta" aria-hidden="true">View {c.title} <span class="arrow">→</span></span>
+            </p>
+          </div>
+        </a>
+      ))
+    }
+  </section>
+</Base>

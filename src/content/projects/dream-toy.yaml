@@ -1,0 +1,24 @@
+title: Dream Toy
+status: draft
+categories: [brand-identity]
+order: 10
+tags: [Brand identity]
+cover: { alt: '', aspect: '16/10' }
+hero:
+  kind: image
+  media: { alt: '', aspect: '16/9' }
+blocks:
+  - type: image
+    size: inset
+    media: { alt: '', aspect: '1/1', fit: contain }
+  - type: pair
+    items:
+      - { alt: '', aspect: '4/5' }
+      - { alt: '', aspect: '4/5' }
+  - type: image
+    size: full
+    media: { alt: '', aspect: '21/9' }
+todo:
+  - CONFIRM the final spelling — Behance lists it as “DRYMTO”; “Dream Toy” is provisional
+  - Logo, applications and original files
+  - Context, year and overview

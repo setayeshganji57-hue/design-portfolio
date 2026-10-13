@@ -1,0 +1,23 @@
+title: Life Below Water
+status: draft
+categories: [graphic-illustration]
+order: 20
+tags: [Educational design, Interactive design]
+context: { type: academic, institution: Sapienza University of Rome }
+cover: { alt: '', aspect: '4/3' }
+hero:
+  kind: image
+  media: { alt: '', aspect: '16/9' }
+blocks:
+  - type: image
+    size: full
+    media: { alt: '', aspect: '21/9' }
+  - type: pair
+    align: center
+    items:
+      - { alt: '', aspect: '3/4' }
+      - { alt: '', aspect: '4/3' }
+todo:
+  - Cover and illustrations
+  - Overview, audience and my role
+  - Year, course name, collaborators (if any)

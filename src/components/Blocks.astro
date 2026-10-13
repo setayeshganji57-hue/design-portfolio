@@ -1,0 +1,75 @@
+---
+/**
+ * Renders a project's flexible content blocks. Each project combines only
+ * the blocks it needs — no fixed case-study structure.
+ */
+import Media from './Media.astro';
+import VideoEmbed from './VideoEmbed.astro';
+import { paragraphs } from '../lib/logic';
+import type { Project } from '../lib/content';
+
+interface Props {
+  blocks: Project['data']['blocks'];
+}
+
+const { blocks } = Astro.props;
+const gridSizes = {
+  2: '(min-width: 1024px) 38vw, (min-width: 640px) 50vw, 100vw',
+  3: '(min-width: 1024px) 25vw, 50vw',
+  4: '(min-width: 1024px) 19vw, 50vw',
+} as const;
+---
+
+{
+  blocks.length > 0 && (
+    <div class="blocks">
+      {blocks.map((b) => {
+        switch (b.type) {
+          case 'text':
+            return (
+              <section class="b-text">
+                {b.heading && <h2>{b.heading}</h2>}
+                {paragraphs(b.body).map((p) => (
+                  <p>{p}</p>
+                ))}
+              </section>
+            );
+          case 'image':
+            return (
+              <div class={`b-image b-image--${b.size}`}>
+                <Media media={b.media} sizes={b.size === 'inset' ? '(min-width: 640px) 36rem, 100vw' : '(min-width: 1024px) 75vw, 100vw'} />
+              </div>
+            );
+          case 'pair':
+            return (
+              <div>
+                <div class={`b-pair b-pair--${b.align}`}>
+                  {b.items.map((m) => (
+                    <Media media={m} sizes="(min-width: 1024px) 38vw, (min-width: 640px) 50vw, 100vw" small />
+                  ))}
+                </div>
+                {b.caption && <p class="block-caption">{b.caption}</p>}
+              </div>
+            );
+          case 'grid':
+            return (
+              <div>
+                <div class={`b-grid b-grid--${b.columns}`}>
+                  {b.items.map((m) => (
+                    <Media media={m} sizes={gridSizes[b.columns]} small />
+                  ))}
+                </div>
+                {b.caption && <p class="block-caption">{b.caption}</p>}
+              </div>
+            );
+          case 'video':
+            return (
+              <div class="b-video">
+                <VideoEmbed video={b.video} />
+              </div>
+            );
+        }
+      })}
+    </div>
+  )
+}

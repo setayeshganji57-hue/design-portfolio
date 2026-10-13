@@ -1,0 +1,23 @@
+title: PFC — Brand & Visual Identity
+status: draft
+categories: [brand-identity]
+order: 20
+tags: [Brand identity, Visual identity]
+cover: { alt: '', aspect: '16/10' }
+hero:
+  kind: image
+  media: { alt: '', aspect: '16/9' }
+blocks:
+  - type: image
+    size: inset
+    media: { alt: '', aspect: '1/1', fit: contain }
+  - type: grid
+    columns: 3
+    items:
+      - { alt: '', aspect: '4/5' }
+      - { alt: '', aspect: '4/5' }
+      - { alt: '', aspect: '4/5' }
+todo:
+  - What PFC stands for (if it should be spelled out)
+  - Context (commissioned / academic / independent), year, overview
+  - Identity files and applications

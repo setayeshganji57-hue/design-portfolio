@@ -1,0 +1,27 @@
+title: 'ChronoLens: Unveiling Temporal Mysteries'
+status: draft
+categories: [interactive-3d]
+order: 10
+tags: [Game design, 3D, Interactive]
+context: { type: academic }
+cover: { alt: '', aspect: '16/9' }
+hero:
+  kind: video
+  video:
+    provider: youtube
+    url: ''
+    title: 'ChronoLens — gameplay'
+    aspect: '16/9'
+blocks:
+  - type: pair
+    items:
+      - { alt: '', aspect: '16/9' }
+      - { alt: '', aspect: '16/9' }
+  - type: image
+    size: full
+    media: { alt: '', aspect: '21/9' }
+todo:
+  - Gameplay video link and original assets
+  - CONFIRM my contribution — which models, characters and assets I made; credit the rest
+  - Institution, course, team and year
+  - Spelling taken from the portfolio PDF — confirm

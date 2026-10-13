@@ -1,0 +1,17 @@
+---
+import { site } from '../config/site';
+import { categories } from '../config/categories';
+const year = new Date().getFullYear();
+---
+
+<footer class="footer">
+  <p>© {year} {site.name}</p>
+  <nav aria-label="Footer">
+    <ul>
+      {categories.map((c) => <li><a href={`/work/${c.slug}`}>{c.title}</a></li>)}
+      <li><a href="/essays">Essays</a></li>
+      <li><a href="/about">About</a></li>
+      <li><a href="/contact">Contact</a></li>
+    </ul>
+  </nav>
+</footer>

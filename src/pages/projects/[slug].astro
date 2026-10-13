@@ -1,0 +1,134 @@
+---
+import type { GetStaticPaths } from 'astro';
+import Base from '../../layouts/Base.astro';
+import Media from '../../components/Media.astro';
+import VideoEmbed from '../../components/VideoEmbed.astro';
+import Blocks from '../../components/Blocks.astro';
+import { categories } from '../../config/categories';
+import { contextLabel, getProjects, primaryCategory, resolveImage, type Project } from '../../lib/content';
+import { paragraphs, relatedFor } from '../../lib/logic';
+
+export const getStaticPaths = (async () => {
+  const all = await getProjects();
+  return all.map((project) => ({
+    params: { slug: project.id },
+    props: { project, related: relatedFor(project, all, 2) },
+  }));
+}) satisfies GetStaticPaths;
+
+interface Props {
+  project: Project;
+  related: Project[];
+}
+
+const { project, related } = Astro.props;
+const d = project.data;
+const primary = primaryCategory(project);
+const ctx = contextLabel(d.context);
+const disciplines = d.categories.map((slug) => categories.find((c) => c.slug === slug)!);
+const overview = paragraphs(d.overview);
+const isDraft = d.status === 'draft';
+const description = d.summary ?? `${d.title} — ${disciplines.map((c) => c.title).join(', ')} project by Setayesh Ganji.`;
+const coverImage = resolveImage(d.cover.file);
+
+const facts: { term: string; value?: string; links?: { href: string; label: string }[] }[] = [
+  { term: 'Discipline', links: disciplines.map((c) => ({ href: `/work/${c.slug}`, label: c.title })) },
+  { term: 'Year', value: d.year !== undefined ? String(d.year) : undefined },
+  { term: 'Context', value: [ctx, d.context?.course].filter(Boolean).join(' — ') || undefined },
+  { term: 'Role', value: d.role },
+  { term: 'With', value: d.collaborators.length ? d.collaborators.join(', ') : undefined },
+  { term: 'Tags', value: d.tags.length ? d.tags.join(', ') : undefined },
+];
+---
+
+<Base title={d.title} description={description} section={primary.slug} noindex={isDraft} ogImage={coverImage?.src}>
+  <article class="project">
+    <nav class="crumbs" aria-label="Breadcrumb">
+      <a class="text-link" href={`/work/${primary.slug}`}><span class="arrow" aria-hidden="true">←</span> {primary.title}</a>
+    </nav>
+
+    {
+      isDraft && (
+        <aside class="draft-note" aria-label="Draft notes">
+          <p><strong>Draft preview.</strong> This project is excluded from production builds until its status is set to “published”.</p>
+          {d.todo.length > 0 && (
+            <ul>
+              {d.todo.map((t) => <li>{t}</li>)}
+            </ul>
+          )}
+        </aside>
+      )
+    }
+
+    <header class="project-head">
+      <h1 class="project-title settle">{d.title}</h1>
+      <div class="project-head-body settle-late">
+        <div class="overview">
+          {overview.length > 0 ? overview.map((p) => <p>{p}</p>) : isDraft && <p class="overview-missing">Overview to come.</p>}
+        </div>
+        <dl class="facts">
+          {
+            facts
+              .filter((f) => f.value || f.links?.length)
+              .map((f) => (
+                <>
+                  <dt>{f.term}</dt>
+                  <dd>
+                    {f.links
+                      ? f.links.map((l, i) => (
+                          <>
+                            {i > 0 && ', '}
+                            <a href={l.href}>{l.label}</a>
+                          </>
+                        ))
+                      : f.value}
+                  </dd>
+                </>
+              ))
+          }
+        </dl>
+      </div>
+    </header>
+
+    {
+      d.hero && (
+        <div class="project-hero">
+          {d.hero.kind === 'image' ? (
+            <Media media={d.hero.media} sizes="(min-width: 1024px) 75vw, 100vw" eager fallbackAspect="16/9" />
+          ) : (
+            <VideoEmbed video={d.hero.video} eager />
+          )}
+        </div>
+      )
+    }
+
+    <Blocks blocks={d.blocks} />
+
+    <footer class="project-foot">
+      {
+        related.length > 0 && (
+          <section aria-labelledby="related-label">
+            <h2 class="eyebrow section-label" id="related-label">More work</h2>
+            <ul class="related">
+              {related.map((r) => (
+                <li>
+                  <a href={`/projects/${r.id}`}>
+                    <Media media={{ ...r.data.cover, aspect: '1/1', fit: 'cover' }} sizes="6rem" showCaption={false} small inLink placeholderLabel="Cover" />
+                    <span>
+                      <span class="related-title">{r.data.title}</span>
+                      <span class="meta" style="display:block">{primaryCategory(r).title}</span>
+                    </span>
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </section>
+        )
+      }
+      <div class="project-foot-links">
+        <a class="text-link" href={`/work/${primary.slug}`}><span class="arrow" aria-hidden="true">←</span> Back to {primary.title}</a>
+        <a class="text-link" href="#content">Back to top <span aria-hidden="true">↑</span></a>
+      </div>
+    </footer>
+  </article>
+</Base>

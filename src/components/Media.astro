@@ -1,0 +1,92 @@
+---
+import { Image } from 'astro:assets';
+import Placeholder from './Placeholder.astro';
+import { resolveImage, publicFileExists, type Media as MediaData } from '../lib/content';
+
+interface Props {
+  media: MediaData;
+  /** `sizes` attribute describing the rendered width. */
+  sizes?: string;
+  eager?: boolean;
+  /** Ratio to use when neither the media nor the file defines one. */
+  fallbackAspect?: string;
+  placeholderLabel?: string;
+  placeholderGlyph?: string;
+  showCaption?: boolean;
+  small?: boolean;
+  /** Inside a link: loops play on hover/focus only, and no toggle button is rendered (no nested controls). */
+  inLink?: boolean;
+}
+
+const {
+  media,
+  sizes = '(min-width: 1024px) 70vw, 100vw',
+  eager = false,
+  fallbackAspect = '4/3',
+  placeholderLabel = 'Image to come',
+  placeholderGlyph,
+  showCaption = true,
+  small = false,
+  inLink = false,
+} = Astro.props;
+
+const img = resolveImage(media.file);
+const loop = media.loop && publicFileExists(media.loop) ? media.loop : undefined;
+const aspect = media.aspect;
+const style = [
+  aspect ? `--ratio: ${aspect.replace('/', ' / ')}` : '',
+  `--fit: ${media.fit}`,
+  media.position ? `--pos: ${media.position}` : '',
+  media.background ? `--media-bg: ${media.background}` : '',
+]
+  .filter(Boolean)
+  .join('; ');
+const widths = [480, 720, 960, 1280, 1680, 2200].filter((w) => !img || w <= img.width);
+if (img && !widths.includes(img.width) && img.width < 2200) widths.push(img.width);
+---
+
+<figure class="media">
+  {
+    img ? (
+      <div class="media-frame" style={style}>
+        <Image
+          src={img}
+          alt={media.alt}
+          widths={widths}
+          sizes={sizes}
+          loading={eager ? 'eager' : 'lazy'}
+          fetchpriority={eager ? 'high' : 'auto'}
+          decoding="async"
+        />
+        {loop && (
+          <video
+            class="media-loop"
+            src={loop}
+            muted
+            loop
+            playsinline
+            preload="none"
+            aria-hidden="true"
+            hidden
+            data-loop={inLink ? 'hover' : 'auto'}
+          />
+        )}
+        {loop && !inLink && (
+          <button type="button" class="loop-toggle" data-loop-toggle hidden>
+            Pause motion
+          </button>
+        )}
+      </div>
+    ) : (
+      <Placeholder label={placeholderLabel} aspect={aspect ?? fallbackAspect} glyph={placeholderGlyph} small={small} detail={media.file ? `missing file: ${media.file}` : undefined} />
+    )
+  }
+  {
+    showCaption && (media.caption || media.credit) && (
+      <figcaption class="media-caption">
+        {media.caption}
+        {media.credit && <span class="media-credit">{media.credit}</span>}
+      </figcaption>
+    )
+  }
+</figure>

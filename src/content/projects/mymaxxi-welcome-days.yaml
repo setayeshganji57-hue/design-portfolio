@@ -1,0 +1,28 @@
+title: myMAXXI Welcome Days
+status: draft
+categories: [graphic-illustration]
+order: 10
+tags: [Visual identity, Motion]
+context: { type: academic, institution: Sapienza University of Rome }
+cover: { alt: '', aspect: '4/5' }
+hero:
+  kind: image
+  media: { alt: '', aspect: '16/9' }
+blocks:
+  - type: pair
+    items:
+      - { alt: '', aspect: '4/5' }
+      - { alt: '', aspect: '4/5' }
+  - type: video
+    video: { provider: vimeo, title: 'myMAXXI Welcome Days — motion', aspect: '16/9' }
+  - type: grid
+    columns: 3
+    items:
+      - { alt: '', aspect: '1/1' }
+      - { alt: '', aspect: '1/1' }
+      - { alt: '', aspect: '1/1' }
+todo:
+  - Cover, hero and identity applications (original files, not PDF screenshots)
+  - Short overview and my role
+  - Year and course name
+  - Motion piece link or file, if it should appear

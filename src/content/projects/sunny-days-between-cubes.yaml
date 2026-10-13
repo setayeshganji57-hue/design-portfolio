@@ -1,0 +1,26 @@
+title: Sunny Days Between Cubes
+status: draft
+categories: [motion-film]
+order: 10
+tags: [Film, Motion]
+context: { type: academic, institution: Sapienza University of Rome }
+cover: { alt: '', aspect: '16/9' }
+hero:
+  kind: video
+  video:
+    provider: vimeo        # or youtube / local
+    url: ''                # paste the Vimeo or YouTube link here
+    title: Sunny Days Between Cubes
+    aspect: '16/9'
+blocks:
+  - type: grid
+    columns: 3
+    caption: Stills
+    items:
+      - { alt: '', aspect: '16/9' }
+      - { alt: '', aspect: '16/9' }
+      - { alt: '', aspect: '16/9' }
+todo:
+  - Vimeo or YouTube link for the finished film
+  - Poster frame and stills
+  - Year, course, credits and my role

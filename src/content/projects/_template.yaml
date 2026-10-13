@@ -1,0 +1,29 @@
+# Copy this file to <slug>.yaml (the filename becomes the URL: /projects/<slug>).
+# Files starting with "_" are ignored. Every field except title/status/categories is optional.
+title: Project title
+status: draft            # draft | published — drafts never appear in production builds
+categories:              # first entry = primary category (used for "back to …")
+  - graphic-illustration # brand-identity | graphic-illustration | digital-ui | motion-film | interactive-3d
+order: 10                # lower = earlier; override per category with categoryOrder
+# categoryOrder: { motion-film: 5 }
+tags: [Poster, Typography]
+# year: 2024
+# context: { type: academic, institution: Sapienza University of Rome, course: "Course name" }
+# summary: One line used on category pages and in metadata.
+# overview: |
+#   Short overview. Paragraphs separated by a blank line.
+# role: What I did
+# collaborators: [Name — role]
+cover:
+  file: my-project/cover.jpg   # relative to src/assets/media
+  alt: Describe the image
+  # aspect: "4/5"              # omit to keep the artwork's own proportions
+  # fit: contain               # never crop posters, book covers, type specimens
+  # position: "50% 30%"        # crop focus when fit is cover
+# hero:
+#   kind: image                # or: kind: video + video: { provider: vimeo, url: …, title: … }
+#   media: { file: my-project/hero.jpg, alt: … }
+blocks: []
+# Block types: text · image (size: full|wide|inset) · pair · grid (columns: 2|3|4) · video
+# related: [other-slug]
+todo: []

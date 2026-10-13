@@ -1,0 +1,21 @@
+title: Illustrated Book Covers
+status: draft
+categories: [graphic-illustration]
+order: 30
+tags: [Illustration, Book design]
+cover: { alt: '', aspect: '2/3', fit: contain }
+blocks:
+  - type: grid
+    columns: 3
+    caption: Book covers are shown uncropped, in their own proportions.
+    items:
+      - { alt: '', aspect: '2/3', fit: contain }
+      - { alt: '', aspect: '2/3', fit: contain }
+      - { alt: '', aspect: '2/3', fit: contain }
+      - { alt: '', aspect: '2/3', fit: contain }
+      - { alt: '', aspect: '2/3', fit: contain }
+      - { alt: '', aspect: '2/3', fit: contain }
+todo:
+  - Curated selection from the earlier Iranian portfolio (original files)
+  - Book titles, authors and publishers for captions — only if verified
+  - Context (commissioned / independent) and years

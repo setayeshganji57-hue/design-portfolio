@@ -1,0 +1,18 @@
+title: Calligraphy & Typography
+status: draft
+categories: [graphic-illustration]
+order: 50
+tags: [Calligraphy, Typography]
+cover: { alt: '', aspect: '1/1', fit: contain }
+blocks:
+  - type: image
+    size: inset
+    media: { alt: '', aspect: '1/1', fit: contain }
+  - type: grid
+    columns: 2
+    items:
+      - { alt: '', aspect: '3/4', fit: contain }
+      - { alt: '', aspect: '3/4', fit: contain }
+todo:
+  - Existing pieces (original scans/photos), further pieces later
+  - Scripts and techniques for captions
