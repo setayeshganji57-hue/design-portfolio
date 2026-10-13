@@ -76,6 +76,47 @@ try {
   const res404 = await (await browser.newPage()).goto(BASE + '/does-not-exist');
   ok(res404?.status() === 404, 'unknown route returns the 404 page');
 
+  console.log('\nLaunch list (compared with tests/launch-manifest.json)');
+  {
+    const { readFileSync } = await import('node:fs');
+    const manifest = JSON.parse(readFileSync('tests/launch-manifest.json', 'utf8'));
+    const built = new Set(projectSlugs);
+    // In a production build only approved, published projects exist. In a draft build every record exists.
+    const expected = drafts
+      ? [...manifest.launch, ...manifest.excluded].map(p => p.slug)
+      : manifest.launch.filter(p => p.status === 'published').map(p => p.slug);
+    const missing = expected.filter(slug => !built.has(slug));
+    const extra = [...built].filter(slug => !expected.includes(slug));
+    ok(missing.length === 0, `every expected project page is built${missing.length ? ` (missing: ${missing.join(', ')})` : ''}`);
+    ok(extra.length === 0, `no unexpected project pages are built${extra.length ? ` (extra: ${extra.join(', ')})` : ''}`);
+
+    // Each expected project is linked from its primary category page.
+    const { readFileSync: rf } = await import('node:fs');
+    const linkProblems = [];
+    for (const p of manifest.launch.filter(p => expected.includes(p.slug))) {
+      const html = rf(`dist/work/${p.category}.html`, 'utf8');
+      if (!html.includes(`href="/projects/${p.slug}"`)) linkProblems.push(`${p.slug} not listed in ${p.category}`);
+    }
+    ok(linkProblems.length === 0, `expected projects are listed in their categories ${linkProblems.join('; ')}`);
+
+    // Excluded projects must not appear in production output at all.
+    if (!drafts) {
+      const { execSync } = await import('node:child_process');
+      const leaks = manifest.excluded.concat(manifest.launch.filter(p => p.status === 'draft')).filter(p => {
+        try { execSync(`grep -rl "/projects/${p.slug}" dist --include=*.html --include=*.xml --include=*.txt`, { stdio: 'pipe' }); return true; } catch { return false; }
+      });
+      ok(leaks.length === 0, `no draft project is linked anywhere in the production output ${leaks.map(p => p.slug).join(', ')}`);
+    }
+
+    // A category with no approved projects shows the honest empty state.
+    for (const cat of manifest.categoriesWithNoApprovedProjects) {
+      const html = rf(`dist/work/${cat}.html`, 'utf8');
+      const approvedHere = manifest.launch.filter(p => p.category === cat && expected.includes(p.slug)).length;
+      // Production: no approved project means the honest empty state. Draft builds list their drafts instead.
+      if (!drafts && approvedHere === 0) ok(html.includes('In preparation'), `${cat} shows its in-preparation state`);
+    }
+  }
+
   console.log('\nCut-and-reveal transition');
   const ctx = await browser.newContext({ viewport: { width: 1280, height: 800 } });
   await ctx.addInitScript(() => {

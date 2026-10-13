@@ -107,21 +107,11 @@ What the `npm run e2e` checks cover (headless Chromium 141):
 - **Behance profile**: readable. Its project pages return errors to automated access, so only the project titles from the profile are used, in `docs/CONTENT-CHECKLIST.md`.
 - **Reference sites** (palomarincon.com, sic-est.com, eliapelle.com): still not reviewed in this session.
 
-Access to Drive and Behance was enabled during this session. If you change the network settings again, the steps are in the previous version of this file (Option A: allow the domains).
+Access to Drive and Behance was enabled during this session. The review pack (`docs/REVIEW.md`) has the current access instructions for local preview, and states that no deployed or public URL exists. If you change the network settings again, the steps are in the previous version of this file (Option A: allow the domains).
 
 ## Publishing status
 
-Six projects are published, and nine are drafts. See the table at the top of `docs/CONTENT-CHECKLIST.md`.
-
-Published pages:
-- Life Below Water
-- myMAXXI Welcome Days
-- Final Studio
-- Woman, Life, Freedom Exhibition
-- Sunny Days Between Cubes
-- Track La Sapienza
-
-Draft pages with visible content gaps: ChronoLens, Fruits in Love, and the seven earlier placeholder records.
+Current status: **two projects are published** (myMAXXI Welcome Days, Life Below Water). Everything else is a draft. The full list, with reasons, is in `docs/REVIEW.md` section 2.
 
 Production builds exclude drafts. Draft pages are visible only in `npm run dev` and `npm run build:drafts`.
 
