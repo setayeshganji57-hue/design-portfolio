@@ -3,7 +3,15 @@ status: draft
 categories: [interactive-3d]
 order: 10
 tags: [Game design, 3D, Interactive]
-context: { type: academic }
+context: { type: academic, course: Computer Graphics and Gaming Studio }
+year: 2024
+summary: A non-violent game set in the Pantheon area of Rome, built in Unreal Engine with 3D objects modelled in Rhino.
+overview: |
+  A non-violent game designed in the area around the Pantheon in Rome. The story follows a 23-year-old history student who finds a camera in an antique shop, which is the tutorial of the game. She then wakes up in another place, where the weather is heavy and snowy and the city is empty and gloomy.
+
+  Her aim is to understand where she is and what she has to do. On her journey she meets a young girl, an angry man, and a series of challenges.
+
+  The 3D objects were designed in Rhino and imported into Unreal Engine, where Blueprints control the characters. A game design document (GDD) shows every step of the project, and a tutorial and a trailer were delivered as outcomes.
 cover: { alt: '', aspect: '16/9' }
 hero:
   kind: video
@@ -21,6 +29,8 @@ blocks:
     size: full
     media: { alt: '', aspect: '21/9' }
 todo:
+  - Gameplay video link (the trailer and tutorial can be used)
+  - Select 4 to 6 stills and screenshots from the 45 images in the PDF
   - Gameplay video link and original assets
   - CONFIRM my contribution — which models, characters and assets I made; credit the rest
   - Institution, course, team and year

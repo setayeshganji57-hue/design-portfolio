@@ -1,0 +1,30 @@
+title: Final Studio
+status: published
+categories: [graphic-illustration]
+order: 30
+tags: [Infographic, Poster, Typography]
+year: 2023
+context: { type: academic, course: Final Studio 2023 }
+summary: An A3 infographic poster summarising my master's thesis on extended reality in virtual museums.
+overview: |
+  An A3 poster that explains the thesis briefly and expressively: "Bridging Boundaries: Utilizing Extended Reality (XR) for Virtual Museums (VM) to Foster Art Appreciation and Learning in Persian-Speaking Communities of Three Growing Countries".
+
+  The poster uses charts, a target-group section and a diagram of how the approach works, and was made in Adobe InDesign and Photoshop.
+cover:
+  file: final-studio/poster.jpg
+  alt: A3 infographic poster summarising a thesis on extended reality for virtual museums
+  aspect: "1/1.414"
+  fit: contain
+  background: "#e9e5dc"
+blocks:
+  - type: image
+    size: inset
+    media:
+      file: final-studio/on-wall.jpg
+      alt: The infographic poster mounted on a stone wall
+      fit: contain
+      background: "#1f1f1f"
+todo:
+  - Confirm the thesis title wording (taken from the poster)
+  - Replace the cover with the original A3 file, if available (the embedded image is 894 px wide)
+  - Confirm the year

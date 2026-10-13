@@ -13,7 +13,11 @@ import { chromium } from 'playwright';
 
 const PORT = 4329;
 const BASE = `http://localhost:${PORT}`;
-const drafts = existsSync('dist/projects') && readdirSync('dist/projects').length > 0;
+// Routes come from the build output, so the suite follows whatever is published.
+const htmlSlugs = dir => (existsSync(dir) ? readdirSync(dir).filter(f => f.endsWith('.html')).map(f => f.replace(/\.html$/, '')) : []);
+const projectSlugs = htmlSlugs('dist/projects');
+const essaySlugs = htmlSlugs('dist/essays');
+const drafts = existsSync('dist/projects/dream-toy.html'); // only draft builds contain this draft record
 
 const candidates = [process.env.CHROMIUM_PATH, '/opt/pw-browsers/chromium-1194/chrome-linux/chrome'].filter(Boolean);
 const executablePath = candidates.find((p) => existsSync(p));
@@ -39,7 +43,7 @@ const browser = await chromium.launch(executablePath ? { executablePath } : {});
 
 try {
   const routes = ['/', '/work/brand-identity', '/work/graphic-illustration', '/work/digital-ui', '/work/motion-film', '/work/interactive-3d', '/essays', '/about', '/contact'];
-  if (drafts) routes.push('/projects/dream-toy', '/projects/sunny-days-between-cubes', '/projects/illustrated-book-covers', '/essays/specimen-reading-layout');
+  routes.push(...projectSlugs.map(s => `/projects/${s}`), ...essaySlugs.map(s => `/essays/${s}`));
 
   console.log(`\nRoutes and overflow (${drafts ? 'draft preview build' : 'production build'})`);
   for (const [w, h] of [[360, 740], [768, 1024], [1280, 800], [1440, 900], [1280, 600]]) {
@@ -154,7 +158,7 @@ try {
   if (drafts) {
     console.log('\nVideo');
     const vp = await browser.newPage();
-    await vp.goto(BASE + '/projects/sunny-days-between-cubes');
+    await vp.goto(BASE + '/projects/chronolens');
     ok((await vp.locator('iframe').count()) === 0, 'no third-party player loads on page load');
     ok((await vp.locator('.video-play').count()) === 0, 'no play button while the video link is missing');
     await vp.close();

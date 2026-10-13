@@ -1,0 +1,44 @@
+title: Track La Sapienza
+status: published
+categories: [digital-ui]
+order: 10
+tags: [Interface design, Wayfinding, UI]
+year: 2023
+context: { type: academic, institution: Sapienza University of Rome, course: New Media Design }
+summary: A map-based interface for the Sapienza University website, using shapes to help visitors find buildings.
+overview: |
+  A user interface for the Sapienza University website, showing the buildings of the campus area on an interactive map. Each building type has its own geometric form on the map, so visitors can recognise it at a glance.
+
+  Libraries are circles, campuses are rectangles, and canteens (mensa) are triangles. The system helps visitors on the site and on the ground to see where they are and where they need to go.
+cover:
+  file: track-la-sapienza/website.jpg
+  alt: Sapienza university website interface with a map of campus buildings
+  aspect: "21/9"
+  fit: cover
+hero:
+  kind: image
+  media:
+    file: track-la-sapienza/devices.jpg
+    alt: The map interface shown across a laptop, tablet and phone
+    aspect: "16/9"
+    fit: contain
+    background: "#c9c9c9"
+blocks:
+  - type: text
+    heading: A shape for every building
+    body: |
+      Libraries are circles, campuses are rectangles and canteens are triangles. The shape is the cue, so a visitor can read the map before reading any label.
+  - type: image
+    size: full
+    media: { file: track-la-sapienza/map-1.jpg, alt: Map of the campus area with the library, campus and canteen markers, fit: contain, background: "#ffffff" }
+  - type: pair
+    align: start
+    items:
+      - { file: track-la-sapienza/overlay-1.jpg, alt: Map overlay with building footprints highlighted in red, fit: contain, background: "#b9b9b9" }
+      - { file: track-la-sapienza/overlay-2.jpg, alt: Map overlay with the building shapes in white on grey, fit: contain, background: "#b9b9b9" }
+  - type: image
+    size: full
+    media: { file: track-la-sapienza/map-2.jpg, alt: Aerial map of the campus with the canteen and building markers, fit: contain, background: "#ffffff" }
+todo:
+  - Confirm my role and whether the project was for a real website or a studio brief (the PDF says a studio brief)
+  - Add a screenshot of the full interface if available

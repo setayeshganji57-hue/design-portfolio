@@ -1,23 +1,57 @@
 title: Life Below Water
-status: draft
+status: published
 categories: [graphic-illustration]
 order: 20
-tags: [Educational design, Interactive design]
-context: { type: academic, institution: Sapienza University of Rome }
-cover: { alt: '', aspect: '4/3' }
+tags: [Educational design, Interactive design, Illustration]
+year: 2022
+context: { type: academic, institution: Sapienza University of Rome, course: Digital Education }
+summary: An educational, playful map that teaches children about ocean life and pollution.
+overview: |
+  An educational map for children aged 7 to 10, designed to explain ocean ecology and why the sea should not be polluted. The path is laid out with a small robotic sphere, and the child moves through different phases of the map, learning the subject while playing through games and challenges.
+
+  Each lesson takes place at a different depth of the ocean, with its own characters and objects. The protagonist is a child playing as a diver.
+cover:
+  file: life-below-water/cover-lesson-1.jpg
+  alt: Lesson 1 cover, "Familiarity with the Ocean", in yellow with a beach scene and a child's illustrations
+  fit: contain
 hero:
   kind: image
-  media: { alt: '', aspect: '16/9' }
+  media:
+    file: life-below-water/hero.jpg
+    alt: Life Below Water title artwork showing a child at a table in front of a yellow ocean-themed backdrop
+    aspect: "16/9"
+    fit: cover
 blocks:
-  - type: image
-    size: full
-    media: { alt: '', aspect: '21/9' }
+  - type: text
+    heading: Four lessons, four depths
+    body: |
+      Lesson 1 introduces the ocean as a familiar place. Lesson 2 introduces the animals that live in it. Lesson 3 covers the different types of garbage and how they reach the sea. Lesson 4 is about recycling.
   - type: pair
-    align: center
+    align: start
     items:
-      - { alt: '', aspect: '3/4' }
-      - { alt: '', aspect: '4/3' }
+      - file: life-below-water/lesson-2.jpg
+        alt: Lesson 2 cover, "Getting familiar with ocean animals", in blue
+        fit: contain
+      - file: life-below-water/lesson-3.jpg
+        alt: Lesson 3 cover, "Getting familiar with different types of garbage", in indigo
+        fit: contain
+  - type: pair
+    align: start
+    items:
+      - file: life-below-water/lesson-4.jpg
+        alt: Lesson 4 cover, "Recycling", in deep purple
+        fit: contain
+      - file: life-below-water/step-1.jpg
+        alt: Line illustration showing how to roll the dice and move the piece on the game board
+        fit: contain
+  - type: grid
+    columns: 3
+    caption: Game-board instructions. Each step shows how a child interacts with the app and the map.
+    items:
+      - { file: life-below-water/step-2.jpg, alt: Line illustration of a child using a robotic sphere on the board, fit: contain }
+      - { file: life-below-water/step-3.jpg, alt: Line illustration of a child scanning a QR code on the board, fit: contain }
+      - { file: life-below-water/step-4.jpg, alt: Line illustration of a child answering a question on a phone, fit: contain }
+      - { file: life-below-water/step-5.jpg, alt: Line illustration of a child scanning a shell for information, fit: contain }
 todo:
-  - Cover and illustrations
-  - Overview, audience and my role
-  - Year, course name, collaborators (if any)
+  - Confirm the wording of the overview and the phrase "robotic sphere" (the PDF's wording was unclear)
+  - Confirm my role and whether anyone collaborated

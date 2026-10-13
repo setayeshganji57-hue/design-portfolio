@@ -1,98 +1,84 @@
 # Content & asset checklist
 
-Everything the site still needs, grouped by where it goes. Nothing listed here is invented on the site in the meantime. Missing items show as labelled placeholders (in draft preview), or are simply left out.
+Last updated after publishing from the portfolio PDF ("Portfolio", Setayesh's Drive file, 58 pages) and the Behance profile.
 
-Each project's own `todo:` list (in its YAML file) repeats its open items. That list appears on the project page in draft preview only.
+**Publishing status**
 
-**General rules for all media**
-- Use **original files**, not screenshots of PDF pages. The sharpest export works best; the build generates the smaller sizes.
-- Add `alt` text to every image that conveys content.
-- Add a `credit` wherever someone else made or photographed the work.
-- Mark posters, book covers, calligraphy and typography `fit: contain`, or leave out `aspect`, so they are never cropped.
+| Project | Discipline | Status |
+| --- | --- | --- |
+| Life Below Water | Graphic & Illustration | **Published** |
+| myMAXXI Welcome Days | Graphic & Illustration | **Published** |
+| Final Studio (thesis poster) | Graphic & Illustration | **Published** |
+| Woman, Life, Freedom Exhibition | Interactive & 3D (also Graphic & Illustration) | **Published**, category to confirm |
+| Sunny Days Between Cubes | Motion & Film (also Interactive & 3D) | **Published**, video link pending |
+| Track La Sapienza | Digital & UI | **Published**, selection to confirm |
+| ChronoLens: Unveiling Temporal Mysteries | Interactive & 3D | Draft: contribution details needed |
+| Fruits in Love | Motion & Film | Draft: no video link or usable stills |
+| Dream Toy, PFC, Illustrated Book Covers, Illustration Collection, Calligraphy & Typography, Roman Typography, Poster Collection | various | Draft: no assets or text yet |
 
-## Site-wide (`src/config/site.ts`)
+Every project's wording was drafted from the PDF. It is lightly edited English, so please read each one. Each record's `todo:` list (in its YAML file) shows the open items for that project.
 
-- [ ] **Public email address** (`email`). The Contact page shows an honest "to be added" note until then.
-- [ ] Further **professional links** (`links`). Behance is listed: https://www.behance.net/setayeshganji1
-- [ ] **CV PDF** in `public/documents/` (the path is already set to `/documents/setayesh-ganji-cv.pdf`).
-- [ ] **Portrait** in `src/assets/media/about/`, plus `portrait: { file, alt }`.
-- [ ] Review the **About wording** (first person, facts only). Is the bachelor's field name exactly right? Should years be shown for either degree?
-- [ ] Production **domain**, set as `SITE_URL` at deploy.
+## Decisions to confirm (highest priority)
 
-## Homepage (`src/config/categories.ts`)
+- [ ] **Dream Toy title.** You said it's pronounced "dream talk." Behance lists it as "DRYMTO." What should the page say?
+- [ ] **Name on the PDF cover.** It reads "Setayesh Shahsavandganji." The site uses "Setayesh Ganji," as you asked. Please confirm the public name, and whether you want the surname used anywhere.
+- [ ] **Your role and collaborators** for every published project. The PDF gives instructors' names, which I did not list as collaborators.
+- [ ] **Contribution to ChronoLens.** Which models, characters and assets are yours? Credits stay out of the site until you confirm.
+- [ ] **Institution** for Woman, Life, Freedom; Fruits in Love; Final Studio. The PDF names only the studio, so the page shows "Academic" with no institution.
 
-- [ ] Optional dedicated `homePreview` image for each discipline. Without one, the first project cover in that discipline is used once covers exist.
-- [ ] Review the one-line discipline **intros**. They are generic descriptions, so edit them freely.
+## Digital & UI selection (Behance)
 
-## Brand Identity
+The Behance profile lists these UI and web projects. I could read the profile but not their gallery pages, which return errors to automated access. Nothing has been published from them. Tell me which to include and I'll write them up from the Behance pages (or from files you upload):
 
-- [ ] **Dream Toy** (`dream-toy.yaml`)
-  - [ ] **Confirm the written title.** Behance lists it as **"DRYMTO"**, and Setayesh says it is pronounced "dream talk". Should the site show "DRYMTO", "Dream Talk", or something else? "Dream Toy" is a placeholder until then.
-  - [ ] Cover, logo, applications (original files)
-  - [ ] Context (academic, commissioned or independent), year, overview, role
-- [ ] **PFC — Brand & Visual Identity** (`pfc-brand-identity.yaml`)
-  - [ ] Should "PFC" be spelled out?
-  - [ ] Context, year, overview, role
-  - [ ] Identity files and applications
+- BiotiFood Website design
+- Interactive Landing page design for a juice company
+- Credit card design for an online blockchain startup
+- Mehr (Your Personal Shopping): Application design
+- clothing e-commerce mobile application
+- welltrain Sport App Design
+- CrediZen AI app UI/UX design
+- UI page design for a company powering analytics with AI
+- Modern UI Website Design for SaaS Company
 
-## Graphic & Illustration
+Also check: the Behance project "Infographic poster" appears to be the same work as **Final Studio** in the PDF, so I did not create a second entry. Confirm this.
 
-- [ ] **myMAXXI Welcome Days** (academic, Sapienza)
-  - [ ] Cover and identity applications
-  - [ ] Optional motion piece (link or file)
-  - [ ] Year, course name, overview, role, collaborators
-- [ ] **Life Below Water** (academic, Sapienza)
-  - [ ] Cover and visuals
-  - [ ] Overview, role, year, course, collaborators
-- [ ] **Illustrated Book Covers**
-  - [ ] Curated selection from the earlier Iranian portfolio (original files)
-  - [ ] Captions (book title, author, publisher), only if verified
-  - [ ] Context and years
-- [ ] **Illustration Collection**
-  - [ ] Additional illustrations. Don't repeat images used in Illustrated Book Covers.
-- [ ] **Calligraphy & Typography**
-  - [ ] Existing pieces now; more later
-- [ ] **Roman Typography**
-  - [ ] Images, description, context, year
-- [ ] **Poster Collection**
-  - [ ] Final selection and original files
-  - [ ] Captions, only if verified
+Behance also lists "Roman Typography" and "Game Design ChronoLens". They match the existing draft records, so I did not duplicate them.
 
-## Digital & UI
+## Media
 
-- [ ] **Which projects belong here.** No projects have been created, by design. The category page shows an "in preparation" state until the first one is published.
-
-## Motion & Film
-
-- [ ] **Sunny Days Between Cubes** (academic, Sapienza)
-  - [ ] **Vimeo or YouTube link** to the finished film (`hero.video.url`)
-  - [ ] Poster frame and stills
-  - [ ] Year, course, credits, role
-
-## Interactive & 3D
-
-- [ ] **ChronoLens: Unveiling Temporal Mysteries** (academic game-design project)
-  - [ ] **Contribution details:** which models, characters and assets are Setayesh's own, and credits for the rest
-  - [ ] Gameplay video link and original assets
-  - [ ] Institution, course, team, year (institution not yet stated, so it's left blank)
-  - [ ] Confirm the spelling (taken from the portfolio PDF)
+- The images for the published projects were extracted from the PDF at their embedded resolution. Some are smaller than ideal, for example the Final Studio poster (894 px wide). **Replace with original files** where you have them.
+- Do not use screenshots of PDF pages.
+- Fruits in Love: needs a video link (YouTube or Vimeo), a poster frame, and two or three stills. The PDF's pages for this project show no usable stills.
+- Sunny Days Between Cubes: the finished film is not in the PDF. Add its link in a video block. The page currently shows stills and plans.
+- ChronoLens: the PDF has 45 images from the game. Select 4 to 6 and add a gameplay link. Each still needs alt text.
 
 ## Essays (`src/content/essays/`)
 
-No titles or texts have been provided, so no essay records exist yet.
+No essay texts or titles have been provided, so no essay records exist.
 
-- [ ] **Master's thesis**: title, abstract, year, language, full text (Markdown), optional PDF
-- [ ] **Essay 2** (completed): as above
-- [ ] **Essay 3** (completed): as above
-- [ ] **Essay 4** (in progress): title and abstract, if it should be listed as "In progress"
-- [ ] **Essay 5** (in progress): as above
-- [ ] References and image credits for each
-- [ ] Delete `specimen-reading-layout.md` once the first real essay is added
+- [ ] Master's thesis. The PDF's Final Studio poster gives this working title: "Bridging Boundaries: Utilizing Extended Reality (XR) for Virtual Museums (VM) to Foster Art Appreciation and Learning in Persian-Speaking Communities of Three Growing Countries." Confirm the final title, then provide the full text.
+- [ ] Two completed essays: title, abstract, year, language, text (Markdown), optional PDF.
+- [ ] Two in-progress essays: title and abstract, if they should be listed.
+- [ ] References and image credits for each.
+- [ ] Delete `specimen-reading-layout.md` once the first real essay is added.
 
-## Before publishing a project
+## Site-wide (`src/config/site.ts`)
 
-1. Media are in `src/assets/media/<slug>/` and referenced in the YAML.
-2. Text is verified: no invented clients, results or dates.
+- [ ] Public email address (`email`). The Contact page shows an honest note until you add one.
+- [ ] Further professional links (Behance is listed).
+- [ ] CV PDF in `public/documents/`.
+- [ ] Portrait in `src/assets/media/about/`, plus `portrait: { file, alt }`.
+- [ ] Review the About wording. Is the bachelor's field name exactly right? Should years be shown?
+- [ ] Production domain, set as `SITE_URL` at deploy.
+
+## Disciplines and homepage (`src/config/categories.ts`)
+
+- [ ] Review the one-line discipline intros.
+- [ ] Optional dedicated `homePreview` image per discipline. Without one, the homepage uses the first project cover in that discipline.
+
+## Before publishing any further project
+
+1. Media are in `src/assets/media/<slug>/` and referenced in the YAML, with alt text.
+2. Every fact is verified: no invented clients, results, dates or roles.
 3. Set `status: published`.
-4. Run `npm run check && npm test && npm run build`.
-5. Check the page in `npm run preview`.
+4. Run `npm run check && npm test && npm run build`, then `npm run e2e`.

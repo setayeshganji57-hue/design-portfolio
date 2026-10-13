@@ -101,26 +101,29 @@ What the `npm run e2e` checks cover (headless Chromium 141):
 - **Stack:** Astro 5.18 (the mature 5.x line), not the newest major (7.x). I chose it for stability and verified compatibility; upgrading later is optional.
 - **Fix found during testing:** the `@view-transition` opt-in is inlined in `<head>`. When it only lived in the external stylesheet, Chromium skipped about half of the transitions; inlined, they were 100% reliable in testing.
 
-## References and source material: how to grant access
+## Source material
 
-This cloud environment's network policy blocks Behance and Google Drive, so I couldn't read the portfolio sources. Any one of these options unblocks it.
+- **Google Drive PDF** (58 pages, "Portfolio"): read and used as the primary source for the published projects. It contains the project briefs, descriptions, dates and 153 embedded images. Nothing from it was used without a text reading.
+- **Behance profile**: readable. Its project pages return errors to automated access, so only the project titles from the profile are used, in `docs/CONTENT-CHECKLIST.md`.
+- **Reference sites** (palomarincon.com, sic-est.com, eliapelle.com): still not reviewed in this session.
 
-**Option A: allow the domains (recommended, so I can read Behance and the Drive PDF myself)**
-1. Open the session's cloud environment menu in the title bar and choose **Edit**.
-2. Under **Network access**, either pick a broader level, or keep "Limited" and add these under **Allowed domains**, leaving "Allow package managers" ticked:
-   - `behance.net`, `www.behance.net`, `mir-s3-cdn-cf.behance.net` (Behance images)
-   - `drive.google.com`, `drive.usercontent.google.com`, `docs.google.com`
-   - optionally `palomarincon.com`, `www.sic-est.com`, `eliapelle.com` (design references)
-3. Make sure the Drive PDF is shared as **"Anyone with the link → Viewer"**.
-4. Start a new session, or tell me it's done.
+Access to Drive and Behance was enabled during this session. If you change the network settings again, the steps are in the previous version of this file (Option A: allow the domains).
 
-Docs: https://code.claude.com/docs/en/cloud-environments#network-access
+## Publishing status
 
-**Option B: upload the files directly (best quality)**
-Commit the original files to the repository, e.g. `src/assets/media/<project-slug>/…` and `incoming/portfolio.pdf`. Original exports are better than anything extracted from a PDF or downloaded from Behance, which serves compressed images.
+Six projects are published, and nine are drafts. See the table at the top of `docs/CONTENT-CHECKLIST.md`.
 
-**Option C: connect Google Drive**
-Add the Google Drive connector at https://claude.ai/customize/connectors, then start a new session.
+Published pages:
+- Life Below Water
+- myMAXXI Welcome Days
+- Final Studio
+- Woman, Life, Freedom Exhibition
+- Sunny Days Between Cubes
+- Track La Sapienza
+
+Draft pages with visible content gaps: ChronoLens, Fruits in Love, and the seven earlier placeholder records.
+
+Production builds exclude drafts. Draft pages are visible only in `npm run dev` and `npm run build:drafts`.
 
 ## Not done in this phase (by design)
 
