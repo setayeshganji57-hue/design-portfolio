@@ -1,24 +1,111 @@
 {
   "$comment": "Agreed launch list. Update only when the owner approves a change. Tests compare these entries with the content files, so a missing or mis-filed project fails the checks.",
   "launch": [
-    { "slug": "mymaxxi-welcome-days", "category": "graphic-illustration", "status": "published" },
-    { "slug": "life-below-water", "category": "graphic-illustration", "status": "published" },
-    { "slug": "sunny-days-between-cubes", "category": "motion-film", "status": "published", "note": "Published with still photographs; the film link is still to come" },
-    { "slug": "chronolens", "category": "interactive-3d", "status": "draft", "note": "Contribution details pending" },
-    { "slug": "illustrated-book-covers", "category": "graphic-illustration", "status": "draft" },
-    { "slug": "illustration-collection", "category": "graphic-illustration", "status": "draft" },
-    { "slug": "calligraphy-typography", "category": "graphic-illustration", "status": "draft" },
-    { "slug": "roman-typography", "category": "graphic-illustration", "status": "draft" },
-    { "slug": "poster-collection", "category": "graphic-illustration", "status": "draft" },
-    { "slug": "dream-toy", "category": "brand-identity", "status": "draft", "note": "Final title pending" },
-    { "slug": "pfc-brand-identity", "category": "brand-identity", "status": "draft" }
+    {
+      "slug": "hamloqmeh",
+      "category": "digital-ui",
+      "status": "published",
+      "note": "Digital & UI, added by the owner; website and app as one case study"
+    },
+    {
+      "slug": "tradememory",
+      "category": "digital-ui",
+      "status": "published",
+      "note": "Digital & UI, added by the owner"
+    },
+    {
+      "slug": "littledetour",
+      "category": "digital-ui",
+      "status": "draft",
+      "note": "Login-protected (HTTP 401); not public yet"
+    },
+    {
+      "slug": "dream-toy",
+      "category": "brand-identity",
+      "status": "draft",
+      "note": "Title is Dreamto per the owner; spelling still to confirm"
+    },
+    {
+      "slug": "mymaxxi-welcome-days",
+      "category": "graphic-illustration",
+      "status": "published"
+    },
+    {
+      "slug": "life-below-water",
+      "category": "graphic-illustration",
+      "status": "published"
+    },
+    {
+      "slug": "sunny-days-between-cubes",
+      "category": "motion-film",
+      "status": "published",
+      "note": "Published with still photographs; the film link is still to come"
+    },
+    {
+      "slug": "chronolens",
+      "category": "interactive-3d",
+      "status": "draft",
+      "note": "Contribution details pending"
+    },
+    {
+      "slug": "illustrated-book-covers",
+      "category": "graphic-illustration",
+      "status": "draft"
+    },
+    {
+      "slug": "illustration-collection",
+      "category": "graphic-illustration",
+      "status": "draft"
+    },
+    {
+      "slug": "calligraphy-typography",
+      "category": "graphic-illustration",
+      "status": "draft"
+    },
+    {
+      "slug": "roman-typography",
+      "category": "graphic-illustration",
+      "status": "draft"
+    },
+    {
+      "slug": "poster-collection",
+      "category": "graphic-illustration",
+      "status": "draft"
+    },
+    {
+      "slug": "pfc-brand-identity",
+      "category": "brand-identity",
+      "status": "draft"
+    }
   ],
   "excluded": [
-    { "slug": "final-studio", "status": "draft", "note": "Not in the approved launch list" },
-    { "slug": "woman-life-freedom-exhibition", "status": "draft", "note": "Not in the approved launch list" },
-    { "slug": "track-la-sapienza", "status": "draft", "note": "Not in the approved launch list; Digital & UI selection pending" },
-    { "slug": "fruits-in-love", "status": "draft", "note": "Not in the approved launch list" }
+    {
+      "slug": "final-studio",
+      "status": "draft",
+      "note": "Not in the approved launch list"
+    },
+    {
+      "slug": "woman-life-freedom-exhibition",
+      "status": "draft",
+      "note": "Not in the approved launch list"
+    },
+    {
+      "slug": "track-la-sapienza",
+      "status": "draft",
+      "note": "Not in the approved launch list; not added by the owner"
+    },
+    {
+      "slug": "fruits-in-love",
+      "status": "draft",
+      "note": "Not in the approved launch list"
+    }
   ],
-  "categories": ["brand-identity", "graphic-illustration", "digital-ui", "motion-film", "interactive-3d"],
-  "categoriesWithNoApprovedProjects": ["digital-ui"]
+  "categories": [
+    "brand-identity",
+    "graphic-illustration",
+    "digital-ui",
+    "motion-film",
+    "interactive-3d"
+  ],
+  "categoriesWithNoApprovedProjects": []
 }

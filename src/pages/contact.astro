@@ -26,6 +26,17 @@ import { SHOW_DRAFTS } from '../lib/content';
         }
       </section>
 
+      <section aria-labelledby="phone-label">
+        <h2 class="eyebrow section-label" id="phone-label">Phone</h2>
+        {
+          site.phone ? (
+            <a class="contact-line" href={`tel:${site.phone.replace(/\s+/g, '')}`}>{site.phone}</a>
+          ) : (
+            <p class="meta">Phone number to be added.</p>
+          )
+        }
+      </section>
+
       <section aria-labelledby="profiles-label">
         <h2 class="eyebrow section-label" id="profiles-label">Profiles</h2>
         {

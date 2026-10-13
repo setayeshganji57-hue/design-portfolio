@@ -1,10 +1,10 @@
 # Review pack
 
-Current as of the latest round of UI changes. It covers how to open the site, what changed, project status, the screenshots and recording, what was verified, and what I need from you.
+Current as of the latest round: three Digital & UI projects, contact details, the mobile discipline strip, and the thesis entry.
 
 ## 1. How to open the site
 
-Three different things. Only the first exists today.
+There are three different things. Only the first exists today.
 
 ### A. Local preview (on your own computer)
 
@@ -22,13 +22,11 @@ npm install
 | What the public would see (published pages only) | `npm run build && npm run preview` | http://localhost:4321 |
 | Private review build (all drafts, marked noindex) | `npm run build:drafts && npm run preview` | http://localhost:4321 |
 
-The local server runs on your machine only. Stop it with Ctrl+C.
-
 ### B. Deployed preview (a hosted, private URL)
 
-**None exists.** The site has not been deployed. The dev server only runs inside this cloud session's container, so there is no URL you can open.
+**None exists.** Not deployed. The dev server only runs inside this cloud session's container, so there is no URL you can open.
 
-When you approve it, I recommend a private Cloudflare Pages preview behind Cloudflare Access. It is free and needs no domain. I will not create it until you say so.
+I recommend a private Cloudflare Pages preview behind Cloudflare Access when you are ready. I will not create it until you approve.
 
 ### C. Public production website
 
@@ -36,101 +34,93 @@ When you approve it, I recommend a private Cloudflare Pages preview behind Cloud
 
 ## 2. What changed in this round
 
-| Your feedback | What I did |
+| Request | What I did |
 | --- | --- |
-| "Too monochrome; add more colour" | Each discipline has its own colour band: Brand Identity (vermilion), Graphic & Illustration (saffron), Digital & UI (sage), Motion & Film (rose), Interactive & 3D (cornflower). They are my own choices, not Paloma's palette. The bands appear in the navigation, on the homepage tiles, on category headers, and as project chips. Burgundy stays the accent for active links. |
-| "Don't like the scissors/cut idea" | Removed the animated sweeping line. The scissors now sit on a dashed divider between the discipline rail and the content, as a fixed detail. Page moves use a short fade and rise (420 ms). |
-| "Use the Paloma idea" | A persistent vertical strip of the five disciplines on the left, with rotated labels, and the content to its right. The active discipline has a dark bar on top. Essays, About and Contact sit at the top right, as on the reference. |
-| "Headers a bit more basic" | Headings, the name and the interface now use Instrument Sans, which is a plain grotesque. Fraunces is kept only for the essay reading text. |
-| "Essays, About and Contact to the right side" | Each of these pages has its title on the left and its content in a right-hand column. The essay reading view follows the same arrangement. |
-| "Sunny Days should be published with stills" | Published, using its still photographs and plan diagrams. Its film link is optional and can be added later. |
-| Mobile | Unchanged for now. The vertical discipline strip for mobile is the next step, as you said. |
+| Add Hamloqmeh (website and app as one case study) | Published. Two buttons: Visit website, Open app. Both links return 200 from this environment. Role and development credit are separate. |
+| Add TradeMemory | Published. Open app button (returns 200). The site says it is in private beta, and I state that. |
+| Add Little Detour | **Draft.** Its website returns a log-in page (HTTP 401), so it isn't publicly viewable, and no Visit website button is added. |
+| Contact details | Email, phone and LinkedIn are on the Contact page. LinkedIn is also in the About page and footer. |
+| Mobile discipline strip | Built. The same five colour bands run as a row of columns under the top bar, with the dashed divider and scissors along their bottom edge. Labels read horizontally on phones. |
+| Dreamto | Title changed to Dreamto, as you wrote. Still a draft: the logo and Behance say DRYMTO, and the full Behance description was cut off in your screenshot. |
+| Thesis as an essay | Added as a draft entry. No abstract exists in the PDF, so none is written. See decisions. |
+| Colours | Kept as they are for now. |
 
 ## 3. Project status
 
-**Published (in the production build):**
+**Published:**
+- Hamloqmeh (Digital & UI)
+- TradeMemory (Digital & UI)
 - myMAXXI Welcome Days (Graphic & Illustration)
 - Life Below Water (Graphic & Illustration)
 - Sunny Days Between Cubes (Motion & Film), with stills
 
 **Draft, on the approved launch list:**
-- ChronoLens: Unveiling Temporal Mysteries (Interactive & 3D). Your contribution details are needed.
-- Illustrated Book Covers, Illustration Collection, Calligraphy & Typography, Roman Typography, Poster Collection (all Graphic & Illustration). Selections and details are needed.
-- Dream Toy (Brand Identity). Final title pending.
-- PFC (Brand Identity). Details needed.
+- Dreamto (Brand Identity). Title and spelling to confirm.
+- PFC (Brand Identity)
+- ChronoLens: Unveiling Temporal Mysteries (Interactive & 3D)
+- Illustrated Book Covers, Illustration Collection, Calligraphy & Typography, Roman Typography, Poster Collection (Graphic & Illustration)
 
-**Draft, not on the approved launch list (kept as drafts until you select them):**
+**Draft, not on the approved list:**
+- Little Detour (Digital & UI). Login-protected.
 - Final Studio / A3 thesis poster
 - Woman, Life, Freedom Exhibition
 - Track La Sapienza
 - Fruits in Love
 
-**Digital & UI:** no approved projects yet. Trade Memory and Hamlogme are waiting for references from you.
+**Essays:** the thesis entry is a draft. Specimen layout is labelled and not published.
 
 The manifest in `tests/launch-manifest.json` records this list. The tests fail if a project is missing, mis-filed, or published without approval.
 
-## 4. Screenshots and recording
+## 4. Screenshots
 
-Public screenshots come from the production build. Essay screenshots come from the draft build, because the only essay is a labelled layout specimen, which is not published.
+Public screenshots come from the production build. Essay screenshots come from the draft build.
 
 | File | What it shows |
 | --- | --- |
-| `screenshots/01-desktop-homepage-1440x900.png` | Desktop homepage with the discipline rail |
-| `screenshots/02-category-graphic-illustration-1440x900.png` | Category page with its colour band |
-| `screenshots/03-project-life-below-water-1440x900.png` | Project page, top of page |
-| `screenshots/04-about-1440x900.png` | About, content on the right |
-| `screenshots/05-mobile-homepage-390x844.png` | Mobile homepage, first screen |
+| `screenshots/01-desktop-homepage-1440x900.png` | Homepage with the discipline rail |
+| `screenshots/02-category-graphic-illustration-1440x900.png` | Category page |
+| `screenshots/03-project-life-below-water-1440x900.png` | Project page |
+| `screenshots/04-about-1440x900.png` | About |
 | `screenshots/05-mobile-homepage-390x844-full.png` | Mobile homepage, full length |
-| `screenshots/06-mobile-open-navigation-390x844.png` | Mobile navigation open |
-| `screenshots/07-essays-listing-1440x900.png` | Essays listing, draft build |
-| `screenshots/08-essay-reading-layout-1440x900.png` | Essay reading layout, labelled specimen, draft build |
-| `screenshots/09-essay-reading-layout-mobile-390x844.png` | Essay reading layout, mobile, draft build |
-| `recording/page-transition.mp4` | Page transition, 5.2 s: homepage → Graphic & Illustration → project → back |
+| `screenshots/06-mobile-open-navigation-390x844.png` | Mobile menu open |
+| `screenshots/10-category-digital-ui-1440x900.png` | Digital & UI category |
+| `screenshots/11-project-hamloqmeh-1440x900.png` | Hamloqmeh case study, desktop |
+| `screenshots/12-project-hamloqmeh-mobile-390x844.png` | Hamloqmeh case study, mobile |
+| `screenshots/13-project-tradememory-1440x900.png` | TradeMemory case study |
+| `screenshots/14-contact-1440x900.png` | Contact |
+| `screenshots/15-mobile-category-graphic-illustration-390x844.png` | Mobile category page |
+| `screenshots/07-essays-listing-1440x900.png` | Essays listing (draft build) |
+| `screenshots/08-essay-reading-layout-1440x900.png` | Essay reading layout, labelled specimen (draft build) |
+| `screenshots/09-essay-reading-layout-mobile-390x844.png` | Essay reading layout, mobile (draft build) |
 
-About the recording: captured from headless Chromium at 1280×800, at about 20 frames per second. It is an accurate capture of the rendering, but on your own machine the timing may feel slightly different.
+The Hamloqmeh and TradeMemory interface images were captured from the live sites. TradeMemory's logging, review and analytics screens sit behind a log-in, so they aren't included yet.
 
-## 5. What was verified
+## 5. Verification
 
 | Check | Result |
 | --- | --- |
-| Type checking and content schema (`astro check`) | 0 errors |
-| Unit tests (`npm test`) | 48 passed. Covers ordering, reading time, video URLs, palette tokens, text contrast, forbidden headings, the launch list |
+| Type checking and content schema | 0 errors |
+| Unit tests | 51 passed |
 | Browser checks, production build | All checks passed |
-| Browser checks, draft build | All checks passed (29 checks) |
+| Browser checks, draft build | All checks passed |
+| Project links (`npm run check:links`) | Hamloqmeh (website and app) and TradeMemory return 200. Little Detour isn't checked because it is a draft. |
 
-The browser checks cover every built route, no horizontal overflow at 360, 768, 1280 and 1440 px and at 1280×600, reachability of every discipline and page link, a 404 page, transitions between work pages, rapid clicks, back and forward, reduced motion, the mobile menu's focus handling, and the launch list.
+The link check uses curl. It fails if a published project's link doesn't respond with a success status, so a login-protected site can't go live with a Visit button by mistake.
 
-Launch checks compare each build with the manifest. They fail if an expected project page is missing, if an unexpected one is built, if a project is not listed in its category, or if a draft is linked from production output.
-
-**Verified by deliberately breaking it (previous round):** marking an unapproved project as published caused the browser checks to fail, and the change was reverted.
-
-### Colour and contrast
-
-Ink text on each discipline colour:
-
-| Discipline | Colour | Ink text contrast |
-| --- | --- | --- |
-| Brand Identity | `#E0764F` | 5.1 : 1 |
-| Graphic & Illustration | `#F0C75E` | 9.6 : 1 |
-| Digital & UI | `#7FB7A4` | 6.8 : 1 |
-| Motion & Film | `#E9A0B0` | 7.5 : 1 |
-| Interactive & 3D | `#7D9CC7` | 5.5 : 1 |
-
-Ink on paper is 13.6 : 1. Every discipline colour carries ink text, never paper text, so every label meets WCAG AA for normal text.
-
-### Transition
-
-Reviewed frame by frame. The earlier ghosting of the outgoing page is gone with the sweeping line. The new fade shows the content settle without any other movement. Reduced motion turns it off.
+The mobile discipline strip was checked at 390 px. The labels are horizontal on phones because a 72 px column is too narrow for vertical text to read well. The vertical text stays on desktop.
 
 ## 6. Decisions I need from you
 
-1. **Colours.** Do the five discipline colours work for you? They are my choices. I can shift any of them.
-2. **Dream Toy.** Which title should the page show: "Dream Toy", "DRYMTO" or "Dream Talk"? You mentioned a second name that already exists on Behance. Please confirm which name that is.
-3. **Digital & UI.** Send the references for Trade Memory and Hamlogme, plus the two or three further projects, when you have them.
-4. **Mobile.** Shall I build the vertical discipline strip for mobile next?
+1. **Hamloqmeh spelling.** You wrote "Hamloghme". The live website and app spell it Hamloqmeh, and the brand's Persian name is هم‌لقمه. I used Hamloqmeh. Tell me if you want your spelling.
+2. **Dreamto spelling.** The title is Dreamto, as you wrote. The logo and Behance say DRYMTO. Which should the page show? Please also send the full Behance description.
+3. **Little Detour.** Make the site publicly viewable, or send screenshots. Then I can add the Visit website button.
+4. **Thesis.** The PDF is the master's thesis, titled "The Role of Artificial Intelligence in Enhancing Startup Communication". Your message called it an essay and used the title "…in Startups Communication". Which title should appear? Should the site show the full text, a PDF download, or the abstract only? The thesis names five real companies in its case studies, and it reproduces figures from other sources. Both need your decision before publishing. I have not written an abstract, because the thesis has none.
+5. **Email address.** You gave Setayesh.ganji@gmail.com, which differs from the address on your account (setayeshganji57@gmail.com). I published the one you gave. Confirm which to use.
+6. **Surname.** The thesis title page reads "Setayesh Shahsavandganji". The site uses Setayesh Ganji. Please confirm.
+7. **Mobile labels.** Horizontal labels on phones are my call for legibility. Tell me if you want vertical text there too.
 
 ## 7. Not verified
 
-- Safari and Firefox. Firefox does not support cross-document View Transitions, so there, navigation is instant and the fade is skipped.
+- Safari and Firefox. Firefox does not support the page-transition fade, so navigation there is instant.
 - Screen readers, and touch behaviour on real devices. Mobile was checked in emulated viewports only.
-- The reference's category transition. The reference site did not respond reliably to my automated clicks, so I designed from its structure and its screenshot, not its timing.
+- The Hamloqmeh app's customer and business journeys. Only the log-in screen is captured, because the rest sits behind a login.

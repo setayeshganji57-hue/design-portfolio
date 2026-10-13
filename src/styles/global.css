@@ -293,7 +293,7 @@ a:hover .arrow {
   display: block;
   min-width: 0;
   padding: var(--gutter);
-  padding-top: calc(var(--header-h) + var(--gutter) * 0.75);
+  padding-top: calc(var(--gutter) * 0.9);
 }
 
 @media (min-width: 1024px) {
@@ -314,8 +314,81 @@ a:hover .arrow {
 
 /* ---------------------------------------------------------------- discipline rail (desktop) */
 
+/* Phones and tablets: the same five bands as a row of vertical columns
+   under the top bar, with the dashed divider and scissors along the bottom edge. */
 .rail {
-  display: none;
+  position: relative;
+  display: block;
+}
+
+.rail ol {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  height: clamp(8rem, 30vw, 10rem);
+}
+
+.rail li {
+  display: flex;
+  min-width: 0;
+}
+
+.rail .band {
+  flex: 1;
+  width: 100%;
+  min-height: 0;
+  justify-content: flex-start;
+  padding: 2.1rem 0 0.7rem;
+}
+
+.rail .band .num {
+  position: absolute;
+  top: 0.55rem;
+  left: 0;
+  right: 0;
+  text-align: center;
+  font-size: 0.8rem;
+}
+
+/* On phones the labels read horizontally, centred in each column. A 72px column
+   is too narrow for vertical text to stay legible. */
+.rail .band-label {
+  writing-mode: horizontal-tb;
+  transform: none;
+  font-size: clamp(0.74rem, 0.7rem + 0.4vw, 0.9rem);
+  line-height: 1.12;
+  text-align: center;
+  white-space: normal;
+  overflow-wrap: anywhere;
+  hyphens: auto;
+  padding-inline: 0.3rem;
+}
+
+.rail::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -2px;
+  border-bottom: 2px dashed var(--ink);
+  pointer-events: none;
+}
+
+.rail .scissors {
+  position: absolute;
+  left: 0.9rem;
+  bottom: -17px;
+  width: 34px;
+  height: 34px;
+  padding: 4px;
+  transform: rotate(90deg);
+  background: var(--paper);
+  color: var(--ink);
+  z-index: 2;
+  pointer-events: none;
+}
+
+.shell {
+  padding-top: var(--header-h);
 }
 
 @media (min-width: 1024px) {
@@ -325,6 +398,35 @@ a:hover .arrow {
     z-index: 3; /* keeps the dashed line and scissors above the page */
     display: block;
     height: 100dvh;
+  }
+
+  .rail ol {
+    height: 100%;
+  }
+
+  .rail .band {
+    padding: 1.1rem 0 1.4rem;
+  }
+
+  .rail .band .num {
+    position: static;
+    font-size: 0.85rem;
+  }
+
+  .rail .band {
+    justify-content: space-between;
+  }
+
+    .rail .band-label {
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+    font-size: clamp(1rem, 0.92rem + 0.35vw, 1.22rem);
+    line-height: 1.1;
+    text-align: start;
+    white-space: nowrap;
+    overflow-wrap: normal;
+    hyphens: manual;
+    padding-inline: 0;
   }
 
   .rail ol {
@@ -344,27 +446,21 @@ a:hover .arrow {
 
   /* The dashed cut line sits on the rail's right edge, with the scissors on it */
   .rail::after {
-    content: '';
-    position: absolute;
     top: 0;
     bottom: 0;
+    left: auto;
     right: -1px;
     width: 0;
+    border-bottom: 0;
     border-right: 1.5px dashed var(--ink);
-    pointer-events: none;
   }
 
   .rail .scissors {
-    position: absolute;
     top: clamp(5.5rem, 14vh, 8.5rem);
     right: -17px;
-    width: 34px;
-    height: 34px;
-    padding: 4px;
-    background: var(--paper);
-    color: var(--ink);
-    z-index: 2;
-    pointer-events: none;
+    left: auto;
+    bottom: auto;
+    transform: none;
   }
 }
 
@@ -389,13 +485,8 @@ a:hover .arrow {
 }
 
 .band-label {
-  writing-mode: vertical-rl;
-  transform: rotate(180deg);
-  font-size: clamp(1rem, 0.92rem + 0.35vw, 1.22rem);
   font-weight: 600;
   letter-spacing: -0.01em;
-  line-height: 1.1;
-  white-space: nowrap;
 }
 
 .band:hover .band-label {
@@ -2006,7 +2097,7 @@ a:hover .arrow {
 
 .contact-email {
   font-family: var(--display);
-  font-size: var(--step-3);
+  font-size: clamp(1.35rem, 1rem + 1.4vw, 2.2rem);
   font-weight: 600;
   line-height: 1.05;
   letter-spacing: -0.03em;
@@ -2016,6 +2107,21 @@ a:hover .arrow {
 }
 
 .contact-email:hover {
+  color: var(--burgundy);
+}
+
+.contact-line {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  font-family: var(--display);
+  font-size: var(--step-1);
+  font-weight: 600;
+  text-decoration-color: var(--burgundy);
+  text-decoration-thickness: 2px;
+}
+
+.contact-line:hover {
   color: var(--burgundy);
 }
 
@@ -2083,4 +2189,13 @@ a:hover .arrow {
   .pp-link:hover .pp-media img {
     transform: none;
   }
+}
+
+/* ---------------------------------------------------------------- project links */
+
+.project-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-bottom: clamp(1.5rem, 3vw, 2.5rem);
 }

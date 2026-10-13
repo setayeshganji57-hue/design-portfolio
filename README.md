@@ -86,6 +86,8 @@ No project is ever labelled "featured" or "selected". The order is the only edit
 | `summary` | One line, shown on category pages and used as the page description |
 | `overview` | Short text. Separate paragraphs with a blank line. |
 | `role`, `collaborators` | Credits |
+| `development` | Credit for development, kept apart from the design role, e.g. "AI-assisted development. Concept and interface design by …" |
+| `links` | Buttons such as Visit website or Open app. Add a link only after it responds publicly. Run `npm run check:links` before each release. |
 | `tags` | Free-text discipline tags shown under the title |
 | `cover` | The image used on category pages and in related links |
 | `hero` | `kind: image` + `media`, or `kind: video` + `video` |

@@ -1,0 +1,42 @@
+title: TradeMemory
+status: published
+categories: [digital-ui]
+order: 20
+tags: [Product concept, UI design, Analytics, Trading journal]
+summary: A trading journal that helps traders understand their decisions and performance.
+overview: |
+  A trading journal designed to help traders understand their decisions and performance. I developed the product concept and designed interfaces for trade logging, review, and analytics, drawing on my own experience as a trader.
+
+  The app is in private beta, as its homepage states. The site describes its analysis as historical only, not trading signals or financial advice.
+role: Product Concept, Visual Design & UI Design
+development: AI-assisted development. Concept and interface design by Setayesh Ganji.
+links:
+  - { label: Open app, url: "https://tradememory-sigma.vercel.app" }
+cover:
+  file: tradememory/app-desktop.jpg
+  alt: TradeMemory homepage on a dark background, with the private beta label and log-in buttons
+  aspect: "16/10"
+  fit: cover
+hero:
+  kind: image
+  media:
+    file: tradememory/app-desktop.jpg
+    alt: TradeMemory homepage on a dark background, with the private beta label and log-in buttons
+    aspect: "16/10"
+    fit: cover
+blocks:
+  - type: text
+    heading: What the app does
+    body: |
+      The homepage describes the workflow: upload an MT5 statement, verify that it is correct, review what the numbers cannot tell you, and see which patterns hold up.
+  - type: image
+    size: inset
+    media:
+      file: tradememory/app-mobile.jpg
+      alt: TradeMemory homepage on a phone
+      fit: contain
+      background: "#11151b"
+todo:
+  - Screens for trade logging, review and analytics sit behind a log-in. Send screenshots, or a demo account, to show them.
+  - Confirm the year
+  - Re-check the link before each release (scripts/check-links.mjs)

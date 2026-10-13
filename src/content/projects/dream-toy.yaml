@@ -1,24 +1,23 @@
-title: Dream Toy
+title: Dreamto
 status: draft
 categories: [brand-identity]
 order: 10
-tags: [Brand identity]
-cover: { alt: '', aspect: '16/10' }
+tags: [Brand identity, Logo]
+cover:
+  file: dreamto/mockup-logo.jpg
+  alt: Logo on a folded white card on a peach surface, in ochre and brown
+  aspect: "4/3"
+  fit: cover
 hero:
   kind: image
-  media: { alt: '', aspect: '16/9' }
-blocks:
-  - type: image
-    size: inset
-    media: { alt: '', aspect: '1/1', fit: contain }
-  - type: pair
-    items:
-      - { alt: '', aspect: '4/5' }
-      - { alt: '', aspect: '4/5' }
-  - type: image
-    size: full
-    media: { alt: '', aspect: '21/9' }
+  media:
+    file: dreamto/mockup-logo.jpg
+    alt: Logo on a folded white card on a peach surface, in ochre and brown
+    aspect: "4/3"
+    fit: cover
+blocks: []
 todo:
-  - "Confirm the written title: Behance lists it as DRYMTO, pronounced dream talk. Dream Toy is a placeholder."
-  - Logo, applications and original files
-  - Context, year and overview
+  - "Confirm the spelling. The title follows your message (Dreamto), but the logo and the Behance project say DRYMTO. Earlier you said it is pronounced dream talk."
+  - "Replace the cover and hero with the original logo file. The current image is a crop from a Behance screenshot."
+  - "Send the full Behance project description. The visible text is cut off, so no overview is written yet."
+  - Context (commissioned, academic or independent), year, role and collaborators

@@ -87,8 +87,10 @@ Needed:
 - [ ] Context for each poster.
 - [ ] Credit for any photographed mockups.
 
-### 10. Dream Toy / DRYMTO (Brand Identity) · **draft**, final title pending
-You wrote that the second name already exists on your Behance. Please confirm which name that is.
+### 10. Dreamto (Brand Identity) · **draft**, spelling pending
+- [ ] Spelling: Dreamto (your message), DRYMTO (logo and Behance).
+- [ ] Full Behance description. The visible text in your screenshot is cut off.
+- [ ] Replace the cover (a crop from a Behance screenshot) with the original logo file.
 Needed:
 - [ ] **Final written title.** The page currently says "Dream Toy", which is a placeholder. Behance spells it "DRYMTO", and you have said it is pronounced "dream talk."
 - [ ] Logo, identity and application files, as originals.
@@ -106,11 +108,39 @@ Needed:
 
 ---
 
-## Digital & UI (selection pending)
+## Digital & UI
 
-- [ ] **Trade Memory** and **Hamlogme**: the projects we worked on together. Please send the references (links, files or screenshots). I will not write them up from memory.
-- [ ] Two or three further projects: references to follow.
-- [ ] The nine Behance UI and web projects listed earlier remain unselected.
+### Hamloqmeh · **published**
+Have: website and app interface screenshots (live sites), the description, role and development credit.
+- [ ] Confirm the spelling (Hamloqmeh on the site, Hamloghme in your message, and هم‌لقمه in Persian).
+- [ ] Confirm the year, and whether the project was independent or commissioned.
+- [ ] Optional: business and customer journey screens, if you want them shown.
+
+### TradeMemory · **published**
+Have: the landing page (desktop and mobile), the description and role.
+- [ ] Screens for trade logging, review and analytics. They sit behind a log-in: send screenshots, or a demo account.
+- [ ] Confirm the year.
+
+### Little Detour · **draft**
+Blocked: the website returns a log-in page (HTTP 401).
+- [ ] Make the site publicly viewable, or send screenshots.
+- [ ] Interface screens for exploring cities, categories and activities.
+- [ ] Year, and whether independent or commissioned.
+
+### Track La Sapienza · **draft, not added by you**
+- [ ] Only if you decide to include it. The selection is yours.
+
+## Essays
+
+### The thesis · **draft**
+Title on the PDF: "The Role of Artificial Intelligence in Enhancing Startup Communication". Master's Degree course in Design Multimedia and Visual Communication, 2023–2024.
+- [ ] Confirm the title (your message said "…in Startups Communication").
+- [ ] Abstract. None exists in the PDF. Write one yourself, or approve a draft from the introduction.
+- [ ] Publication format: web reading, PDF download, or abstract only.
+- [ ] If you want the PDF downloadable: send permission to use the figures from other sources. Credit them in the image credits.
+- [ ] The case studies name WalkMe, Grizzle, OddBytes, Elevatus and Loopio. Confirm that naming them is acceptable.
+
+---
 
 ## Excluded from launch (drafts until you select them)
 
@@ -123,7 +153,10 @@ Needed:
 
 ## Site-wide
 
-- [ ] Public email address (`email` in `src/config/site.ts`). Contact shows an honest note until you add one.
+- [ ] Email: Setayesh.ganji@gmail.com is on the Contact page. Confirm it (your account address is different).
+- [ ] Phone: +39 351 855 7278 is on the Contact page. Confirm it.
+- [ ] LinkedIn is in the profiles list.
+- [ ] Surname: the thesis title page reads Shahsavandganji. The site uses Ganji.
 - [ ] CV as a PDF in `public/documents/`, if you want a download.
 - [ ] Portrait image for About, in `src/assets/media/about/`. The placeholder stays until then.
 - [ ] Confirm the About wording (first person; facts only). Confirm the bachelor's field name.

@@ -36,6 +36,7 @@ const facts: { term: string; value?: string; links?: { href: string; label: stri
   { term: 'Year', value: d.year !== undefined ? String(d.year) : undefined },
   { term: 'Context', value: [ctx, d.context?.course].filter(Boolean).join(' — ') || undefined },
   { term: 'Role', value: d.role },
+  { term: 'Development', value: d.development },
   { term: 'With', value: d.collaborators.length ? d.collaborators.join(', ') : undefined },
   { term: 'Tags', value: d.tags.length ? d.tags.join(', ') : undefined },
 ];
@@ -57,6 +58,18 @@ const facts: { term: string; value?: string; links?: { href: string; label: stri
             </ul>
           )}
         </aside>
+      )
+    }
+
+    {
+      d.links.length > 0 && (
+        <nav class="project-links" aria-label="Project links">
+          {d.links.map((l) => (
+            <a class="button" href={l.url} rel="noopener" target="_blank">
+              {l.label} <span aria-hidden="true">↗</span><span class="visually-hidden"> (opens in a new tab)</span>
+            </a>
+          ))}
+        </nav>
       )
     }
 

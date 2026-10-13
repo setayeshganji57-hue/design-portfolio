@@ -61,9 +61,11 @@ describe('categories', () => {
     ]);
   });
 
-  it('digital & UI has no approved projects yet (selection pending)', () => {
-    const inDigital = manifest.launch.filter((p) => p.category === 'digital-ui');
-    expect(inDigital).toEqual([]);
-    expect(manifest.categoriesWithNoApprovedProjects).toContain('digital-ui');
+  it('digital & UI publishes exactly the projects the owner added', () => {
+    const published = manifest.launch
+      .filter((p) => p.category === 'digital-ui' && p.status === 'published')
+      .map((p) => p.slug)
+      .sort();
+    expect(published).toEqual(['hamloqmeh', 'tradememory']);
   });
 });

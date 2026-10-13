@@ -106,7 +106,13 @@ const projects = defineCollection({
       summary: z.string().optional(),
       overview: z.string().optional(),
       role: z.string().optional(),
+      /** Credit for development, kept separate from the design role (e.g. "AI-assisted development"). */
+      development: z.string().optional(),
       collaborators: z.array(z.string()).default([]),
+      /** External links shown as buttons. Add only after checking that the URL responds publicly. */
+      links: z
+        .array(z.object({ label: z.string(), url: z.string().url() }))
+        .default([]),
       cover: media.default({}),
       hero: z
         .union([z.object({ kind: z.literal('image'), media }), z.object({ kind: z.literal('video'), video })])

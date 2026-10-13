@@ -1,0 +1,55 @@
+title: Hamloqmeh
+status: published
+categories: [digital-ui]
+order: 10
+tags: [Product concept, UI design, Persian, Right-to-left]
+summary: A Persian-language platform that connects food businesses with customers to reduce food waste.
+overview: |
+  A Persian-language platform connecting food businesses with customers to reduce food waste. I developed the concept and designed the visual identity, website, and app interfaces, including right-to-left layouts and customer and business journeys.
+role: Product Concept, Visual Design & UI Design
+development: AI-assisted development. Concept, visual identity and interface design by Setayesh Ganji.
+links:
+  - { label: Visit website, url: "https://hamloqmeh-website.vercel.app" }
+  - { label: Open app, url: "https://hamloqmeh-app.vercel.app" }
+cover:
+  file: hamloqmeh/website-desktop.jpg
+  alt: Homepage of the Hamloqmeh website in Persian, with a headline about saving good food
+  aspect: "16/10"
+  fit: cover
+  position: "50% 0%"
+hero:
+  kind: image
+  media:
+    file: hamloqmeh/website-desktop.jpg
+    alt: Homepage of the Hamloqmeh website in Persian, with a headline about saving good food
+    aspect: "16/10"
+    fit: cover
+    position: "50% 0%"
+blocks:
+  - type: text
+    heading: Website
+    body: |
+      The website introduces the platform in Persian, using right-to-left layouts. It explains how the service works, with separate sections for customers and for food businesses. During the trial stage, visitors can join a waiting list.
+  - type: pair
+    align: start
+    caption: The website and the app's log-in screen on a phone.
+    items:
+      - { file: hamloqmeh/website-mobile.jpg, alt: Hamloqmeh website on a phone, in Persian, right-to-left, fit: contain, background: "#f7f3ec" }
+      - { file: hamloqmeh/app-login-mobile.jpg, alt: Hamloqmeh app log-in screen on a phone, in Persian, fit: contain, background: "#f5f7fa" }
+  - type: text
+    heading: App
+    body: |
+      The app asks people to log in before they can view and reserve food packages.
+  - type: image
+    size: full
+    media:
+      file: hamloqmeh/app-login-desktop.jpg
+      alt: Hamloqmeh app log-in screen on a desktop browser, in Persian
+      caption: Customer app, log-in screen.
+      aspect: "16/10"
+      fit: cover
+todo:
+  - Confirm the year and whether the project was independent or commissioned
+  - Decide the spelling. The site and app spell it Hamloqmeh, and the brand's Persian name is هم‌لقمه. Your message said Hamloghme.
+  - Add business and customer journey screens if you want them shown. Only the public pages are captured here.
+  - Re-check both links before each release (scripts/check-links.mjs)

@@ -24,6 +24,8 @@ export interface SiteConfig {
   availability: string;
   /** Leave empty until a public address is confirmed. */
   email: string;
+  /** International format, e.g. +39 ... Leave empty to hide. */
+  phone: string;
   links: ProfessionalLink[];
   /**
    * CV file placed in /public/documents (e.g. "/documents/setayesh-ganji-cv.pdf").
@@ -67,8 +69,12 @@ export const site: SiteConfig = {
     'Interactive & 3D',
   ],
   availability: 'Open to design employment and freelance work.',
-  email: '',
-  links: [{ label: 'Behance', url: 'https://www.behance.net/setayeshganji1' }],
+  email: 'Setayesh.ganji@gmail.com',
+  phone: '+39 351 855 7278',
+  links: [
+    { label: 'Behance', url: 'https://www.behance.net/setayeshganji1' },
+    { label: 'LinkedIn', url: 'https://www.linkedin.com/in/setayesh-ganji-1b680a114' },
+  ],
   cv: [{ label: 'Curriculum vitae (PDF)', path: '/documents/setayesh-ganji-cv.pdf' }],
   portrait: null,
 };
