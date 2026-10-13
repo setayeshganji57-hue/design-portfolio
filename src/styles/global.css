@@ -152,7 +152,7 @@ button {
   font-family: var(--serif);
   font-size: var(--step-5);
   font-weight: 560;
-  font-variation-settings: 'SOFT' 30, 'WONK' 0;
+  font-variation-settings: 'SOFT' 0, 'WONK' 0;
   line-height: 0.9;
   letter-spacing: -0.035em;
   text-wrap: balance;
@@ -220,9 +220,9 @@ a:hover .arrow {
 .badge {
   display: inline-flex;
   align-items: center;
-  gap: 0.35em;
-  padding: 0.15em 0.55em;
-  border: 1px solid currentColor;
+  gap: 0.45em;
+  padding: 0;
+  border: 0;
   font-family: var(--sans);
   font-size: 0.8rem;
   font-weight: 600;
@@ -231,6 +231,14 @@ a:hover .arrow {
   line-height: 1.4;
   color: var(--burgundy);
   white-space: nowrap;
+}
+
+.badge::before {
+  content: '';
+  width: 0.45em;
+  height: 0.45em;
+  border-radius: 50%;
+  background: currentColor;
 }
 
 /* ---------------------------------------------------------------- shell */
@@ -287,7 +295,7 @@ a:hover .arrow {
   font-family: var(--serif);
   font-size: clamp(2rem, 1.2rem + 1.6vw, 2.75rem);
   font-weight: 600;
-  font-variation-settings: 'SOFT' 50, 'WONK' 1;
+  font-variation-settings: 'SOFT' 0, 'WONK' 0;
   line-height: 0.9;
   letter-spacing: -0.03em;
   text-decoration: none;
@@ -343,8 +351,8 @@ a:hover .arrow {
 }
 
 .nav-work a {
-  font-size: var(--step-1);
-  font-weight: 520;
+  font-size: clamp(1.02rem, 0.9rem + 0.3vw, 1.18rem);
+  font-weight: 500;
   line-height: 1.15;
   letter-spacing: -0.005em;
   align-items: center;
@@ -364,7 +372,7 @@ a:hover .arrow {
 
 .nav-pages a {
   font-family: var(--serif);
-  font-size: var(--step-1);
+  font-size: clamp(1.1rem, 0.98rem + 0.3vw, 1.28rem);
   font-style: italic;
   font-weight: 420;
   align-items: center;
@@ -403,11 +411,23 @@ a:hover .arrow {
 }
 
 .sidebar-foot {
+  display: grid;
+  gap: 0.35rem;
   margin-top: auto;
   padding-top: 2rem;
-  font-size: var(--step--1);
-  line-height: 1.45;
+  font-size: 0.9rem;
+  line-height: 1.4;
   color: var(--ink-soft);
+}
+
+.sidebar-foot a {
+  justify-self: start;
+  color: var(--ink);
+  text-decoration-color: var(--stone-strong);
+}
+
+.sidebar-foot a:hover {
+  color: var(--burgundy);
 }
 
 /* Short desktop screens: tighten before anything becomes unreachable */
@@ -612,11 +632,6 @@ a:hover .arrow {
   aspect-ratio: var(--ratio, 4 / 3);
   overflow: hidden;
   background-color: var(--paper-deep);
-  background-image: repeating-linear-gradient(
-    -45deg,
-    transparent 0 14px,
-    color-mix(in srgb, var(--stone) 55%, transparent) 14px 15px
-  );
   color: var(--ink-soft);
 }
 
@@ -664,11 +679,11 @@ a:hover .arrow {
 
 .ph-glyph {
   font-family: var(--serif);
-  font-size: clamp(3rem, 12cqi, 9rem);
+  font-size: clamp(2.5rem, 9cqi, 6.5rem);
   font-weight: 300;
-  font-style: italic;
   line-height: 1;
-  color: color-mix(in srgb, var(--ink) 18%, transparent);
+  letter-spacing: -0.03em;
+  color: color-mix(in srgb, var(--ink) 14%, transparent);
   user-select: none;
 }
 
@@ -685,9 +700,9 @@ a:hover .arrow {
   flex-wrap: wrap;
   align-items: baseline;
   gap: 0.25rem 0.75rem;
-  font-size: 0.82rem;
+  font-size: 0.74rem;
   font-weight: 560;
-  letter-spacing: 0.06em;
+  letter-spacing: 0.08em;
   text-transform: uppercase;
   line-height: 1.3;
 }
@@ -883,19 +898,37 @@ a:hover .arrow {
 
 .home-intro {
   display: grid;
-  gap: 1.25rem;
-  padding-bottom: clamp(1.75rem, 4vw, 3.5rem);
+  gap: 1.5rem;
+  padding-bottom: clamp(2rem, 4vw, 3.5rem);
 }
 
-.home-intro .lede em {
-  font-style: italic;
-  color: var(--burgundy);
+.home-intro .lede {
+  max-width: 30ch;
+}
+
+.home-status {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.2rem 1.5rem;
+  font-size: var(--step--1);
+  color: var(--ink-soft);
+}
+
+
+.status-dot {
+  display: inline-block;
+  width: 0.5rem;
+  height: 0.5rem;
+  margin-right: 0.5rem;
+  border-radius: 50%;
+  background: var(--burgundy);
+  vertical-align: 0.08em;
 }
 
 .home-index {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.2rem 1.25rem;
+  gap: 0 1.25rem;
   font-size: var(--step--1);
 }
 
@@ -920,12 +953,58 @@ a:hover .arrow {
 
 .home-grid {
   display: grid;
-  gap: clamp(2.75rem, 5vw, 4.5rem) var(--gap);
+  gap: clamp(2.5rem, 4.5vw, 4rem) var(--gap);
+  border-top: 1px solid var(--ink);
+  padding-top: clamp(1.25rem, 2vw, 1.75rem);
 }
 
 .tile {
-  display: block;
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+  min-width: 0;
   text-decoration: none;
+}
+
+.tile-caption {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  align-items: baseline;
+  column-gap: 0.85rem;
+  row-gap: 0.25rem;
+}
+
+.tile-caption .num {
+  font-size: var(--step--1);
+}
+
+.tile-title {
+  font-family: var(--serif);
+  font-size: var(--step-2);
+  font-weight: 520;
+  font-variation-settings: 'SOFT' 0;
+  line-height: 1.05;
+  letter-spacing: -0.02em;
+  text-wrap: balance;
+  transition: color 160ms;
+}
+
+.tile-sub {
+  grid-column: 2;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0.25rem 1rem;
+  font-size: var(--step--1);
+  color: var(--ink-soft);
+}
+
+.tile-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35em;
+  font-weight: 560;
+  color: var(--ink);
 }
 
 .tile-media {
@@ -938,110 +1017,91 @@ a:hover .arrow {
 }
 
 .tile:hover .tile-media img {
-  transform: scale(1.025);
+  transform: scale(1.02);
 }
 
-.tile-caption {
+.tile:hover .tile-title,
+.tile:hover .tile-cta {
+  color: var(--burgundy);
+}
+
+/* Companion panel: the non-work pages, completing the last row */
+.home-more {
   display: grid;
-  grid-template-columns: auto 1fr;
-  align-items: baseline;
-  column-gap: 0.85rem;
-  row-gap: 0.15rem;
-  padding-top: 0.9rem;
+  align-content: start;
+  gap: 0;
+  border-top: 1px solid var(--stone);
 }
 
-.tile-caption .num {
-  font-size: var(--step--1);
+.home-more a {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 0.15rem 1rem;
+  padding: 1rem 0;
+  border-bottom: 1px solid var(--stone);
+  text-decoration: none;
 }
 
-.tile-title {
+.home-more-title {
   font-family: var(--serif);
-  font-size: var(--step-3);
-  font-weight: 560;
-  font-variation-settings: 'SOFT' 30;
-  line-height: 0.98;
-  letter-spacing: -0.025em;
-  text-wrap: balance;
+  font-size: var(--step-1);
+  font-weight: 500;
+  font-style: italic;
 }
 
-.tile-sub {
-  grid-column: 2;
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  gap: 0.25rem 1.1rem;
-  margin-top: 0.35rem;
+.home-more-text {
+  grid-column: 1;
   font-size: var(--step--1);
   color: var(--ink-soft);
 }
 
-.tile-cta {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.4em;
-  min-height: 32px;
-  font-weight: 560;
-  color: var(--ink);
-  text-decoration: underline;
-  text-decoration-color: var(--stone-strong);
-  text-underline-offset: 0.25em;
+.home-more .arrow {
+  grid-column: 2;
+  grid-row: 1 / 3;
+  align-self: center;
 }
 
-.tile:hover .tile-cta {
+.home-more a:hover .home-more-title,
+.home-more a:hover .arrow {
   color: var(--burgundy);
-  text-decoration-color: var(--burgundy);
-}
-
-.tile:hover .tile-title {
-  color: var(--burgundy);
-}
-
-/* Mobile/tablet: stacked, with an alternating indent so it doesn't read as a list of cards */
-@media (max-width: 1023.98px) {
-  .tile:nth-child(even) {
-    margin-left: 12%;
-  }
-
-  .tile:nth-child(odd):not(:first-child) {
-    margin-right: 8%;
-  }
 }
 
 @media (min-width: 640px) and (max-width: 1023.98px) {
   .home-grid {
-    grid-template-columns: repeat(6, minmax(0, 1fr));
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
-  .tile {
-    margin: 0 !important;
+  .tile--1,
+  .tile--4 {
+    grid-column: 1 / -1;
   }
-
-  .tile--1 { grid-column: 1 / 7; }
-  .tile--2 { grid-column: 1 / 5; }
-  .tile--3 { grid-column: 3 / 7; }
-  .tile--4 { grid-column: 1 / 7; }
-  .tile--5 { grid-column: 2 / 6; }
 }
 
-/* Desktop: an asymmetric 12-column composition */
+/* Desktop: a measured 12-column composition — rows share a top line, widths alternate */
 @media (min-width: 1024px) {
   .home-grid {
     grid-template-columns: repeat(12, minmax(0, 1fr));
     align-items: start;
   }
 
-  .tile--1 { grid-column: 1 / 8; }
-  .tile--2 { grid-column: 9 / 13; margin-top: clamp(4rem, 10vw, 10rem); }
-  .tile--3 { grid-column: 1 / 6; }
-  .tile--4 { grid-column: 7 / 13; margin-top: clamp(2.5rem, 7vw, 7rem); }
-  .tile--5 { grid-column: 3 / 10; }
-}
+  /* Subgrid keeps captions in a row the same height, so images share a top line */
+  .tile {
+    display: grid;
+    grid-row: span 2;
+    grid-template-rows: subgrid;
+    row-gap: 0.85rem;
+  }
 
-@media (min-width: 1440px) {
-  .tile--1 { grid-column: 1 / 7; }
-  .tile--2 { grid-column: 8 / 12; }
-  .tile--4 { grid-column: 7 / 12; }
-  .tile--5 { grid-column: 4 / 10; }
+  .tile-caption {
+    align-self: end;
+  }
+
+  .tile--1 { grid-column: 1 / 8; }
+  .tile--2 { grid-column: 8 / 13; }
+  .tile--3 { grid-column: 1 / 6; }
+  .tile--4 { grid-column: 6 / 13; }
+  .tile--5 { grid-column: 1 / 8; }
+  .home-more { grid-column: 9 / 13; grid-row: span 2; align-self: end; }
 }
 
 /* ---------------------------------------------------------------- category page */
@@ -1205,8 +1265,9 @@ a:hover .arrow {
     grid-row: 1;
   }
 
-  .projects--stack .pp-title {
-    font-size: var(--step-3);
+  .projects--stack .pp-meta {
+    padding-top: 0.9rem;
+    border-top: 1px solid var(--ink);
   }
 }
 
@@ -1303,7 +1364,7 @@ a:hover .arrow {
   font-family: var(--serif);
   font-size: var(--step-4);
   font-weight: 560;
-  font-variation-settings: 'SOFT' 30;
+  font-variation-settings: 'SOFT' 0;
   line-height: 0.95;
   letter-spacing: -0.03em;
   text-wrap: balance;
@@ -1569,7 +1630,7 @@ a:hover .arrow {
   font-family: var(--serif);
   font-size: var(--step-4);
   font-weight: 500;
-  font-variation-settings: 'SOFT' 50;
+  font-variation-settings: 'SOFT' 0;
   line-height: 0.98;
   letter-spacing: -0.03em;
   text-wrap: balance;
@@ -1603,7 +1664,7 @@ a:hover .arrow {
   font-family: var(--serif);
   font-size: clamp(1.1rem, 1.04rem + 0.3vw, 1.27rem);
   font-weight: 380;
-  font-variation-settings: 'SOFT' 50;
+  font-variation-settings: 'SOFT' 0;
   line-height: 1.65;
 }
 
@@ -1865,31 +1926,64 @@ a:hover .arrow {
 /* ---------------------------------------------------------------- footer */
 
 .footer {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  gap: 1rem 2rem;
+  display: grid;
+  gap: 2rem;
   margin-top: var(--section);
-  padding-top: 1.25rem;
-  border-top: 1px solid var(--stone);
+  padding-top: clamp(1.5rem, 3vw, 2.5rem);
+  border-top: 1px solid var(--ink);
   font-size: var(--step--1);
   color: var(--ink-soft);
 }
 
-.footer nav ul {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0 1.1rem;
+.footer-cta {
+  display: grid;
+  gap: 0.6rem;
 }
 
-.footer a {
+.footer-cta a {
+  justify-self: start;
+  font-family: var(--serif);
+  font-size: var(--step-3);
+  font-weight: 500;
+  line-height: 1.05;
+  letter-spacing: -0.025em;
+  color: var(--ink);
+  text-decoration: none;
+}
+
+.footer-cta a:hover {
+  color: var(--burgundy);
+}
+
+.footer-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.5rem 2rem;
+}
+
+.footer ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0 1.25rem;
+}
+
+.footer a:not(.footer-cta a) {
   display: inline-flex;
   align-items: center;
   min-height: 44px;
+  text-decoration-color: var(--stone-strong);
 }
 
 .footer a:hover {
   color: var(--burgundy);
+}
+
+@media (min-width: 1024px) {
+  .footer-nav {
+    display: none; /* the sidebar is always present at this width */
+  }
 }
 
 .preview-flag {
@@ -1897,10 +1991,11 @@ a:hover .arrow {
   right: 0.75rem;
   bottom: 0.75rem;
   z-index: 50;
-  padding: 0.3rem 0.65rem;
-  background: var(--burgundy);
-  color: var(--paper);
-  font-size: 0.78rem;
+  padding: 0.25rem 0.55rem;
+  border: 1px solid var(--burgundy);
+  background: var(--paper);
+  color: var(--burgundy);
+  font-size: 0.72rem;
   font-weight: 600;
   letter-spacing: 0.05em;
   text-transform: uppercase;

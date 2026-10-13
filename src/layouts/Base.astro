@@ -81,12 +81,16 @@ const robots = noindex || SHOW_DRAFTS ? 'noindex, nofollow' : undefined;
         <a class="brand" href="/" aria-current={current === '/' ? 'page' : undefined}><span>Setayesh</span> <span>Ganji</span></a>
         <p class="brand-role">{site.role}</p>
         <Nav current={current} section={section} id="side-nav" />
-        <p class="sidebar-foot">{site.location}<br />{site.availability}</p>
+        <div class="sidebar-foot">
+          <p><span class="status-dot" aria-hidden="true"></span>{site.availability}</p>
+          <p>{site.location}</p>
+          {site.email ? <a href={`mailto:${site.email}`}>{site.email}</a> : site.links[0] && <a href={site.links[0].url} rel="me noopener" target="_blank">{site.links[0].label}<span class="visually-hidden"> (opens in a new tab)</span></a>}
+        </div>
       </aside>
 
       <main class="main stage" id="content" tabindex="-1">
         <slot />
-        <Footer />
+        <Footer current={current} />
       </main>
     </div>
 

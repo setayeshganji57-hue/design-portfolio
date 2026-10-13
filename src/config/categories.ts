@@ -47,7 +47,7 @@ export const categories: Category[] = [
     displayLines: ['Brand', 'Identity'],
     intro: 'Identity systems, marks and the visual language that carries them across print, screen and space.',
     layout: 'stack',
-    homeAspect: '6/5',
+    homeAspect: '4/3',
   },
   {
     slug: 'graphic-illustration',
@@ -55,7 +55,7 @@ export const categories: Category[] = [
     displayLines: ['Graphic &', 'Illustration'],
     intro: 'Posters, book covers, illustration, calligraphy and type — printed matter and drawn work.',
     layout: 'mosaic',
-    homeAspect: '3/4',
+    homeAspect: '1/1',
   },
   {
     slug: 'digital-ui',
@@ -63,7 +63,7 @@ export const categories: Category[] = [
     displayLines: ['Digital', '& UI'],
     intro: 'Interfaces and screen-based design.',
     layout: 'grid',
-    homeAspect: '16/10',
+    homeAspect: '4/3',
   },
   {
     slug: 'motion-film',
@@ -79,7 +79,7 @@ export const categories: Category[] = [
     displayLines: ['Interactive', '& 3D'],
     intro: 'Games, interactive experiences and three-dimensional worlds.',
     layout: 'stack',
-    homeAspect: '16/10',
+    homeAspect: '16/9',
   },
 ];
 

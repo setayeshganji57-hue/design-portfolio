@@ -101,9 +101,26 @@ What the `npm run e2e` checks cover (headless Chromium 141):
 - **Stack:** Astro 5.18 (the mature 5.x line), not the newest major (7.x). I chose it for stability and verified compatibility; upgrading later is optional.
 - **Fix found during testing:** the `@view-transition` opt-in is inlined in `<head>`. When it only lived in the external stylesheet, Chromium skipped about half of the transitions; inlined, they were 100% reliable in testing.
 
-## References
+## References and source material: how to grant access
 
-I couldn't inspect the reference sites (palomarincon.com, sic-est.com, eliapelle.com), Behance or the Google Drive portfolio. This environment's network policy blocks those hosts, so the design follows the written brief only, and no project facts were taken from Behance or the PDF. To let a future session look at them, add those domains under the environment's network access settings.
+This cloud environment's network policy blocks Behance and Google Drive, so I couldn't read the portfolio sources. Any one of these options unblocks it.
+
+**Option A: allow the domains (recommended, so I can read Behance and the Drive PDF myself)**
+1. Open the session's cloud environment menu in the title bar and choose **Edit**.
+2. Under **Network access**, either pick a broader level, or keep "Limited" and add these under **Allowed domains**, leaving "Allow package managers" ticked:
+   - `behance.net`, `www.behance.net`, `mir-s3-cdn-cf.behance.net` (Behance images)
+   - `drive.google.com`, `drive.usercontent.google.com`, `docs.google.com`
+   - optionally `palomarincon.com`, `www.sic-est.com`, `eliapelle.com` (design references)
+3. Make sure the Drive PDF is shared as **"Anyone with the link → Viewer"**.
+4. Start a new session, or tell me it's done.
+
+Docs: https://code.claude.com/docs/en/cloud-environments#network-access
+
+**Option B: upload the files directly (best quality)**
+Commit the original files to the repository, e.g. `src/assets/media/<project-slug>/…` and `incoming/portfolio.pdf`. Original exports are better than anything extracted from a PDF or downloaded from Behance, which serves compressed images.
+
+**Option C: connect Google Drive**
+Add the Google Drive connector at https://claude.ai/customize/connectors, then start a new session.
 
 ## Not done in this phase (by design)
 

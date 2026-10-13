@@ -2,11 +2,17 @@
 import { site } from '../config/site';
 import { categories } from '../config/categories';
 const year = new Date().getFullYear();
+const { current = '' } = Astro.props as { current?: string };
 ---
 
 <footer class="footer">
-  <p>© {year} {site.name}</p>
-  <nav aria-label="Footer">
+  {current !== '/contact' && (
+  <div class="footer-cta">
+    <p>{site.availability}</p>
+    <a href="/contact">Get in touch <span class="arrow" aria-hidden="true">→</span></a>
+  </div>
+  )}
+  <nav class="footer-nav" aria-label="Footer">
     <ul>
       {categories.map((c) => <li><a href={`/work/${c.slug}`}>{c.title}</a></li>)}
       <li><a href="/essays">Essays</a></li>
@@ -14,4 +20,11 @@ const year = new Date().getFullYear();
       <li><a href="/contact">Contact</a></li>
     </ul>
   </nav>
+  <div class="footer-row">
+    <p>© {year} {site.name}</p>
+    <ul>
+      {site.links.map((l) => <li><a href={l.url} rel="me noopener" target="_blank">{l.label}<span class="visually-hidden"> (opens in a new tab)</span></a></li>)}
+      <li><a href="#content">Back to top ↑</a></li>
+    </ul>
+  </div>
 </footer>

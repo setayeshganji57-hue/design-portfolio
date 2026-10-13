@@ -27,7 +27,7 @@ Each project's own `todo:` list (in its YAML file) repeats its open items. That 
 ## Brand Identity
 
 - [ ] **Dream Toy** (`dream-toy.yaml`)
-  - [ ] **Confirm the final spelling.** Behance lists it as **"DRYMTO"**; "Dream Toy" is a provisional display title.
+  - [ ] **Confirm the written title.** Behance lists it as **"DRYMTO"**, and Setayesh says it is pronounced "dream talk". Should the site show "DRYMTO", "Dream Talk", or something else? "Dream Toy" is a placeholder until then.
   - [ ] Cover, logo, applications (original files)
   - [ ] Context (academic, commissioned or independent), year, overview, role
 - [ ] **PFC — Brand & Visual Identity** (`pfc-brand-identity.yaml`)

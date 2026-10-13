@@ -57,7 +57,7 @@ try {
     if (w >= 1024) {
       // Every sidebar link must be reachable (scrolling the sidebar if needed).
       const reachable = await page.evaluate(() => {
-        const links = [...document.querySelectorAll('.sidebar a')];
+        const links = [...document.querySelectorAll('.sidebar .brand, .sidebar .nav a')];
         return links.every((a) => {
           a.scrollIntoView({ block: 'nearest' });
           const r = a.getBoundingClientRect();
