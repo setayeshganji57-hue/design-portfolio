@@ -47,7 +47,7 @@ const notPublic = d.status !== 'published' || d.specimen;
         {year && <span>{d.date ? <time datetime={d.date.toISOString().slice(0, 10)}>{year}</time> : year}</span>}
         {contextLabel(d.context) && <span>{contextLabel(d.context)}</span>}
         <span>{d.language}</span>
-        {minutes > 0 && <span>{minutes} min read</span>}
+        {minutes >= 3 && <span>{minutes} min read</span>}
         {d.tags.length > 0 && <span>{d.tags.join(', ')}</span>}
       </p>
       {
@@ -60,8 +60,9 @@ const notPublic = d.status !== 'published' || d.specimen;
       }
       {
         hasPdf && (
-          <p style="margin-top:1.5rem" lang="en">
-            <a class="button" href={d.pdf} download>Download PDF <span aria-hidden="true">↓</span></a>
+          <p class="essay-pdf" lang="en">
+            <a class="button" href={d.pdf} target="_blank" rel="noopener">Open PDF <span aria-hidden="true">↗</span><span class="visually-hidden"> (opens in a new tab)</span></a>
+            <a class="button button--quiet" href={d.pdf} download>Download PDF <span aria-hidden="true">↓</span></a>
           </p>
         )
       }

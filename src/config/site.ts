@@ -69,7 +69,7 @@ export const site: SiteConfig = {
     'Interactive & 3D',
   ],
   availability: 'Open to design employment and freelance work.',
-  email: 'Setayesh.ganji@gmail.com',
+  email: 'Setayesh.gannji@gmail.com',
   phone: '+39 351 855 7278',
   links: [
     { label: 'Behance', url: 'https://www.behance.net/setayeshganji1' },

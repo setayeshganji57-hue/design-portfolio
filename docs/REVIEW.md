@@ -36,14 +36,12 @@ I recommend a private Cloudflare Pages preview behind Cloudflare Access when you
 
 | Request | What I did |
 | --- | --- |
-| Add Hamloqmeh (website and app as one case study) | Published. Two buttons: Visit website, Open app. Both links return 200 from this environment. Role and development credit are separate. |
-| Add TradeMemory | Published. Open app button (returns 200). The site says it is in private beta, and I state that. |
-| Add Little Detour | **Draft.** Its website returns a log-in page (HTTP 401), so it isn't publicly viewable, and no Visit website button is added. |
-| Contact details | Email, phone and LinkedIn are on the Contact page. LinkedIn is also in the About page and footer. |
-| Mobile discipline strip | Built. The same five colour bands run as a row of columns under the top bar, with the dashed divider and scissors along their bottom edge. Labels read horizontally on phones. |
-| Dreamto | Title changed to Dreamto, as you wrote. Still a draft: the logo and Behance say DRYMTO, and the full Behance description was cut off in your screenshot. |
-| Thesis as an essay | Added as a draft entry. No abstract exists in the PDF, so none is written. See decisions. |
-| Colours | Kept as they are for now. |
+| Hamloqmeh: stop work on it | No further changes. It stays published as it is, with its spelling confirmed. |
+| Dreamto | Stays a draft. I can't open its Behance page from this environment (Behance blocks the project page here), so the description is still missing. The spelling question is closed: the title is Dreamto. |
+| Publish the thesis in full | Published as an essay: "The Influence of AI in Startups Communication". The full 99-page PDF is in `public/documents/`, with Open PDF and Download PDF buttons. The PDF's cover reads "The Role of Artificial Intelligence in Enhancing Startup Communication." |
+| Email | Setayesh.gannji@gmail.com, as you wrote it, on the Contact page. Your earlier message spelled it Setayesh.ganji@gmail.com. |
+| Surname | Unchanged. The site uses Ganji. |
+| Reading time | Hidden for essays under three minutes, so the thesis no longer says "1 min read". |
 
 ## 3. Project status
 
@@ -111,16 +109,12 @@ The mobile discipline strip was checked at 390 px. The labels are horizontal on 
 
 ## 6. Decisions I need from you
 
-1. **Hamloqmeh spelling.** You wrote "Hamloghme". The live website and app spell it Hamloqmeh, and the brand's Persian name is هم‌لقمه. I used Hamloqmeh. Tell me if you want your spelling.
-2. **Dreamto spelling.** The title is Dreamto, as you wrote. The logo and Behance say DRYMTO. Which should the page show? Please also send the full Behance description.
-3. **Little Detour.** Make the site publicly viewable, or send screenshots. Then I can add the Visit website button.
-4. **Thesis.** The PDF is the master's thesis, titled "The Role of Artificial Intelligence in Enhancing Startup Communication". Your message called it an essay and used the title "…in Startups Communication". Which title should appear? Should the site show the full text, a PDF download, or the abstract only? The thesis names five real companies in its case studies, and it reproduces figures from other sources. Both need your decision before publishing. I have not written an abstract, because the thesis has none.
-5. **Email address.** You gave Setayesh.ganji@gmail.com, which differs from the address on your account (setayeshganji57@gmail.com). I published the one you gave. Confirm which to use.
-6. **Surname.** The thesis title page reads "Setayesh Shahsavandganji". The site uses Setayesh Ganji. Please confirm.
-7. **Mobile labels.** Horizontal labels on phones are my call for legibility. Tell me if you want vertical text there too.
+1. **Email spelling.** Setayesh.gannji@gmail.com is on the site as you wrote it. Your earlier message used Setayesh.ganji@gmail.com. Which is correct?
+2. **Mobile labels.** Horizontal labels on phones are my call for legibility. Tell me if you want vertical text there too.
 
 ## 7. Not verified
 
 - Safari and Firefox. Firefox does not support the page-transition fade, so navigation there is instant.
 - Screen readers, and touch behaviour on real devices. Mobile was checked in emulated viewports only.
-- The Hamloqmeh app's customer and business journeys. Only the log-in screen is captured, because the rest sits behind a login.
+- The Hamloqmeh app's customer and business journeys (not needed for now, per your message).
+- Dreamto's Behance description and images, which Behance blocks from this environment.

@@ -49,7 +49,6 @@ blocks:
       aspect: "16/10"
       fit: cover
 todo:
-  - Confirm the year and whether the project was independent or commissioned
-  - Decide the spelling. The site and app spell it Hamloqmeh, and the brand's Persian name is هم‌لقمه. Your message said Hamloghme.
-  - Add business and customer journey screens if you want them shown. Only the public pages are captured here.
-  - Re-check both links before each release (scripts/check-links.mjs)
+  - Confirm the year, and whether the project was independent or commissioned
+  - "Optional: business and customer journey screens, if you want them shown"
+  - Re-check both links before each release (npm run check:links)

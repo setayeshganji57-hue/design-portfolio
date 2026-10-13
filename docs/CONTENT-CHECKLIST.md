@@ -87,9 +87,8 @@ Needed:
 - [ ] Context for each poster.
 - [ ] Credit for any photographed mockups.
 
-### 10. Dreamto (Brand Identity) · **draft**, spelling pending
-- [ ] Spelling: Dreamto (your message), DRYMTO (logo and Behance).
-- [ ] Full Behance description. The visible text in your screenshot is cut off.
+### 10. Dreamto (Brand Identity) · **draft**
+- [ ] Full description. Behance blocks the project page from this environment, and the visible text in your screenshot is cut off.
 - [ ] Replace the cover (a crop from a Behance screenshot) with the original logo file.
 Needed:
 - [ ] **Final written title.** The page currently says "Dream Toy", which is a placeholder. Behance spells it "DRYMTO", and you have said it is pronounced "dream talk."
@@ -112,7 +111,7 @@ Needed:
 
 ### Hamloqmeh · **published**
 Have: website and app interface screenshots (live sites), the description, role and development credit.
-- [ ] Confirm the spelling (Hamloqmeh on the site, Hamloghme in your message, and هم‌لقمه in Persian).
+- [x] Name: Hamloqmeh, as you confirmed.
 - [ ] Confirm the year, and whether the project was independent or commissioned.
 - [ ] Optional: business and customer journey screens, if you want them shown.
 
@@ -132,13 +131,11 @@ Blocked: the website returns a log-in page (HTTP 401).
 
 ## Essays
 
-### The thesis · **draft**
-Title on the PDF: "The Role of Artificial Intelligence in Enhancing Startup Communication". Master's Degree course in Design Multimedia and Visual Communication, 2023–2024.
-- [ ] Confirm the title (your message said "…in Startups Communication").
-- [ ] Abstract. None exists in the PDF. Write one yourself, or approve a draft from the introduction.
-- [ ] Publication format: web reading, PDF download, or abstract only.
-- [ ] If you want the PDF downloadable: send permission to use the figures from other sources. Credit them in the image credits.
-- [ ] The case studies name WalkMe, Grizzle, OddBytes, Elevatus and Loopio. Confirm that naming them is acceptable.
+### The master's thesis · **published (full PDF)**
+Title: "The Influence of AI in Startups Communication" (as you gave it). The PDF's cover reads "The Role of Artificial Intelligence in Enhancing Startup Communication." Master's Degree course in Design Multimedia and Visual Communication, 2023–2024. The full 99-page PDF is in `public/documents/` and is linked as Open PDF and Download PDF.
+- [ ] Optional: a short abstract for the listing. The PDF has none.
+- [ ] Optional: web text. The site currently offers the PDF only.
+- [ ] The PDF includes its own references and image sources.
 
 ---
 
@@ -153,10 +150,10 @@ Title on the PDF: "The Role of Artificial Intelligence in Enhancing Startup Comm
 
 ## Site-wide
 
-- [ ] Email: Setayesh.ganji@gmail.com is on the Contact page. Confirm it (your account address is different).
+- [x] Email: Setayesh.gannji@gmail.com is on the Contact page, as you wrote it. Your earlier message spelled it Setayesh.ganji@gmail.com. Tell me if that spelling is correct.
 - [ ] Phone: +39 351 855 7278 is on the Contact page. Confirm it.
 - [ ] LinkedIn is in the profiles list.
-- [ ] Surname: the thesis title page reads Shahsavandganji. The site uses Ganji.
+- [x] Surname: the site uses Ganji, as you asked.
 - [ ] CV as a PDF in `public/documents/`, if you want a download.
 - [ ] Portrait image for About, in `src/assets/media/about/`. The placeholder stays until then.
 - [ ] Confirm the About wording (first person; facts only). Confirm the bachelor's field name.

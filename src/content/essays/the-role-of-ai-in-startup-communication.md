@@ -1,8 +1,6 @@
 ---
-# Draft. Hidden in production until status is changed.
-# Title as printed on the thesis title page. No abstract exists in the PDF, so none is written here.
-title: The Role of Artificial Intelligence in Enhancing Startup Communication
-status: draft
+title: The Influence of AI in Startups Communication
+status: published
 kind: thesis
 year: "2023–2024"
 language: English
@@ -13,8 +11,9 @@ context:
   course: Master's Degree course in Design Multimedia and Visual Communication
 tags: [Artificial intelligence, Startups, Communication]
 order: 10
+pdf: /documents/ai-startup-communication-thesis.pdf
 references: []
 imageCredits: []
 ---
 
-The text of the thesis is not yet published on the site. Decide whether it should appear as a web reading, a PDF download, or an abstract only.
+The full master's thesis is available as a PDF, with its references and image sources included.

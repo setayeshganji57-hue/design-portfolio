@@ -17,7 +17,6 @@ hero:
     fit: cover
 blocks: []
 todo:
-  - "Confirm the spelling. The title follows your message (Dreamto), but the logo and the Behance project say DRYMTO. Earlier you said it is pronounced dream talk."
-  - "Replace the cover and hero with the original logo file. The current image is a crop from a Behance screenshot."
-  - "Send the full Behance project description. The visible text is cut off, so no overview is written yet."
-  - Context (commissioned, academic or independent), year, role and collaborators
+  - "Description: the full Behance text can't be read from this environment. Add it when available."
+  - Replace the cover with the original logo file. The current image is a crop from a Behance screenshot.
+  - Context, year, role and collaborators

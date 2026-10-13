@@ -35,7 +35,7 @@ const statusLabel = { draft: 'Draft', 'in-progress': 'In progress', published: u
                     {essayYear(e) && <span>{essayYear(e)}</span>}
                     {contextLabel(d.context) && <span>{contextLabel(d.context)}</span>}
                     <span>{d.language}</span>
-                    {minutes > 0 && canRead && <span>{minutes} min read</span>}
+                    {minutes >= 3 && canRead && <span>{minutes} min read</span>}
                   </div>
                 </li>
               );
