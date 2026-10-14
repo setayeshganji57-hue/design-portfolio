@@ -191,6 +191,8 @@ Fallbacks: Iowan Old Style / Palatino / Georgia for the serif, and Helvetica Neu
 
 ## 4. Deployment
 
+The recommended host is Vercel with protected previews. See `docs/DEPLOY-VERCEL.md` for the exact steps. Protection is configured before any content is served.
+
 The output is plain static files in `dist/`, so any static host works. **Cloudflare Pages** or **Netlify** are recommended. Both have free tiers, serve `about.html` at `/about` automatically, and support private preview deployments.
 
 **Cloudflare Pages**
