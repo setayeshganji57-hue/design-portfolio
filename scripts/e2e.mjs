@@ -182,6 +182,7 @@ try {
   const expectedHero = ['/work/brand-identity', '/work/graphic-illustration', '/work/digital-ui', '/work/motion-film', '/work/interactive-3d'];
   ok(JSON.stringify(heroLinks) === JSON.stringify(expectedHero), 'homepage statement links each discipline in band order');
   ok((await fp.locator('.deck .band').count()) === 5, 'the five discipline bands are on the homepage');
+  ok((await fp.locator('.page-nav a[href="/contact"]').count()) === 1, 'Contact is in the header');
 
   // Discipline pager wraps around: 01 → 05 and 05 → 01.
   const disciplines = ['brand-identity', 'graphic-illustration', 'digital-ui', 'motion-film', 'interactive-3d'];

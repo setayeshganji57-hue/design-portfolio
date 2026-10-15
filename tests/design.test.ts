@@ -64,11 +64,10 @@ describe('forbidden structure', () => {
 describe('required sections exist in navigation', () => {
   const nav = readFileSync(join(process.cwd(), 'src/components/Nav.astro'), 'utf8');
   const footer = readFileSync(join(process.cwd(), 'src/components/Footer.astro'), 'utf8');
-  // The header carries Essays and About; Contact lives in the footer.
-  it.each(['/essays', '/about'])('header navigation links to %s', (href) => {
+  it.each(['/essays', '/about', '/contact'])('header navigation links to %s', (href) => {
     expect(nav).toContain(href);
   });
-  it('contact is reachable from the footer', () => {
+  it('contact is also linked from the footer', () => {
     expect(footer).toContain('/contact');
   });
   it('navigation lists the five disciplines from the category config', () => {

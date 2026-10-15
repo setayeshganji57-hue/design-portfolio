@@ -43,7 +43,7 @@
 
   /* Discipline bands (desktop): the width of each closed band */
   --band-w: clamp(3.4rem, 2.7rem + 1.5vw, 4.8rem);
-  --header-h: 4rem;
+  --header-h: 3.25rem;
 
   /* Motion */
   --ease: cubic-bezier(0.3, 0, 0.2, 1);
@@ -295,8 +295,8 @@ a:hover .arrow {
   align-items: center;
   justify-content: center;
   min-width: 0;
-  min-height: clamp(5.25rem, 22vw, 7rem);
-  padding: 0.6rem 0.3rem;
+  min-height: 3.4rem;
+  padding: 0.35rem 0.25rem;
   border-bottom: 2px dashed var(--ink);
   background: var(--band);
   color: var(--ink);
@@ -305,7 +305,7 @@ a:hover .arrow {
 }
 
 .band-label {
-  font-size: clamp(0.8rem, 0.74rem + 0.4vw, 0.98rem);
+  font-size: clamp(0.7rem, 0.66rem + 0.3vw, 0.84rem);
   font-weight: 600;
   line-height: 1.12;
   letter-spacing: -0.01em;
@@ -435,29 +435,48 @@ a.scissors:hover {
   }
 
   .band {
+    display: block;
     min-height: 0;
-    padding: 1.1rem 0 1.4rem;
+    padding: 0;
     border-bottom: 0;
   }
 
+  /* The name sticks near the top of its band, so it stays on screen however long the page is. */
   .band-label {
+    display: block;
     writing-mode: vertical-rl;
     transform: rotate(180deg);
+    inline-size: max-content;
+    margin: 1.1rem auto 0;
+    position: sticky;
+    top: 1.1rem;
     font-size: clamp(1rem, 0.92rem + 0.35vw, 1.22rem);
     line-height: 1.1;
     white-space: nowrap;
     overflow-wrap: normal;
     hyphens: manual;
+    text-align: start;
   }
 
-  /* The open discipline names itself in the page heading, so its band label is hidden. */
+  /* An open discipline keeps its name in a gutter at the left of the page. */
   .band[aria-current] .band-label {
-    display: none;
+    margin: 1.1rem 0 0 calc((var(--band-w) - 1.35rem) / 2);
+  }
+
+  a.band:hover,
+  a.band:focus-visible,
+  .band[aria-current] {
+    box-shadow: none;
   }
 
   .stage {
     grid-row: 1;
     grid-column: var(--stage-col, 6);
+  }
+
+  .stage.is-open {
+    background: transparent;
+    padding-left: var(--band-w);
   }
 
   /* The dashed cut line runs down the left edge of the page, with the scissors on it. */
@@ -472,8 +491,9 @@ a.scissors:hover {
     z-index: 1;
   }
 
+  /* Level with the middle of the seam, clear of the band names at the top. */
   .scissors {
-    top: clamp(5.5rem, 14vh, 8rem);
+    top: 46vh;
     left: -17px;
     transform: rotate(90deg);
   }
@@ -573,7 +593,7 @@ a.scissors:hover {
 }
 
 .topbar .brand {
-  font-size: 1.5rem;
+  font-size: 1.25rem;
   line-height: 1;
 }
 
@@ -652,7 +672,7 @@ a.scissors:hover {
 }
 
 .menu-head .brand {
-  font-size: 1.5rem;
+  font-size: 1.25rem;
 }
 
 .menu-head .brand span {
@@ -1344,32 +1364,6 @@ a.scissors:hover {
   vertical-align: 0.08em;
 }
 
-.home-index {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0 1.25rem;
-  font-size: var(--step--1);
-}
-
-.home-index a {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.4rem;
-  min-height: 44px;
-  font-weight: 600;
-  text-decoration: none;
-}
-
-.home-index a:hover {
-  color: var(--burgundy);
-}
-
-@media (min-width: 1024px) {
-  .home-index {
-    display: none; /* the bands already list every discipline */
-  }
-}
-
 /* Each discipline is a colour block with its preview inside */
 .home-grid {
   display: grid;
@@ -2018,7 +2012,6 @@ a.scissors:hover {
 }
 
 .hero-statement,
-.home-index,
 .home-status,
 .home-grid > .tile,
 .cat-band,

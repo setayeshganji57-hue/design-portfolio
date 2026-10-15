@@ -41,11 +41,6 @@ const tileSizes = [
       <span><span class="status-dot" aria-hidden="true"></span>{site.availability}</span>
       <span>{site.location}</span>
     </p>
-    <ul class="home-index" aria-label="Disciplines">
-      {categories.map((c) => (
-        <li><a href={`/work/${c.slug}`}>{c.title}</a></li>
-      ))}
-    </ul>
   </section>
 
   <section class="home-grid" aria-label="Discipline previews">
