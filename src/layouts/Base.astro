@@ -7,7 +7,7 @@ import Nav from '../components/Nav.astro';
 import Footer from '../components/Footer.astro';
 import Rail from '../components/Rail.astro';
 import Scissors from '../components/Scissors.astro';
-import { categories } from '../config/categories';
+import { deckLayout } from '../lib/deck';
 import { site } from '../config/site';
 import { SHOW_DRAFTS } from '../lib/content';
 
@@ -28,14 +28,8 @@ const current = Astro.url.pathname.replace(/\.html$/, '').replace(/(.)\/$/, '$1'
 const canonical = Astro.site ? new URL(current, Astro.site).href : undefined;
 const robots = noindex || SHOW_DRAFTS ? 'noindex, nofollow' : undefined;
 
-// Desktop layout. With a discipline open, its band takes the free width and the page sits inside it;
-// the other bands stay as narrow strips. Otherwise the page sits to the right of five strips.
-const openIndex = categories.findIndex((c) => c.slug === section);
-const deckCols =
-  openIndex < 0
-    ? 'repeat(5, var(--band-w)) minmax(0, 1fr)'
-    : [...categories.map((_, i) => (i === openIndex ? 'minmax(0, 1fr)' : 'var(--band-w)')), '0px'].join(' ');
-const stageCol = openIndex < 0 ? 6 : openIndex + 1;
+// Desktop: five narrow bands and the page, in grid tracks (see src/lib/deck.ts).
+const deck = deckLayout(section);
 ---
 
 <!doctype html>
@@ -82,7 +76,7 @@ const stageCol = openIndex < 0 ? 6 : openIndex + 1;
       </div>
     </dialog>
 
-    <div class="deck" style={`--deck-cols: ${deckCols}; --stage-col: ${stageCol}`}>
+    <div class="deck" style={`--deck-cols: ${deck.columns}; --stage-col: ${deck.stageTrack}`}>
       <Rail section={section} />
 
       <div class:list={['stage', section && `band--${section}`, section && 'is-open']}>

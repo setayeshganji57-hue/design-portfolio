@@ -1,6 +1,7 @@
 ---
 import { categories } from '../config/categories';
 import { getProjectsIn } from '../lib/content';
+import { bandNameOffset, deckLayout } from '../lib/deck';
 
 interface Props {
   /** Discipline the current page belongs to; that band opens instead of linking. */
@@ -8,25 +9,31 @@ interface Props {
 }
 
 const { section } = Astro.props;
+const deck = deckLayout(section);
 
 // Counts respect draft filtering. They are for screen readers only; nothing is printed on the bands.
 const counts = Object.fromEntries(
   await Promise.all(categories.map(async (c) => [c.slug, (await getProjectsIn(c.slug)).length] as const)),
 );
+
+// Each name is pinned to the window with fixed positioning, so it stays on screen however long the page is.
+const nameStyle = (i: number) => {
+  const offset = bandNameOffset(deck, i);
+  return [offset.left && `--name-left: ${offset.left}`, offset.right && `--name-right: ${offset.right}`].filter(Boolean).join('; ');
+};
 ---
 
 {
   categories.map((c, i) => {
-    // Each band is named in the page transition, so it slides into its new place when the discipline opens.
-    const style = `--i: ${i + 1}; view-transition-name: band-${c.slug}`;
+    const style = [`--i: ${deck.bandTracks[i]}`, `--b: ${i + 1}`, `view-transition-name: band-${c.slug}`, nameStyle(i)].join('; ');
     return section === c.slug ? (
-      <span class={`band band--${c.slug}`} aria-current="true" style={style} aria-hidden="true">
-        <span class="band-label">{c.title}</span>
+      <span class={`band band--${c.slug}`} aria-current="true" style={style}>
+        <span class="band-label" aria-hidden="true">{c.title}</span>
       </span>
     ) : (
       <a class={`band band--${c.slug}`} href={`/work/${c.slug}`} style={style}>
-        <span class="band-label">{c.title}</span>
-        <span class="visually-hidden">, {counts[c.slug]} {counts[c.slug] === 1 ? 'project' : 'projects'}</span>
+        <span class="band-label" aria-hidden="true">{c.title}</span>
+        <span class="visually-hidden">{c.title}, {counts[c.slug]} {counts[c.slug] === 1 ? 'project' : 'projects'}</span>
       </a>
     );
   })
