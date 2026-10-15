@@ -156,7 +156,7 @@ Title: "The Influence of AI in Startups Communication" (as you gave it). The PDF
 - [x] Surname: the site uses Ganji, as you asked.
 - [ ] CV as a PDF in `public/documents/`, if you want a download.
 - [ ] Portrait image for About, in `src/assets/media/about/`. The placeholder stays until then.
-- [ ] Confirm the About wording (first person; facts only). Confirm the bachelor's field name.
+- [x] About text: your paragraphs, used as written.
 - [ ] Essays: no texts or titles have been provided. Needed for each essay: title, abstract, year, language, full text, and an optional PDF. The master's thesis working title on the Final Studio poster is "Bridging Boundaries: Utilizing Extended Reality (XR) for Virtual Museums (VM) to Foster Art Appreciation and Learning in Persian-Speaking Communities of Three Growing Countries." Confirm it.
 - [ ] Production domain, when chosen (for `SITE_URL` at deployment).
 

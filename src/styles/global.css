@@ -41,9 +41,8 @@
   --gap: clamp(1rem, 0.6rem + 1.6vw, 2.25rem);
   --section: clamp(3.5rem, 2rem + 6vw, 8rem);
 
-  /* Discipline rail (desktop) */
-  --band-w: clamp(2.9rem, 2.3rem + 1.5vw, 4.1rem);
-  --rail-w: calc(var(--band-w) * 5);
+  /* Discipline bands (desktop): the width of each closed band */
+  --band-w: clamp(3.4rem, 2.7rem + 1.5vw, 4.8rem);
   --header-h: 4rem;
 
   /* Motion */
@@ -195,12 +194,6 @@ button {
   color: var(--ink-soft);
 }
 
-.num {
-  font-variant-numeric: tabular-nums;
-  font-weight: 600;
-  color: var(--ink-soft);
-}
-
 .text-link {
   display: inline-flex;
   align-items: center;
@@ -279,246 +272,110 @@ a:hover .arrow {
   display: inline;
 }
 
-/* ---------------------------------------------------------------- shell (desktop: rail + page) */
+/* ---------------------------------------------------------------- deck: discipline bands and the page */
 
-.shell {
-  min-height: 100dvh;
-}
+/* The five disciplines are bands of colour. On desktop they run side by side
+   across the full height. The page sits in the band it belongs to (an open
+   discipline) or to the right of the bands. Base sets --deck-cols and --stage-col
+   for each page. On phones the bands form a row above the page. */
 
-.page {
-  min-width: 0;
-}
-
-.main {
-  display: block;
-  min-width: 0;
-  padding: var(--gutter);
-  padding-top: calc(var(--gutter) * 0.9);
-}
-
-@media (min-width: 1024px) {
-  :root {
-    --header-h: 0px;
-  }
-
-  .shell {
-    display: grid;
-    grid-template-columns: var(--rail-w) minmax(0, 1fr);
-    align-items: start;
-  }
-
-  .main {
-    padding-top: clamp(1.75rem, 3vw, 3rem);
-  }
-}
-
-/* ---------------------------------------------------------------- discipline rail (desktop) */
-
-/* Phones and tablets: the same five bands as a row of vertical columns
-   under the top bar, with the dashed divider and scissors along the bottom edge. */
-.rail {
-  position: relative;
-  display: block;
-}
-
-.rail ol {
+.deck {
   display: grid;
   grid-template-columns: repeat(5, minmax(0, 1fr));
-  height: clamp(8rem, 30vw, 10rem);
-}
-
-.rail li {
-  display: flex;
-  min-width: 0;
-}
-
-.rail .band {
-  flex: 1;
-  width: 100%;
-  min-height: 0;
-  justify-content: flex-start;
-  padding: 2.1rem 0 0.7rem;
-}
-
-.rail .band .num {
-  position: absolute;
-  top: 0.55rem;
-  left: 0;
-  right: 0;
-  text-align: center;
-  font-size: 0.8rem;
-}
-
-/* On phones the labels read horizontally, centred in each column. A 72px column
-   is too narrow for vertical text to stay legible. */
-.rail .band-label {
-  writing-mode: horizontal-tb;
-  transform: none;
-  font-size: clamp(0.74rem, 0.7rem + 0.4vw, 0.9rem);
-  line-height: 1.12;
-  text-align: center;
-  white-space: normal;
-  overflow-wrap: anywhere;
-  hyphens: auto;
-  padding-inline: 0.3rem;
-}
-
-.rail::after {
-  content: '';
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: -2px;
-  border-bottom: 2px dashed var(--ink);
-  pointer-events: none;
-}
-
-.rail .scissors {
-  position: absolute;
-  left: 0.9rem;
-  bottom: -17px;
-  width: 34px;
-  height: 34px;
-  padding: 4px;
-  transform: rotate(90deg);
-  background: var(--paper);
-  color: var(--ink);
-  z-index: 2;
-  pointer-events: none;
-}
-
-.shell {
+  align-items: stretch;
+  min-height: 100dvh;
   padding-top: var(--header-h);
-}
-
-@media (min-width: 1024px) {
-  .rail {
-    position: sticky;
-    top: 0;
-    z-index: 3; /* keeps the dashed line and scissors above the page */
-    display: block;
-    height: 100dvh;
-  }
-
-  .rail ol {
-    height: 100%;
-  }
-
-  .rail .band {
-    padding: 1.1rem 0 1.4rem;
-  }
-
-  .rail .band .num {
-    position: static;
-    font-size: 0.85rem;
-  }
-
-  .rail .band {
-    justify-content: space-between;
-  }
-
-    .rail .band-label {
-    writing-mode: vertical-rl;
-    transform: rotate(180deg);
-    font-size: clamp(1rem, 0.92rem + 0.35vw, 1.22rem);
-    line-height: 1.1;
-    text-align: start;
-    white-space: nowrap;
-    overflow-wrap: normal;
-    hyphens: manual;
-    padding-inline: 0;
-  }
-
-  .rail ol {
-    display: grid;
-    grid-template-columns: repeat(5, minmax(0, 1fr));
-    height: 100%;
-  }
-
-  .rail li {
-    display: flex;
-    min-height: 0;
-  }
-
-  .rail .band {
-    flex: 1;
-  }
-
-  /* The dashed cut line sits on the rail's right edge, with the scissors on it */
-  .rail::after {
-    top: 0;
-    bottom: 0;
-    left: auto;
-    right: -1px;
-    width: 0;
-    border-bottom: 0;
-    border-right: 1.5px dashed var(--ink);
-  }
-
-  .rail .scissors {
-    top: clamp(5.5rem, 14vh, 8.5rem);
-    right: -17px;
-    left: auto;
-    bottom: auto;
-    transform: none;
-  }
 }
 
 .band {
   position: relative;
+  grid-row: 1;
+  grid-column: var(--i);
   display: flex;
-  flex-direction: column;
   align-items: center;
-  justify-content: space-between;
-  min-height: 44px;
-  width: 100%;
-  padding: 1.1rem 0 1.4rem;
+  justify-content: center;
+  min-width: 0;
+  min-height: clamp(5.25rem, 22vw, 7rem);
+  padding: 0.6rem 0.3rem;
+  border-bottom: 2px dashed var(--ink);
   background: var(--band);
   color: var(--ink);
   text-decoration: none;
   transition: box-shadow 220ms var(--ease);
 }
 
-.band .num {
-  color: var(--ink);
-  font-size: 0.85rem;
-}
-
 .band-label {
+  font-size: clamp(0.8rem, 0.74rem + 0.4vw, 0.98rem);
   font-weight: 600;
+  line-height: 1.12;
   letter-spacing: -0.01em;
+  text-align: center;
+  overflow-wrap: anywhere;
+  hyphens: auto;
 }
 
-.band:hover .band-label {
+a.band:hover,
+a.band:focus-visible {
+  box-shadow: inset 0 -6px 0 var(--ink);
+}
+
+a.band:hover .band-label,
+a.band:focus-visible .band-label {
   text-decoration: underline;
   text-decoration-thickness: 2px;
   text-underline-offset: 0.3em;
 }
 
-.band[aria-current='page'] {
-  box-shadow: inset 0 7px 0 var(--ink);
+.band[aria-current] {
+  box-shadow: inset 0 -6px 0 var(--ink);
 }
 
-.band[aria-current='page'] .band-label {
+.band[aria-current] .band-label {
   font-weight: 700;
 }
 
-/* ---------------------------------------------------------------- page head (desktop): wordmark left, pages right */
+/* The page. Closed pages (home, about, contact, essays) keep the paper colour. */
+.stage {
+  position: relative;
+  grid-row: 2;
+  grid-column: 1 / -1;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  align-self: stretch;
+  background: var(--paper);
+}
+
+.stage.is-open {
+  background: var(--band);
+}
+
+/* Phones: the scissors sit on the seam between the band row and the page. */
+.scissors {
+  position: absolute;
+  z-index: 2;
+  top: -17px;
+  left: 50%;
+  display: block;
+  width: 34px;
+  height: 34px;
+  padding: 4px;
+  transform: translateX(-50%) rotate(90deg);
+  background: var(--paper);
+  color: var(--ink);
+}
+
+a.scissors:hover {
+  color: var(--burgundy);
+}
+
+.scissors svg {
+  width: 100%;
+  height: 100%;
+}
 
 .page-head {
   display: none;
-}
-
-@media (min-width: 1024px) {
-  .page-head {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 2rem;
-    min-height: 5rem;
-    padding: 0 var(--gutter);
-    padding-top: clamp(1.25rem, 2.2vw, 2rem);
-  }
 }
 
 .wordmark {
@@ -558,6 +415,87 @@ a:hover .arrow {
   text-underline-offset: 0.35em;
 }
 
+.main {
+  display: block;
+  min-width: 0;
+  padding: 1.5rem var(--gutter) 2rem;
+}
+
+/* An open discipline: the content sits on a paper card inside its band. */
+.stage.is-open .main {
+  margin: 0 clamp(0.75rem, 1.6vw, 1.5rem) clamp(0.75rem, 1.6vw, 1.5rem);
+  padding: clamp(1.25rem, 3vw, 2.75rem);
+  background: var(--paper);
+}
+
+@media (min-width: 1024px) {
+  .deck {
+    grid-template-columns: var(--deck-cols, repeat(5, var(--band-w)) minmax(0, 1fr));
+    padding-top: 0;
+  }
+
+  .band {
+    min-height: 0;
+    padding: 1.1rem 0 1.4rem;
+    border-bottom: 0;
+  }
+
+  .band-label {
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+    font-size: clamp(1rem, 0.92rem + 0.35vw, 1.22rem);
+    line-height: 1.1;
+    white-space: nowrap;
+    overflow-wrap: normal;
+    hyphens: manual;
+  }
+
+  /* The open discipline names itself in the page heading, so its band label is hidden. */
+  .band[aria-current] .band-label {
+    display: none;
+  }
+
+  .stage {
+    grid-row: 1;
+    grid-column: var(--stage-col, 6);
+  }
+
+  /* The dashed cut line runs down the left edge of the page, with the scissors on it. */
+  .stage::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    border-left: 1.5px dashed var(--ink);
+    pointer-events: none;
+    z-index: 1;
+  }
+
+  .scissors {
+    top: clamp(5.5rem, 14vh, 8rem);
+    left: -17px;
+    transform: rotate(90deg);
+  }
+
+  .page-head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+    padding: clamp(1.25rem, 2.2vw, 2rem) var(--gutter) 0;
+  }
+
+  .main {
+    padding: clamp(1.5rem, 3vw, 2.5rem) var(--gutter) var(--gutter);
+  }
+
+  .stage.is-open .main {
+    margin: clamp(0.5rem, 1.2vw, 1rem) clamp(0.75rem, 1.6vw, 1.5rem) clamp(0.75rem, 1.6vw, 1.5rem);
+    padding: clamp(1.5rem, 3vw, 3rem);
+  }
+}
+
 /* ---------------------------------------------------------------- navigation list (used by the mobile menu) */
 
 .nav {
@@ -585,7 +523,6 @@ a:hover .arrow {
 .nav-pages a {
   display: flex;
   align-items: center;
-  gap: 0.7rem;
   min-height: 44px;
   padding-block: 0.35rem;
   text-decoration: none;
@@ -597,12 +534,6 @@ a:hover .arrow {
   font-weight: 600;
   line-height: 1.15;
   letter-spacing: -0.01em;
-}
-
-.nav-work .num {
-  width: 1.6rem;
-  flex: none;
-  font-size: 0.82rem;
 }
 
 .nav-pages {
@@ -623,11 +554,6 @@ a:hover .arrow {
 .nav a[aria-current] {
   color: var(--burgundy);
 }
-
-.nav-work a[aria-current] .num {
-  color: var(--burgundy);
-}
-
 
 /* ---------------------------------------------------------------- top bar + menu (tablet/mobile) */
 
@@ -776,10 +702,6 @@ a:hover .arrow {
 
 .menu .nav-pages a {
   font-size: 1.45rem;
-}
-
-.menu .nav-work a[aria-current] .num::before {
-  display: none;
 }
 
 .menu-foot {
@@ -1302,14 +1224,6 @@ a:hover .arrow {
   position: relative;
 }
 
-.notfound-cut {
-  display: block;
-  width: min(100%, 30rem);
-  height: 1.5px;
-  margin-block: 0.5rem 1rem;
-  background: var(--burgundy);
-}
-
 /* ---------------------------------------------------------------- footer */
 
 .footer {
@@ -1452,7 +1366,7 @@ a:hover .arrow {
 
 @media (min-width: 1024px) {
   .home-index {
-    display: none; /* the rail already lists every discipline */
+    display: none; /* the bands already list every discipline */
   }
 }
 
@@ -1488,16 +1402,9 @@ a:hover .arrow {
 
 .tile-caption {
   display: grid;
-  grid-template-columns: auto minmax(0, 1fr);
-  align-items: baseline;
-  column-gap: 0.75rem;
+  grid-template-columns: minmax(0, 1fr);
   row-gap: 0.2rem;
   padding-top: 0.9rem;
-}
-
-.tile-caption .num {
-  color: var(--ink);
-  font-size: var(--step--1);
 }
 
 .tile-title {
@@ -1510,7 +1417,7 @@ a:hover .arrow {
 }
 
 .tile-sub {
-  grid-column: 2;
+  grid-column: 1;
   display: flex;
   flex-wrap: wrap;
   align-items: baseline;
@@ -1564,23 +1471,20 @@ a:hover .arrow {
   }
 }
 
-/* ---------------------------------------------------------------- category page */
+
+/* ---------------------------------------------------------------- category page (an open discipline) */
 
 .cat-band {
   display: grid;
   gap: 1.25rem;
-  padding: clamp(1.5rem, 3.5vw, 3rem);
+  padding: clamp(1.25rem, 3vw, 2.5rem);
   background: var(--band);
   color: var(--ink);
-  margin-bottom: clamp(2rem, 4vw, 3.5rem);
+  margin-bottom: clamp(1.75rem, 3.5vw, 3rem);
 }
 
 .cat-band .display {
   font-size: var(--step-5);
-  color: var(--ink);
-}
-
-.cat-band .eyebrow {
   color: var(--ink);
 }
 
@@ -1597,46 +1501,20 @@ a:hover .arrow {
     align-items: end;
     column-gap: var(--gap);
   }
-
-  .cat-band .eyebrow {
-    grid-column: 1 / -1;
-  }
 }
 
-.cat-switch {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0 1.1rem;
-  margin-bottom: 2rem;
-  padding-block: 0.4rem;
-  border-block: 1px solid var(--stone);
-  font-size: var(--step--1);
-}
-
-.cat-switch a {
-  display: inline-flex;
-  align-items: center;
-  min-height: 44px;
-  font-weight: 600;
-  text-decoration: none;
-}
-
-.cat-switch a[aria-current] {
-  color: var(--burgundy);
-  text-decoration: underline;
-  text-decoration-thickness: 1.5px;
-  text-underline-offset: 0.35em;
-}
-
-@media (min-width: 1024px) {
-  .cat-switch {
-    display: none;
-  }
-}
+/* Projects: square photographs. Hovering fades the photo and sets the project name over it. */
 
 .projects {
   display: grid;
-  gap: clamp(3rem, 6vw, 6rem) var(--gap);
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: clamp(0.5rem, 1.2vw, 1rem);
+}
+
+@media (min-width: 900px) {
+  .projects {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
 }
 
 .pp {
@@ -1644,136 +1522,89 @@ a:hover .arrow {
 }
 
 .pp-link {
-  display: grid;
-  gap: 1rem;
+  position: relative;
+  display: block;
+  overflow: hidden;
+  isolation: isolate;
+  background: var(--paper-deep);
+  color: var(--ink);
   text-decoration: none;
 }
 
-.pp-media {
-  overflow: hidden;
-}
-
 .pp-media img {
-  transition: transform 700ms var(--ease);
+  transition: opacity 360ms var(--ease), transform 700ms var(--ease);
 }
 
-.pp-link:hover .pp-media img {
-  transform: scale(1.02);
+.pp-link:hover .pp-media img,
+.pp-link:focus-visible .pp-media img {
+  opacity: 0.3;
+  transform: scale(1.03);
 }
 
 .pp-meta {
-  display: grid;
-  grid-template-columns: auto 1fr;
-  column-gap: 0.85rem;
-  row-gap: 0.4rem;
-  align-content: start;
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: clamp(0.75rem, 2vw, 1.5rem);
+  background: color-mix(in srgb, var(--paper) 40%, transparent);
+  text-align: center;
+  opacity: 0;
+  transition: opacity 280ms var(--ease);
+  pointer-events: none;
 }
 
-.pp-meta > :not(.num) {
-  grid-column: 2;
-}
-
-.pp-meta .num {
-  font-size: var(--step--1);
-  padding-top: 0.35em;
+.pp-link:hover .pp-meta,
+.pp-link:focus-visible .pp-meta {
+  opacity: 1;
 }
 
 .pp-title {
   font-family: var(--display);
-  font-size: var(--step-2);
+  font-size: clamp(1.05rem, 0.8rem + 1.3vw, 2.1rem);
   font-weight: 600;
-  line-height: 1.08;
-  letter-spacing: -0.02em;
+  line-height: 1.05;
+  letter-spacing: -0.025em;
   text-wrap: balance;
 }
 
-.pp-link:hover .pp-title {
-  text-decoration: underline;
-  text-decoration-thickness: 2px;
-  text-underline-offset: 0.14em;
+.pp-draft {
+  position: absolute;
+  top: 0.5rem;
+  left: 0.5rem;
+  z-index: 2;
 }
 
-.pp-summary {
-  max-width: 44ch;
-}
-
-.pp-tags {
-  font-size: var(--step--1);
-  color: var(--ink-soft);
-}
-
-@media (min-width: 900px) {
-  .projects--stack .pp-link {
-    grid-template-columns: repeat(12, minmax(0, 1fr));
-    align-items: end;
-    column-gap: var(--gap);
+/* Touch screens have no hover: the name stays visible along the bottom edge. */
+@media (hover: none) {
+  .pp-meta {
+    align-items: flex-end;
+    justify-content: flex-start;
+    text-align: start;
+    opacity: 1;
+    background: linear-gradient(to top, color-mix(in srgb, var(--paper) 92%, transparent) 0%, transparent 62%);
   }
 
-  .projects--stack .pp-media {
-    grid-column: 1 / 9;
-  }
-
-  .projects--stack .pp-meta {
-    grid-column: 9 / 13;
-    padding-bottom: 0.25rem;
-    padding-top: 0.9rem;
-    border-top: 1px solid var(--ink);
-  }
-
-  .projects--stack .pp:nth-child(even) .pp-media {
-    grid-column: 5 / 13;
-    grid-row: 1;
-  }
-
-  .projects--stack .pp:nth-child(even) .pp-meta {
-    grid-column: 1 / 5;
-    grid-row: 1;
+  .pp-title {
+    font-size: clamp(0.95rem, 0.85rem + 0.6vw, 1.25rem);
   }
 }
 
-@media (min-width: 640px) {
-  .projects--mosaic {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    align-items: start;
-  }
-
-  .projects--mosaic .pp:nth-child(4n + 2) {
-    margin-top: clamp(4rem, 12vw, 11rem);
-  }
-
-  .projects--mosaic .pp:nth-child(4n + 3) {
-    width: 82%;
-    justify-self: end;
-  }
-
-  .projects--grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-}
-
-.empty {
+/* A discipline with no approved projects yet. */
+.coming-soon {
   display: grid;
-  gap: 1rem;
-  max-width: 46rem;
-  padding: clamp(1.5rem, 4vw, 3rem);
-  background: var(--paper-deep);
+  gap: 0.75rem;
+  padding-block: clamp(3rem, 8vw, 7rem);
 }
 
-.empty-title {
+.coming-soon p {
   font-family: var(--display);
-  font-size: var(--step-2);
+  font-size: var(--step-4);
   font-weight: 500;
-  line-height: 1.15;
-  letter-spacing: -0.02em;
+  line-height: 1;
+  letter-spacing: -0.03em;
 }
-
-.empty-links {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0 1.25rem;
-}
-
-
 /* ---------------------------------------------------------------- right-hand content pages (essays, about, contact) */
 
 /* Left: the page title. Right: the content column. */
@@ -2071,41 +1902,6 @@ a:hover .arrow {
   background: var(--stone);
 }
 
-.edu {
-  display: grid;
-  gap: 1.1rem;
-}
-
-.edu li {
-  display: grid;
-  gap: 0.15rem;
-}
-
-.edu-field {
-  font-size: var(--step-1);
-  font-weight: 600;
-  line-height: 1.2;
-}
-
-.practice {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.5rem;
-}
-
-.practice li {
-  padding: 0.3rem 0.8rem;
-  background: var(--paper-deep);
-  font-size: var(--step--1);
-  font-weight: 600;
-}
-
-.practice li:nth-child(7n + 1) { background: var(--c-brand); }
-.practice li:nth-child(7n + 2) { background: var(--c-graphic); }
-.practice li:nth-child(7n + 3) { background: var(--c-digital); }
-.practice li:nth-child(7n + 4) { background: var(--c-motion); }
-.practice li:nth-child(7n + 5) { background: var(--c-interactive); }
-
 .link-list {
   display: grid;
   gap: 0.25rem;
@@ -2153,44 +1949,35 @@ a:hover .arrow {
 
 /* =====================================================================
    Page transition
-   Cross-document view transitions for moves between work pages. A short
-   fade and rise of the content; no line, no scissors animation. Other
-   navigation is instant. Reduced motion disables it entirely.
+   Moves between pages are cross-document view transitions. Each band is
+   named, and so is the page, so the browser slides them into their new
+   places: a discipline opens by widening its band while the others narrow.
+   Browsers without cross-document view transitions navigate instantly.
+   Reduced motion disables the transition entirely.
    ===================================================================== */
 
 @view-transition {
   navigation: auto;
 }
 
+@media (prefers-reduced-motion: reduce) {
+  @view-transition {
+    navigation: none;
+  }
+}
+
 .stage {
   view-transition-name: stage;
-  background: var(--paper);
 }
 
-::view-transition-old(root),
-::view-transition-new(root) {
-  animation: none;
+::view-transition-group(*) {
+  animation-duration: 560ms;
+  animation-timing-function: var(--ease);
 }
 
-::view-transition-old(stage) {
-  animation: stage-out 180ms var(--ease) both;
-}
-
+::view-transition-old(stage),
 ::view-transition-new(stage) {
-  animation: stage-in 420ms var(--ease) both;
-}
-
-@keyframes stage-out {
-  to {
-    opacity: 0;
-  }
-}
-
-@keyframes stage-in {
-  from {
-    opacity: 0;
-    transform: translateY(14px);
-  }
+  animation-duration: 420ms;
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -2203,7 +1990,6 @@ a:hover .arrow {
     scroll-behavior: auto !important;
   }
 
-  .tile:hover .tile-media img,
   .pp-link:hover .pp-media img {
     transform: none;
   }
@@ -2294,43 +2080,6 @@ a:hover .arrow {
 
 .home-intro {
   gap: 1.6rem;
-}
-
-/* Discipline rail: counts, and the band under the pointer widens */
-
-.band-count {
-  font-size: 0.8rem;
-  font-weight: 700;
-  font-variant-numeric: tabular-nums;
-  color: var(--ink);
-  padding: 0.2rem 0.45rem;
-  background: color-mix(in srgb, var(--paper) 55%, transparent);
-  line-height: 1;
-}
-
-@media (min-width: 1024px) {
-  .rail ol {
-    display: flex;
-  }
-
-  .rail li {
-    flex: 1 1 0;
-    min-width: 0;
-    transition: flex-grow 320ms var(--ease);
-  }
-
-  .rail li:hover,
-  .rail li:focus-within {
-    flex-grow: 1.7;
-  }
-
-  .rail .band {
-    width: 100%;
-  }
-
-  .rail .band-label {
-    font-size: clamp(1rem, 0.92rem + 0.35vw, 1.25rem);
-  }
 }
 
 /* Image viewer: "Enlarge" overlay on artwork */

@@ -1,37 +1,32 @@
 ---
 import Media from './Media.astro';
-import { contextLabel, type Project } from '../lib/content';
-import { pad2 } from '../lib/logic';
-import { categories, type CategoryLayout } from '../config/categories';
+import type { Project } from '../lib/content';
 
 interface Props {
   project: Project;
   index: number;
-  layout: CategoryLayout;
 }
 
-const { project, index, layout } = Astro.props;
+const { project, index } = Astro.props;
 const d = project.data;
-const sizes =
-  layout === 'stack' ? '(min-width: 1024px) 50vw, 100vw' : '(min-width: 1024px) 38vw, (min-width: 640px) 50vw, 100vw';
-const ctx = contextLabel(d.context);
-const metaLine = [d.year, ctx].filter(Boolean).join(' · ');
-const primary = categories.find((c) => c.slug === d.categories[0]);
 ---
 
 <li class="pp">
   <a class="pp-link" href={`/projects/${project.id}`}>
     <div class="pp-media">
-      <Media media={d.cover} sizes={sizes} eager={index < 2} showCaption={false} fallbackAspect="4/3" placeholderLabel="Cover to come" inLink />
+      <Media
+        media={{ ...d.cover, aspect: '1/1', fit: 'cover' }}
+        sizes="(min-width: 900px) 33vw, 50vw"
+        eager={index < 3}
+        showCaption={false}
+        fallbackAspect="1/1"
+        placeholderLabel="Cover to come"
+        inLink
+      />
     </div>
-    <div class="pp-meta">
-      <span class="num" aria-hidden="true">{pad2(index + 1)}</span>
-      <h2 class="pp-title">{d.title}</h2>
-      {d.summary && <p class="pp-summary">{d.summary}</p>}
-      {primary && <p><span class={`chip band--${primary.slug}`}>{primary.title}</span></p>}
-      {d.tags.length > 0 && <p class="pp-tags">{d.tags.join(' · ')}</p>}
-      {metaLine && <p class="meta">{metaLine}</p>}
-      {d.status === 'draft' && <p><span class="badge">Draft — preview only</span></p>}
-    </div>
+    <span class="pp-meta">
+      <span class="pp-title">{d.title}</span>
+    </span>
+    {d.status === 'draft' && <span class="badge pp-draft">Draft — preview only</span>}
   </a>
 </li>

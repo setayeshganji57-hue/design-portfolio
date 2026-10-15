@@ -3,5 +3,6 @@
   "framework": "astro",
   "installCommand": "npm ci",
   "buildCommand": "node scripts/vercel-gate.mjs && npm run build",
+  "cleanUrls": true,
   "outputDirectory": "dist"
 }

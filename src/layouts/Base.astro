@@ -3,10 +3,11 @@ import '@fontsource-variable/fraunces/full.css';
 import '@fontsource-variable/fraunces/standard-italic.css';
 import '@fontsource-variable/instrument-sans/standard.css';
 import '../styles/global.css';
-import cutScript from '../scripts/cut.js?raw';
 import Nav from '../components/Nav.astro';
 import Footer from '../components/Footer.astro';
 import Rail from '../components/Rail.astro';
+import Scissors from '../components/Scissors.astro';
+import { categories } from '../config/categories';
 import { site } from '../config/site';
 import { SHOW_DRAFTS } from '../lib/content';
 
@@ -26,6 +27,15 @@ const fullTitle = title ? `${title} — ${site.name}` : `${site.name} — ${site
 const current = Astro.url.pathname.replace(/\.html$/, '').replace(/(.)\/$/, '$1') || '/';
 const canonical = Astro.site ? new URL(current, Astro.site).href : undefined;
 const robots = noindex || SHOW_DRAFTS ? 'noindex, nofollow' : undefined;
+
+// Desktop layout. With a discipline open, its band takes the free width and the page sits inside it;
+// the other bands stay as narrow strips. Otherwise the page sits to the right of five strips.
+const openIndex = categories.findIndex((c) => c.slug === section);
+const deckCols =
+  openIndex < 0
+    ? 'repeat(5, var(--band-w)) minmax(0, 1fr)'
+    : [...categories.map((_, i) => (i === openIndex ? 'minmax(0, 1fr)' : 'var(--band-w)')), '0px'].join(' ');
+const stageCol = openIndex < 0 ? 6 : openIndex + 1;
 ---
 
 <!doctype html>
@@ -46,11 +56,6 @@ const robots = noindex || SHOW_DRAFTS ? 'noindex, nofollow' : undefined;
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="theme-color" content="#F3F0E9" />
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
-    <style is:inline>
-      @view-transition { navigation: auto; }
-      @media (prefers-reduced-motion: reduce) { @view-transition { navigation: none; } }
-    </style>
-    <script is:inline set:html={cutScript} />
   </head>
   <body>
     <a class="skip-link" href="#content">Skip to content</a>
@@ -77,20 +82,31 @@ const robots = noindex || SHOW_DRAFTS ? 'noindex, nofollow' : undefined;
       </div>
     </dialog>
 
-    <div class="shell">
-      <Rail current={current} section={section} />
+    <div class="deck" style={`--deck-cols: ${deckCols}; --stage-col: ${stageCol}`}>
+      <Rail section={section} />
 
-      <div class="page">
+      <div class:list={['stage', section && `band--${section}`, section && 'is-open']}>
+        {
+          section ? (
+            <a class="scissors" href="/" aria-label="Back to all disciplines">
+              <Scissors />
+            </a>
+          ) : (
+            <span class="scissors">
+              <Scissors />
+            </span>
+          )
+        }
+
         <header class="page-head">
           <a class="wordmark" href="/" aria-label={`${site.name}, home`}>{site.name}</a>
           <nav class="page-nav" aria-label="Pages">
             <a href="/essays" aria-current={current === '/essays' || current.startsWith('/essays/') ? 'page' : undefined}>Essays</a>
             <a href="/about" aria-current={current === '/about' ? 'page' : undefined}>About</a>
-            <a href="/contact" aria-current={current === '/contact' ? 'page' : undefined}>Contact</a>
           </nav>
         </header>
 
-        <main class="main stage" id="content" tabindex="-1">
+        <main class="main" id="content" tabindex="-1">
           <slot />
           <Footer current={current} />
         </main>

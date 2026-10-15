@@ -13,6 +13,7 @@ This guide sets up a separate Vercel project for the portfolio. It does not touc
 | Draft switch | `PUBLIC_SHOW_DRAFTS=true`, Preview only | Drafts appear in the preview so you can review the whole layout. Production never receives this variable. The site also refuses a production build that includes drafts (`astro.config.mjs`). |
 | Production branch | `main` | A real branch, separate from the preview branch. Production deployments stay closed by the gate until you open it for Production. |
 | Preview branch | `claude/setayesh-portfolio-site-smiwyr` | Everything else deploys as a preview. |
+| Clean URLs | `cleanUrls: true` in `vercel.json` | The build writes flat pages such as `about.html`. Without this setting Vercel answers `/about`, `/contact`, `/essays`, `/work/…` and `/projects/…` with 404. |
 
 **Not enabled, on purpose:** Password Protection (a paid feature), Trusted IPs (Enterprise), Protection Bypass for Automation (not needed), Sharable Links, and any custom domain.
 

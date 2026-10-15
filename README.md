@@ -5,8 +5,8 @@ It's a static site built with [Astro](https://astro.build) 5 and TypeScript. It 
 
 - **Content** lives in `src/content/` (YAML for projects, Markdown for essays) and `src/config/` (site facts and disciplines).
 - **Layout** lives in `src/components/`, `src/layouts/` and `src/pages/`. Adding or changing content never requires editing these.
-- **Discipline colours and rail:** the category bands use the `--c-*` tokens in `src/styles/global.css`. The rail is `src/components/Rail.astro`.
-- **Page transition:** a short fade and rise between work pages, in `src/styles/global.css` (section "Page transition") and `src/scripts/cut.js`.
+- **Discipline colours and bands:** the bands use the `--c-*` tokens in `src/styles/global.css`. The band row is `src/components/Rail.astro`; the page layout that places the open discipline is in `src/layouts/Base.astro`.
+- **Page transition:** the bands and the page are named cross-document view transitions, so an opening discipline slides into place. See `src/styles/global.css` (section "Page transition").
 
 See also:
 - [`docs/CONTENT-CHECKLIST.md`](docs/CONTENT-CHECKLIST.md): every missing asset, text and confirmation.
@@ -167,7 +167,7 @@ Everything is in `src/config/site.ts`:
 - `links`: professional profiles (Behance is already listed).
 - `cv`: CV files in `public/documents/`. The link appears only once the file exists.
 - `portrait`: `{ file: 'about/portrait.jpg', alt: '…' }`, with the image in `src/assets/media/about/`. Until then a designed placeholder is shown.
-- `about`, `education`, `practice`, `intro`: verified wording only.
+- `about`: the About paragraphs, in the owner's own words. `intro`: the short introduction used in page descriptions.
 
 ### Disciplines and homepage previews
 
@@ -193,7 +193,7 @@ Fallbacks: Iowan Old Style / Palatino / Georgia for the serif, and Helvetica Neu
 
 The recommended host is Vercel with protected previews. See `docs/DEPLOY-VERCEL.md` for the exact steps. Protection is configured before any content is served.
 
-The output is plain static files in `dist/`, so any static host works. **Cloudflare Pages** or **Netlify** are recommended. Both have free tiers, serve `about.html` at `/about` automatically, and support private preview deployments.
+The output is plain static files in `dist/`, so any static host works. **Cloudflare Pages** or **Netlify** are recommended. Both have free tiers, serve `about.html` at `/about` automatically, and support private preview deployments. Vercel serves `/about` only with `cleanUrls`, which `vercel.json` already sets.
 
 **Cloudflare Pages**
 1. Connect the GitHub repository.
@@ -222,12 +222,12 @@ src/
   content.config.ts  typed schemas for all content
   assets/media/      project images (processed into responsive sizes)
   components/        Nav, Media, Placeholder, VideoEmbed, Blocks, ProjectPreview, Footer
-  layouts/Base.astro page shell: discipline rail, page header, mobile menu, metadata
-  components/Rail.astro  the five discipline bands with the scissors divider
+  layouts/Base.astro page shell: the band deck, page header, mobile menu, metadata
+  components/Rail.astro  the five discipline bands (one opens around the page)
   lib/               content.ts (queries, draft filtering, media resolution) · logic.ts (pure, tested)
   pages/             routes: / · /work/[category] · /projects/[slug] · /essays · /essays/[slug] · /about · /contact · 404 · sitemap.xml · robots.txt
-  scripts/           cut.js (transition logic) · ui.ts (menu, video, loops)
-  styles/global.css  tokens, layout and the signature transition
+  scripts/           ui.ts (menu, video, loops, image viewer)
+  styles/global.css  tokens, layout and the page transition
 public/              favicon · documents/ (PDFs, CV) · video/ (local video files)
 scripts/e2e.mjs      browser checks
 tests/               unit tests

@@ -1,49 +1,33 @@
 ---
 import { categories } from '../config/categories';
 import { getProjectsIn } from '../lib/content';
-import { pad2 } from '../lib/logic';
 
 interface Props {
-  /** Normalised path of the current page. */
-  current: string;
-  /** Discipline the current page belongs to (project pages). */
+  /** Discipline the current page belongs to; that band opens instead of linking. */
   section?: string;
 }
 
-const { current, section } = Astro.props;
+const { section } = Astro.props;
 
-// Visible project counts respect draft filtering, so the numbers match the pages.
+// Counts respect draft filtering. They are for screen readers only; nothing is printed on the bands.
 const counts = Object.fromEntries(
   await Promise.all(categories.map(async (c) => [c.slug, (await getProjectsIn(c.slug)).length] as const)),
 );
-
-const state = (slug: string) => {
-  if (current === `/work/${slug}`) return 'page';
-  if (section === slug) return 'true';
-  return undefined;
-};
 ---
 
-<nav class="rail" aria-label="Disciplines">
-  <ol>
-    {
-      categories.map((c, i) => (
-        <li>
-          <a class={`band band--${c.slug}`} href={`/work/${c.slug}`} aria-current={state(c.slug)}>
-            <span class="num" aria-hidden="true">{pad2(i + 1)}</span>
-            <span class="band-label" aria-hidden="true">{c.title}</span>
-            <span class="band-count" aria-hidden="true">{counts[c.slug]}</span>
-            <span class="visually-hidden">
-              {c.title}, {counts[c.slug]} {counts[c.slug] === 1 ? 'project' : 'projects'}
-            </span>
-          </a>
-        </li>
-      ))
-    }
-  </ol>
-  <svg class="scissors" viewBox="0 0 26 26" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round">
-    <circle cx="6" cy="8" r="3.2" />
-    <circle cx="6" cy="18" r="3.2" />
-    <path d="M8.6 9.8L23 15.2M8.6 16.2L23 10.8" />
-  </svg>
-</nav>
+{
+  categories.map((c, i) => {
+    // Each band is named in the page transition, so it slides into its new place when the discipline opens.
+    const style = `--i: ${i + 1}; view-transition-name: band-${c.slug}`;
+    return section === c.slug ? (
+      <span class={`band band--${c.slug}`} aria-current="true" style={style} aria-hidden="true">
+        <span class="band-label">{c.title}</span>
+      </span>
+    ) : (
+      <a class={`band band--${c.slug}`} href={`/work/${c.slug}`} style={style}>
+        <span class="band-label">{c.title}</span>
+        <span class="visually-hidden">, {counts[c.slug]} {counts[c.slug] === 1 ? 'project' : 'projects'}</span>
+      </a>
+    );
+  })
+}

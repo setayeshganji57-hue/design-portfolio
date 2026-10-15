@@ -63,8 +63,13 @@ describe('forbidden structure', () => {
 
 describe('required sections exist in navigation', () => {
   const nav = readFileSync(join(process.cwd(), 'src/components/Nav.astro'), 'utf8');
-  it.each(['/essays', '/about', '/contact'])('navigation links to %s', (href) => {
+  const footer = readFileSync(join(process.cwd(), 'src/components/Footer.astro'), 'utf8');
+  // The header carries Essays and About; Contact lives in the footer.
+  it.each(['/essays', '/about'])('header navigation links to %s', (href) => {
     expect(nav).toContain(href);
+  });
+  it('contact is reachable from the footer', () => {
+    expect(footer).toContain('/contact');
   });
   it('navigation lists the five disciplines from the category config', () => {
     const categories = readFileSync(join(process.cwd(), 'src/config/categories.ts'), 'utf8');
@@ -73,11 +78,10 @@ describe('required sections exist in navigation', () => {
 });
 
 describe('interaction rules', () => {
-  const layout = readFileSync(join(process.cwd(), 'src/layouts/Base.astro'), 'utf8');
   it('reduced motion disables the view transition', () => {
-    expect(layout).toMatch(/prefers-reduced-motion: reduce\) \{ @view-transition \{ navigation: none/);
+    expect(css).toMatch(/prefers-reduced-motion: reduce\) \{\s*@view-transition \{\s*navigation: none/);
   });
-  it('the cut transition has no sound and no global cursor change', () => {
+  it('the page transition has no sound and no global cursor change', () => {
     expect(allSource).not.toMatch(/new Audio|\.play\(\)\s*;?\s*\/\/\s*sfx/);
     expect(css).not.toMatch(/cursor:\s*(none|url)/);
   });

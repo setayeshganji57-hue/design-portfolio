@@ -153,4 +153,3 @@ export function paragraphs(body: string | undefined): string[] {
 }
 
 /** Two-digit index, e.g. 1 → "01". */
-export const pad2 = (n: number) => String(n).padStart(2, '0');

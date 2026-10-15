@@ -63,10 +63,12 @@ try {
     if (w >= 1024) {
       // Every discipline and page link must be reachable on desktop.
       const reachable = await page.evaluate(() => {
-        const links = [...document.querySelectorAll('.rail a, .page-nav a')];
+        const links = [...document.querySelectorAll('a.band, .page-nav a')];
         return links.every((a) => {
-          a.scrollIntoView({ block: 'nearest' });
-          const r = a.getBoundingClientRect();
+          // Bands run the full height of the page, so check the label rather than the band.
+          const target = a.querySelector('.band-label') ?? a;
+          target.scrollIntoView({ block: 'nearest' });
+          const r = target.getBoundingClientRect();
           return r.height > 0 && r.bottom <= window.innerHeight + 1 && r.top >= 0;
         });
       });
@@ -115,58 +117,58 @@ try {
       const html = rf(`dist/work/${cat}.html`, 'utf8');
       const approvedHere = manifest.launch.filter(p => p.category === cat && expected.includes(p.slug)).length;
       // Production: no approved project means the honest empty state. Draft builds list their drafts instead.
-      if (!drafts && approvedHere === 0) ok(html.includes('In preparation'), `${cat} shows its in-preparation state`);
+      if (!drafts && approvedHere === 0) ok(html.includes('Coming soon'), `${cat} shows a coming-soon state`);
     }
   }
 
-  console.log('\nCut-and-reveal transition');
-  const ctx = await browser.newContext({ viewport: { width: 1280, height: 800 } });
-  await ctx.addInitScript(() => {
-    window.__reveals = [];
+  console.log('\nPage transition');
+  // Record, for each page reveal, whether the browser ran a view transition.
+  const recordReveals = async (context) => context.addInitScript(() => {
     addEventListener('pagereveal', (e) => {
-      sessionStorage.setItem('lastReveal', JSON.stringify({ vt: !!e.viewTransition, cut: document.documentElement.classList.contains('vt-cut') }));
+      sessionStorage.setItem('lastReveal', JSON.stringify({ vt: !!e.viewTransition, url: location.pathname }));
     });
   });
+  const ctx = await browser.newContext({ viewport: { width: 1280, height: 800 } });
+  await recordReveals(ctx);
   const page = await ctx.newPage();
   const lastReveal = () => page.evaluate(() => JSON.parse(sessionStorage.getItem('lastReveal') || '{}'));
   await page.goto(BASE + '/work/brand-identity');
-  await page.click('.rail a[href="/work/motion-film"]');
+  await page.waitForLoadState('load');
+  await page.evaluate(() => document.fonts.ready);
+  await page.click('a.band[href="/work/motion-film"]');
   await page.waitForURL('**/work/motion-film');
-  await page.waitForTimeout(50);
+  await page.waitForFunction(() => (sessionStorage.getItem('lastReveal') || '').includes('"url":"/work/motion-film"'));
   const r1 = await lastReveal();
-  ok(r1.vt, 'category → category uses a view transition');
+  ok(r1.vt, 'discipline → discipline runs a view transition (the bands slide into place)');
   await page.waitForTimeout(900);
-  ok(!(await page.evaluate(() => document.documentElement.classList.contains('vt-cut'))), 'transition classes are removed afterwards');
+  ok((await page.evaluate(() => document.querySelector('.band[aria-current]')?.textContent?.trim())) === 'Motion & Film', 'the open discipline is marked current after the move');
 
+  // Browsers may skip a transition when the previous one is still settling, so this move is only checked for its destination.
   await page.click('.page-nav a[href="/essays"]');
   await page.waitForURL('**/essays');
-  await page.waitForTimeout(50);
-  ok(!(await page.evaluate(() => document.documentElement.classList.contains('vt-cut'))), 'navigating to Essays does not cut (instant)');
+  await page.waitForLoadState('load');
+  ok((await page.textContent('h1'))?.trim() === 'Essays', 'the Essays link opens the Essays page');
 
   // Rapid repeated navigation: the final URL and content must match the last click.
   await page.goto(BASE + '/work/brand-identity');
   const order = ['graphic-illustration', 'digital-ui', 'motion-film', 'interactive-3d'];
   for (const slug of order) {
-    await page.locator(`.rail a[href="/work/${slug}"]`).click({ noWaitAfter: true }).catch(() => {});
+    await page.locator(`a.band[href="/work/${slug}"]`).click({ noWaitAfter: true }).catch(() => {});
     await page.waitForTimeout(60);
   }
   await page.waitForURL('**/work/interactive-3d');
   await page.waitForTimeout(1200);
   const h1 = (await page.textContent('h1'))?.replace(/\s+/g, ' ').trim();
   ok(h1 === 'Interactive & 3D', `rapid clicks end on the last category (h1: "${h1}")`);
-  const stuck = await page.evaluate(() => ({
-    cut: document.documentElement.className,
-    current: document.querySelector('.rail a[aria-current="page"]')?.getAttribute('href'),
-  }));
-  ok(stuck.cut.trim() === '' && stuck.current === '/work/interactive-3d', 'no stuck overlay, nav state matches URL');
+  const current = await page.evaluate(() => document.querySelector('.band[aria-current]')?.textContent?.trim());
+  ok(current === 'Interactive & 3D', 'no stuck state: the open band matches the URL');
 
   await page.goBack();
   await page.waitForTimeout(800);
   ok(page.url().endsWith('/work/brand-identity') || page.url().endsWith('/work/motion-film'), `back navigates to a previous page (${page.url()})`);
   const backH1 = (await page.textContent('h1'))?.replace(/\s+/g, ' ').trim();
-  const backCurrent = await page.evaluate(() => document.querySelector('.rail a[aria-current="page"]')?.getAttribute('href'));
-  const backPath = await page.evaluate(() => location.pathname);
-  ok(backCurrent === backPath, `after back, heading and active nav agree (${backH1})`);
+  const backCurrent = await page.evaluate(() => document.querySelector('.band[aria-current]')?.textContent?.trim());
+  ok(backCurrent === backH1, `after back, heading and open band agree (${backH1})`);
   await page.goForward();
   await page.waitForTimeout(800);
   ok(page.url().endsWith('/work/interactive-3d'), 'forward returns to the last category');
@@ -178,8 +180,8 @@ try {
   await fp.goto(BASE + '/');
   const heroLinks = await fp.$$eval('.hero-statement a', (as) => as.map((a) => a.getAttribute('href')));
   const expectedHero = ['/work/brand-identity', '/work/graphic-illustration', '/work/digital-ui', '/work/motion-film', '/work/interactive-3d'];
-  ok(JSON.stringify(heroLinks) === JSON.stringify(expectedHero), 'homepage statement links each discipline in rail order');
-  ok((await fp.locator('.rail .band-count').count()) === 5, 'every rail band shows its project count');
+  ok(JSON.stringify(heroLinks) === JSON.stringify(expectedHero), 'homepage statement links each discipline in band order');
+  ok((await fp.locator('.deck .band').count()) === 5, 'the five discipline bands are on the homepage');
 
   // Discipline pager wraps around: 01 → 05 and 05 → 01.
   const disciplines = ['brand-identity', 'graphic-illustration', 'digital-ui', 'motion-film', 'interactive-3d'];
@@ -237,12 +239,13 @@ try {
 
   console.log('\nReduced motion');
   const rm = await browser.newContext({ viewport: { width: 1280, height: 800 }, reducedMotion: 'reduce' });
+  await recordReveals(rm);
   const rp = await rm.newPage();
   await rp.goto(BASE + '/work/brand-identity');
-  await rp.click('.rail a[href="/work/graphic-illustration"]');
+  await rp.click('a.band[href="/work/graphic-illustration"]');
   await rp.waitForURL('**/work/graphic-illustration');
-  await rp.waitForTimeout(30);
-  ok(!(await rp.evaluate(() => document.documentElement.classList.contains('vt-cut'))), 'no cut animation with prefers-reduced-motion');
+  await rp.waitForTimeout(60);
+  ok(!(await rp.evaluate(() => JSON.parse(sessionStorage.getItem('lastReveal') || '{}').vt)), 'no view transition with prefers-reduced-motion');
   await rm.close();
 
   console.log('\nMobile menu');

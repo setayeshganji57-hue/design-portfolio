@@ -1,6 +1,5 @@
 ---
 import { categories } from '../config/categories';
-import { pad2 } from '../lib/logic';
 
 interface Props {
   /** Normalised path of the current page, e.g. "/work/brand-identity". */
@@ -15,7 +14,6 @@ const { current, section, id } = Astro.props;
 const pages = [
   { href: '/essays', label: 'Essays' },
   { href: '/about', label: 'About' },
-  { href: '/contact', label: 'Contact' },
 ];
 
 const workState = (slug: string) => {
@@ -37,10 +35,9 @@ const pageState = (href: string) => {
     <p class="nav-label eyebrow" id={`${id}-work`}>Work</p>
     <ol class="nav-work" aria-labelledby={`${id}-work`}>
       {
-        categories.map((c, i) => (
+        categories.map((c) => (
           <li>
             <a href={`/work/${c.slug}`} aria-current={workState(c.slug)}>
-              <span class="num" aria-hidden="true">{pad2(i + 1)}</span>
               <span>{c.title}</span>
             </a>
           </li>

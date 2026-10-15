@@ -5,7 +5,6 @@ import Placeholder from '../components/Placeholder.astro';
 import { categories } from '../config/categories';
 import { site } from '../config/site';
 import { getProjectsIn, resolveImage } from '../lib/content';
-import { pad2 } from '../lib/logic';
 
 const tiles = await Promise.all(
   categories.map(async (c, i) => {
@@ -43,8 +42,8 @@ const tileSizes = [
       <span>{site.location}</span>
     </p>
     <ul class="home-index" aria-label="Disciplines">
-      {categories.map((c, i) => (
-        <li><a href={`/work/${c.slug}`}><span class="num">{pad2(i + 1)}</span>{c.title}</a></li>
+      {categories.map((c) => (
+        <li><a href={`/work/${c.slug}`}>{c.title}</a></li>
       ))}
     </ul>
   </section>
@@ -54,10 +53,9 @@ const tileSizes = [
       tiles.map(({ c, i, count, preview }) => (
         <a class={`tile tile--${i + 1} band--${c.slug}`} href={`/work/${c.slug}`}>
           <div class="tile-caption">
-            <span class="num" aria-hidden="true">{pad2(i + 1)}</span>
             <h2 class="tile-title">{c.title}</h2>
             <span class="tile-sub">
-              <span>{count === 0 ? 'In preparation' : `${count} ${count === 1 ? 'project' : 'projects'}`}</span>
+              <span>{count === 0 ? 'Coming soon' : `${count}\u00a0${count === 1 ? 'project' : 'projects'}`}</span>
               <span class="tile-cta" aria-hidden="true">View <span class="arrow">→</span></span>
             </span>
           </div>
@@ -71,7 +69,7 @@ const tileSizes = [
                 inLink
               />
             ) : (
-              <Placeholder label="Temporary visual" detail={c.title} aspect={c.homeAspect} glyph={pad2(i + 1)} />
+              <Placeholder label="Temporary visual" detail={c.title} aspect={c.homeAspect} />
             )}
           </div>
         </a>
