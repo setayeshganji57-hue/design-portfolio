@@ -4,8 +4,9 @@
  *   npm run e2e
  *
  * Starts `astro preview`, drives Chromium with Playwright and checks routes,
- * overflow, navigation/transition behaviour, reduced motion, the mobile menu
- * and video loading. Set CHROMIUM_PATH to use a specific browser binary.
+ * overflow, navigation/transition behaviour, the homepage statement, the
+ * discipline pager, the image viewer, reduced motion, the mobile menu and video
+ * loading. Set CHROMIUM_PATH to use a specific browser binary.
  */
 import { spawn } from 'node:child_process';
 import { existsSync, readdirSync } from 'node:fs';
@@ -54,7 +55,8 @@ try {
       if (!res || res.status() !== 200) bad.push(`${r} → ${res?.status()}`);
       const overflow = await page.evaluate(() => document.documentElement.scrollWidth - window.innerWidth);
       if (overflow > 0) bad.push(`${r} overflows by ${overflow}px`);
-      const broken = await page.evaluate(() => [...document.images].filter((i) => i.complete && i.naturalWidth === 0).length);
+      // Images without a src (the empty image viewer) are not loaded yet, so they don't count.
+      const broken = await page.evaluate(() => [...document.images].filter((i) => i.getAttribute('src') && i.complete && i.naturalWidth === 0).length);
       if (broken) bad.push(`${r} has ${broken} broken image(s)`);
     }
     ok(bad.length === 0, `${w}×${h}: all routes load, no horizontal overflow, no broken images ${bad.join('; ')}`);
@@ -162,12 +164,76 @@ try {
   await page.waitForTimeout(800);
   ok(page.url().endsWith('/work/brand-identity') || page.url().endsWith('/work/motion-film'), `back navigates to a previous page (${page.url()})`);
   const backH1 = (await page.textContent('h1'))?.replace(/\s+/g, ' ').trim();
-  const backCurrent = await page.evaluate(() => document.querySelector('.rail a[aria-current="page"]')?.textContent?.replace(/\s+/g, ' ').trim());
-  ok(backCurrent?.endsWith(backH1 ?? '—'), `after back, heading and active nav agree (${backH1})`);
+  const backCurrent = await page.evaluate(() => document.querySelector('.rail a[aria-current="page"]')?.getAttribute('href'));
+  const backPath = await page.evaluate(() => location.pathname);
+  ok(backCurrent === backPath, `after back, heading and active nav agree (${backH1})`);
   await page.goForward();
   await page.waitForTimeout(800);
   ok(page.url().endsWith('/work/interactive-3d'), 'forward returns to the last category');
   await ctx.close();
+
+  console.log('\nHomepage, discipline pager and image viewer');
+  const fx = await browser.newContext({ viewport: { width: 1280, height: 800 } });
+  const fp = await fx.newPage();
+  await fp.goto(BASE + '/');
+  const heroLinks = await fp.$$eval('.hero-statement a', (as) => as.map((a) => a.getAttribute('href')));
+  const expectedHero = ['/work/brand-identity', '/work/graphic-illustration', '/work/digital-ui', '/work/motion-film', '/work/interactive-3d'];
+  ok(JSON.stringify(heroLinks) === JSON.stringify(expectedHero), 'homepage statement links each discipline in rail order');
+  ok((await fp.locator('.rail .band-count').count()) === 5, 'every rail band shows its project count');
+
+  // Discipline pager wraps around: 01 → 05 and 05 → 01.
+  const disciplines = ['brand-identity', 'graphic-illustration', 'digital-ui', 'motion-film', 'interactive-3d'];
+  const pagerProblems = [];
+  for (const [i, slug] of disciplines.entries()) {
+    await fp.goto(BASE + `/work/${slug}`);
+    const prev = await fp.getAttribute('.cat-pager a[rel="prev"]', 'href');
+    const next = await fp.getAttribute('.cat-pager a[rel="next"]', 'href');
+    const wantPrev = `/work/${disciplines[(i + 4) % 5]}`;
+    const wantNext = `/work/${disciplines[(i + 1) % 5]}`;
+    if (prev !== wantPrev || next !== wantNext) pagerProblems.push(`${slug} (prev ${prev}, next ${next})`);
+  }
+  ok(pagerProblems.length === 0, `each discipline links to its neighbours, wrapping at the ends ${pagerProblems.join('; ')}`);
+
+  // The image viewer: open from a zoom button, step with the arrow keys, close with Escape, the button and the backdrop.
+  let zoomSlug = null;
+  for (const slug of projectSlugs) {
+    await fp.goto(BASE + `/projects/${slug}`);
+    if ((await fp.locator('[data-zoom]').count()) > 0) {
+      zoomSlug = slug;
+      break;
+    }
+  }
+  if (!zoomSlug) {
+    ok(false, 'at least one project page offers the image viewer');
+  } else {
+    await fp.goto(BASE + `/projects/${zoomSlug}`);
+    const total = await fp.locator('[data-zoom]').count();
+    const isOpen = () => fp.evaluate(() => document.getElementById('lightbox').open);
+    const counter = () => fp.textContent('.lightbox-count');
+    await fp.locator('[data-zoom]').first().click();
+    await fp.waitForFunction(() => document.getElementById('lightbox').open);
+    await fp.waitForFunction(() => document.querySelector('.lightbox-img').complete && document.querySelector('.lightbox-img').naturalWidth > 0);
+    ok((await counter()) === `1 of ${total}`, `the image viewer opens on the clicked image (${await counter()})`);
+    if (total > 1) {
+      await fp.keyboard.press('ArrowRight');
+      ok((await counter()) === `2 of ${total}`, 'ArrowRight moves to the next image');
+      await fp.keyboard.press('ArrowLeft');
+      ok((await counter()) === `1 of ${total}`, 'ArrowLeft moves back');
+      await fp.keyboard.press('ArrowLeft');
+      ok((await counter()) === `${total} of ${total}`, 'ArrowLeft from the first image wraps to the last');
+    }
+    await fp.keyboard.press('Escape');
+    ok(!(await isOpen()), 'Escape closes the image viewer');
+
+    await fp.locator('[data-zoom]').first().click();
+    await fp.click('[data-lightbox-close]');
+    ok(!(await isOpen()), 'the Close button closes the image viewer');
+
+    await fp.locator('[data-zoom]').first().click();
+    await fp.mouse.click(3, 3);
+    ok(!(await isOpen()), 'a click on the backdrop closes the image viewer');
+  }
+  await fx.close();
 
   console.log('\nReduced motion');
   const rm = await browser.newContext({ viewport: { width: 1280, height: 800 }, reducedMotion: 'reduce' });

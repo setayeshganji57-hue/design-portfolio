@@ -33,6 +33,58 @@ if (menu && openBtn && typeof menu.showModal === 'function') {
   openBtn.addEventListener('click', () => document.querySelector('.footer nav')?.scrollIntoView());
 }
 
+/* ---------------- Image viewer ----------------
+ * Every "Enlarge" control on the page opens one shared dialog. The dialog
+ * steps through the page's images in order, with buttons and arrow keys.
+ * Escape and the close button return focus to the image that was opened.
+ */
+
+const lightbox = document.getElementById('lightbox') as HTMLDialogElement | null;
+const zoomTriggers = [...document.querySelectorAll<HTMLButtonElement>('[data-zoom]')];
+
+if (lightbox && zoomTriggers.length) {
+  const img = lightbox.querySelector<HTMLImageElement>('.lightbox-img')!;
+  const caption = lightbox.querySelector<HTMLElement>('.lightbox-caption')!;
+  const count = lightbox.querySelector<HTMLElement>('.lightbox-count')!;
+  const prev = lightbox.querySelector<HTMLButtonElement>('[data-lightbox-prev]')!;
+  const next = lightbox.querySelector<HTMLButtonElement>('[data-lightbox-next]')!;
+  let current = 0;
+
+  const show = (index: number) => {
+    current = (index + zoomTriggers.length) % zoomTriggers.length;
+    const trigger = zoomTriggers[current];
+    img.src = trigger.dataset.zoomSrc ?? '';
+    img.alt = trigger.dataset.zoomAlt ?? '';
+    caption.textContent = trigger.dataset.zoomCaption ?? '';
+    caption.hidden = !caption.textContent;
+    count.textContent = `${current + 1} of ${zoomTriggers.length}`;
+    const multiple = zoomTriggers.length > 1;
+    prev.hidden = !multiple;
+    next.hidden = !multiple;
+  };
+
+  zoomTriggers.forEach((trigger, index) => {
+    trigger.addEventListener('click', () => {
+      show(index);
+      lightbox.showModal();
+    });
+  });
+
+  prev.addEventListener('click', () => show(current - 1));
+  next.addEventListener('click', () => show(current + 1));
+  lightbox.querySelector('[data-lightbox-close]')?.addEventListener('click', () => lightbox.close());
+
+  lightbox.addEventListener('keydown', (event) => {
+    if (event.key === 'ArrowLeft') show(current - 1);
+    if (event.key === 'ArrowRight') show(current + 1);
+  });
+
+  // A click on the backdrop (outside the figure) closes the viewer.
+  lightbox.addEventListener('click', (event) => {
+    if (event.target === lightbox) lightbox.close();
+  });
+}
+
 /* ---------------- Click-to-load video ---------------- */
 
 document.querySelectorAll<HTMLElement>('[data-video-embed]').forEach((box) => {

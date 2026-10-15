@@ -32,7 +32,7 @@ Other commands:
 | `npm run preview` | Serves the last build at http://localhost:4321 |
 | `npm run check` | Astro + TypeScript type checking (also validates every content file against its schema) |
 | `npm test` | Unit tests for ordering, draft filtering, reading time and video URL parsing |
-| `npm run e2e` | Browser checks against the last build: routes, overflow at 360/768/1280/1440 px and a short 1280×600 screen, transitions, rapid clicks, back/forward, reduced motion, mobile menu, video loading |
+| `npm run e2e` | Browser checks against the last build: routes, overflow at 360/768/1280/1440 px and a short 1280×600 screen, transitions, rapid clicks, back/forward, the homepage statement, the discipline pager, the image viewer, reduced motion, mobile menu, video loading |
 
 `npm run e2e` uses Playwright's Chromium. If no browser is installed, run `npx playwright install chromium` once, or set `CHROMIUM_PATH` to an existing Chrome/Chromium binary.
 

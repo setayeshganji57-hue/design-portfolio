@@ -17,6 +17,8 @@ interface Props {
 const { category, index } = Astro.props;
 const projects = await getProjectsIn(category.slug);
 const others = categories.filter((c) => c.slug !== category.slug);
+const prevCategory = categories[(index - 1 + categories.length) % categories.length];
+const nextCategory = categories[(index + 1) % categories.length];
 ---
 
 <Base title={category.title} description={category.intro} section={category.slug}>
@@ -54,4 +56,15 @@ const others = categories.filter((c) => c.slug !== category.slug);
       </div>
     )
   }
+
+  <nav class="cat-pager" aria-label="Other disciplines">
+    <a class={`cat-pager-link band--${prevCategory.slug}`} href={`/work/${prevCategory.slug}`} rel="prev">
+      <span class="cat-pager-dir"><span aria-hidden="true">←</span> Previous discipline</span>
+      <span class="cat-pager-title">{prevCategory.title}</span>
+    </a>
+    <a class={`cat-pager-link band--${nextCategory.slug}`} href={`/work/${nextCategory.slug}`} rel="next">
+      <span class="cat-pager-dir">Next discipline <span aria-hidden="true">→</span></span>
+      <span class="cat-pager-title">{nextCategory.title}</span>
+    </a>
+  </nav>
 </Base>

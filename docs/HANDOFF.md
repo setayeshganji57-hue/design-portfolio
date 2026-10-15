@@ -43,9 +43,10 @@ Pages to look at:
 - **Layout:** a persistent left sidebar from 1024 px up, with the five disciplines numbered and separated from Essays, About and Contact. On short screens it tightens, and scrolls if needed.
   - Below 1024 px there's a compact top bar with a full-screen menu built on a native `<dialog>`. Focus moves in, Esc closes it, focus returns to the button, and `aria-expanded` is kept in sync.
   - The footer navigation works without JavaScript.
-- **Homepage:** a one-line introduction, then an asymmetric composition of the five discipline previews. Each one has a number, name, project count and a visible "View …" link. On mobile the previews stack with alternating indents, plus a compact discipline index under the intro.
-- **Category pages:** a large display title, an editable intro and a count. There are three preview layouts (`stack`, `mosaic`, `grid`), chosen per discipline in config, and an honest empty state.
+- **Homepage:** a statement in which each discipline name is a link in its own colour, then an asymmetric composition of the five discipline previews. Each one has a number, name, project count and a visible "View …" link. On mobile the previews stack with alternating indents, plus a compact discipline index under the intro.
+- **Category pages:** a large display title, an editable intro and a count. Previous and next discipline links at the foot of the page wrap around the ends of the list. There are three preview layouts (`stack`, `mosaic`, `grid`), chosen per discipline in config, and an honest empty state.
 - **Project template:** title, facts table (discipline links, year, context, role, collaborators, tags), overview, image or video hero, and flexible blocks (text, image full/wide/inset, pair, grid with 2–4 columns, video). It ends with related projects and a return link to the category.
+  - Images open in a full-screen viewer with previous/next, arrow keys, Escape and a Close button. The viewer is a native `<dialog>`.
   - Drafts show a preview banner with that project's open questions.
 - **Essays:** a listing and a calm reading template with abstract, metadata, a reading time calculated from the real text, references, image credits and a PDF button (shown only if the file exists). It supports draft, in-progress and published states, plus `lang`/RTL.
 - **About:** a portrait placeholder, a first-person introduction limited to the facts you gave, Education, Practice, CV & links (the CV link appears only once the file exists), and Contact.
@@ -71,7 +72,7 @@ Pages to look at:
 | Check | Result |
 | --- | --- |
 | `npm run check` (astro check / TypeScript, content schemas) | 0 errors, 0 warnings |
-| `npm test` (vitest) | 12 / 12 passed |
+| `npm test` (vitest) | 51 / 51 passed |
 | `npm run build` and `npm run build:drafts` | both succeed |
 | `npm run e2e` on the draft build **and** the production build | all checks passed |
 
@@ -82,6 +83,9 @@ What the `npm run e2e` checks cover (headless Chromium 141):
 - category → category triggers the transition, and Essays doesn't
 - rapid clicks across four categories end on the right URL, heading and active nav, with no leftover transition state
 - back and forward
+- homepage statement links each discipline in rail order, and every rail band shows its project count
+- each discipline's previous/next pager link goes to its neighbour, wrapping at both ends
+- image viewer: opens on the clicked image, ArrowLeft/ArrowRight step and wrap, and Escape, the Close button and a backdrop click all close it
 - reduced motion disables the cut
 - mobile menu focus, Esc and close-on-navigate
 - no video iframe on load

@@ -107,7 +107,7 @@ const facts: { term: string; value?: string; links?: { href: string; label: stri
       d.hero && (
         <div class="project-hero">
           {d.hero.kind === 'image' ? (
-            <Media media={d.hero.media} sizes="(min-width: 1024px) 75vw, 100vw" eager fallbackAspect="16/9" />
+            <Media media={d.hero.media} zoom sizes="(min-width: 1024px) 75vw, 100vw" eager fallbackAspect="16/9" />
           ) : (
             <VideoEmbed video={d.hero.video} eager />
           )}

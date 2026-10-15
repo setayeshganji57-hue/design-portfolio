@@ -16,6 +16,8 @@ interface Props {
   small?: boolean;
   /** Inside a link: loops play on hover/focus only, and no toggle button is rendered (no nested controls). */
   inLink?: boolean;
+  /** Adds an "Enlarge" control that opens the image in the viewer. */
+  zoom?: boolean;
 }
 
 const {
@@ -28,6 +30,7 @@ const {
   showCaption = true,
   small = false,
   inLink = false,
+  zoom = false,
 } = Astro.props;
 
 const img = resolveImage(media.file);
@@ -58,6 +61,19 @@ if (img && !widths.includes(img.width) && img.width < 2200) widths.push(img.widt
           fetchpriority={eager ? 'high' : 'auto'}
           decoding="async"
         />
+        {zoom && (
+          <button
+            type="button"
+            class="zoom-hit"
+            data-zoom
+            data-zoom-src={img.src}
+            data-zoom-alt={media.alt}
+            data-zoom-caption={media.caption ?? ''}
+            aria-label={`Enlarge image${media.alt ? `: ${media.alt}` : ''}`}
+          >
+            <span class="zoom-hint" aria-hidden="true">Enlarge</span>
+          </button>
+        )}
         {loop && (
           <video
             class="media-loop"

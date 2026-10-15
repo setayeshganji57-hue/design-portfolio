@@ -27,7 +27,7 @@
     var vt = event.viewTransition;
     if (!vt) return;
 
-    var nav = window.navigation;
+    var nav = /** @type {any} */ (window).navigation;
     var from = nav && nav.activation && nav.activation.from ? path(nav.activation.from.url) : null;
     var to = path(location.href);
     var reduced = matchMedia('(prefers-reduced-motion: reduce)').matches;

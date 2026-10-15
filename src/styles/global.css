@@ -2217,3 +2217,309 @@ a:hover .arrow {
   gap: 0.75rem;
   margin-bottom: clamp(1.5rem, 3vw, 2.5rem);
 }
+
+/* =====================================================================
+   Round: functional and expressive details
+   ===================================================================== */
+
+/* Entrance motion: content rises into place once, then stays still.
+   Global reduced-motion rules switch it off. */
+@keyframes rise {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+}
+
+.hero-statement,
+.home-index,
+.home-status,
+.home-grid > .tile,
+.cat-band,
+.projects > .pp,
+.essay-row,
+.project-head,
+.split-head,
+.split-body {
+  animation: rise 720ms var(--ease) backwards;
+}
+
+.home-grid > .tile:nth-child(2),
+.projects > .pp:nth-child(2) {
+  animation-delay: 80ms;
+}
+
+.home-grid > .tile:nth-child(3),
+.projects > .pp:nth-child(3) {
+  animation-delay: 160ms;
+}
+
+.home-grid > .tile:nth-child(4),
+.projects > .pp:nth-child(4) {
+  animation-delay: 240ms;
+}
+
+.home-grid > .tile:nth-child(5),
+.projects > .pp:nth-child(5) {
+  animation-delay: 320ms;
+}
+
+/* Homepage statement: each discipline word is a coloured link */
+
+.hero-statement {
+  max-width: 22ch;
+  font-family: var(--display);
+  font-size: clamp(2.1rem, 1.25rem + 3.4vw, 4.7rem);
+  font-weight: 600;
+  line-height: 1.04;
+  letter-spacing: -0.035em;
+  text-wrap: balance;
+}
+
+.hero-statement a {
+  padding: 0 0.12em;
+  background: var(--band);
+  color: var(--ink);
+  text-decoration: none;
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
+  transition: background-color 200ms var(--ease), color 200ms var(--ease);
+}
+
+.hero-statement a:hover,
+.hero-statement a:focus-visible {
+  background: var(--ink);
+  color: var(--paper);
+}
+
+.home-intro {
+  gap: 1.6rem;
+}
+
+/* Discipline rail: counts, and the band under the pointer widens */
+
+.band-count {
+  font-size: 0.8rem;
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+  color: var(--ink);
+  padding: 0.2rem 0.45rem;
+  background: color-mix(in srgb, var(--paper) 55%, transparent);
+  line-height: 1;
+}
+
+@media (min-width: 1024px) {
+  .rail ol {
+    display: flex;
+  }
+
+  .rail li {
+    flex: 1 1 0;
+    min-width: 0;
+    transition: flex-grow 320ms var(--ease);
+  }
+
+  .rail li:hover,
+  .rail li:focus-within {
+    flex-grow: 1.7;
+  }
+
+  .rail .band {
+    width: 100%;
+  }
+
+  .rail .band-label {
+    font-size: clamp(1rem, 0.92rem + 0.35vw, 1.25rem);
+  }
+}
+
+/* Image viewer: "Enlarge" overlay on artwork */
+
+.zoom-hit {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  padding: 0.7rem;
+  border: 0;
+  background: transparent;
+  cursor: zoom-in;
+}
+
+.zoom-hit:focus-visible {
+  outline: 2px solid var(--burgundy);
+  outline-offset: -4px;
+}
+
+.zoom-hint {
+  padding: 0.35rem 0.7rem;
+  background: var(--ink);
+  color: var(--paper);
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  opacity: 0;
+  transform: translateY(4px);
+  transition: opacity 180ms var(--ease), transform 180ms var(--ease);
+}
+
+.zoom-hit:hover .zoom-hint,
+.zoom-hit:focus-visible .zoom-hint {
+  opacity: 1;
+  transform: none;
+}
+
+@media (hover: none) {
+  .zoom-hint {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.lightbox {
+  width: min(96vw, 1400px);
+  max-width: none;
+  max-height: 94vh;
+  margin: auto;
+  padding: 0;
+  border: 0;
+  background: var(--paper);
+  color: var(--ink);
+}
+
+.lightbox::backdrop {
+  background: rgba(36, 36, 36, 0.86);
+}
+
+.lightbox[open] {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+}
+
+.lightbox-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.6rem 0.8rem 0.6rem 1.1rem;
+  border-bottom: 1px solid var(--stone);
+}
+
+.lightbox-count {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--ink-soft);
+}
+
+.lightbox-close,
+.lightbox-prev,
+.lightbox-next {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  min-height: 44px;
+  padding: 0.4rem 0.9rem;
+  border: 0;
+  background: var(--ink);
+  color: var(--paper);
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 160ms;
+}
+
+.lightbox-close:hover,
+.lightbox-prev:hover,
+.lightbox-next:hover {
+  background: var(--burgundy);
+}
+
+.lightbox-figure {
+  display: grid;
+  align-content: center;
+  justify-items: center;
+  gap: 0.75rem;
+  min-height: 0;
+  margin: 0;
+  padding: 1rem;
+  overflow: hidden;
+}
+
+.lightbox-img {
+  max-width: 100%;
+  max-height: 74vh;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+}
+
+.lightbox-caption {
+  max-width: 60ch;
+  font-size: 0.95rem;
+  color: var(--ink-soft);
+  text-align: center;
+}
+
+.lightbox-nav {
+  display: flex;
+  justify-content: space-between;
+  gap: 0.75rem;
+  padding: 0.6rem 0.8rem;
+  border-top: 1px solid var(--stone);
+}
+
+.lightbox-nav [hidden],
+.lightbox-caption[hidden] {
+  display: none;
+}
+
+/* Category pager: previous and next discipline, in their colours */
+
+.cat-pager {
+  display: grid;
+  gap: 0.75rem;
+  margin-top: var(--section);
+  padding-top: 0;
+}
+
+.cat-pager-link {
+  display: grid;
+  gap: 0.6rem;
+  padding: clamp(1.25rem, 2.5vw, 2rem);
+  background: var(--band);
+  color: var(--ink);
+  text-decoration: none;
+  transition: background-color 200ms var(--ease), color 200ms var(--ease);
+}
+
+.cat-pager-link:hover,
+.cat-pager-link:focus-visible {
+  background: var(--ink);
+  color: var(--paper);
+}
+
+.cat-pager-dir {
+  font-size: var(--step--1);
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.cat-pager-title {
+  font-family: var(--display);
+  font-size: var(--step-3);
+  font-weight: 600;
+  line-height: 1;
+  letter-spacing: -0.03em;
+}
+
+@media (min-width: 720px) {
+  .cat-pager {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .cat-pager-link:last-child {
+    text-align: right;
+    justify-items: end;
+  }
+}
