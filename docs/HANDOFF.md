@@ -1,130 +1,103 @@
-# Handoff: Phase 1 (interface)
+# Handoff
 
-## How to review
+Status at 16 October 2026. Branch: `claude/setayesh-portfolio-site-smiwyr`. Do not merge into `main` without an explicit decision.
+
+Read in this order:
+1. `docs/PORTFOLIO-AUDIT.md`: what works, what doesn't, and the fixes ranked by priority.
+2. `docs/CONTENT-NEEDED.md`: what the owner must provide before the next application round.
+3. `docs/JOB-SEARCH-PLAN.md`: positioning, the two tracks, the shortlist and the ten-day schedule.
+4. `docs/APPLICATION-MATERIALS.md`: drafts for About, LinkedIn, CV, notes and messages. Nothing has been sent.
+5. `docs/JOB-TRACKER.csv`: one row per role or target, with checked status.
+
+The older `docs/CONTENT-CHECKLIST.md` and `docs/REVIEW.md` still describe the earlier state. Use `CONTENT-NEEDED.md` for the current work.
+
+## Where things stand
+
+- **Published (visible in production):** Hamloqmeh, TradeMemory, myMAXXI Welcome Days, Life Below Water, Sunny Days Between Cubes, and the thesis essay.
+- **Drafts (preview only):** everything else in `src/content/projects/`.
+- **Empty categories:** Brand Identity and Interactive & 3D show "Coming soon". The homepage statement still names both, so brand work is the most urgent content gap.
+- **Public address:** none. The protected preview returns a redirect to Vercel sign-in, which is the intended state. Recruiters cannot open it until the owner decides on production.
+- **Blocked on the owner:** section A of `docs/CONTENT-NEEDED.md`, which covers roles, CV, portrait, right to work, the public-address decision, and the thesis title and surname.
+
+Changes made in the most recent round:
+- TradeMemory: removed the unverified sentence about the owner's trading experience.
+- Sunny Days: tag changed from "4D video" to "Projection".
+- Hamloqmeh: "Open app" is now labelled "Open app (log-in required)".
+
+## Run it locally
+
+Node 22 is recommended (20.3 or later works).
 
 ```bash
 npm install
-npm run dev                 # http://localhost:4321, with drafts visible and a "Preview · drafts visible" tag
+npm run dev          # http://localhost:4321, drafts visible
+npm run build        # production build in dist/, drafts excluded
+npm run build:drafts # review build with drafts, noindex
+npm run preview      # serve the last build at http://localhost:4321
+npm run check        # Astro and TypeScript checks, including content schemas
+npm test             # unit tests (vitest)
+npm run e2e          # browser checks on the last build (run after a build)
+npm run check:links  # checks each published project link
 ```
 
-To see exactly what the public would get, which today is the disciplines, About, Contact and the empty states, with every draft hidden:
+Run `npm run e2e` after both `npm run build` and `npm run build:drafts`. The production build must not contain draft slugs. The suite checks this.
 
-```bash
-npm run build && npm run preview
-```
+If Playwright can't find a browser, set `CHROMIUM_PATH` to a Chromium binary.
 
-Pages to look at:
-- `/`
-- `/work/graphic-illustration` (mosaic layout)
-- `/work/brand-identity` (stack layout)
-- `/work/digital-ui` (empty state)
-- `/projects/dream-toy`
-- `/projects/sunny-days-between-cubes` (video placeholder)
-- `/projects/illustrated-book-covers` (uncropped grid)
-- `/essays` and `/essays/specimen-reading-layout`
-- `/about`, `/contact`, and any unknown URL (the 404 page)
+## Edit the content
 
-**To see the page transition:** click between disciplines in the colour bands, or from a discipline into a project. Chrome, Edge and Safari 18.2+ show the fade; Firefox navigates instantly.
+**Projects:** `src/content/projects/<slug>.yaml`. Start from `_template.yaml`.
+- `status`: `draft` or `published`. Only published projects appear in production.
+- `categories`: the first listed is the primary category, used for navigation and related work.
+- `role`, `development`, `collaborators`: fill these in. The role row appears on the page only when `role` is set.
+- `links`: add a link only after checking that it responds publicly. Keep the label honest, for example "(log-in required)".
+- `cover`, `hero`, `blocks`: images are referenced by path relative to `src/assets/media/<slug>/`.
+- Run `npm run check` after every change. It reports the file and line of any schema error.
 
-> **Superseded in part.** The design was revised in the latest round (colour rail, right-hand pages, a fade instead of the sweeping line). `docs/REVIEW.md` is current. The bullets below describe the earlier version.
+**Essays:** `src/content/essays/<slug>.md`. `status` is `draft`, `in-progress` or `published`. The PDF goes in `public/documents/` and is referenced by its `pdf:` path.
 
-## What works
+**Site facts:** `src/config/site.ts`.
+- `about`: the About paragraphs, in the owner's words.
+- `email`, `phone`, `links`: contact details and profiles.
+- `cv`: the About page shows a download link automatically once `public/documents/setayesh-ganji-cv.pdf` exists.
+- `portrait`: currently `null`, so a placeholder shows. To add one, place the image at `src/assets/media/about/portrait.jpg` and set `portrait: { file: 'about/portrait.jpg', alt: '…' }`.
 
-- **All routes** are built as static files:
-  - `/`
-  - `/work/<discipline>` (5)
-  - `/projects/<slug>`
-  - `/essays` and `/essays/<slug>`
-  - `/about` and `/contact`
-  - a designed 404 page
-  - `sitemap.xml` and `robots.txt`
+**Disciplines:** `src/config/categories.ts` holds titles, intros and layouts. Categories without published projects show "Coming soon" automatically.
 
-  Direct loading, normal links and browser history all behave normally, because these are ordinary pages.
-- **Layout:** a persistent left sidebar from 1024 px up, with the five disciplines numbered and separated from Essays, About and Contact. On short screens it tightens, and scrolls if needed.
-  - Below 1024 px there's a compact top bar with a full-screen menu built on a native `<dialog>`. Focus moves in, Esc closes it, focus returns to the button, and `aria-expanded` is kept in sync.
-  - The footer navigation works without JavaScript.
-- **Homepage:** a statement in which each discipline name is a link in its own colour, then an asymmetric composition of the five discipline previews. Each one has its name, a project count and a visible "View …" link. On mobile the previews stack with alternating indents, plus a compact discipline index under the intro.
-- **Category pages:** a large display title, an editable intro and a count. Previous and next discipline links at the foot of the page wrap around the ends of the list. There are three preview layouts (`stack`, `mosaic`, `grid`), chosen per discipline in config, and an honest empty state.
-- **Project template:** title, facts table (discipline links, year, context, role, collaborators, tags), overview, image or video hero, and flexible blocks (text, image full/wide/inset, pair, grid with 2–4 columns, video). It ends with related projects and a return link to the category.
-  - Images open in a full-screen viewer with previous/next, arrow keys, Escape and a Close button. The viewer is a native `<dialog>`.
-  - Drafts show a preview banner with that project's open questions.
-- **Essays:** a listing and a calm reading template with abstract, metadata, a reading time calculated from the real text, references, image credits and a PDF button (shown only if the file exists). It supports draft, in-progress and published states, plus `lang`/RTL.
-- **About:** a portrait placeholder and your own paragraphs, used as written. **Contact:** email, phone and profiles.
-- **Contact:** a configurable email and links. With no email it shows an honest "will be listed shortly" note, and there's no fake form.
-- **Content model:** typed schemas validated at build. Adding a project means adding one YAML file plus images; no component edits are needed.
-- **Drafts:**
-  - Visible in `npm run dev` and `npm run build:drafts` (which also adds `noindex` everywhere and `Disallow: /`).
-  - Excluded from production pages, listings, the homepage counts, metadata and the sitemap. I checked this by grepping the production `dist/` for draft titles and found none.
-- **Media:**
-  - Responsive WebP `srcset` is generated locally with sharp.
-  - Frames are stable through `aspect-ratio`, so there's no layout shift.
-  - Each image has its own `fit`/`position`/`background` settings.
-  - Artwork keeps its own proportions unless you set a frame.
-  - Missing files become labelled placeholders, never broken images.
-- **Video:** YouTube, Vimeo (including unlisted hashes) and local files are supported. It's click-to-load (a poster plus a Play link that works without JS), and nothing third-party loads before the click.
-- **Earlier version, replaced:** cut-and-reveal, 560 ms. A 1.5 px burgundy line with a small drawn pair of scissors travels left to right while the incoming content is revealed behind it, and titles and intros settle in.
-  - It runs only between the homepage, disciplines and projects. Essays, About and Contact open instantly.
-  - It's built on cross-document View Transitions. The browser owns URLs, history and interruption, so there's no overlay in the DOM to get stuck.
-  - Reduced motion turns it off completely.
+## Drafts
 
-## Checks run in this session
+- A project with `status: draft` appears in `npm run dev` and `npm run build:drafts` only.
+- The production build excludes drafts from pages, listings, metadata and the sitemap. The end-to-end suite checks this.
+- The preview deployment sets `PUBLIC_SHOW_DRAFTS=true`. The production build refuses to run with that setting (`astro.config.mjs`).
 
-| Check | Result |
-| --- | --- |
-| `npm run check` (astro check / TypeScript, content schemas) | 0 errors, 0 warnings |
-| `npm test` (vitest) | 51 / 51 passed |
-| `npm run build` and `npm run build:drafts` | both succeed |
-| `npm run e2e` on the draft build **and** the production build | all checks passed |
+## Deployment
 
-What the `npm run e2e` checks cover (headless Chromium 141):
-- every route at 360×740, 768×1024, 1280×800, 1440×900 and 1280×600, with no horizontal overflow and no broken images
-- every discipline and page link reachable on desktop sizes
-- a 404 for an unknown URL
-- category → category triggers the transition, and Essays doesn't
-- rapid clicks across four categories end on the right URL, heading and active nav, with no leftover transition state
-- back and forward
-- homepage statement links each discipline in band order, and the five bands are on the homepage
-- each discipline's previous/next pager link goes to its neighbour, wrapping at both ends
-- image viewer: opens on the clicked image, ArrowLeft/ArrowRight step and wrap, and Escape, the Close button and a backdrop click all close it
-- reduced motion disables the view transition
-- mobile menu focus, Esc and close-on-navigate
-- no video iframe on load
+**Current setup (Vercel, preview only):**
+- The project is imported. Deployment Protection is set to All Deployments with Vercel Authentication. This was configured by the owner and must not be changed without a decision.
+- `vercel.json` runs `scripts/vercel-gate.mjs` before the build. The build fails unless `PORTFOLIO_PREVIEW_GATE=open` is set in Vercel. Preview is open; production is still gated.
+- `cleanUrls: true` is set, so `/about`, `/contact`, `/essays`, `/work/…` and `/projects/…` resolve. Without it, Vercel returns 404 for them.
+- No custom domain is connected.
 
-**Manual visual review:** I looked at screenshots of the homepage (1440, 1280, 360), category pages (1440, 1280×600), project pages (1440, 768), the essay specimen, About, Contact (768), Essays (360), 404, and the mobile menu. I also captured the transition mid-way with slowed-down animations to confirm the line, scissors and reveal direction.
+**Before any public launch (only with the owner's explicit decision):**
+1. Decide the production branch and whether to remove the gate for production.
+2. Set `SITE_URL` to the final address. It drives canonical URLs and the sitemap.
+3. Confirm `PUBLIC_SHOW_DRAFTS` is not set for production.
+4. Run `npm run check:links` and `npm run e2e` on the production build.
+5. Check the public address in a private window, and check it on a phone.
 
-**Also verified with temporary content, then reverted:** a real image renders with its own colours and a full srcset, a missing image file falls back to a placeholder with a build warning, and a Vimeo URL produces the correct embed only after Play is pressed.
+The full steps are in `docs/DEPLOY-VERCEL.md`.
 
-**Not verified:** Safari and Firefox were not available here, so I didn't test them. Firefox doesn't support cross-document View Transitions yet, so there navigation is simply instant. I didn't run a screen reader.
+## Known gaps and what is not verified
 
-## Provisional / decisions to confirm
+- Safari and Firefox are not tested. Safari has previously collapsed vertical text in flex layouts, so check the band labels there.
+- No screen-reader test has been run.
+- The thesis PDF's cover title and candidate name differ from the site (see the audit, A5).
+- Behance blocks automated access, so project text cannot be checked against it.
+- The draft-build transition check in `scripts/e2e.mjs` can fail intermittently, because Chromium sometimes skips a view transition. Rerun before treating it as a regression.
+- Job listings in `docs/JOB-TRACKER.csv` were checked on 16 October 2026. Re-check each one before you apply.
 
-- **Every project is a draft**, because none has assets yet. That means the production homepage shows "Coming soon" and temporary visuals, and discipline pages show a "Coming soon" state. Publish projects one by one as their content arrives.
-- **"Dream Toy"** is provisional, since Behance says "DRYMTO". The ChronoLens spelling and contribution details also need confirming (see the checklist).
-- **Discipline intros** and the homepage line are my wording, describing the disciplines generally. Please edit them.
-- **About** is written in the first person, so no pronoun is assumed. Degree entries say "Master's studies" and "Bachelor's studies", with no dates and no completion claims.
-- **Essays:** "in-progress" essays are listed publicly with title and abstract only. Set them to `draft` instead if you'd rather hide them.
-- **Typefaces:** Instrument Sans for headings, name and interface (latest round); Fraunces for essay reading text only. Both are OFL and self-hosted.
-- **Stack:** Astro 5.18 (the mature 5.x line), not the newest major (7.x). I chose it for stability and verified compatibility; upgrading later is optional.
-- **Fix found during testing:** the `@view-transition` opt-in is inlined in `<head>`. When it only lived in the external stylesheet, Chromium skipped about half of the transitions; inlined, they were 100% reliable in testing.
+## Rules that apply to anyone continuing this work
 
-## Source material
-
-- **Google Drive PDF** (58 pages, "Portfolio"): read and used as the primary source for the published projects. It contains the project briefs, descriptions, dates and 153 embedded images. Nothing from it was used without a text reading.
-- **Behance profile**: readable. Its project pages return errors to automated access, so only the project titles from the profile are used, in `docs/CONTENT-CHECKLIST.md`.
-- **Reference sites** (palomarincon.com, sic-est.com, eliapelle.com): still not reviewed in this session.
-
-Access to Drive and Behance was enabled during this session. The review pack (`docs/REVIEW.md`) has the current access instructions for local preview, and states that no deployed or public URL exists. If you change the network settings again, the steps are in the previous version of this file (Option A: allow the domains).
-
-## Publishing status
-
-Current status: **two projects are published** (myMAXXI Welcome Days, Life Below Water). Everything else is a draft. The full list, with reasons, is in `docs/REVIEW.md` section 2.
-
-Production builds exclude drafts. Draft pages are visible only in `npm run dev` and `npm run build:drafts`.
-
-## Not done in this phase (by design)
-
-- no deployment or domain
-- no contact form backend
-- no CMS
-- no dark mode
-- no real project media or essay text
+- Do not publish the site, change its access protection, merge into `main`, submit applications, or message anyone, without explicit instruction from the owner.
+- Do not put passwords, tokens or other secrets in the repository or in chat.
+- Keep factual claims tied to a source: the owner's own statement, the thesis, the project record, or a page you checked. Mark everything else as unverified.

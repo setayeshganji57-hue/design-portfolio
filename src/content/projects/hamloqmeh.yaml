@@ -10,7 +10,7 @@ role: Product Concept, Visual Design & UI Design
 development: AI-assisted development. Concept, visual identity and interface design by Setayesh Ganji.
 links:
   - { label: Visit website, url: "https://hamloqmeh-website.vercel.app" }
-  - { label: Open app, url: "https://hamloqmeh-app.vercel.app" }
+  - { label: Open app (log-in required), url: "https://hamloqmeh-app.vercel.app" }
 cover:
   file: hamloqmeh/website-desktop.jpg
   alt: Homepage of the Hamloqmeh website in Persian, with a headline about saving good food
