@@ -1,18 +1,19 @@
-title: Teaching Motion — Preproduction, from Process to Outcome
+title: Teaching Motion — Lessons for Sapienza's Multimedia Design Studio
 status: published
 categories: [motion-film]
 order: 20
 tags: [Teaching, Storyboarding, Motion design]
 year: 2022
 context: { type: academic, institution: Sapienza University of Rome, course: Multimedia Design Studio }
-summary: Lesson materials I designed as a teaching assistant for Sapienza's Multimedia Design Studio, introducing students to the preproduction of motion projects.
+summary: Lesson materials I designed as a teaching assistant for Sapienza's Multimedia Design Studio, on preproduction and stop-motion animation.
 overview: |
   I was invited to Sapienza University of Rome as a teaching assistant in the Multimedia Design Studio, led by Prof. Vincenzo Maselli, to teach parts of the motion design programme. For each lesson I designed the teaching materials.
 
-  This lesson, given on 11 April 2022, takes students through preproduction: the steps that turn an idea into a plan before any animation is made. It moves from concept development, mood boards and script to visual style, storyboarding and design boards, and gives students a shared vocabulary for framing a moving image.
+  The lessons below cover two stages of a motion project: planning it, and one of the oldest ways of making it move.
 role: Teaching assistant. Lesson structure and slide design.
 links:
-  - { label: Lesson slides (PDF), url: /documents/preproduction-process-to-outcome.pdf }
+  - { label: "Lesson slides: preproduction (PDF)", url: /documents/preproduction-process-to-outcome.pdf }
+  - { label: "Lesson slides: stop-motion (PDF, 28 MB)", url: /documents/stop-motion-animation.pdf }
 cover:
   file: motion-teaching/cover.jpg
   alt: "Title slide: Preproduction, process-to-outcome spectrum"
@@ -23,8 +24,10 @@ hero:
   media: { file: motion-teaching/cover.jpg, alt: "Title slide: Preproduction, process-to-outcome spectrum, with the Sapienza DCVM logo", aspect: "16/9", fit: cover }
 blocks:
   - type: text
-    heading: What the lesson covers
+    heading: "Lesson 1: Preproduction, from process to outcome (11 April 2022)"
     body: |
+      This lesson takes students through preproduction: the steps that turn an idea into a plan before any animation is made.
+
       Preproduction phases: a timeline from concept development, keywords and mind maps, script outline and visual concept, to storyboard, design board and pitch.
 
       Visual style: the choices that define a project's look, including colour palette, medium, line quality, scale, texture, typography and cinematic conventions.
@@ -48,6 +51,25 @@ blocks:
     items:
       - { file: motion-teaching/dolly.jpg, alt: Slide explaining the dolly shot with a drawn sequence, fit: contain }
       - { file: motion-teaching/storyboard-designboard.jpg, alt: Slide comparing a storyboard with a design board, fit: contain }
+  - type: text
+    heading: "Lesson 2: Stop-motion animation (29 April 2022)"
+    body: |
+      This lesson introduces stop-motion: objects physically moved and photographed frame by frame, so that they seem to move on their own when the frames are played in sequence.
+
+      It is organised by technique, each traced through its history with film examples: objects animation, from Méliès to the Quay Brothers; puppet animation, including armatures, replacement heads and puppet fabrication; claymation, from Willis O'Brien to Aardman; cut-out and silhouette animation, from Lotte Reiniger to Emanuele Luzzati; and pixillation. It closes with the twelve principles of animation and a filmography.
+  - type: pair
+    align: center
+    caption: "The lesson's opening, and the map of stop-motion techniques that structures it."
+    items:
+      - { file: motion-teaching/stop-motion-cover.jpg, alt: "Title slide: Stop-motion animation", fit: contain }
+      - { file: motion-teaching/stop-motion-categories.jpg, alt: Slide mapping the categories of stop-motion animation, fit: contain }
+  - type: grid
+    columns: 3
+    caption: "Section openers for each technique, and the closing slide on the principles of animation."
+    items:
+      - { file: motion-teaching/stop-motion-objects.jpg, alt: Section slide for objects animation, fit: contain }
+      - { file: motion-teaching/stop-motion-claymation.jpg, alt: Section slide for claymation, fit: contain }
+      - { file: motion-teaching/stop-motion-principles.jpg, alt: Section slide for the animation principles, fit: contain }
 todo:
   - Add the other lessons' files
   - Confirm whether the drawn shot examples are your own drawings or reference images, and credit them if needed
