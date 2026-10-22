@@ -1,0 +1,66 @@
+title: Miaohaus — A playful identity for art and community
+status: published
+categories:
+- brand-identity
+order: 20
+tags:
+- Visual identity
+- Editorial design
+- Photography
+year: 2022
+summary: Visual identity, event posters, and a photographic fanzine for creative workshops in Ostia.
+overview: 'Context: Art and design workshops at Teatro del Lido, Ostia
+
+
+  For Miaohaus, I created a visual identity and a fanzine documenting a programme of creative workshops. My work brought together the logo, graphic language, event posters, publication layout, and photography.
+
+
+  A pixel-style cat, stepped shapes, directional arrows, and a bright colour palette give the project its playful character. These elements connect the promotional materials and publication, creating a consistent identity across different activities.
+
+
+  I also photographed the workshops, documenting participants, materials, and the work they created. The fanzine combines these photographs with event information, moving between the programme’s visual identity and the hands-on experiences behind it.'
+role: Visual identity, logo design, event posters, editorial design, and photography.
+links:
+- label: Read the complete fanzine (PDF)
+  url: /documents/miaohaus-fanzine.pdf
+cover:
+  file: miaohaus/cover.jpg
+  alt: Miaohaus fanzine cover with pixel typography and colourful geometric shapes
+  fit: contain
+hero:
+  kind: image
+  media:
+    file: miaohaus/cover.jpg
+    alt: Miaohaus fanzine cover
+    fit: contain
+blocks:
+- type: pair
+  items:
+  - file: miaohaus/identity.jpg
+    alt: White pixel-style cat logo on black
+    fit: contain
+  - file: miaohaus/signage.jpg
+    alt: Miaohaus Minigalleria directional graphics
+    fit: contain
+  caption: The cat symbol and directional graphic language.
+- type: image
+  size: full
+  media:
+    file: miaohaus/drawing-workshop.jpg
+    alt: Photographs of a drawing workshop and participants’ artworks
+    fit: contain
+    caption: Drawing workshop — photography and editorial layout.
+- type: image
+  size: full
+  media:
+    file: miaohaus/birdwatching-workshop.jpg
+    alt: Outdoor workshop and bird paintings arranged in a photographic grid
+    fit: contain
+    caption: Birdwatching workshop — photography and editorial layout.
+- type: image
+  size: full
+  media:
+    file: miaohaus/shadow-workshop.jpg
+    alt: Workshop participants exploring projected light and hand shadows
+    fit: contain
+    caption: Shadow-play workshop — photography and editorial layout.

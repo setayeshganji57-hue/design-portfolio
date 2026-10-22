@@ -66,6 +66,6 @@ describe('categories', () => {
       .filter((p) => p.category === 'digital-ui' && p.status === 'published')
       .map((p) => p.slug)
       .sort();
-    expect(published).toEqual(['hamloqmeh', 'tradememory']);
+    expect(published).toEqual(['hamloqmeh', 'parkscanner', 'parsitalk', 'tradememory']);
   });
 });

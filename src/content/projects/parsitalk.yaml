@@ -1,0 +1,51 @@
+title: ParsiTalk — Connecting language, culture, and belonging
+status: published
+categories:
+- digital-ui
+order: 30
+tags:
+- Web application design
+- UI/UX
+- Independent product concept
+context:
+  type: independent
+summary: A Persian-learning platform concept connecting language, stories, and cultural identity.
+overview: 'Audience: Children and teenagers in the Iranian diaspora, alongside global learners interested in Persian language and culture
+
+
+  ParsiTalk is a Persian-learning platform concept that brings language and cultural discovery together. Designed with young learners growing up outside Iran in mind, it explores how digital learning can help people connect with their heritage through stories, everyday vocabulary, celebrations, and creative activities.
+
+
+  I shaped the product experience around an approachable journey, from choosing a learner profile and learning goals to exploring themed lessons. The design challenge was to organise a broad range of activities into an inviting interface that encourages curiosity while giving learners a clear sense of direction.
+
+
+  The prototype brings together story-based lessons, Persian text with optional English translations, vocabulary cards, comprehension questions, and calligraphy practice. Colourful activity cards, progress indicators, and rewards support the playful visual direction, while a parent dashboard explores how families could follow and encourage a child’s learning.
+
+
+  Project stage: Interactive prototype demonstrating the proposed learning experience and interface, with further development and user testing planned.'
+role: Concept development, user-flow design, visual direction, and UI design. Interactive prototyping with v0.
+links:
+- label: Explore prototype
+  url: https://v0-persian-learning-app.vercel.app
+cover:
+  file: parsitalk/home.jpg
+  alt: ParsiTalk homepage introducing Persian heritage and story-based learning
+  aspect: 16/10
+  fit: cover
+  position: 50% 0%
+hero:
+  kind: image
+  media:
+    file: parsitalk/home.jpg
+    alt: ParsiTalk homepage with a bilingual welcome and pastel visual identity
+    fit: contain
+blocks:
+- type: image
+  size: full
+  media:
+    file: parsitalk/onboarding.jpg
+    alt: ParsiTalk onboarding with choices for diaspora children, second-generation teens, and global learners
+    caption: The first step of the five-step onboarding flow.
+    fit: contain
+todo:
+- Add further completed learning-screen visuals when available; the story scene currently uses a placeholder image.

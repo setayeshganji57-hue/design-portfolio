@@ -1,22 +1,122 @@
-title: Dreamto
-status: draft
-categories: [brand-identity]
+title: Drymto — Bringing a fundraising idea to life through identity and interface
+status: published
+categories:
+- brand-identity
 order: 10
-tags: [Brand identity, Logo]
+tags:
+- Brand identity
+- Illustration
+- Website UI design
+summary: Identity, original illustrations, and website interface design for a cryptocurrency-based fundraising startup.
+overview: 'Context: A startup project spanning Iran and Dubai
+
+
+  Audience: People seeking funding and supporters interested in contributing through cryptocurrency
+
+
+  Drymto was conceived as a cryptocurrency-based fundraising platform, connecting people seeking support for their ideas with potential contributors. Its name combines “dream” and “crypto,” bringing personal ambition into the identity of a technology-led service.
+
+
+  I designed the brand identity, original illustrations, and website interface. The logo draws on the form of a phoenix, interpreted within the project as a symbol of dreaming and aspiration. A gold-and-blue palette connects the mark with an illustrated world of people, growth, and possibility.
+
+
+  The design challenge was to give a technically unfamiliar service an approachable visual language while organising the steps involved in fundraising. I extended the identity across the homepage, registration screens, donation interface, and a sequence for creating a fundraiser—from choosing a beneficiary and setting a target to telling a story and submitting it for review.
+
+
+  Alongside the visual design, I mapped the website’s pages and proposed journeys, connecting the brand experience with the structure of the product.
+
+
+  Work shown: Identity assets and website design-stage mockups, including placeholder content from the original project.'
+role: Brand identity, logo design, original illustration, website UI design, wireframes, and user-flow mapping.
+links:
+- label: Watch walkthrough on Vimeo
+  url: https://vimeo.com/827370125
+- label: View website user-flow map (PDF)
+  url: /documents/drymto-user-flow.pdf
 cover:
-  file: dreamto/mockup-logo.jpg
-  alt: Logo on a folded white card on a peach surface, in ochre and brown
-  aspect: "4/3"
-  fit: cover
+  file: drymto/logo-mockup.jpg
+  alt: Drymto phoenix-inspired gold logo on a white card
+  fit: contain
 hero:
-  kind: image
+  kind: video
+  video:
+    provider: vimeo
+    url: https://vimeo.com/827370125
+    title: Drymto — Website prototype walkthrough
+    poster:
+      file: drymto/logo-mockup.jpg
+      alt: Drymto logo
+      fit: contain
+    aspect: 16/9
+    caption: Website prototype walkthrough — UI design and original illustrations.
+blocks:
+- type: image
+  size: wide
   media:
-    file: dreamto/mockup-logo.jpg
-    alt: Logo on a folded white card on a peach surface, in ochre and brown
-    aspect: "4/3"
-    fit: cover
-blocks: []
+    file: drymto/logo-mockup.jpg
+    alt: Drymto phoenix-inspired gold logo on a white card
+    fit: contain
+    caption: Brand identity — phoenix-inspired mark.
+- type: image
+  size: full
+  media:
+    file: drymto/screen-1.png
+    alt: Drymto homepage with gold phoenix mark and blue-and-gold illustrations
+    fit: contain
+    caption: Homepage design. Original design-stage mockup with placeholder copy.
+- type: image
+  size: wide
+  media:
+    file: drymto/screen-5.jpg
+    alt: Drymto registration interface with original character illustrations
+    fit: contain
+    caption: Registration — illustration and interface design.
+- type: text
+  heading: Creating a fundraiser
+  body: Selected design-stage screens show the proposed sequence from location and beneficiary to a funding target, story, and submission review.
+- type: image
+  size: wide
+  media:
+    file: drymto/screen-22.jpg
+    alt: Location selection with illustrated map
+    fit: contain
+- type: image
+  size: wide
+  media:
+    file: drymto/screen-24.jpg
+    alt: Beneficiary selection with gift illustration
+    fit: contain
+- type: image
+  size: wide
+  media:
+    file: drymto/screen-25.jpg
+    alt: Fundraising target with chart illustration
+    fit: contain
+- type: image
+  size: wide
+  media:
+    file: drymto/screen-27.jpg
+    alt: Fundraiser title and story with tree and cloud illustration
+    fit: contain
+- type: image
+  size: wide
+  media:
+    file: drymto/screen-28.jpg
+    alt: Submission review confirmation
+    fit: contain
+- type: image
+  size: wide
+  media:
+    file: drymto/screen-11.jpg
+    alt: Drymto donation interface with funding goal and progress indicator
+    fit: contain
+    caption: Donation interface — design-stage mockup with placeholder content.
+- type: image
+  size: full
+  media:
+    file: drymto/roadmap.png
+    alt: Drymto website user-flow map connecting homepage, registration, fundraiser creation and donation screens
+    fit: contain
+    caption: Website structure and proposed user journeys. Open the PDF for a closer look.
 todo:
-  - "Description: the full Behance text can't be read from this environment. Add it when available."
-  - Replace the cover with the original logo file. The current image is a crop from a Behance screenshot.
-  - Context, year, role and collaborators
+- Verify Vimeo embed playback on the final portfolio domain.

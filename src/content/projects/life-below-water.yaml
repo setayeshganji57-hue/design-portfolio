@@ -1,57 +1,167 @@
-title: Life Below Water
+title: Life Below Water — An illustrated adventure in ocean discovery
 status: published
-categories: [graphic-illustration]
+categories:
+- graphic-illustration
 order: 20
-tags: [Educational design, Interactive design, Illustration]
-year: 2022
-context: { type: academic, institution: Sapienza University of Rome, course: Digital Education }
-summary: An educational, playful map that teaches children about ocean life and pollution.
-overview: |
-  An educational map for children aged 7 to 10, designed to explain ocean ecology and why the sea should not be polluted. The path is laid out with a small robotic sphere, and the child moves through different phases of the map, learning the subject while playing through games and challenges.
+tags:
+- Educational design
+- Illustration
+- Storytelling
+- Game experience
+year: 2020–2021
+summary: A 4 × 1 metre illustrated ocean map combining storytelling, four learning stages, and robotic play.
+overview: 'Life Below Water is an educational game concept that invites children to explore the ocean through storytelling,
+  illustration, and hands-on play. Designed around a 4 × 1 metre illustrated map and a Sphero robotic ball, the
+  experience takes players from a sunny shoreline into deeper underwater environments, connecting discoveries about
+  marine life with lessons about pollution and recycling.
 
-  Each lesson takes place at a different depth of the ocean, with its own characters and objects. The protagonist is a child playing as a diver.
+
+  I developed the map’s visual world, creating the marine characters, environmental illustrations, and layouts across
+  four connected stages. The design challenge was to translate a substantial educational programme into a journey
+  children could understand and want to explore. Characters, activity markers, and a colour palette that shifts
+  from warm yellow to deep blue and violet give each stage its own identity while holding the experience together.'
 cover:
-  file: life-below-water/cover-lesson-1.jpg
-  alt: Lesson 1 cover, "Familiarity with the Ocean", in yellow with a beach scene and a child's illustrations
+  file: life-below-water/lesson-1-original.jpg
+  alt: Yellow shoreline illustration introducing the first ocean lesson
   fit: contain
 hero:
   kind: image
   media:
     file: life-below-water/hero.jpg
     alt: Life Below Water title artwork showing a child at a table in front of a yellow ocean-themed backdrop
-    aspect: "16/9"
+    aspect: 16/9
     fit: cover
 blocks:
-  - type: text
-    heading: Four lessons, four depths
-    body: |
-      Lesson 1 introduces the ocean as a familiar place. Lesson 2 introduces the animals that live in it. Lesson 3 covers the different types of garbage and how they reach the sea. Lesson 4 is about recycling.
-  - type: pair
-    align: start
-    items:
-      - file: life-below-water/lesson-2.jpg
-        alt: Lesson 2 cover, "Getting familiar with ocean animals", in blue
-        fit: contain
-      - file: life-below-water/lesson-3.jpg
-        alt: Lesson 3 cover, "Getting familiar with different types of garbage", in indigo
-        fit: contain
-  - type: pair
-    align: start
-    items:
-      - file: life-below-water/lesson-4.jpg
-        alt: Lesson 4 cover, "Recycling", in deep purple
-        fit: contain
-      - file: life-below-water/step-1.jpg
-        alt: Line illustration showing how to roll the dice and move the piece on the game board
-        fit: contain
-  - type: grid
-    columns: 3
-    caption: Game-board instructions. Each step shows how a child interacts with the app and the map.
-    items:
-      - { file: life-below-water/step-2.jpg, alt: Line illustration of a child using a robotic sphere on the board, fit: contain }
-      - { file: life-below-water/step-3.jpg, alt: Line illustration of a child scanning a QR code on the board, fit: contain }
-      - { file: life-below-water/step-4.jpg, alt: Line illustration of a child answering a question on a phone, fit: contain }
-      - { file: life-below-water/step-5.jpg, alt: Line illustration of a child scanning a shell for information, fit: contain }
+- type: grid
+  columns: 4
+  caption: The four connected stages of the 4 × 1 metre illustrated map, progressing from the shoreline into deeper
+    water.
+  items:
+  - file: life-below-water/lesson-1-original.jpg
+    alt: 'Lesson 1: Discovering the ocean'
+    fit: contain
+  - file: life-below-water/lesson-2-original.jpg
+    alt: 'Lesson 2: Meeting marine life'
+    fit: contain
+  - file: life-below-water/lesson-3-original.jpg
+    alt: 'Lesson 3: Understanding pollution'
+    fit: contain
+  - file: life-below-water/lesson-4-original.jpg
+    alt: 'Lesson 4: Learning to recycle'
+    fit: contain
+- type: text
+  heading: A story that gives learning a purpose
+  body: 'The adventure begins with a shell asking for help: its underwater home is threatened by pollution. Children
+    become ocean defenders, following a route through the map and completing activities to progress. The proposed
+    experience combines movement of the Sphero robot with QR-triggered content, teacher guidance, stories, puzzles,
+    drawing, and questions. Each interaction connects the illustrated environment to a learning task.'
+- type: text
+  heading: 1. Discovering the ocean
+  body: Introducing its importance to life on Earth, including climate, food, habitats, and livelihoods.
+- type: pair
+  align: start
+  items:
+  - file: life-below-water/lesson-1-original.jpg
+    alt: Discovering the ocean lesson board
+    fit: contain
+  - file: life-below-water/activity-1.jpg
+    alt: Discovering the ocean activity sheet
+    fit: contain
+- type: text
+  heading: 2. Meeting marine life
+  body: Exploring ocean animals and biodiversity through illustrated stories, colouring, and classification activities.
+- type: pair
+  align: start
+  items:
+  - file: life-below-water/lesson-2-original.jpg
+    alt: Meeting marine life lesson board
+    fit: contain
+  - file: life-below-water/activity-2.jpg
+    alt: Meeting marine life activity sheet
+    fit: contain
+- type: text
+  heading: 3. Understanding pollution
+  body: Recognising different types of waste, their effects on marine environments, and how long they can persist.
+- type: pair
+  align: start
+  items:
+  - file: life-below-water/lesson-3-original.jpg
+    alt: Understanding pollution lesson board
+    fit: contain
+  - file: life-below-water/activity-3.jpg
+    alt: Understanding pollution activity sheet
+    fit: contain
+- type: text
+  heading: 4. Learning to recycle
+  body: Introducing material sorting, recycling, and the ways everyday choices can help reduce waste.
+- type: pair
+  align: start
+  items:
+  - file: life-below-water/lesson-4-original.jpg
+    alt: Learning to recycle lesson board
+    fit: contain
+  - file: life-below-water/activity-4.jpg
+    alt: Learning to recycle activity sheet
+    fit: contain
+- type: text
+  heading: An interconnected visual learning experience
+  body: 'The project brings together a large-format map, four lesson boards, four activity sheets, an original collection
+    of illustrated characters and objects, and storyboards explaining the proposed interactions. Illustration serves
+    both an expressive and a practical purpose: it introduces characters, guides attention, and makes environmental
+    topics approachable for young learners.'
+- type: grid
+  columns: 3
+  caption: Original characters and objects from the illustrated ocean world.
+  items:
+  - file: life-below-water/character-01.png
+    alt: Hermit crab illustration
+    fit: contain
+  - file: life-below-water/character-02.png
+    alt: Shell illustration
+    fit: contain
+  - file: life-below-water/character-03.png
+    alt: Blue crab illustration
+    fit: contain
+  - file: life-below-water/character-07.png
+    alt: Squid holding a paintbrush illustration
+    fit: contain
+  - file: life-below-water/character-08.png
+    alt: Jellyfish illustration
+    fit: contain
+  - file: life-below-water/character-09.png
+    alt: Seahorse with a compass illustration
+    fit: contain
+  - file: life-below-water/character-10.png
+    alt: Anglerfish illustration
+    fit: contain
+- type: grid
+  columns: 3
+  caption: 'Interaction storyboard: moving the robot, scanning a QR code, answering questions, and discovering the
+    shell’s story.'
+  items:
+  - file: life-below-water/step-1.jpg
+    alt: Rolling dice to progress on the board
+    fit: contain
+  - file: life-below-water/step-2.jpg
+    alt: Using the robotic sphere on the board
+    fit: contain
+  - file: life-below-water/step-3.jpg
+    alt: Scanning a QR code
+    fit: contain
+  - file: life-below-water/step-4.jpg
+    alt: Answering a question on a phone
+    fit: contain
+  - file: life-below-water/step-5.jpg
+    alt: Scanning the shell
+    fit: contain
+- type: text
+  heading: Project format
+  body: Educational game concept combining a physical illustrated board with robotic play and digital learning content.
+    The Sphero link provides background on the robot used in the concept.
 todo:
-  - Confirm the wording of the overview and the phrase "robotic sphere" (the PDF's wording was unclear)
-  - Confirm my role and whether anyone collaborated
+- Confirm academic or commissioned context and any collaborators before adding institutional credits.
+role: Visual concept development, map and lesson-board design, original marine illustrations, visual storytelling,
+  and activity-sheet design.
+links:
+- label: About the Sphero Mini robot
+  url: https://sphero.com/products/sphero-mini/

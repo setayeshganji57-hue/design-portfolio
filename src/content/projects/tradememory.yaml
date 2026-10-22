@@ -1,42 +1,58 @@
-title: TradeMemory
+title: TradeMemory — Turning trading activity into meaningful insights
 status: published
-categories: [digital-ui]
+categories:
+- digital-ui
 order: 20
-tags: [Product concept, UI design, Analytics, Trading journal]
+tags:
+- Website and application design
+- UI/UX
+- Independent startup project
 summary: A trading journal that helps traders understand their decisions and performance.
-overview: |
-  A trading journal designed to help traders understand their decisions and performance. I developed the product concept and designed the interfaces for trade logging, review, and analytics.
+overview: 'Audience: Active traders who want to understand and improve their trading habits
 
-  The app is in private beta, as its homepage states. The site describes its analysis as historical only, not trading signals or financial advice.
-role: Product Concept, Visual Design & UI Design
-development: AI-assisted development. Concept and interface design by Setayesh Ganji.
+
+  TradeMemory is a trading journal designed to help traders organise their trades, reflect on their decisions, and identify patterns in their performance. The idea grew from my own experience with trading and the difficulty of turning scattered records and manual notes into useful insights.
+
+
+  I worked from the initial product concept through the interface design, focusing on how complex trading information could become easier to record, navigate, and understand. The design challenge was to bring trade history, personal observations, and performance analysis together in a clear and coherent experience.
+
+
+  The interface centres on reviewing trades and adding the context that numbers alone cannot explain: the setup, the reasoning behind an entry, and how a position was managed. Clear information hierarchy and explanations of technical metrics aim to make the journal useful for reflection as well as record-keeping.
+
+
+  Project stage: Independent product in MVP development, with ongoing refinement of its features and user experience.'
+role: Concept development, product structure, visual direction, and UI design.
 links:
-  - { label: Open app, url: "https://tradememory-sigma.vercel.app" }
+- label: Visit website
+  url: https://tradememory-sigma.vercel.app
 cover:
   file: tradememory/app-desktop.jpg
   alt: TradeMemory homepage on a dark background, with the private beta label and log-in buttons
-  aspect: "16/10"
+  aspect: 16/10
   fit: cover
 hero:
   kind: image
   media:
     file: tradememory/app-desktop.jpg
     alt: TradeMemory homepage on a dark background, with the private beta label and log-in buttons
-    aspect: "16/10"
+    aspect: 16/10
     fit: cover
 blocks:
-  - type: text
-    heading: What the app does
-    body: |
-      The homepage describes the workflow: upload an MT5 statement, verify that it is correct, review what the numbers cannot tell you, and see which patterns hold up.
-  - type: image
-    size: inset
-    media:
-      file: tradememory/app-mobile.jpg
-      alt: TradeMemory homepage on a phone
-      fit: contain
-      background: "#11151b"
+- type: text
+  heading: What the app does
+  body: 'The homepage describes the workflow: upload an MT5 statement, verify that it is correct, review what the numbers cannot tell you, and see which patterns hold up.
+
+    '
+- type: image
+  size: inset
+  media:
+    file: tradememory/app-mobile.jpg
+    alt: TradeMemory homepage on a phone
+    fit: contain
+    background: '#11151b'
 todo:
-  - Screens for trade logging, review and analytics sit behind a log-in. Send screenshots, or a demo account, to show them.
-  - Confirm the year
-  - Re-check the link before each release (scripts/check-links.mjs)
+- Replace existing desktop and mobile images with screenshots of the latest version; the supplied source ZIP contains no screenshots.
+- Add review and analytics screenshots using demonstration data.
+- Confirm the project year.
+context:
+  type: independent

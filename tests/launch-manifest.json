@@ -22,7 +22,7 @@
     {
       "slug": "dream-toy",
       "category": "brand-identity",
-      "status": "draft",
+      "status": "published",
       "note": "Title is Dreamto per the owner; spelling still to confirm"
     },
     {
@@ -75,7 +75,25 @@
     {
       "slug": "pfc-brand-identity",
       "category": "brand-identity",
-      "status": "draft"
+      "status": "published"
+    },
+    {
+      "slug": "miaohaus",
+      "category": "brand-identity",
+      "status": "published",
+      "note": "Added by the owner, October 2026"
+    },
+    {
+      "slug": "parkscanner",
+      "category": "digital-ui",
+      "status": "published",
+      "note": "Added by the owner, October 2026"
+    },
+    {
+      "slug": "parsitalk",
+      "category": "digital-ui",
+      "status": "published",
+      "note": "Added by the owner, October 2026"
     }
   ],
   "excluded": [
@@ -107,5 +125,7 @@
     "motion-film",
     "interactive-3d"
   ],
-  "categoriesWithNoApprovedProjects": []
+  "categoriesWithNoApprovedProjects": [
+    "interactive-3d"
+  ]
 }

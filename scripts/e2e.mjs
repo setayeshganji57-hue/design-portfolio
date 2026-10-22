@@ -18,7 +18,7 @@ const BASE = `http://localhost:${PORT}`;
 const htmlSlugs = dir => (existsSync(dir) ? readdirSync(dir).filter(f => f.endsWith('.html')).map(f => f.replace(/\.html$/, '')) : []);
 const projectSlugs = htmlSlugs('dist/projects');
 const essaySlugs = htmlSlugs('dist/essays');
-const drafts = existsSync('dist/projects/dream-toy.html'); // only draft builds contain this draft record
+const drafts = existsSync('dist/projects/littledetour.html'); // only draft builds contain this draft record
 
 const candidates = [process.env.CHROMIUM_PATH, '/opt/pw-browsers/chromium-1194/chrome-linux/chrome'].filter(Boolean);
 const executablePath = candidates.find((p) => existsSync(p));

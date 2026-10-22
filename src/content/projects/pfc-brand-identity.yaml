@@ -1,23 +1,79 @@
-title: PFC — Brand & Visual Identity
-status: draft
-categories: [brand-identity]
-order: 20
-tags: [Brand identity, Visual identity]
-cover: { alt: '', aspect: '16/10' }
+title: Pars Foam Cut — A visual identity across print and digital
+status: published
+categories:
+- brand-identity
+order: 30
+tags:
+- Brand identity
+- Logo design
+- Stationery
+- Website UI
+- Illustration
+year: 2022
+summary: Logo, corporate stationery, website wireframes, UI design, and illustrations for a CNC cutting and fabrication
+  company.
+overview: 'Pars Foam Cut specialises in CNC cutting, large-scale modelling, and fabrication, turning digital designs
+  into physical forms for industrial, architectural, and advertising applications. In 2022, I worked across its
+  brand identity and digital presence, designing the logo, corporate stationery, website wireframes, interface,
+  and illustrations.
+
+
+  The identity combines a geometric symbol with a Persian logotype and a restrained palette of reddish brown, grey-green,
+  and cream. I extended this visual language across corporate stationery, creating a consistent presentation across
+  printed materials.
+
+
+  For the website, I worked on the structure and interface, organising information about the company’s services
+  and capabilities. I also created a coordinated collection of illustrations combining industrial scenes, human
+  characters, and simplified symbols, bringing a more approachable character to its technical subject matter.
+
+
+  The project brings together identity design, print applications, interface design, and illustration around a shared
+  visual language.'
+role: Logo and visual identity design, corporate stationery, website wireframing, UI design, and website illustrations.
+links:
+- label: Visit company website
+  url: https://parsfoamcut.com
+cover: &id001
+  file: pfc/stationery.jpg
+  alt: Pars Foam Cut corporate stationery mockup with logo and coordinated printed materials
+  fit: contain
 hero:
   kind: image
-  media: { alt: '', aspect: '16/9' }
+  media: *id001
 blocks:
-  - type: image
-    size: inset
-    media: { alt: '', aspect: '1/1', fit: contain }
-  - type: grid
-    columns: 3
-    items:
-      - { alt: '', aspect: '4/5' }
-      - { alt: '', aspect: '4/5' }
-      - { alt: '', aspect: '4/5' }
+- type: text
+  heading: Logo and corporate stationery
+  body: A geometric symbol and Persian logotype form the foundation of the identity. The stationery mockups show
+    how the logo and colour palette extend across printed applications.
+- type: pair
+  items:
+  - file: pfc/logo.png
+    alt: Pars Foam Cut geometric logo and Persian logotype
+    fit: contain
+  - file: pfc/staff-cards.jpg
+    alt: Pars Foam Cut staff identification card mockups
+    fit: contain
+- type: text
+  heading: Illustration collection
+  body: Selected illustrations created for the 2022 website project. Industrial imagery and simplified symbols share
+    a consistent colour palette and outlined visual style.
+- type: grid
+  columns: 2
+  items:
+  - file: pfc/digital-illustration.jpg
+    alt: Outlined smartphone and geometric shapes
+    fit: contain
+  - file: pfc/cloud-illustration.jpg
+    alt: Cloud and upward arrow illustration
+    fit: contain
+  - file: pfc/idea-illustration.jpg
+    alt: Light bulb illustration
+    fit: contain
+  - file: pfc/vector-illustration.jpg
+    alt: Vector editing symbol illustration
+    fit: contain
 todo:
-  - What PFC stands for (if it should be spelled out)
-  - Context (commissioned / academic / independent), year, overview
-  - Identity files and applications
+- Add original wireframes and desktop/mobile UI designs when supplied.
+- Confirm which elements of the current blue-and-orange website retain the 2022 UI work before adding current screenshots.
+- Catalogue design authorship remains unconfirmed; catalogue mockups are not shown.

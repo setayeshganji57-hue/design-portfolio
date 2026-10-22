@@ -1,0 +1,1 @@
+Updated after user confirmed logo and corporate stationery authorship. Brand Identity is the sole category. Added logo, stationery overview and staff card mockups. Retained UI, wireframing and illustration credits. Current website screenshots and catalogue mockups remain excluded pending attribution. Source saved only; not deployed.

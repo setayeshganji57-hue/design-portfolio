@@ -1,0 +1,43 @@
+title: ParkScanner — Making parking information easier to understand
+status: published
+categories:
+- digital-ui
+order: 40
+tags:
+- Mobile app design
+- UI/UX
+- Mobility startup
+summary: A map-based mobile interface for exploring parking availability, location, and pricing.
+overview: 'Audience: Drivers looking for parking near their destination
+
+
+  ParkScanner is a parking-intelligence startup working to help drivers make better-informed decisions about where to park. As the team’s UI/UX designer, I designed a mobile app interface that translates parking information into an approachable, map-based experience.
+
+
+  The design challenge was to make several pieces of information easy to compare: location, availability, distance, price, and how recently a parking observation was updated. The interface brings these details together through map markers, browsable parking cards, and expandable location panels, helping users explore their options without losing their place on the map.
+
+
+  A dark navy foundation, cyan highlights, and colour-coded availability indicators establish the visual language. Beyond the map, the prototype includes destination search, parking activity, saved locations, and profile settings, exploring how the experience could support both occasional and returning users.
+
+
+  Project stage: App interface prototype using sample data to demonstrate the proposed experience.'
+role: UI/UX design, app navigation, information hierarchy, and visual interface design.
+links:
+- label: Visit company website
+  url: https://parkscannerai.com
+cover:
+  file: parkscanner/concept.jpg
+  alt: Concept illustration of a bus and parking spaces highlighted in cyan
+  fit: cover
+  caption: Concept illustration supplied with the project; not an app screenshot or live parking data.
+  aspect: 16/10
+hero:
+  kind: image
+  media:
+    file: parkscanner/concept.jpg
+    alt: Concept illustration of a bus and parking spaces highlighted in cyan
+    fit: contain
+    caption: Concept illustration supplied with the project; not an app screenshot or live parking data.
+todo:
+- Add actual app screenshots and a public prototype link when available.
+- Prototype statistics and availability are sample data, not measured outcomes.

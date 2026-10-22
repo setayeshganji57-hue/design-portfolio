@@ -1,54 +1,76 @@
-title: Hamloqmeh
+title: Hamloqmeh — Making food sharing more accessible
 status: published
-categories: [digital-ui]
+categories:
+- digital-ui
 order: 10
-tags: [Product concept, UI design, Persian, Right-to-left]
-summary: A Persian-language platform that connects food businesses with customers to reduce food waste.
-overview: |
-  A Persian-language platform connecting food businesses with customers to reduce food waste. I developed the concept and designed the visual identity, website, and app interfaces, including right-to-left layouts and customer and business journeys.
-role: Product Concept, Visual Design & UI Design
-development: AI-assisted development. Concept, visual identity and interface design by Setayesh Ganji.
+tags:
+- Website design
+- UI/UX
+- Independent startup project
+summary: A food-saving platform connecting consumers and food businesses in Iran.
+overview: 'Audience: Consumers and food businesses in Iran
+
+
+  Hamloqmeh is a food-saving platform to connect people with bakeries, restaurants, and supermarkets offering surplus food at reduced prices. The idea brings together two everyday needs: helping businesses reduce food waste and making good food more affordable.
+
+
+  For its marketing website, I worked from the initial concept through the interface design, shaping how the platform introduces itself to both customers and potential business partners. The design challenge was to communicate an unfamiliar service clearly: what Hamloqmeh offers, how it works, and why someone would want to take part.
+
+
+  The website is designed for a Persian-speaking audience, with a right-to-left layout and an emphasis on readable typography, clear information hierarchy, and a welcoming visual identity. Its purpose at this early stage is to introduce the service and encourage customers and businesses to join the waitlist.
+
+
+  Project stage: Early-stage startup. The website supports awareness and waitlist registration ahead of wider product testing.'
+role: Concept development, website structure, visual direction, and UI design
 links:
-  - { label: Visit website, url: "https://hamloqmeh-website.vercel.app" }
-  - { label: Open app (log-in required), url: "https://hamloqmeh-app.vercel.app" }
+- label: Website preview (Vercel sign-in required)
+  url: https://hamloqmeh-website-cmgvpchh1-setayeshganji57-3963s-projects.vercel.app
+- label: Open app (log-in required)
+  url: https://hamloqmeh-app.vercel.app
 cover:
-  file: hamloqmeh/website-desktop.jpg
-  alt: Homepage of the Hamloqmeh website in Persian, with a headline about saving good food
-  aspect: "16/10"
+  file: hamloqmeh/website-desktop-updated.png
+  alt: Updated Hamloqmeh homepage with a Persian right-to-left layout, green and cream palette, and food-sharing journey cards
+  aspect: 16/10
   fit: cover
-  position: "50% 0%"
+  position: 50% 0%
 hero:
   kind: image
   media:
-    file: hamloqmeh/website-desktop.jpg
-    alt: Homepage of the Hamloqmeh website in Persian, with a headline about saving good food
-    aspect: "16/10"
+    file: hamloqmeh/website-desktop-updated.png
+    alt: Updated Hamloqmeh homepage with a Persian right-to-left layout, green and cream palette, and food-sharing journey cards
     fit: cover
-    position: "50% 0%"
+    position: 50% 0%
 blocks:
-  - type: text
-    heading: Website
-    body: |
-      The website introduces the platform in Persian, using right-to-left layouts. It explains how the service works, with separate sections for customers and for food businesses. During the trial stage, visitors can join a waiting list.
-  - type: pair
-    align: start
-    caption: The website and the app's log-in screen on a phone.
-    items:
-      - { file: hamloqmeh/website-mobile.jpg, alt: Hamloqmeh website on a phone, in Persian, right-to-left, fit: contain, background: "#f7f3ec" }
-      - { file: hamloqmeh/app-login-mobile.jpg, alt: Hamloqmeh app log-in screen on a phone, in Persian, fit: contain, background: "#f5f7fa" }
-  - type: text
-    heading: App
-    body: |
-      The app asks people to log in before they can view and reserve food packages.
-  - type: image
-    size: full
-    media:
-      file: hamloqmeh/app-login-desktop.jpg
-      alt: Hamloqmeh app log-in screen on a desktop browser, in Persian
-      caption: Customer app, log-in screen.
-      aspect: "16/10"
-      fit: cover
+- type: pair
+  align: start
+  caption: Updated marketing website and the existing app's log-in screen on a phone.
+  items:
+  - file: hamloqmeh/website-mobile-updated.png
+    alt: Hamloqmeh website on a phone
+    in Persian: null
+    right-to-left: null
+    fit: contain
+    background: '#f7f3ec'
+  - file: hamloqmeh/app-login-mobile.jpg
+    alt: Hamloqmeh app log-in screen on a phone
+    in Persian: null
+    fit: contain
+    background: '#f5f7fa'
+- type: text
+  heading: App
+  body: 'The app asks people to log in before they can view and reserve food packages.
+
+    '
+- type: image
+  size: full
+  media:
+    file: hamloqmeh/app-login-desktop.jpg
+    alt: Hamloqmeh app log-in screen on a desktop browser, in Persian
+    caption: Customer app, log-in screen.
+    aspect: 16/10
+    fit: cover
 todo:
-  - Confirm the year, and whether the project was independent or commissioned
-  - "Optional: business and customer journey screens, if you want them shown"
-  - Re-check both links before each release (npm run check:links)
+- Replace the protected website preview link with a verified public address before recruiter outreach.
+- Confirm the project year.
+context:
+  type: independent

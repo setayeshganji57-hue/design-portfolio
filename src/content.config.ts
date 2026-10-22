@@ -88,8 +88,8 @@ const projects = defineCollection({
     .object({
       title: z.string(),
       status,
-      /** Every category the project appears in. The first one is its primary category. */
-      categories: z.array(z.enum(CATEGORY_SLUGS)).min(1),
+      /** Exactly one category per project. */
+      categories: z.array(z.enum(CATEGORY_SLUGS)).length(1),
       /** Lower numbers appear first. Override per category with `categoryOrder`. */
       order: z.number().default(100),
       categoryOrder: z.record(z.enum(CATEGORY_SLUGS), z.number()).optional(),
@@ -111,7 +111,7 @@ const projects = defineCollection({
       collaborators: z.array(z.string()).default([]),
       /** External links shown as buttons. Add only after checking that the URL responds publicly. */
       links: z
-        .array(z.object({ label: z.string(), url: z.string().url() }))
+        .array(z.object({ label: z.string(), url: z.union([z.string().url(), z.string().regex(/^\/documents\/[a-zA-Z0-9_-]+\.pdf$/)]) }))
         .default([]),
       cover: media.default({}),
       hero: z

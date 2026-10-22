@@ -1,0 +1,1 @@
+Each project now has exactly one category, enforced by the content schema. Drymto and Miaohaus: Brand Identity. Woman, Life, Freedom Exhibition draft: existing primary category Interactive & 3D retained. Prior multi-category handoff notes are superseded.
