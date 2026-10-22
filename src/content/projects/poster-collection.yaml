@@ -30,6 +30,23 @@ blocks:
     items:
       - { file: poster-collection/no-neon-plinth.jpg, alt: The framed No Neon No Cry poster standing on stone plinths in warm light, fit: contain }
       - { file: poster-collection/no-neon-chair.jpg, alt: The framed poster resting on a wooden chair against a sunlit wall, fit: contain }
+  - type: text
+    heading: Typography Competition 2022
+    body: |
+      A call-for-entries poster for a typography competition in 2022. The title sits above a marbled swirl of teal, grey and charcoal, cut through by rounded vertical bars that carry the call for entries and the year, set at a right angle to the reader.
+  - type: pair
+    align: center
+    items:
+      - { file: poster-collection/typography-table.jpg, alt: The framed teal Typography Competition poster lying on a wooden bench in dappled light, fit: contain }
+      - { file: poster-collection/typography-curtain.jpg, alt: The same poster standing on the floor in front of linen curtains, fit: contain }
+  - type: text
+    heading: Media Architecture Biennale, MAB
+    body: |
+      A poster for the Media Architecture Biennale, from 28 June to 2 July 2021. Simple geometric shapes, a circle, two half-circles and three arches, balance on top of one another in navy, violet and olive on a speckled off-white ground, beside the event title in a stencil display face.
+  - type: pair
+    align: center
+    items:
+      - { file: poster-collection/mab-billboard.jpg, alt: The Media Architecture Biennale design on a landscape billboard against blue sky, fit: contain }
+      - { file: poster-collection/mab-wall.jpg, alt: The portrait poster pasted on a concrete wall behind bamboo leaves, fit: contain }
 todo:
-  - Add the remaining posters
   - Confirm whether each poster was commissioned, academic or independent
