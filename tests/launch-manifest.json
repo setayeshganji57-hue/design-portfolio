@@ -48,31 +48,6 @@
       "note": "Contribution details pending"
     },
     {
-      "slug": "illustrated-book-covers",
-      "category": "graphic-illustration",
-      "status": "draft"
-    },
-    {
-      "slug": "illustration-collection",
-      "category": "graphic-illustration",
-      "status": "draft"
-    },
-    {
-      "slug": "calligraphy-typography",
-      "category": "graphic-illustration",
-      "status": "draft"
-    },
-    {
-      "slug": "roman-typography",
-      "category": "graphic-illustration",
-      "status": "draft"
-    },
-    {
-      "slug": "poster-collection",
-      "category": "graphic-illustration",
-      "status": "draft"
-    },
-    {
       "slug": "pfc-brand-identity",
       "category": "brand-identity",
       "status": "published"
@@ -94,26 +69,17 @@
       "category": "digital-ui",
       "status": "published",
       "note": "Added by the owner, October 2026"
+    },
+    {
+      "slug": "final-studio",
+      "category": "graphic-illustration",
+      "status": "published",
+      "note": "Published by the owner, October 2026"
     }
   ],
   "excluded": [
     {
-      "slug": "final-studio",
-      "status": "draft",
-      "note": "Not in the approved launch list"
-    },
-    {
       "slug": "woman-life-freedom-exhibition",
-      "status": "draft",
-      "note": "Not in the approved launch list"
-    },
-    {
-      "slug": "track-la-sapienza",
-      "status": "draft",
-      "note": "Not in the approved launch list; not added by the owner"
-    },
-    {
-      "slug": "fruits-in-love",
       "status": "draft",
       "note": "Not in the approved launch list"
     }

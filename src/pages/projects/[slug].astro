@@ -48,18 +48,6 @@ const facts: { term: string; value?: string; links?: { href: string; label: stri
       <a class={`chip band--${primary.slug}`} href={`/work/${primary.slug}`}><span aria-hidden="true">←</span>&nbsp;{primary.title}</a>
     </nav>
 
-    {
-      isDraft && (
-        <aside class="draft-note" aria-label="Draft notes">
-          <p><strong>Draft preview.</strong> This project is excluded from production builds until its status is set to “published”.</p>
-          {d.todo.length > 0 && (
-            <ul>
-              {d.todo.map((t) => <li>{t}</li>)}
-            </ul>
-          )}
-        </aside>
-      )
-    }
 
     {
       d.links.length > 0 && (
