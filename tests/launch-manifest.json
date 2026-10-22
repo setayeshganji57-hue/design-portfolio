@@ -75,6 +75,12 @@
       "category": "graphic-illustration",
       "status": "published",
       "note": "Published by the owner, October 2026"
+    },
+    {
+      "slug": "poster-collection",
+      "category": "graphic-illustration",
+      "status": "published",
+      "note": "Added by the owner, October 2026"
     }
   ],
   "excluded": [

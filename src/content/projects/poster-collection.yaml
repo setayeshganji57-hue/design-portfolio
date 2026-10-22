@@ -1,0 +1,35 @@
+title: Posters
+status: published
+categories: [graphic-illustration]
+order: 40
+tags: [Poster, Typography, Event design]
+summary: A collection of event and exhibition posters, each shown as a poster and in its setting.
+overview: |
+  A collection of posters for events and exhibitions. Each poster is shown twice: as a printed poster, and at the scale of the street or the room where it would be seen.
+cover:
+  file: poster-collection/mef-street.jpg
+  alt: Blue MEF Leadership Forum poster in a street display case
+  aspect: "1/1"
+  fit: cover
+blocks:
+  - type: text
+    heading: MEF Leadership Forum, Rome
+    body: |
+      A poster for the MEF Leadership Forum in Rome on 9 May 2023, at Lungotevere dei 26, The First Musica. The letters "mef" are extruded into deep, fading three-dimensional forms that sweep across a flat blue field, with the event details set small in a technical display face.
+  - type: pair
+    align: center
+    items:
+      - { file: poster-collection/mef-street.jpg, alt: The MEF Leadership Forum poster in a street display case next to a tram stop, fit: contain }
+      - { file: poster-collection/mef-billboard.jpg, alt: The same design adapted to a landscape billboard among trees, fit: contain }
+  - type: text
+    heading: No, Neon No Cry
+    body: |
+      A poster for "No, Neon No Cry" at MAMbo, Project Room, from 12 May to 23 October 2022. The title is written as glowing neon script on a deep red ground, with the venue and dates in the same neon hand below.
+  - type: pair
+    align: center
+    items:
+      - { file: poster-collection/no-neon-plinth.jpg, alt: The framed No Neon No Cry poster standing on stone plinths in warm light, fit: contain }
+      - { file: poster-collection/no-neon-chair.jpg, alt: The framed poster resting on a wooden chair against a sunlit wall, fit: contain }
+todo:
+  - Add the remaining posters
+  - Confirm whether each poster was commissioned, academic or independent
