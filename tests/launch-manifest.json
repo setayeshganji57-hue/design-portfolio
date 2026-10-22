@@ -44,7 +44,7 @@
     {
       "slug": "chronolens",
       "category": "interactive-3d",
-      "status": "draft",
+      "status": "published",
       "note": "Contribution details pending"
     },
     {
@@ -91,7 +91,5 @@
     "motion-film",
     "interactive-3d"
   ],
-  "categoriesWithNoApprovedProjects": [
-    "interactive-3d"
-  ]
+  "categoriesWithNoApprovedProjects": []
 }

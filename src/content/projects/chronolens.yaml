@@ -1,5 +1,5 @@
 title: 'ChronoLens: Unveiling Temporal Mysteries'
-status: draft
+status: published
 categories: [interactive-3d]
 order: 10
 tags: [Game design, Narrative design, 3D environments]
@@ -13,6 +13,11 @@ overview: |
 
   Through exploration, observation, and the collection of photographic clues, players piece together the circumstances surrounding a photographer's mysterious death. At the heart of the experience lies the Pantheon, a landmark that becomes both a historical anchor and a key element in the unfolding narrative.
 role: Game concept, narrative design, historical and visual research, environment and level development, 3D visual development, game design documentation
+cover:
+  file: chronolens/pantheon-fire.jpg
+  alt: Render of the Pantheon in flames in a snow-covered Rome
+  aspect: "16/9"
+  fit: cover
 links:
   - { label: Game design document (PDF), url: /documents/chronolens-game-design-document.pdf }
 hero:
@@ -22,6 +27,10 @@ hero:
     url: https://youtu.be/rXq6fD96z7w
     title: ChronoLens — trailer
     aspect: '16/9'
+    poster:
+      file: chronolens/pantheon-snow.jpg
+      alt: Render of the Pantheon in a snow-covered Rome
+      fit: cover
 blocks:
   - type: text
     heading: Facts
@@ -37,6 +46,26 @@ blocks:
       Photography serves as the central narrative device, connecting the protagonist's journey to the act of gathering evidence and uncovering hidden stories. The contrast between a familiar summer landscape and an unsettling winter world reinforces the game's atmosphere and sense of temporal disorientation.
 
       The result is a concept that approaches cultural heritage through exploration and mystery, encouraging players to engage with history by investigating the environment rather than simply observing it.
+  - type: pair
+    caption: The winter Pantheon, and the fire sequence.
+    items:
+      - { file: chronolens/pantheon-snow.jpg, alt: Render of the Pantheon surrounded by snowy trees and buildings, fit: contain, background: "#000000" }
+      - { file: chronolens/pantheon-fire.jpg, alt: Render of the Pantheon in flames, fit: contain, background: "#000000" }
+  - type: image
+    size: full
+    media: { file: chronolens/city-snow.jpg, alt: Render of the snow-covered city around the Pantheon, fit: contain, background: "#000000", caption: The snow-covered city. }
+  - type: grid
+    columns: 3
+    caption: 3D models of the Pantheon and the surrounding buildings.
+    items:
+      - { file: chronolens/pantheon-model.jpg, alt: White 3D model of the Pantheon, fit: contain, background: "#000000" }
+      - { file: chronolens/pantheon-portico.jpg, alt: Close view of the 3D model of the Pantheon's portico, fit: contain, background: "#000000" }
+      - { file: chronolens/building-model.jpg, alt: 3D model of a Roman apartment building, fit: contain, background: "#000000" }
+  - type: pair
+    caption: Main menu and controls screens.
+    items:
+      - { file: chronolens/menu.jpg, alt: ChronoLens main menu over a view of Rome, fit: contain }
+      - { file: chronolens/controls.jpg, alt: Controls screen showing the keyboard keys, fit: contain }
   - type: video
     video:
       provider: youtube
@@ -60,6 +89,4 @@ blocks:
     heading: Outcome
     body: |
       ChronoLens brings together narrative thinking, historical investigation, and digital environment development to explore how a real city's cultural heritage can become the foundation of an immersive fictional experience.
-todo:
-  - Add the cover and 4 to 6 images (Pantheon, snow-covered Rome, environmental scenes, Pantheon fire) from the owner's photo file, then publish
-  - Confirm collaborator credit (the PDF's metadata names "Setayesh, Farnaz")
+todo: []
