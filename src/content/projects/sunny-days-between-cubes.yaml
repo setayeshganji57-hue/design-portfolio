@@ -1,18 +1,23 @@
-title: Sunny Days Between Cubes
+title: Sunny Days Between Cubes — Translating everyday movements into a visual language
 status: published
 categories: [motion-film]
 order: 10
-tags: [Film, Motion, Projection]
-year: 2023
+tags: [Visual communication, Motion studies, Exhibition design]
+year: February 2023
 context: { type: academic, institution: Sapienza University of Rome, course: Performing Arts and New Media Studio }
-summary: A movement-based project in the centre of Sapienza University, translating choreographic scores into video.
+summary: An experimental visual communication project that turns students' everyday movements into graphic scores, motion studies and an exhibition concept.
 overview: |
-  Choreography has changed over time, and today its movements can be recorded as scores and then translated into other forms of art. This project is based on movement in the Sapienza University area, using the basic concepts of chronography.
+  What if everyday human activity could be translated into a choreography of shapes, lines, and moving images?
 
-  The outcome is a 4D video, created in Cinema 4D, which could not be shown in a printed portfolio. The video is projected in the centre of the university, on the same tables where the scores were made, with LED lights and a projector. The projection recalls the activity and movement of students, and draws the attention of visitors at night.
+  Sunny Days Between Cubes is an experimental visual communication project that explores the relationship between human movement, geometric abstraction, and architectural space. Starting with the observation of students in a shared resting area at Sapienza University of Rome, the project investigates how ordinary gestures (writing, typing, and conversation) can be observed, abstracted, and transformed into a new visual language.
+
+  By translating physical movements into graphic scores and animated forms, the project reveals the hidden rhythms of everyday life. These visual explorations culminate in a transmedia exhibition concept that brings the resulting imagery back into the physical environment where the original movements took place.
+role: Site study, visual scores, motion studies and exhibition concept, in a collaborative academic project
+links:
+  - { label: Project presentation (PDF), url: /documents/sunny-days-between-cubes-presentation.pdf }
 cover:
-  file: sunny-days-between-cubes/still-1.jpg
-  alt: "Still from the 4D video: grey and red cubes filling the frame"
+  file: sunny-days-between-cubes/combined-motion.jpg
+  alt: Red grid and wave forms layered over the grey table surface
   aspect: "1/1"
   fit: cover
 hero:
@@ -20,28 +25,66 @@ hero:
   video:
     provider: vimeo
     url: "https://vimeo.com/826360556"
-    title: Sunny Days Between Cubes, film
+    title: Sunny Days Between Cubes, motion study
     aspect: "16/9"
     poster:
-      file: sunny-days-between-cubes/still-1.jpg
-      alt: "Still from the film: grey and red cubes filling the frame"
+      file: sunny-days-between-cubes/title.jpg
+      alt: Title frame with spheres and red lines across a grey field
       fit: cover
 blocks:
   - type: text
-    heading: From score to space
+    heading: Process and visual exploration
     body: |
-      The movements were first recorded as scores on tables in the university. These scores were translated into video and placed back on the same tables through projection, so the piece continues the activity that inspired it.
-  - type: pair
-    align: start
-    items:
-      - { file: sunny-days-between-cubes/plan-1.jpg, alt: Plan of the site showing the direction of movement across the selected area, fit: contain, background: "#55575a" }
-      - { file: sunny-days-between-cubes/plan-2.jpg, alt: Plan of the site showing the light and shadow study for the selected area, fit: contain, background: "#55575a" }
+      The project began with a site study of the university's covered outdoor resting area. Through observation, photographic documentation, and video recording, I explored the relationship between students' activities, architectural geometry, changing light, and the patterns of movement within the space.
   - type: image
     size: full
-    media: { file: sunny-days-between-cubes/plan-3.jpg, alt: Second plan of the site showing the direction of movement, fit: contain, background: "#55575a" }
-  - type: image
-    size: wide
-    media: { file: sunny-days-between-cubes/still-2.jpg, alt: "Still from the 4D video showing a red arc drawn across the grey cubes", fit: cover }
+    media: { file: sunny-days-between-cubes/site.jpg, alt: Black-and-white photographs of the covered resting area and its tables, fit: contain, background: "#ffffff", caption: "Site study: the covered resting area at Sapienza, its geometry and its light." }
+  - type: text
+    heading: From movement to score to motion
+    body: |
+      Drawing inspiration from William Forsythe's choreographic explorations and the Synchronous Objects project, I developed a system of visual scores. Each everyday action was translated into its own graphic expression, then animated. Each row below follows one action from observation, to score, to moving image.
+  - type: grid
+    columns: 3
+    caption: "Writing. The repetitive movement of the hand becomes a zigzag line, which then draws itself across the table in the video."
+    items:
+      - { file: sunny-days-between-cubes/writing-observed.jpg, alt: Overhead photographs of a student writing at the table, fit: contain, background: "#ffffff" }
+      - { file: sunny-days-between-cubes/writing-score.jpg, alt: Red zigzag line, the score for writing, fit: contain, background: "#ffffff" }
+      - { file: sunny-days-between-cubes/writing-motion.jpg, alt: Video frames of a red line drawing across the grey table, fit: contain, background: "#ffffff" }
+  - type: grid
+    columns: 3
+    caption: "Typing. Keystrokes are abstracted into modular squares, which multiply across the surface in the video."
+    items:
+      - { file: sunny-days-between-cubes/typing-observed.jpg, alt: Overhead photographs of a student typing on a laptop, fit: contain, background: "#ffffff" }
+      - { file: sunny-days-between-cubes/typing-score.jpg, alt: Grid of red squares, the score for typing, fit: contain, background: "#ffffff" }
+      - { file: sunny-days-between-cubes/typing-motion.jpg, alt: Video frames of red squares spreading across the table, fit: contain, background: "#ffffff" }
+  - type: grid
+    columns: 3
+    caption: "Conversation. Speech is represented by circles and sound-wave forms, which drift and gather in the video."
+    items:
+      - { file: sunny-days-between-cubes/conversation-observed.jpg, alt: Overhead photographs of students talking around the table, fit: contain, background: "#ffffff" }
+      - { file: sunny-days-between-cubes/conversation-score.jpg, alt: Red sound-wave form, the score for conversation, fit: contain, background: "#ffffff" }
+      - { file: sunny-days-between-cubes/conversation-motion.jpg, alt: Video frames of circles and spheres gathering on the table, fit: contain, background: "#ffffff" }
+  - type: pair
+    align: center
+    caption: "Combined composition. The three scores coexist, and lines, grids and waveforms become one abstract visual environment."
+    items:
+      - { file: sunny-days-between-cubes/combined-scores.jpg, alt: The zigzag line, sound wave and square grid together, fit: contain, background: "#ffffff" }
+      - { file: sunny-days-between-cubes/combined-motion.jpg, alt: Frame of the combined video with red squares and waves on the table, fit: contain, background: "#000000" }
+  - type: text
+    heading: From screen to space — exhibition concept
+    body: |
+      The final stage extended the research beyond the screen into a site-specific exhibition design concept. Using projected imagery and LED lighting, the proposal reimagines the university's central resting area as an immersive visual experience, placing the generated forms back into the space that inspired them.
+
+      The installation concept establishes a dialogue between the physical environment and its abstract representation, allowing the familiar rhythms of student life to be perceived in a different way. This is a proposal: the presentation documents the concept, not a realised installation.
+  - type: pair
+    align: center
+    caption: "Installation proposal: the plan of the projection area, and a visualisation of the projector over the tables at night."
+    items:
+      - { file: sunny-days-between-cubes/exhibition-plan.jpg, alt: Exhibition design plan with the table layout and projection frames, fit: contain, background: "#ffffff" }
+      - { file: sunny-days-between-cubes/installation.jpg, alt: Night visualisation of a projector beam over the tables in the resting area, fit: contain, background: "#000000" }
+  - type: text
+    heading: Outcome
+    body: |
+      Sunny Days Between Cubes explores how observation can become notation, notation can become moving imagery, and moving imagery can become a spatial experience. By connecting research, abstraction, motion, and exhibition design, the project examines the potential of visual communication to make the invisible patterns of everyday life visible.
 todo:
-  - Confirm my role and collaborators
-  - Confirm the year (the PDF gives February 2023)
+  - Replace the Vimeo video with a higher-resolution export when available (current upload is 426 x 240)
