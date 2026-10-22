@@ -2,36 +2,64 @@ title: 'ChronoLens: Unveiling Temporal Mysteries'
 status: draft
 categories: [interactive-3d]
 order: 10
-tags: [Game design, 3D, Interactive]
+tags: [Game design, Narrative design, 3D environments]
 context: { type: academic, course: Computer Graphics and Gaming Studio }
-year: 2024
-summary: A non-violent game set in the Pantheon area of Rome, built in Unreal Engine with 3D objects modelled in Rhino.
+year: January 2024
+summary: A historical mystery told through photography. A narrative adventure game concept set in a distorted, snow-covered Rome.
 overview: |
-  A non-violent game designed in the area around the Pantheon in Rome. The story follows a 23-year-old history student who finds a camera in an antique shop, which is the tutorial of the game. She then wakes up in another place, where the weather is heavy and snowy and the city is empty and gloomy.
+  What if a photograph could transport you into a forgotten version of history?
 
-  Her aim is to understand where she is and what she has to do. On her journey she meets a young girl, an angry man, and a series of challenges.
+  ChronoLens is a narrative-driven adventure game concept that transforms the historic city of Rome into an atmospheric mystery to be uncovered. The story follows Nerezza, a young history student who discovers an old camera in an antique shop. After taking a photograph, she finds herself in a distorted, snow-covered version of Rome, where familiar landmarks conceal the traces of a forgotten crime.
 
-  The 3D objects were designed in Rhino and imported into Unreal Engine, where Blueprints control the characters. A game design document (GDD) shows every step of the project, and a tutorial and a trailer were delivered as outcomes.
-cover: { alt: '', aspect: '16/9' }
+  Through exploration, observation, and the collection of photographic clues, players piece together the circumstances surrounding a photographer's mysterious death. At the heart of the experience lies the Pantheon, a landmark that becomes both a historical anchor and a key element in the unfolding narrative.
+role: Game concept, narrative design, historical and visual research, environment and level development, 3D visual development, game design documentation
+links:
+  - { label: Game design document (PDF), url: /documents/chronolens-game-design-document.pdf }
 hero:
   kind: video
   video:
     provider: youtube
-    url: ''
-    title: 'ChronoLens — gameplay'
+    url: https://youtu.be/rXq6fD96z7w
+    title: ChronoLens — trailer
     aspect: '16/9'
 blocks:
-  - type: pair
-    items:
-      - { alt: '', aspect: '16/9' }
-      - { alt: '', aspect: '16/9' }
-  - type: image
-    size: full
-    media: { alt: '', aspect: '21/9' }
+  - type: text
+    heading: Facts
+    body: |
+      Project type: game design concept and visual development. Genre: narrative adventure and mystery. Platform: PC (Windows).
+  - type: text
+    heading: Design approach
+    body: |
+      The project explores how history, architecture, and interactive storytelling can come together to create a compelling game environment.
+
+      Historical and visual research informed the development of Rome's urban setting and its architectural landmarks. These references were translated into 3D environments and rendered scenes, including a transformed winter city and a dramatic depiction of the Pantheon in flames.
+
+      Photography serves as the central narrative device, connecting the protagonist's journey to the act of gathering evidence and uncovering hidden stories. The contrast between a familiar summer landscape and an unsettling winter world reinforces the game's atmosphere and sense of temporal disorientation.
+
+      The result is a concept that approaches cultural heritage through exploration and mystery, encouraging players to engage with history by investigating the environment rather than simply observing it.
+  - type: video
+    video:
+      provider: youtube
+      url: https://youtu.be/9i83SRw2RQw
+      title: ChronoLens — tutorial
+      aspect: '16/9'
+      caption: Tutorial.
+  - type: text
+    heading: Project scope
+    body: |
+      Game concept and narrative design: the story premise, protagonist, objectives, and mystery-driven progression.
+
+      Historical and visual research: Rome's architecture, landmarks, and historical imagery, to establish the game's visual context.
+
+      Environment and level development: the main locations, translated from the research into a cohesive game world.
+
+      3D visual development: rendered environmental scenes exploring the atmosphere and dramatic potential of the setting.
+
+      Game design documentation: gameplay objectives, player profiles, controls, accessibility considerations, and audio direction.
+  - type: text
+    heading: Outcome
+    body: |
+      ChronoLens brings together narrative thinking, historical investigation, and digital environment development to explore how a real city's cultural heritage can become the foundation of an immersive fictional experience.
 todo:
-  - Gameplay video link (the trailer and tutorial can be used)
-  - Select 4 to 6 stills and screenshots from the 45 images in the PDF
-  - Gameplay video link and original assets
-  - CONFIRM my contribution — which models, characters and assets I made; credit the rest
-  - Institution, course, team and year
-  - Spelling taken from the portfolio PDF — confirm
+  - Add the cover and 4 to 6 images (Pantheon, snow-covered Rome, environmental scenes, Pantheon fire) from the owner's photo file, then publish
+  - Confirm collaborator credit (the PDF's metadata names "Setayesh, Farnaz")
