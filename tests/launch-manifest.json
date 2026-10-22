@@ -81,6 +81,12 @@
       "category": "graphic-illustration",
       "status": "published",
       "note": "Added by the owner, October 2026"
+    },
+    {
+      "slug": "motion-teaching",
+      "category": "motion-film",
+      "status": "published",
+      "note": "Added by the owner, October 2026"
     }
   ],
   "excluded": [

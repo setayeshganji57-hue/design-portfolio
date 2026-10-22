@@ -1,0 +1,53 @@
+title: Teaching Motion — Preproduction, from Process to Outcome
+status: published
+categories: [motion-film]
+order: 20
+tags: [Teaching, Storyboarding, Motion design]
+year: 2022
+context: { type: academic, institution: Sapienza University of Rome, course: Multimedia Design Studio }
+summary: Lesson materials I designed as a teaching assistant for Sapienza's Multimedia Design Studio, introducing students to the preproduction of motion projects.
+overview: |
+  I was invited to Sapienza University of Rome as a teaching assistant in the Multimedia Design Studio, led by Prof. Vincenzo Maselli, to teach parts of the motion design programme. For each lesson I designed the teaching materials.
+
+  This lesson, given on 11 April 2022, takes students through preproduction: the steps that turn an idea into a plan before any animation is made. It moves from concept development, mood boards and script to visual style, storyboarding and design boards, and gives students a shared vocabulary for framing a moving image.
+role: Teaching assistant. Lesson structure and slide design.
+links:
+  - { label: Lesson slides (PDF), url: /documents/preproduction-process-to-outcome.pdf }
+cover:
+  file: motion-teaching/cover.jpg
+  alt: "Title slide: Preproduction, process-to-outcome spectrum"
+  aspect: "16/9"
+  fit: cover
+hero:
+  kind: image
+  media: { file: motion-teaching/cover.jpg, alt: "Title slide: Preproduction, process-to-outcome spectrum, with the Sapienza DCVM logo", aspect: "16/9", fit: cover }
+blocks:
+  - type: text
+    heading: What the lesson covers
+    body: |
+      Preproduction phases: a timeline from concept development, keywords and mind maps, script outline and visual concept, to storyboard, design board and pitch.
+
+      Visual style: the choices that define a project's look, including colour palette, medium, line quality, scale, texture, typography and cinematic conventions.
+
+      Storyboarding: what a storyboard is, its main elements (camera field, angle and movement, character movement, sound and dialogue, duration), and traditional versus thumbnail storyboards.
+
+      Camera language: each type of shot, shooting angle and camera movement, from the extreme wide shot to the bird's-eye view, the dolly, the pan and the tilt, each explained beside a drawn example.
+
+      Design boards and pitch books: how a design board fixes the visual style of a motion project, how it differs from a storyboard, and how to present the work.
+  - type: image
+    size: full
+    media: { file: motion-teaching/phases.jpg, alt: Slide with a timeline of the preproduction phases, fit: contain, caption: "The preproduction phases, from concept development to the design board and pitch." }
+  - type: pair
+    align: center
+    caption: "Camera language: the full list of shots, angles and movements, and how each is explained with a drawn frame."
+    items:
+      - { file: motion-teaching/shot-types.jpg, alt: Slide listing the types of shot, shooting angles and camera movements, fit: contain }
+      - { file: motion-teaching/wide-shot.jpg, alt: Slide explaining the wide shot beside a drawn street scene, fit: contain }
+  - type: pair
+    align: center
+    items:
+      - { file: motion-teaching/dolly.jpg, alt: Slide explaining the dolly shot with a drawn sequence, fit: contain }
+      - { file: motion-teaching/storyboard-designboard.jpg, alt: Slide comparing a storyboard with a design board, fit: contain }
+todo:
+  - Add the other lessons' files
+  - Confirm whether the drawn shot examples are your own drawings or reference images, and credit them if needed
