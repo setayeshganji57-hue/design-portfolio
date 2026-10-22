@@ -16,12 +16,16 @@ cover:
   aspect: "1/1"
   fit: cover
 hero:
-  kind: image
-  media:
-    file: sunny-days-between-cubes/still-1.jpg
-    alt: "Still from the 4D video: grey and red cubes filling the frame"
-    aspect: "1/1"
-    fit: cover
+  kind: video
+  video:
+    provider: vimeo
+    url: "https://vimeo.com/826360556"
+    title: Sunny Days Between Cubes, film
+    aspect: "16/9"
+    poster:
+      file: sunny-days-between-cubes/still-1.jpg
+      alt: "Still from the film: grey and red cubes filling the frame"
+      fit: cover
 blocks:
   - type: text
     heading: From score to space
@@ -39,6 +43,5 @@ blocks:
     size: wide
     media: { file: sunny-days-between-cubes/still-2.jpg, alt: "Still from the 4D video showing a red arc drawn across the grey cubes", fit: cover }
 todo:
-  - "Add the video: the finished film is in Cinema 4D. Add a Vimeo or YouTube link in a video block, or a local file."
   - Confirm my role and collaborators
   - Confirm the year (the PDF gives February 2023)
