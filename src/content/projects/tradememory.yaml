@@ -22,6 +22,7 @@ overview: 'Audience: Active traders who want to understand and improve their tra
 
   Project stage: Independent product in MVP development, with ongoing refinement of its features and user experience.'
 role: Concept development, product structure, visual direction, and UI design.
+development: AI-assisted development. Concept, product logic, visual direction and interface design by Setayesh Ganji.
 links:
 - label: Visit website
   url: https://tradememory-sigma.vercel.app
@@ -39,20 +40,74 @@ hero:
     fit: cover
 blocks:
 - type: text
-  heading: What the app does
-  body: 'The homepage describes the workflow: upload an MT5 statement, verify that it is correct, review what the numbers cannot tell you, and see which patterns hold up.
-
-    '
+  heading: The workflow
+  body: |
+    TradeMemory is organised around one loop: import a broker statement, verify it, review each trade, and only then read the patterns. The app is structured as seven areas in a single sidebar, Overview, Calendar, Trades, Review Queue, Insights, Import, and Settings, so a trader always knows where they are in that loop.
 - type: image
-  size: inset
   media:
     file: tradememory/app-mobile.jpg
     alt: TradeMemory homepage on a phone
     fit: contain
-    background: '#11151b'
+    caption: The public homepage on mobile.
+- type: text
+  heading: Overview
+  body: |
+    The dashboard answers three questions at a glance: how the account is performing, how much of it has been reviewed, and what to do next. Key figures sit in a row of cards, a progress bar shows review completion with a direct "Continue reviewing" action, and the latest import is shown with its status. Below, entry points to the main areas, a month calendar, recent trades, and recent trading days give quick ways into the detail.
+- type: pair
+  tiles: wide
+  items:
+  - { file: tradememory/overview.jpg, alt: "Overview dashboard with net P&L, trade count, win rate, profit factor and review completion" }
+  - { file: tradememory/overview-detail.jpg, alt: "Lower part of the Overview with recent trades, recent trading days and a month calendar" }
+- type: text
+  heading: Calendar
+  body: |
+    The calendar shows each trading day with its realised result, number of trades, and how many have been reviewed, coloured by profit or loss. A summary row above the month adds net result, win rate, profitable and losing days, and review completion. A short note states the rule behind the grid: results are assigned to the day a trade closed, in the account's own timezone.
+- type: image
+  media: { file: tradememory/calendar.jpg, alt: "Calendar view of September with daily results, trade counts and a monthly summary" }
+- type: text
+  heading: Trades
+  body: |
+    Every trade reconstructed from the statement is listed in one table: instrument, side, status, open and close times, net result, and whether it has been reviewed. Review status is shown as a label on every row, so unreviewed trades stand out without a separate filter.
+- type: image
+  media: { file: tradememory/trades.jpg, alt: "Trades table with symbol, side, status, review label, open and close times and net P&L" }
+- type: text
+  heading: Review Queue
+  body: |
+    Reviewing is where the journal adds what the numbers cannot: the setup, the session, planned stop and target, how far the trade moved for and against the position (MAE and MFE), the exit reason, and the best possible exit. The queue sits on the left, grouped by day, and the form on the right; a completeness bar and the choice between "Save draft" and "Save and mark complete" let the trader work through a backlog in short sessions. Technical fields carry a small help icon with an explanation.
+- type: image
+  media: { file: tradememory/review-queue.jpg, alt: "Review Queue with the list of trades on the left and the journal form on the right" }
+- type: text
+  heading: Insights
+  body: |
+    Insights compares reviewed trades by setup, weekday, and session, alongside a cumulative result curve and summary metrics such as profit factor, expectancy, and how much profit was left on the table. Each breakdown states its scope and sample size, and the page is framed as historical evidence, not a signal, so small samples are never presented as conclusions.
+- type: pair
+  tiles: wide
+  items:
+  - { file: tradememory/insights.jpg, alt: "Insights summary metrics with a panel explaining what the numbers cover" }
+  - { file: tradememory/insights-breakdowns.jpg, alt: "Insights charts: cumulative net P&L and performance by setup, weekday and session" }
+- type: text
+  heading: Import
+  body: |
+    Importing an MT5 statement is broken into six visible steps: select, validate, review reconciliation, confirm, reconstruct trades, and result. The first screen says plainly that nothing is added to the trade history until the trader has checked and confirmed it.
+- type: image
+  media: { file: tradememory/import.jpg, alt: "Import screen with the six-step progress and the statement file upload" }
+- type: text
+  heading: Settings
+  body: |
+    Settings holds the account details, the trading timezone, and the controlled lists that keep the analysis clean: setups are chosen from a list rather than typed each time, so the same setup is never counted under two names. Fields that cannot change, such as the account currency, say why. Appearance offers dark, light, and system themes, and a data panel shows real counts from the account.
+- type: pair
+  tiles: wide
+  items:
+  - { file: tradememory/settings.jpg, alt: "Settings with profile and trading account details" }
+  - { file: tradememory/settings-preferences.jpg, alt: "Settings with the setup list, appearance options and account data counts" }
+- type: text
+  heading: Designing for trust
+  body: |
+    Trading data is personal and easy to misread, so the interface is designed to be explicit about what it knows. Imports must be confirmed before they count. Every metric shows the number of trades behind it. Results are labelled as realised and assigned to a clear date. Read-only fields explain themselves. The aim is a tool that helps traders reflect honestly on their decisions rather than one that flatters them with numbers.
 todo:
-- Replace existing desktop and mobile images with screenshots of the latest version; the supplied source ZIP contains no screenshots.
-- Add review and analytics screenshots using demonstration data.
+- Add the walkthrough video when supplied.
+- Add the tools used.
 - Confirm the project year.
+- Screens show a real imported account; replace with demonstration data if preferred.
 context:
   type: independent

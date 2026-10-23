@@ -61,8 +61,8 @@ const block = z.discriminatedUnion('type', [
   z.object({
     type: z.literal('pair'),
     items: z.tuple([media, media]),
-    /** Tile shape in the gallery: landscape (default) or portrait, for phone screens. */
-    tiles: z.enum(['landscape', 'portrait']).default('landscape'),
+    /** Tile shape in the gallery: landscape (default), portrait for phone screens, or wide (two columns) for dense desktop screens. */
+    tiles: z.enum(['landscape', 'portrait', 'wide']).default('landscape'),
     /** Vertical alignment when the two images differ in height. */
     align: z.enum(['start', 'center', 'end']).default('start'),
     caption: z.string().optional(),
@@ -72,7 +72,7 @@ const block = z.discriminatedUnion('type', [
     /** Detail images, series of posters, book covers … */
     columns: z.union([z.literal(2), z.literal(3), z.literal(4)]).default(3),
     items: z.array(media).min(1),
-    tiles: z.enum(['landscape', 'portrait']).default('landscape'),
+    tiles: z.enum(['landscape', 'portrait', 'wide']).default('landscape'),
     caption: z.string().optional(),
   }),
   z.object({

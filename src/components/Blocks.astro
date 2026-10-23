@@ -53,8 +53,8 @@ const isPortrait = (aspect: string) => {
               <div class="b-gallery">
                 <div class="gallery">
                   {b.items.map((m) => (
-                    <div class="g-tile">
-                      <Media media={m} zoom tile tileAspect={b.tiles === 'portrait' ? '3/5' : '4/3'} sizes={tileSizes} small />
+                    <div class:list={['g-tile', b.tiles === 'wide' && 'g-tile--wide']}>
+                      <Media media={m} zoom tile tileAspect={b.tiles === 'portrait' ? '3/5' : '4/3'} sizes={b.tiles === 'wide' ? wideTileSizes : tileSizes} small />
                     </div>
                   ))}
                 </div>
