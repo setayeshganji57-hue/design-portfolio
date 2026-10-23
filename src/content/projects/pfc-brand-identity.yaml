@@ -55,6 +55,18 @@ blocks:
     alt: Pars Foam Cut staff identification card mockups
     fit: contain
 - type: text
+  heading: Catalogue and brochure
+  body: The identity carries into the company's printed communication, a catalogue presenting its fabrication
+    work and a folded brochure, both set in Persian with the logo and colour palette.
+- type: pair
+  items:
+  - file: pfc/catalogue.jpg
+    alt: Open Pars Foam Cut catalogue with photographs of CNC-cut foam sculptures and Persian text
+    fit: contain
+  - file: pfc/brochure.jpg
+    alt: Folded Pars Foam Cut brochure with the logo, Persian logotype and text
+    fit: contain
+- type: text
   heading: Illustration collection
   body: Selected illustrations created for the 2022 website project. Industrial imagery and simplified symbols share
     a consistent colour palette and outlined visual style.
@@ -79,5 +91,4 @@ blocks:
 todo:
 - Add original wireframes and desktop/mobile UI designs when supplied.
 - Confirm which elements of the current blue-and-orange website retain the 2022 UI work before adding current screenshots.
-- Catalogue design authorship remains unconfirmed; catalogue mockups are not shown.
-- Owner asked (October 2026) to publish all PFC mockups and illustrations; every PFC file received so far is now on the page. Any further mockups still need to be sent.
+- Owner asked (October 2026) to publish all PFC mockups and illustrations; catalogue and brochure added from the files sent on 23 October. Any further mockups still need to be sent.
