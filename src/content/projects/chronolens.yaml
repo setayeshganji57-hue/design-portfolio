@@ -75,6 +75,46 @@ blocks:
       - { file: chronolens/pantheon-portico.jpg, alt: Close view of the 3D model of the Pantheon's portico, fit: contain, background: "#000000" }
       - { file: chronolens/building-model.jpg, alt: 3D model of a Roman apartment building, fit: contain, background: "#000000" }
   - type: text
+    heading: Inside the game
+    body: |
+      Screens from the playable build in Unreal Engine. The city is seen first from above, then at street level in summer, where empty picture frames on the walls are the first hint of the mystery, and finally in the snow-covered version of Rome that Nerezza enters after taking the photograph, where mannequins stand in place of people.
+  - type: grid
+    columns: 4
+    caption: The city from above.
+    items:
+      - { file: chronolens/game-aerial-1.jpg, alt: "Wide view over the city and the surrounding hills" }
+      - { file: chronolens/game-aerial-2.jpg, alt: "Aerial view of the Pantheon and the piazza in the snow" }
+      - { file: chronolens/game-aerial-3.jpg, alt: "Aerial view of rooftops and courtyards in the winter city" }
+      - { file: chronolens/game-aerial-4.jpg, alt: "Aerial view of the district around the Pantheon dome" }
+      - { file: chronolens/game-aerial-5.jpg, alt: "Top-down view of a city block surrounded by snowy trees" }
+  - type: grid
+    columns: 4
+    caption: Summer streets, with the empty frames that start the story.
+    items:
+      - { file: chronolens/game-summer-1.jpg, alt: "Nerezza in a sunlit piazza lined with palazzi" }
+      - { file: chronolens/game-summer-2.jpg, alt: "Street corner with an orange palazzo and barrels" }
+      - { file: chronolens/game-summer-3.jpg, alt: "Narrow street with a cart, crates and trees" }
+      - { file: chronolens/game-summer-4.jpg, alt: "Facade with a green door and barred windows" }
+      - { file: chronolens/game-summer-5.jpg, alt: "Empty picture frame on a wall beside sacks and a bin" }
+      - { file: chronolens/game-summer-6.jpg, alt: "Barrels beneath an empty frame on a pale wall" }
+      - { file: chronolens/game-summer-7.jpg, alt: "Wheelbarrow and barrel in a small square" }
+      - { file: chronolens/game-summer-8.jpg, alt: "Square with barrels, trees and a red-brick palazzo" }
+      - { file: chronolens/game-summer-9.jpg, alt: "Long alley with an empty frame on an orange wall" }
+      - { file: chronolens/game-summer-10.jpg, alt: "Empty frame between doorways on a street" }
+      - { file: chronolens/game-summer-11.jpg, alt: "An empty picture frame on a lilac wall" }
+  - type: grid
+    columns: 4
+    caption: The winter city, with Nerezza and the mannequins.
+    items:
+      - { file: chronolens/game-winter-1.jpg, alt: "Overhead view of Nerezza between snow-covered roofs" }
+      - { file: chronolens/game-winter-2.jpg, alt: "Nerezza in front of the Pantheon in the snow" }
+      - { file: chronolens/game-winter-3.jpg, alt: "Top-down view of Nerezza on a snowy path" }
+      - { file: chronolens/game-winter-4.jpg, alt: "Top-down view of Nerezza beside a yellow barrel" }
+      - { file: chronolens/game-winter-5.jpg, alt: "Nerezza crossing a snowy slope towards the city" }
+      - { file: chronolens/game-winter-6.jpg, alt: "A group of mannequins standing in the snow" }
+      - { file: chronolens/game-winter-7.jpg, alt: "Nerezza among snow-covered trees" }
+      - { file: chronolens/game-winter-8.jpg, alt: "Dark mannequin figures in front of a palazzo" }
+  - type: text
     heading: Interface design
     body: |
       The menus share one visual system: a warm sepia veil over blurred scenes from the game, the ChronoLens logotype, thin underlined headings, and soft pill-shaped buttons. The look recalls an old photograph, which ties the interface to the camera at the centre of the story.
