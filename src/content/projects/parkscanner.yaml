@@ -38,6 +38,59 @@ hero:
     alt: Concept illustration of a bus and parking spaces highlighted in cyan
     fit: contain
     caption: Concept illustration supplied with the project; not an app screenshot or live parking data.
+blocks:
+- type: text
+  heading: Map and spot details
+  body: |
+    The map is the home screen. Parking areas appear as numbered markers, coloured by availability, with browsable parking cards along the bottom.
+
+    Selecting a marker opens a panel with spot-by-spot availability, the hourly price, the distance, and a Navigate button. The same panel adapts its colour to the three states: available, filling up, and almost full.
+- type: grid
+  columns: 4
+  tiles: portrait
+  caption: Prototype screens. All parking data shown is sample data.
+  items:
+  - { file: parkscanner/map.jpg, alt: "Map screen with numbered parking markers and parking cards" }
+  - { file: parkscanner/spot-available.jpg, alt: "Spot panel for Viale Monza showing 12 of 16 spaces available" }
+  - { file: parkscanner/spot-filling.jpg, alt: "Spot panel for Navigli District, filling up, 4 of 14 spaces" }
+  - { file: parkscanner/spot-full.jpg, alt: "Spot panel for Corso Buenos Aires, almost full, 2 of 12 spaces" }
+- type: text
+  heading: Search and Explore
+  body: |
+    Search finds parking by street, area, or zone, with recent searches and popular areas. Explore gathers city-wide insights, such as the best time to park and the least congested area.
+- type: grid
+  columns: 4
+  tiles: portrait
+  items:
+  - { file: parkscanner/search.jpg, alt: "Find Parking screen with a search field, recent searches and popular areas" }
+  - { file: parkscanner/explore.jpg, alt: "Explore screen with parking insights for the city" }
+- type: text
+  heading: Activity
+  body: |
+    Activity keeps the driver's parking sessions in three tabs, recent, history, and upcoming, with time saved and cost for each session.
+- type: grid
+  columns: 4
+  tiles: portrait
+  items:
+  - { file: parkscanner/activity-recent.jpg, alt: "Activity screen, Recent tab, with session cards" }
+  - { file: parkscanner/activity-history.jpg, alt: "Activity screen, History tab, with totals and all sessions" }
+  - { file: parkscanner/activity-upcoming.jpg, alt: "Activity screen, Upcoming tab, with scheduled sessions" }
+- type: text
+  heading: Profile and settings
+  body: |
+    The profile brings together the driver's impact, payment methods, inbox, saved spots, vehicles, notifications, and an invite-a-friend referral.
+- type: grid
+  columns: 4
+  tiles: portrait
+  items:
+  - { file: parkscanner/profile.jpg, alt: "Profile screen with the driver's impact and settings" }
+  - { file: parkscanner/profile-settings.jpg, alt: "Profile screen scrolled to vehicles, notifications and privacy settings" }
+  - { file: parkscanner/payment-methods.jpg, alt: "Payment Methods screen with saved cards and billing history" }
+  - { file: parkscanner/inbox.jpg, alt: "Inbox screen with messages and updates" }
+  - { file: parkscanner/invite-friends.jpg, alt: "Invite Friends screen with a referral code" }
+  - { file: parkscanner/notifications.jpg, alt: "Notification settings with toggles" }
+  - { file: parkscanner/saved-spots.jpg, alt: "Saved Spots screen with availability bars" }
 todo:
-- Add actual app screenshots and a public prototype link when available.
+- Add the public prototype link once it opens without a Vercel sign-in (the link supplied on 23 October redirects to the Vercel login).
+- Add the walkthrough video link when supplied.
 - Prototype statistics and availability are sample data, not measured outcomes.

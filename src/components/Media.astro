@@ -20,6 +20,8 @@ interface Props {
   zoom?: boolean;
   /** Small mounted frame: fixed 4:3 tile, whole image shown, never cropped. */
   tile?: boolean;
+  /** Tile ratio; 3/5 suits phone screens. */
+  tileAspect?: string;
 }
 
 const {
@@ -34,11 +36,12 @@ const {
   inLink = false,
   zoom = false,
   tile = false,
+  tileAspect = '4/3',
 } = Astro.props;
 
 const img = resolveImage(media.file);
 const loop = media.loop && publicFileExists(media.loop) ? media.loop : undefined;
-const aspect = tile ? '4/3' : media.aspect;
+const aspect = tile ? tileAspect : media.aspect;
 const style = [
   aspect ? `--ratio: ${aspect.replace('/', ' / ')}` : '',
   `--fit: ${tile ? 'contain' : media.fit}`,
