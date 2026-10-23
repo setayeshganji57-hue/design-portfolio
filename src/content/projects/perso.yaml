@@ -14,6 +14,8 @@ overview: |
   Set in 18th-century Rome, the game follows Aurelia on a quest to find her brother, Saverio, a treasure hunter who has stolen a valuable treasure from the royal treasury. With only the knowledge that he is somewhere in Rome, Aurelia must explore the city, interact with objects, collect clues, and solve challenges to uncover his whereabouts.
 role: Game design, narrative development, 3D modelling of every building, environment design in Unreal Engine, all game coding. Designed with the guidance of a professor at Sapienza.
 tools: [Rhinoceros 3D, CAD, Unreal Engine]
+links:
+  - { label: Game design document (PDF), url: 'https://drive.google.com/file/d/1JKm5TaBDs3Us3_nNbwToaH-wKaiSQXYE/view' }
 cover:
   file: perso/title-screen.jpg
   alt: PERSO title screen, the game's name over a line map of Rome
@@ -76,6 +78,5 @@ blocks:
 
       PERSO brings together historical investigation, architectural modelling, narrative design, and real-time environment development to explore how a historically grounded urban setting can become an interactive story.
 todo:
-  - Add the game design document link once it is uploaded (over 30 MB, so hosted outside the site)
   - Add in-game screenshots or renders; only the title screen is available so far (the trailer's own Vimeo thumbnail is a black frame)
   - Confirm the professor's name and the course, if they should be credited
