@@ -3,7 +3,7 @@ status: published
 categories: [interactive-3d]
 order: 10
 tags: [Game design, Narrative design, 3D environments]
-context: { type: academic, course: Computer Graphics and Gaming Studio }
+context: { type: academic, institution: Sapienza University of Rome, course: Computer Graphics and Gaming Studio }
 year: January 2024
 summary: A historical mystery told through photography. A narrative adventure game concept set in a distorted, snow-covered Rome.
 overview: |
@@ -13,6 +13,7 @@ overview: |
 
   Through exploration, observation, and the collection of photographic clues, players piece together the circumstances surrounding a photographer's mysterious death. At the heart of the experience lies the Pantheon, a landmark that becomes both a historical anchor and a key element in the unfolding narrative.
 role: Game concept, narrative design, historical and visual research, 3D modelling of every building, environment and level development in Unreal Engine, all game coding, game design documentation
+collaborators: [Farnaz Attar]
 tools: [Rhinoceros 3D, CAD, Unreal Engine 4.27 and 5.2, Adobe Photoshop, Adobe Illustrator, Adobe Premiere Pro, Adobe After Effects]
 cover:
   file: chronolens/pantheon-fire.jpg
@@ -38,6 +39,8 @@ blocks:
     heading: Facts
     body: |
       Project type: game design concept and visual development. Genre: narrative adventure and mystery. Platform: PC (Windows).
+
+      Created with Farnaz Attar, under the guidance of Prof. Tommaso Empler and Prof. Lauren Ferro at Sapienza University of Rome.
   - type: text
     heading: How I built it
     body: |
@@ -71,11 +74,24 @@ blocks:
       - { file: chronolens/pantheon-model.jpg, alt: White 3D model of the Pantheon, fit: contain, background: "#000000" }
       - { file: chronolens/pantheon-portico.jpg, alt: Close view of the 3D model of the Pantheon's portico, fit: contain, background: "#000000" }
       - { file: chronolens/building-model.jpg, alt: 3D model of a Roman apartment building, fit: contain, background: "#000000" }
-  - type: pair
-    caption: Main menu and controls screens.
+  - type: text
+    heading: Interface design
+    body: |
+      The menus share one visual system: a warm sepia veil over blurred scenes from the game, the ChronoLens logotype, thin underlined headings, and soft pill-shaped buttons. The look recalls an old photograph, which ties the interface to the camera at the centre of the story.
+
+      The controls screen shows each key as a keycap grouped into movement and actions, so players can read the layout at a glance. Settings are split into controls, audio, and general options, and the story screen introduces the premise before play begins.
+  - type: grid
+    columns: 4
+    caption: Main menu, story, settings, controls, audio, general settings, credits and exit.
     items:
-      - { file: chronolens/menu.jpg, alt: ChronoLens main menu over a view of Rome, fit: contain }
-      - { file: chronolens/controls.jpg, alt: Controls screen showing the keyboard keys, fit: contain }
+      - { file: chronolens/ui-main-menu.jpg, alt: "Main menu with the ChronoLens logotype and Play, Story, Credits and Exit buttons" }
+      - { file: chronolens/ui-story.jpg, alt: "Story screen with the opening narrative over a blurred city scene" }
+      - { file: chronolens/ui-settings.jpg, alt: "Settings menu with Controls, Audio settings and General settings" }
+      - { file: chronolens/ui-controls.jpg, alt: "Controls screen showing movement keys and action keys as keycaps" }
+      - { file: chronolens/ui-audio.jpg, alt: "Audio settings with sliders for music, sound effects, ambient sound and voice-over" }
+      - { file: chronolens/ui-general.jpg, alt: "General settings for quality, display mode, invert look, sprint and zoom" }
+      - { file: chronolens/ui-credits.jpg, alt: "Credits screen naming the authors and professors, with Unreal Engine and Sapienza logos" }
+      - { file: chronolens/ui-exit.jpg, alt: "Exit confirmation asking whether to abandon the game" }
   - type: video
     video:
       provider: youtube
