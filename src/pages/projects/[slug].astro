@@ -94,9 +94,13 @@ const facts: { term: string; value?: string; links?: { href: string; label: stri
 
     {
       d.hero && (
-        <div class="project-hero">
+        <div class:list={['project-hero', `project-hero--${d.hero.kind}`]}>
           {d.hero.kind === 'image' ? (
-            <Media media={d.hero.media} zoom sizes="(min-width: 1024px) 75vw, 100vw" eager fallbackAspect="16/9" />
+            <div class="gallery">
+              <div class="g-tile g-tile--wide">
+                <Media media={d.hero.media} zoom tile sizes="(min-width: 900px) 30rem, 92vw" eager />
+              </div>
+            </div>
           ) : (
             <VideoEmbed video={d.hero.video} eager />
           )}

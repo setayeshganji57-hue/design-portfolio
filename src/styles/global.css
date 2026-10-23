@@ -1112,9 +1112,10 @@ a.scissors:hover {
 }
 
 .blocks {
+  --blocks-gap: clamp(2.5rem, 5vw, 4.5rem);
   display: grid;
-  gap: clamp(2.5rem, 6vw, 6rem);
-  margin-top: clamp(2.5rem, 6vw, 6rem);
+  gap: var(--blocks-gap);
+  margin-top: var(--blocks-gap);
 }
 
 .b-text {
@@ -1141,54 +1142,83 @@ a.scissors:hover {
   text-wrap: pretty;
 }
 
-.b-image--wide {
-  width: min(100%, 88%);
-  margin-inline: auto;
+/* Gallery: every project image is a small mounted 4:3 tile on one shared
+   grid, so pictures stay modest and consistent; the viewer shows them large. */
+
+.b-gallery,
+.b-video,
+.project-hero {
+  max-width: 58rem;
 }
 
-.b-image--inset {
-  width: min(100%, 36rem);
-  margin-inline: auto;
+.b-video,
+.project-hero--video {
+  max-width: 38rem;
 }
 
-@media (max-width: 639.98px) {
-  .b-image--wide,
-  .b-image--inset {
-    width: 100%;
+@media (min-width: 1024px) {
+  .b-gallery,
+  .b-video,
+  .project-hero {
+    margin-left: calc(100% / 12 * 1);
+  }
+
+  .b-gallery,
+  .project-hero--image {
+    max-width: min(58rem, calc(100% / 12 * 11));
   }
 }
 
-.b-pair,
-.b-grid {
+.gallery {
   display: grid;
-  gap: var(--gap);
-}
-
-@media (min-width: 640px) {
-  .b-pair {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-
-  .b-pair--center { align-items: center; }
-  .b-pair--end { align-items: end; }
-  .b-pair--start { align-items: start; }
-
-  .b-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    align-items: start;
-  }
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: clamp(0.6rem, 0.4rem + 0.6vw, 1rem);
 }
 
 @media (min-width: 900px) {
-  .b-grid--3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
-  .b-grid--4 { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+  .gallery {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
 }
 
-@media (max-width: 639.98px) {
-  .b-grid--3,
-  .b-grid--4 {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
+.g-tile--wide {
+  grid-column: span 2;
+}
+
+.media-frame--tile {
+  padding: clamp(0.5rem, 0.3rem + 0.7vw, 0.95rem);
+  background: var(--media-bg, var(--paper-deep));
+  transition: background-color 220ms var(--ease);
+}
+
+.media-frame--tile > img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  transition: transform 420ms var(--ease);
+}
+
+.media-frame--tile:hover > img {
+  transform: scale(1.025);
+}
+
+.media-frame--tile .zoom-hit {
+  padding: 0.45rem;
+}
+
+.media-frame--tile .zoom-hint {
+  padding: 0.25rem 0.5rem;
+  font-size: 0.7rem;
+}
+
+.g-tile .media-caption {
+  margin-top: 0.45rem;
+  font-size: 0.8rem;
+}
+
+/* Consecutive image blocks read as one gallery, not separate sections. */
+.blocks > .b-gallery + .b-gallery {
+  margin-top: calc(var(--gap) - var(--blocks-gap));
 }
 
 .project-foot {

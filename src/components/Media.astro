@@ -1,5 +1,5 @@
 ---
-import { Image } from 'astro:assets';
+import { Image, getImage } from 'astro:assets';
 import Placeholder from './Placeholder.astro';
 import { resolveImage, publicFileExists, type Media as MediaData } from '../lib/content';
 
@@ -18,6 +18,8 @@ interface Props {
   inLink?: boolean;
   /** Adds an "Enlarge" control that opens the image in the viewer. */
   zoom?: boolean;
+  /** Small mounted frame: fixed 4:3 tile, whole image shown, never cropped. */
+  tile?: boolean;
 }
 
 const {
@@ -31,27 +33,32 @@ const {
   small = false,
   inLink = false,
   zoom = false,
+  tile = false,
 } = Astro.props;
 
 const img = resolveImage(media.file);
 const loop = media.loop && publicFileExists(media.loop) ? media.loop : undefined;
-const aspect = media.aspect;
+const aspect = tile ? '4/3' : media.aspect;
 const style = [
   aspect ? `--ratio: ${aspect.replace('/', ' / ')}` : '',
-  `--fit: ${media.fit}`,
+  `--fit: ${tile ? 'contain' : media.fit}`,
   media.position ? `--pos: ${media.position}` : '',
-  media.background ? `--media-bg: ${media.background}` : '',
+  // Tiles share one neutral mat so the gallery reads as a set.
+  media.background && !tile ? `--media-bg: ${media.background}` : '',
 ]
   .filter(Boolean)
   .join('; ');
-const widths = [480, 720, 960, 1280, 1680, 2200].filter((w) => !img || w <= img.width);
-if (img && !widths.includes(img.width) && img.width < 2200) widths.push(img.width);
+const maxWidth = tile ? 960 : 2200;
+const widths = [320, 480, 720, 960, 1280, 1680, 2200].filter((w) => w <= maxWidth && (tile || w >= 480) && (!img || w <= img.width));
+if (img && !widths.includes(img.width) && img.width < maxWidth) widths.push(img.width);
+// The viewer gets a web-sized copy rather than the (sometimes very large) original.
+const zoomSrc = img && zoom ? (await getImage({ src: img, width: Math.min(img.width, 2000), format: 'webp' })).src : undefined;
 ---
 
 <figure class="media">
   {
     img ? (
-      <div class="media-frame" style={style}>
+      <div class:list={['media-frame', tile && 'media-frame--tile']} style={style}>
         <Image
           src={img}
           alt={media.alt}
@@ -66,7 +73,7 @@ if (img && !widths.includes(img.width) && img.width < 2200) widths.push(img.widt
             type="button"
             class="zoom-hit"
             data-zoom
-            data-zoom-src={img.src}
+            data-zoom-src={zoomSrc}
             data-zoom-alt={media.alt}
             data-zoom-caption={media.caption ?? ''}
             aria-label={`Enlarge image${media.alt ? `: ${media.alt}` : ''}`}

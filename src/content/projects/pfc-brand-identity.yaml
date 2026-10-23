@@ -59,7 +59,7 @@ blocks:
   body: Selected illustrations created for the 2022 website project. Industrial imagery and simplified symbols share
     a consistent colour palette and outlined visual style.
 - type: grid
-  columns: 2
+  columns: 4
   items:
   - file: pfc/digital-illustration.jpg
     alt: Outlined smartphone and geometric shapes
@@ -73,7 +73,11 @@ blocks:
   - file: pfc/vector-illustration.jpg
     alt: Vector editing symbol illustration
     fit: contain
+  - file: pfc/industrial-scene.jpg
+    alt: A worker giving a thumbs up beside a robotic arm on a conveyor
+    fit: contain
 todo:
 - Add original wireframes and desktop/mobile UI designs when supplied.
 - Confirm which elements of the current blue-and-orange website retain the 2022 UI work before adding current screenshots.
 - Catalogue design authorship remains unconfirmed; catalogue mockups are not shown.
+- Owner asked (October 2026) to publish all PFC mockups and illustrations; every PFC file received so far is now on the page. Any further mockups still need to be sent.

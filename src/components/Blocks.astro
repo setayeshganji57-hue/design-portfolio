@@ -13,11 +13,10 @@ interface Props {
 }
 
 const { blocks } = Astro.props;
-const gridSizes = {
-  2: '(min-width: 1024px) 38vw, (min-width: 640px) 50vw, 100vw',
-  3: '(min-width: 1024px) 25vw, 50vw',
-  4: '(min-width: 1024px) 19vw, 50vw',
-} as const;
+// Images sit in small 4:3 tiles on a four-column gallery grid (two on phones);
+// the viewer shows them large. A single image spans two columns.
+const tileSizes = '(min-width: 900px) 15rem, 45vw';
+const wideTileSizes = '(min-width: 900px) 30rem, 92vw';
 ---
 
 {
@@ -36,27 +35,23 @@ const gridSizes = {
             );
           case 'image':
             return (
-              <div class={`b-image b-image--${b.size}`}>
-                <Media media={b.media} zoom sizes={b.size === 'inset' ? '(min-width: 640px) 36rem, 100vw' : '(min-width: 1024px) 75vw, 100vw'} />
+              <div class="b-gallery">
+                <div class="gallery">
+                  <div class="g-tile g-tile--wide">
+                    <Media media={b.media} zoom tile sizes={wideTileSizes} small />
+                  </div>
+                </div>
               </div>
             );
           case 'pair':
-            return (
-              <div>
-                <div class={`b-pair b-pair--${b.align}`}>
-                  {b.items.map((m) => (
-                    <Media media={m} zoom sizes="(min-width: 1024px) 38vw, (min-width: 640px) 50vw, 100vw" small />
-                  ))}
-                </div>
-                {b.caption && <p class="block-caption">{b.caption}</p>}
-              </div>
-            );
           case 'grid':
             return (
-              <div>
-                <div class={`b-grid b-grid--${b.columns}`}>
+              <div class="b-gallery">
+                <div class="gallery">
                   {b.items.map((m) => (
-                    <Media media={m} zoom sizes={gridSizes[b.columns]} small />
+                    <div class="g-tile">
+                      <Media media={m} zoom tile sizes={tileSizes} small />
+                    </div>
                   ))}
                 </div>
                 {b.caption && <p class="block-caption">{b.caption}</p>}
