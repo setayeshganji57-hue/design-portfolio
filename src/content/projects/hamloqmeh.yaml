@@ -28,49 +28,59 @@ links:
 - label: Open app (log-in required)
   url: https://hamloqmeh-app.vercel.app
 cover:
-  file: hamloqmeh/website-desktop-updated.png
-  alt: Updated Hamloqmeh homepage with a Persian right-to-left layout, green and cream palette, and food-sharing journey cards
-  aspect: 16/10
-  fit: cover
-  position: 50% 0%
+  file: hamloqmeh/website-hero.jpg
+  alt: Hamloqmeh homepage in Persian, with the headline, the waitlist button and three cards showing how a food package is reserved
 hero:
   kind: image
   media:
-    file: hamloqmeh/website-desktop-updated.png
-    alt: Updated Hamloqmeh homepage with a Persian right-to-left layout, green and cream palette, and food-sharing journey cards
-    fit: cover
-    position: 50% 0%
+    file: hamloqmeh/website-hero.jpg
+    alt: Hamloqmeh homepage in Persian, with the headline, the waitlist button and three cards showing how a food package is reserved
 blocks:
+- type: text
+  heading: Explaining a new service
+  body: |
+    The homepage opens with the offer in one line, good food today with a big end-of-day discount, and a single call to join the waitlist. A small label says the service is in its trial phase. Three stacked cards beside the headline preview the whole journey: a bakery's package available today, reserved at a discount, and collected in a set time window.
+
+    The next sections answer the first questions a visitor has. Why does this food exist? Because good food is still left at closing time. How does it work? Three numbered steps: discover the day's packages, reserve one at a discount, and pick it up in person.
+- type: image
+  media:
+    file: hamloqmeh/website-how-it-works.jpg
+    alt: The problem statement on a pale green band, followed by the three steps of how Hamloqmeh works
+- type: text
+  heading: Two audiences, one page
+  body: |
+    Hamloqmeh needs both customers and food businesses, so the page speaks to each side in its own card: savings and local discovery for customers, extra income and new neighbourhood customers for businesses, with a separate call to partner. A row of labels lists the kinds of business that can join, from bakeries and cafés to supermarkets and greengrocers.
+- type: image
+  media:
+    file: hamloqmeh/website-audiences.jpg
+    alt: Two cards, one for customers and one for food businesses, above the list of business types that can join
+- type: text
+  heading: Values and the waitlist
+  body: |
+    The closing sections explain why the idea matters, that every package chosen means the water, energy and work behind that food were not wasted, and answer common questions in an expandable FAQ. The page ends with a short waitlist form that asks only for a name, an email or mobile number, a city, and whether the person is a customer or a business, with a clear consent line and a link to the privacy policy.
 - type: pair
-  align: start
-  caption: Updated marketing website and the existing app's log-in screen on a phone.
+  tiles: wide
+  items:
+  - file: hamloqmeh/website-values-faq.jpg
+    alt: Values section with a large statement about food waste, and the FAQ
+  - file: hamloqmeh/website-waitlist.jpg
+    alt: Waitlist form with name, email or mobile, city and user type
+- type: text
+  heading: Mobile and app
+  body: |
+    The website is fully right-to-left on mobile. The customer app, a separate product, asks people to log in before they can view and reserve food packages.
+- type: pair
   items:
   - file: hamloqmeh/website-mobile-updated.png
-    alt: Hamloqmeh website on a phone
-    in Persian: null
-    right-to-left: null
-    fit: contain
-    background: '#f7f3ec'
+    alt: Hamloqmeh website on a phone, in Persian, right to left
   - file: hamloqmeh/app-login-mobile.jpg
-    alt: Hamloqmeh app log-in screen on a phone
-    in Persian: null
-    fit: contain
-    background: '#f5f7fa'
-- type: text
-  heading: App
-  body: 'The app asks people to log in before they can view and reserve food packages.
-
-    '
+    alt: Hamloqmeh app log-in screen on a phone, in Persian
 - type: image
-  size: full
   media:
     file: hamloqmeh/app-login-desktop.jpg
     alt: Hamloqmeh app log-in screen on a desktop browser, in Persian
     caption: Customer app, log-in screen.
-    aspect: 16/10
-    fit: cover
 todo:
-- Replace the protected website preview link with a verified public address before recruiter outreach.
 - Confirm the project year.
 context:
   type: independent

@@ -5,7 +5,7 @@ import Media from '../../components/Media.astro';
 import VideoEmbed from '../../components/VideoEmbed.astro';
 import Blocks from '../../components/Blocks.astro';
 import { categories } from '../../config/categories';
-import { contextLabel, getProjects, primaryCategory, resolveImage, type Project } from '../../lib/content';
+import { contextLabel, getProjects, primaryCategory, resolveImage, tileRatio, type Project } from '../../lib/content';
 import { paragraphs, relatedFor } from '../../lib/logic';
 
 export const getStaticPaths = (async () => {
@@ -30,6 +30,7 @@ const overview = paragraphs(d.overview);
 const isDraft = d.status === 'draft';
 const description = d.summary ?? `${d.title} — ${disciplines.map((c) => c.title).join(', ')} project by Setayesh Ganji.`;
 const coverImage = resolveImage(d.cover.file);
+const heroShape = d.hero?.kind === 'image' ? tileRatio([d.hero.media.file]) : undefined;
 
 const facts: { term: string; value?: string; links?: { href: string; label: string }[] }[] = [
   { term: 'Discipline', links: disciplines.map((c) => ({ href: `/work/${c.slug}`, label: c.title })) },
@@ -97,8 +98,8 @@ const facts: { term: string; value?: string; links?: { href: string; label: stri
         <div class:list={['project-hero', `project-hero--${d.hero.kind}`]}>
           {d.hero.kind === 'image' ? (
             <div class="gallery">
-              <div class="g-tile g-tile--wide">
-                <Media media={d.hero.media} zoom tile sizes="(min-width: 900px) 30rem, 92vw" eager />
+              <div class:list={['g-tile', heroShape?.wide && 'g-tile--wide']}>
+                <Media media={d.hero.media} zoom tile tileAspect={heroShape?.aspect} sizes="(min-width: 900px) 30rem, 92vw" eager />
               </div>
             </div>
           ) : (

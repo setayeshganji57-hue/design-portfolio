@@ -8,3 +8,7 @@ The website preview link is labelled as requiring sign-in. No deployment or acce
 
 ## Apply
 Replace the corresponding files in your local portfolio checkout with this updated project, preserving your .git directory and local environment files. Run npm install, npm run check and npm run build. For local visual review run npm run dev and open http://localhost:4321/projects/hamloqmeh. Review before committing and pushing to the preview branch.
+
+## 23 October 2026
+
+New homepage screenshots from hamloqmeh.com (hero, how it works, two audiences, values and FAQ, waitlist), cropped to the page. The site link now points to https://www.hamloqmeh.com. Older desktop screenshots removed.

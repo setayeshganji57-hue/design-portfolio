@@ -1191,8 +1191,8 @@ a.scissors:hover {
 }
 
 .media-frame--tile {
-  padding: clamp(0.5rem, 0.3rem + 0.7vw, 0.95rem);
   background: var(--media-bg, var(--paper-deep));
+  box-shadow: 0 0 0 1px rgb(36 36 36 / 0.08);
   transition: background-color 220ms var(--ease);
 }
 

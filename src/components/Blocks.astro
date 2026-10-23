@@ -6,7 +6,7 @@
 import Media from './Media.astro';
 import VideoEmbed from './VideoEmbed.astro';
 import { paragraphs } from '../lib/logic';
-import type { Project } from '../lib/content';
+import { tileRatio, type Project } from '../lib/content';
 
 interface Props {
   blocks: Project['data']['blocks'];
@@ -37,30 +37,35 @@ const isPortrait = (aspect: string) => {
                 ))}
               </section>
             );
-          case 'image':
+          case 'image': {
+            // A single landscape image spans two columns; square and portrait ones stay one column wide.
+            const shape = tileRatio([b.media.file]);
             return (
               <div class="b-gallery">
                 <div class="gallery">
-                  <div class="g-tile g-tile--wide">
-                    <Media media={b.media} zoom tile sizes={wideTileSizes} small />
+                  <div class:list={['g-tile', shape.wide && 'g-tile--wide']}>
+                    <Media media={b.media} zoom tile tileAspect={shape.aspect} sizes={shape.wide ? wideTileSizes : tileSizes} small />
                   </div>
                 </div>
               </div>
             );
+          }
           case 'pair':
-          case 'grid':
+          case 'grid': {
+            const shape = tileRatio(b.items.map((m) => m.file));
             return (
               <div class="b-gallery">
                 <div class="gallery">
                   {b.items.map((m) => (
                     <div class:list={['g-tile', b.tiles === 'wide' && 'g-tile--wide']}>
-                      <Media media={m} zoom tile tileAspect={b.tiles === 'portrait' ? '3/5' : '4/3'} sizes={b.tiles === 'wide' ? wideTileSizes : tileSizes} small />
+                      <Media media={m} zoom tile tileAspect={shape.aspect} sizes={b.tiles === 'wide' ? wideTileSizes : tileSizes} small />
                     </div>
                   ))}
                 </div>
                 {b.caption && <p class="block-caption">{b.caption}</p>}
               </div>
             );
+          }
           case 'video':
             return (
               <div class:list={['b-video', isPortrait(b.video.aspect) && 'b-video--portrait']}>

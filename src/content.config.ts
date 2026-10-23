@@ -61,7 +61,7 @@ const block = z.discriminatedUnion('type', [
   z.object({
     type: z.literal('pair'),
     items: z.tuple([media, media]),
-    /** Tile shape in the gallery: landscape (default), portrait for phone screens, or wide (two columns) for dense desktop screens. */
+    /** Tile size in the gallery; the shape follows the images. wide = two columns, for dense desktop screens. */
     tiles: z.enum(['landscape', 'portrait', 'wide']).default('landscape'),
     /** Vertical alignment when the two images differ in height. */
     align: z.enum(['start', 'center', 'end']).default('start'),

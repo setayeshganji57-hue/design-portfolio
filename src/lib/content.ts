@@ -38,6 +38,22 @@ export function resolveImage(file?: string): ImageMetadata | undefined {
   return mod?.default;
 }
 
+/**
+ * Gallery tile shape for a group of images: the median of their proportions,
+ * kept between 1:2 and 2:1, so tiles hug the images instead of framing them.
+ */
+export function tileRatio(files: (string | undefined)[]): { aspect: string; portrait: boolean; wide: boolean } {
+  const ratios = files
+    .map((f) => resolveImage(f))
+    .filter((img): img is ImageMetadata => Boolean(img))
+    .map((img) => img.width / img.height)
+    .sort((a, b) => a - b);
+  if (!ratios.length) return { aspect: '4/3', portrait: false, wide: true };
+  const r = Math.min(2, Math.max(0.5, ratios[Math.floor(ratios.length / 2)]));
+  // Only clearly landscape images earn a double-width tile on their own.
+  return { aspect: `${r.toFixed(4)}/1`, portrait: r < 1, wide: r >= 1.25 };
+}
+
 /** True when a file exists under /public (used to hide download links for absent files). */
 export function publicFileExists(path?: string): boolean {
   if (!path || !path.startsWith('/')) return false;
