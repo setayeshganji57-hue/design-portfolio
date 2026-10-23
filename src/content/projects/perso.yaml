@@ -1,0 +1,81 @@
+title: PERSO — A historical treasure hunt through 18th-century Rome
+status: published
+categories: [interactive-3d]
+order: 20
+tags: [Game design, Narrative design, 3D environment design]
+year: 2022
+context: { type: academic, institution: Sapienza University of Rome }
+summary: A third-person adventure game set in 18th-century Rome, built from architectural models of the Regola district.
+overview: |
+  What if the streets, architecture, and hidden corners of historical Rome became part of an interactive mystery?
+
+  PERSO is a third-person adventure game that transforms a historic district of Rome into an explorable world, bringing together architectural research, environmental design, and narrative-driven gameplay.
+
+  Set in 18th-century Rome, the game follows Aurelia on a quest to find her brother, Saverio, a treasure hunter who has stolen a valuable treasure from the royal treasury. With only the knowledge that he is somewhere in Rome, Aurelia must explore the city, interact with objects, collect clues, and solve challenges to uncover his whereabouts.
+role: Game design, narrative development, 3D modelling of every building, environment design in Unreal Engine, all game coding. Designed with the guidance of a professor at Sapienza.
+tools: [Rhinoceros 3D, CAD, Unreal Engine]
+cover:
+  file: perso/title-screen.jpg
+  alt: PERSO title screen, the game's name over a line map of Rome
+  aspect: "16/9"
+  fit: cover
+hero:
+  kind: video
+  video:
+    provider: vimeo
+    url: https://vimeo.com/1238730104
+    title: PERSO — trailer
+    aspect: '16/9'
+    caption: Trailer.
+    poster:
+      file: perso/title-screen.jpg
+      alt: PERSO title screen, the game's name over a line map of Rome
+      fit: cover
+blocks:
+  - type: text
+    heading: Facts
+    body: |
+      Project type: game design, narrative development, and 3D environment design. Genre: third-person adventure. Year: 2022.
+  - type: text
+    heading: Reconstructing the historical city
+    body: |
+      The project began with research into Rome's history, urban fabric, and architectural heritage. The main cartographic reference was Giambattista Nolli's 1748 map of Rome, which provided a foundation for studying the city's historic layout and translating it into a navigable digital environment.
+
+      The environment centres on the Regola district and its architectural context: Santa Maria in Monticelli as the primary building, the surrounding convent buildings, and the garden of Palazzo Spada as a secondary environmental element.
+
+      I modelled every building in the game myself, from start to finish, in Rhinoceros 3D and CAD, studying their facades, proportions, and defining details. The objective was more than a collection of isolated models: the buildings needed to work together as a recognisable place that players could inhabit and explore.
+  - type: text
+    heading: From architectural models to an interactive world
+    body: |
+      I imported the buildings into Unreal Engine and built the game environment there, with in-game lighting and third-person navigation.
+
+      The principal characters, Aurelia and Saverio, and a guard character use Unreal Engine mannequins, which I chose and set up in the engine.
+
+      I did all the coding in Unreal Engine, building the gameplay from the story we had written. The city had to work both as a designed visual world and as the setting for play, so the arrangement of buildings, their scale, and the lighting were all used to set the atmosphere and guide the player.
+  - type: text
+    heading: Storytelling through exploration
+    body: |
+      At the heart of PERSO is a treasure-hunt narrative structured around discovery and gradual progression.
+
+      Players move through the environment, interact with objects, and collect clues as they get closer to finding Saverio. Collectibles become progressively harder to find, giving the exploration a sense of development and bringing the player closer to the story's resolution.
+  - type: video
+    video:
+      provider: vimeo
+      url: https://vimeo.com/1238730103
+      title: PERSO — gameplay tutorial
+      aspect: '16/9'
+      caption: Gameplay tutorial.
+      poster:
+        file: perso/title-screen.jpg
+        alt: PERSO title screen with the Start button
+        fit: cover
+  - type: text
+    heading: Outcome
+    body: |
+      The project resulted in a playable game, with a trailer and a tutorial film that introduces the game and how to play it.
+
+      PERSO brings together historical investigation, architectural modelling, narrative design, and real-time environment development to explore how a historically grounded urban setting can become an interactive story.
+todo:
+  - Add the game design document link once it is uploaded (over 30 MB, so hosted outside the site)
+  - Add in-game screenshots or renders; only the title screen is available so far (the trailer's own Vimeo thumbnail is a black frame)
+  - Confirm the professor's name and the course, if they should be credited

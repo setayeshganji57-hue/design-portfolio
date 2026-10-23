@@ -12,7 +12,8 @@ overview: |
   ChronoLens is a narrative-driven adventure game concept that transforms the historic city of Rome into an atmospheric mystery to be uncovered. The story follows Nerezza, a young history student who discovers an old camera in an antique shop. After taking a photograph, she finds herself in a distorted, snow-covered version of Rome, where familiar landmarks conceal the traces of a forgotten crime.
 
   Through exploration, observation, and the collection of photographic clues, players piece together the circumstances surrounding a photographer's mysterious death. At the heart of the experience lies the Pantheon, a landmark that becomes both a historical anchor and a key element in the unfolding narrative.
-role: Game concept, narrative design, historical and visual research, environment and level development, 3D visual development, game design documentation
+role: Game concept, narrative design, historical and visual research, 3D modelling of every building, environment and level development in Unreal Engine, all game coding, game design documentation
+tools: [Rhinoceros 3D, CAD, Unreal Engine 4.27 and 5.2, Adobe Photoshop, Adobe Illustrator, Adobe Premiere Pro, Adobe After Effects]
 cover:
   file: chronolens/pantheon-fire.jpg
   alt: Render of the Pantheon in flames in a snow-covered Rome
@@ -27,15 +28,24 @@ hero:
     url: https://youtu.be/rXq6fD96z7w
     title: ChronoLens — trailer
     aspect: '16/9'
+    caption: Trailer.
     poster:
-      file: chronolens/pantheon-snow.jpg
-      alt: Render of the Pantheon in a snow-covered Rome
+      file: chronolens/trailer-frame.jpg
+      alt: Frame from the trailer, Nerezza running down a narrow street
       fit: cover
 blocks:
   - type: text
     heading: Facts
     body: |
       Project type: game design concept and visual development. Genre: narrative adventure and mystery. Platform: PC (Windows).
+  - type: text
+    heading: How I built it
+    body: |
+      I modelled every building in the game myself, from start to finish, in Rhinoceros 3D and CAD: the Pantheon and the city around it.
+
+      I then imported the buildings into Unreal Engine and built the game environment there. The characters are Unreal Engine mannequins, which I chose and set up in the engine.
+
+      I did all the coding in Unreal Engine, building the gameplay from the story we had written.
   - type: text
     heading: Design approach
     body: |
@@ -73,6 +83,10 @@ blocks:
       title: ChronoLens — tutorial
       aspect: '16/9'
       caption: Tutorial.
+      poster:
+        file: chronolens/tutorial-frame.jpg
+        alt: Frame from the tutorial, Nerezza in front of the Pantheon in the snow
+        fit: cover
   - type: text
     heading: Project scope
     body: |

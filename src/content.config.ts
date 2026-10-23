@@ -106,6 +106,8 @@ const projects = defineCollection({
       summary: z.string().optional(),
       overview: z.string().optional(),
       role: z.string().optional(),
+      /** Software and techniques used, shown near the top of the project page. */
+      tools: z.array(z.string()).default([]),
       /** Credit for development, kept separate from the design role (e.g. "AI-assisted development"). */
       development: z.string().optional(),
       collaborators: z.array(z.string()).default([]),

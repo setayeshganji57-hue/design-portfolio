@@ -62,9 +62,15 @@ const providerName = { youtube: 'YouTube', vimeo: 'Vimeo', local: 'video' }[vide
     )
   }
   {
-    (video.caption || video.credit) && (
+    (video.caption || video.credit || (usable && parsed!.provider !== 'local')) && (
       <figcaption class="media-caption">
-        {video.caption}
+        {video.caption && <span class="video-caption-text">{video.caption}</span>}
+        {usable && parsed!.provider !== 'local' && (
+          <a class="video-watch" href={parsed!.watchUrl} rel="noopener" target="_blank">
+            Watch on {providerName} <span aria-hidden="true">↗</span>
+            <span class="visually-hidden"> (opens in a new tab)</span>
+          </a>
+        )}
         {video.credit && <span class="media-credit">{video.credit}</span>}
       </figcaption>
     )

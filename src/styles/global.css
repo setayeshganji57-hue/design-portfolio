@@ -883,6 +883,17 @@ a.scissors:hover {
   font-size: 0.85rem;
 }
 
+.video-watch {
+  color: var(--ink);
+  text-decoration: underline;
+  text-underline-offset: 0.2em;
+  white-space: nowrap;
+}
+
+.video-caption-text + .video-watch {
+  margin-left: 0.6em;
+}
+
 .media-loop {
   position: absolute;
   inset: 0;

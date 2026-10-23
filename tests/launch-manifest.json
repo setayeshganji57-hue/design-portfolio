@@ -45,7 +45,13 @@
       "slug": "chronolens",
       "category": "interactive-3d",
       "status": "published",
-      "note": "Contribution details pending"
+      "note": "Owner confirmed 3D modelling, Unreal environment and coding, October 2026"
+    },
+    {
+      "slug": "perso",
+      "category": "interactive-3d",
+      "status": "published",
+      "note": "Added by the owner, October 2026; game design document link to come"
     },
     {
       "slug": "pfc-brand-identity",

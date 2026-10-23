@@ -13,6 +13,7 @@ tags: [Poster, Typography]
 # overview: |
 #   Short overview. Paragraphs separated by a blank line.
 # role: What I did
+# tools: [Rhinoceros 3D, Unreal Engine]   # software, shown near the top of the page
 # collaborators: [Name — role]
 cover:
   file: my-project/cover.jpg   # relative to src/assets/media

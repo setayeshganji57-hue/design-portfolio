@@ -36,6 +36,7 @@ const facts: { term: string; value?: string; links?: { href: string; label: stri
   { term: 'Year', value: d.year !== undefined ? String(d.year) : undefined },
   { term: 'Context', value: [ctx, d.context?.course].filter(Boolean).join(' — ') || undefined },
   { term: 'Role', value: d.role },
+  { term: 'Tools', value: d.tools.length ? d.tools.join(', ') : undefined },
   { term: 'Development', value: d.development },
   { term: 'With', value: d.collaborators.length ? d.collaborators.join(', ') : undefined },
   { term: 'Tags', value: d.tags.length ? d.tags.join(', ') : undefined },

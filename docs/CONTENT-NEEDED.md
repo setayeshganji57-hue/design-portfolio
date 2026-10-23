@@ -38,6 +38,8 @@ Send items in any format. A reply in chat is enough for facts. For files, send t
 | C7 | **Languages**: your levels in Persian, English and Italian | Needed for CV and LinkedIn. | Chat |
 | C8 | **Software you use day to day** | Needed for CV. Confirm Adobe, Figma, After Effects, Cinema 4D, Rhino, Unreal. | Chat |
 | C9 | **About text**: keep your current text, or choose Option B in `docs/APPLICATION-MATERIALS.md` | Possible reading of "eight-year journey". | Chat |
+| C10 | **PERSO**: a public share link to the game design document (over 30 MB, so hosted on Google Drive or Dropbox) | The project page will link to it as "Game design document (PDF)". | Link |
+| C11 | **Tools per project**: the software used on the projects that don't list it yet | Each project page shows a Tools row at the top. Filled so far: ChronoLens, PERSO, Sunny Days, Final Studio. | Chat |
 
 ## D. Optional
 
