@@ -43,6 +43,17 @@ blocks:
   heading: The workflow
   body: |
     TradeMemory is organised around one loop: import a broker statement, verify it, review each trade, and only then read the patterns. The app is structured as seven areas in a single sidebar, Overview, Calendar, Trades, Review Queue, Insights, Import, and Settings, so a trader always knows where they are in that loop.
+- type: video
+  video:
+    provider: vimeo
+    url: https://vimeo.com/1238796294
+    title: TradeMemory — app walkthrough
+    aspect: '1920/1096'
+    caption: App walkthrough.
+    poster:
+      file: tradememory/walkthrough-poster.jpg
+      alt: TradeMemory Overview dashboard
+      fit: cover
 - type: image
   media:
     file: tradememory/app-mobile.jpg
@@ -105,7 +116,7 @@ blocks:
   body: |
     Trading data is personal and easy to misread, so the interface is designed to be explicit about what it knows. Imports must be confirmed before they count. Every metric shows the number of trades behind it. Results are labelled as realised and assigned to a clear date. Read-only fields explain themselves. The aim is a tool that helps traders reflect honestly on their decisions rather than one that flatters them with numbers.
 todo:
-- Add the walkthrough video when supplied.
+- Walkthrough video (Vimeo 1238796294) shows the personal email in the app header; replace with a version without it if possible. Vimeo refused embedding on 23 October; check its embed setting if the player does not load.
 - Add the tools used.
 - Confirm the project year.
 - Screens show a real imported account; replace with demonstration data if preferred.
