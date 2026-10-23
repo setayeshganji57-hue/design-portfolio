@@ -48,5 +48,18 @@ blocks:
     items:
       - { file: poster-collection/mab-billboard.jpg, alt: The Media Architecture Biennale design on a landscape billboard against blue sky, fit: contain }
       - { file: poster-collection/mab-wall.jpg, alt: The portrait poster pasted on a concrete wall behind bamboo leaves, fit: contain }
+  - type: text
+    heading: Kandinsky, Gaudí, Klee — The Dubai Mall
+    body: |
+      A series of three exhibition posters for The Dubai Mall, from September 2022. They share one system: bands of lines that warp around solid circles, as if the dots were weighing down the surface. Only the colour changes for each artist, blue for Kandinsky, ochre for Gaudí and green for Klee.
+  - type: image
+    size: full
+    media: { file: poster-collection/dubai-mall-wall.jpg, alt: The three posters pasted side by side on a grey wall, fit: contain }
+  - type: grid
+    columns: 3
+    items:
+      - { file: poster-collection/dubai-mall-kandinsky.jpg, alt: Blue Kandinsky poster with warped lines and four circles, fit: contain }
+      - { file: poster-collection/dubai-mall-gaudi.jpg, alt: Ochre Gaudí poster with warped lines and four circles, fit: contain }
+      - { file: poster-collection/dubai-mall-klee.jpg, alt: Green Klee poster with warped lines and four circles, fit: contain }
 todo:
   - Confirm whether each poster was commissioned, academic or independent
