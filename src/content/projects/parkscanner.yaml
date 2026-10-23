@@ -39,6 +39,17 @@ hero:
     fit: contain
     caption: Concept illustration supplied with the project; not an app screenshot or live parking data.
 blocks:
+- type: video
+  video:
+    provider: vimeo
+    url: https://vimeo.com/1238791267
+    title: ParkScanner — app walkthrough
+    aspect: '1920/4219'
+    caption: App walkthrough.
+    poster:
+      file: parkscanner/walkthrough-frame.jpg
+      alt: Opening frame of the walkthrough, the map screen with parking markers
+      fit: cover
 - type: text
   heading: Map and spot details
   body: |
@@ -92,5 +103,5 @@ blocks:
   - { file: parkscanner/saved-spots.jpg, alt: "Saved Spots screen with availability bars" }
 todo:
 - Add the public prototype link once it opens without a Vercel sign-in (the link supplied on 23 October redirects to the Vercel login).
-- Add the walkthrough video link when supplied.
+- Walkthrough video (Vimeo 1238791267) refused embedding on 23 October; check its Vimeo embed setting if the player does not load.
 - Prototype statistics and availability are sample data, not measured outcomes.

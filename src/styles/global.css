@@ -1156,6 +1156,11 @@ a.scissors:hover {
   max-width: 38rem;
 }
 
+/* Phone recordings: a narrow, phone-sized frame instead of a full-width one. */
+.b-video--portrait {
+  max-width: min(18rem, 100%);
+}
+
 @media (min-width: 1024px) {
   .b-gallery,
   .b-video,

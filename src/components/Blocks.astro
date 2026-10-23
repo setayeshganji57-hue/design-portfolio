@@ -17,6 +17,10 @@ const { blocks } = Astro.props;
 // the viewer shows them large. A single image spans two columns.
 const tileSizes = '(min-width: 900px) 15rem, 45vw';
 const wideTileSizes = '(min-width: 900px) 30rem, 92vw';
+const isPortrait = (aspect: string) => {
+  const [w, h] = aspect.split('/').map(Number);
+  return w < h;
+};
 ---
 
 {
@@ -59,8 +63,8 @@ const wideTileSizes = '(min-width: 900px) 30rem, 92vw';
             );
           case 'video':
             return (
-              <div class="b-video">
-                <VideoEmbed video={b.video} />
+              <div class:list={['b-video', isPortrait(b.video.aspect) && 'b-video--portrait']}>
+                <VideoEmbed video={b.video} sizes={isPortrait(b.video.aspect) ? '18rem' : undefined} />
               </div>
             );
         }
