@@ -5,6 +5,7 @@ categories:
 order: 20
 tags:
 - Website and application design
+- Brand identity
 - UI/UX
 - Independent startup project
 summary: A trading journal that helps traders understand their decisions and performance.
@@ -21,28 +22,41 @@ overview: 'Audience: Active traders who want to understand and improve their tra
 
 
   Project stage: Independent product in MVP development, with ongoing refinement of its features and user experience.'
-role: Concept development, product structure, visual direction, and UI design.
-development: AI-assisted development. Concept, product logic, visual direction and interface design by Setayesh Ganji.
+role: Concept development, brand identity, information architecture, UX audit, visual direction, and UI design.
+development: AI-assisted development. Concept, product logic, brand, visual direction and interface design by Setayesh Ganji.
 links:
 - label: Visit website
   url: https://tradememory-sigma.vercel.app
+- label: Brand & UX presentation (PDF)
+  url: /documents/tradememory-brand-ux-presentation.pdf
 cover:
-  file: tradememory/app-desktop.jpg
-  alt: TradeMemory homepage on a dark background, with the private beta label and log-in buttons
-  aspect: 16/10
-  fit: cover
+  file: tradememory/board-02-logo-concept-versions.jpg
+  alt: TradeMemory symbol concept on navy, one trade in two halves, with logo versions
 hero:
   kind: image
   media:
-    file: tradememory/app-desktop.jpg
-    alt: TradeMemory homepage on a dark background, with the private beta label and log-in buttons
-    aspect: 16/10
-    fit: cover
+    file: tradememory/board-02-logo-concept-versions.jpg
+    alt: TradeMemory symbol concept on navy, one trade in two halves, with logo versions
 blocks:
 - type: text
-  heading: The workflow
+  heading: One trade, two halves
   body: |
-    TradeMemory is organised around one loop: import a broker statement, verify it, review each trade, and only then read the patterns. The app is structured as seven areas in a single sidebar, Overview, Calendar, Trades, Review Queue, Insights, Import, and Settings, so a trader always knows where they are in that loop.
+    The symbol is one capsule drawn twice. A bar with a rounded end holds two overlapping discs, and the second capsule is the first turned 180 degrees around the point where they meet: two halves of one trade, the trade and its review, locked on a single line. A gradient from solid navy to white is the memory, fading in one direction on a white page and the other on navy.
+
+    The palette is lifted straight from the symbol. Ledger Navy carries the record, Signal Sky marks what is being looked at, and Paper is the page the numbers sit on. Profit and loss colours stay out of the brand, so the identity never takes sides on a result. Every text pairing is checked against WCAG contrast. Inter runs the whole product with tabular figures, so every number holds its column, and a weight shift, Trade in 600 and Memory in 400, gives the name a wordmark without a second typeface.
+- type: pair
+  tiles: wide
+  items:
+  - { file: tradememory/board-01-logo-construction.jpg, alt: "Logo construction: the capsule, its half-ellipse end, the two discs and the 180-degree rotation, with measurements" }
+  - { file: tradememory/board-03-colour.jpg, alt: "Colour board: Ledger Navy, Signal Sky and Paper, the symbol's gradients and WCAG contrast pairings" }
+- type: image
+  media: { file: tradememory/board-04-typography.jpg, alt: "Typography and UI tokens: Inter, the shipped dark-theme tokens and the wordmark" }
+- type: text
+  heading: From statement to self-knowledge
+  body: |
+    The product is mapped as twenty-four routes in three layers: access, an import gate, and the account workspace with its seven-item navigation. Nothing reaches the workspace until a statement has passed reconciliation, so trust before insight is built into the route map, not just the copy. A line on every screen states that the analysis is historical, not trading signals or financial advice.
+- type: image
+  media: { file: tradememory/board-05-information-architecture.jpg, alt: "Information architecture: twenty-four routes in three layers, from access to import to the account workspace" }
 - type: video
   video:
     provider: vimeo
@@ -52,73 +66,65 @@ blocks:
     caption: App walkthrough.
     poster:
       file: tradememory/walkthrough-poster.jpg
-      alt: TradeMemory Overview dashboard
+      alt: TradeMemory Overview dashboard with example data
       fit: cover
-- type: image
-  media:
-    file: tradememory/app-mobile.jpg
-    alt: TradeMemory homepage on a phone
-    fit: contain
-    caption: The public homepage on mobile.
 - type: text
-  heading: Overview
+  heading: Screen by screen
   body: |
-    The dashboard answers three questions at a glance: how the account is performing, how much of it has been reviewed, and what to do next. Key figures sit in a row of cards, a progress bar shows review completion with a direct "Continue reviewing" action, and the latest import is shown with its status. Below, entry points to the main areas, a month calendar, recent trades, and recent trading days give quick ways into the detail.
+    Each board annotates one screen with example data: what it does, what works, and what the next iteration should change. Together they form an audit of the shipped product.
+
+    Getting in and setting up: the landing page makes one honest promise, and a new account states its rules, timezones and pip size, before any number is trusted.
 - type: pair
   tiles: wide
   items:
-  - { file: tradememory/overview.jpg, alt: "Overview dashboard with net P&L, trade count, win rate, profit factor and review completion" }
-  - { file: tradememory/overview-detail.jpg, alt: "Lower part of the Overview with recent trades, recent trading days and a month calendar" }
+  - { file: tradememory/board-06-landing-access.jpg, alt: "Landing and access board: one screen, one honest promise" }
+  - { file: tradememory/board-07-account-setup.jpg, alt: "Account setup board: set the rules once, trust every number" }
 - type: text
-  heading: Calendar
+  heading: Import, overview and calendar
   body: |
-    The calendar shows each trading day with its realised result, number of trades, and how many have been reviewed, coloured by profit or loss. A summary row above the month adds net result, win rate, profitable and losing days, and review completion. A short note states the rule behind the grid: results are assigned to the day a trade closed, in the account's own timezone.
-- type: image
-  media: { file: tradememory/calendar.jpg, alt: "Calendar view of September with daily results, trade counts and a monthly summary" }
-- type: text
-  heading: Trades
-  body: |
-    Every trade reconstructed from the statement is listed in one table: instrument, side, status, open and close times, net result, and whether it has been reviewed. Review status is shown as a label on every row, so unreviewed trades stand out without a separate filter.
-- type: image
-  media: { file: tradememory/trades.jpg, alt: "Trades table with symbol, side, status, review label, open and close times and net P&L" }
-- type: text
-  heading: Review Queue
-  body: |
-    Reviewing is where the journal adds what the numbers cannot: the setup, the session, planned stop and target, how far the trade moved for and against the position (MAE and MFE), the exit reason, and the best possible exit. The queue sits on the left, grouped by day, and the form on the right; a completeness bar and the choice between "Save draft" and "Save and mark complete" let the trader work through a backlog in short sessions. Technical fields carry a small help icon with an explanation.
-- type: image
-  media: { file: tradememory/review-queue.jpg, alt: "Review Queue with the list of trades on the left and the journal form on the right" }
-- type: text
-  heading: Insights
-  body: |
-    Insights compares reviewed trades by setup, weekday, and session, alongside a cumulative result curve and summary metrics such as profit factor, expectancy, and how much profit was left on the table. Each breakdown states its scope and sample size, and the page is framed as historical evidence, not a signal, so small samples are never presented as conclusions.
+    Import is the signature screen: three reconciliation checks, each with a plain-language proof, and Confirm stays disabled until every one passes. The Overview answers where am I and what's next, and the Calendar shows a month of trading days with review progress beside the money.
 - type: pair
   tiles: wide
   items:
-  - { file: tradememory/insights.jpg, alt: "Insights summary metrics with a panel explaining what the numbers cover" }
-  - { file: tradememory/insights-breakdowns.jpg, alt: "Insights charts: cumulative net P&L and performance by setup, weekday and session" }
-- type: text
-  heading: Import
-  body: |
-    Importing an MT5 statement is broken into six visible steps: select, validate, review reconciliation, confirm, reconstruct trades, and result. The first screen says plainly that nothing is added to the trade history until the trader has checked and confirmed it.
+  - { file: tradememory/board-08-import-verify.jpg, alt: "Import and verify board: trust before insight, made visible" }
+  - { file: tradememory/board-09-overview.jpg, alt: "Overview board: where am I, what's next" }
 - type: image
-  media: { file: tradememory/import.jpg, alt: "Import screen with the six-step progress and the statement file upload" }
+  media: { file: tradememory/board-10-calendar.jpg, alt: "Calendar board: a month of trading days" }
 - type: text
-  heading: Settings
+  heading: Trades and review
   body: |
-    Settings holds the account details, the trading timezone, and the controlled lists that keep the analysis clean: setups are chosen from a list rather than typed each time, so the same setup is never counted under two names. Fields that cannot change, such as the account currency, say why. Appearance offers dark, light, and system themes, and a data panel shows real counts from the account.
+    MT5 records deals, not trades, so TradeMemory rebuilds each position from its deals. The trade detail separates the broker's facts from the trader's journal, so a note can never be mistaken for a fact. The Review Queue treats journaling as an inbox, one trade at a time, with every term defined and its unit stated.
 - type: pair
   tiles: wide
   items:
-  - { file: tradememory/settings.jpg, alt: "Settings with profile and trading account details" }
-  - { file: tradememory/settings-preferences.jpg, alt: "Settings with the setup list, appearance options and account data counts" }
+  - { file: tradememory/board-11-trades.jpg, alt: "Trades board: every trade, rebuilt from deals" }
+  - { file: tradememory/board-12-trade-detail.jpg, alt: "Trade detail board: what happened beside what I meant" }
+- type: image
+  media: { file: tradememory/board-13-review-queue.jpg, alt: "Review Queue board: journaling as an inbox" }
+- type: text
+  heading: Insights, analysis and mobile
+  body: |
+    Insights is designed as a mirror, not a crystal ball: every chart names its population, every value shows its sample size, and the app refuses to conclude from too little data. Statement analysis is the deepest page, and the audit proposes moving its conclusions to the top. On a phone, the same navigation becomes four tabs and More, and the light theme's contrast is checked by a unit test.
+- type: pair
+  tiles: wide
+  items:
+  - { file: tradememory/board-14-insights.jpg, alt: "Insights board: a mirror, not a crystal ball" }
+  - { file: tradememory/board-15-statement-analysis.jpg, alt: "Statement analysis board: the deepest page, the longest scroll" }
+- type: image
+  media: { file: tradememory/board-16-responsive-themes.jpg, alt: "Responsive and themes board: mobile screens and the light theme" }
+- type: text
+  heading: Roadmap
+  body: |
+    Phase one is what ships today in the private beta. Phases two and three come from the screen-by-screen audit, and each item points back to a board: first polish and consistency, then clarity and bringing the product closer to the brand. The success signal is simple: an activated tester has imported a statement and journaled at least five trades.
+- type: image
+  media: { file: tradememory/board-17-ui-ux-roadmap.jpg, alt: "UI and UX roadmap in three phases: shipped, next and later" }
 - type: text
   heading: Designing for trust
   body: |
-    Trading data is personal and easy to misread, so the interface is designed to be explicit about what it knows. Imports must be confirmed before they count. Every metric shows the number of trades behind it. Results are labelled as realised and assigned to a clear date. Read-only fields explain themselves. The aim is a tool that helps traders reflect honestly on their decisions rather than one that flatters them with numbers.
+    Trading data is personal and easy to misread, so the interface is explicit about what it knows. Imports must be confirmed before they count. Every metric shows the number of trades behind it. Results are labelled as realised and assigned to a clear date. Read-only fields explain themselves. The aim is a tool that helps traders reflect honestly on their decisions rather than one that flatters them with numbers.
 todo:
-- Walkthrough video (Vimeo 1238796294) shows the personal email in the app header; replace with a version without it if possible. Vimeo refused embedding on 23 October; check its embed setting if the player does not load.
+- Walkthrough video (Vimeo 1238796294) shows the personal email in the app header; replace with a version without it if possible.
 - Add the tools used.
 - Confirm the project year.
-- Screens show a real imported account; replace with demonstration data if preferred.
 context:
   type: independent

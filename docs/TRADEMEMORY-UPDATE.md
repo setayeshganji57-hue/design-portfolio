@@ -7,3 +7,7 @@ The supplied tradememory-main-2.zip contains source code but no PNG/JPG/WebP scr
 ## 23 October 2026
 
 Added ten screenshots of the working app (Overview, Calendar, Trades, Review Queue, Insights, Import, Settings), cropped to the app area. The personal email in the app header and Settings was removed. Each area has a short description; closing section on designing for trust. Development credited as AI-assisted. Walkthrough video and tools still to come.
+
+## 26 October 2026
+
+Rebuilt around the Brand & UX presentation: 17 boards (logo construction, concept, colour, type, information architecture, eleven annotated screens with example data, responsive and themes, roadmap). The PDF is linked beside the website. Raw screenshots of the real account removed; video poster now uses example data. Role now includes brand identity and UX audit.
