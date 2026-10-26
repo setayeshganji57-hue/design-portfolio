@@ -1,0 +1,93 @@
+title: KINEKO 2025 — A festival identity built from a camera with a smile
+status: published
+categories: [brand-identity]
+order: 5
+tags: [Visual identity, Character design, 3D and motion, Poster design, Illustration]
+year: 2025
+summary: Visual identity, 3D character, motion piece and poster for KINEKO, an international film festival for children and teenagers in Tokyo.
+overview: |
+  KINEKO is an international film festival for children and teenagers, held each autumn in Futako-Tamagawa, Tokyo, and one of the largest of its kind in Japan. For its 2025 edition, I designed a visual identity built around one idea: a character made out of cinema itself.
+
+  The character is a film camera turned into a friendly tower. A megaphone is its voice, two film reels are its eyes, and a wide red smile, coloured cables, a small door and a spiral staircase turn the machine into a place a child could climb into. The festival's number sits on its head like a hat. The tone is playful without talking down to its audience, and the figure reads clearly at any size.
+
+  I developed the identity in two directions that share the same shapes and colours. In three dimensions, the character is modelled in Cinema 4D for the poster and the motion piece. In two dimensions, it breaks down into a flat language of circles, triangles and bars in yellow, blue, red and green, which becomes illustrations, crayon-textured drawings, patterns and banners, so the identity can stretch from a single poster to a whole festival site.
+
+  The final outcome is a 4D piece, the identity in motion, together with the poster and a family of illustrations and applications.
+role: Visual identity, character design, 3D modelling and motion, poster design, illustration, and applications.
+tools: [Adobe Illustrator, Adobe InDesign, Cinema 4D]
+links:
+  - { label: Poster (PDF), url: /documents/kineko-poster.pdf }
+  - { label: Festival website, url: 'https://www.kineko.jp' }
+cover:
+  file: kineko/character-blue.jpg
+  alt: The 3D camera character on a blue background
+hero:
+  kind: video
+  video:
+    provider: vimeo
+    url: https://vimeo.com/1239496656
+    title: KINEKO 2025 — motion piece
+    aspect: '16/9'
+    caption: The identity in motion.
+    poster:
+      file: kineko/film-frame.jpg
+      alt: Frame from the motion piece, a film-reel eye floating like a planet over yellow hills, with a pencil, stars and scribbles
+      fit: cover
+blocks:
+  - type: text
+    heading: The poster
+    body: |
+      The A4 poster gives the character the whole page, on a warm off-white ground. The festival's logotype and Japanese name sit above it, and the festival details are set in a quiet column to the right, so the figure carries the poster on its own.
+  - type: image
+    media: { file: kineko/poster.jpg, alt: "A4 poster with the 3D camera character, the KINEKO logotype above and festival details on the right" }
+  - type: text
+    heading: A character made of cinema
+    body: |
+      Every part of the character comes from film or from play: the reels, the projector grille, the megaphone, the cables of a lighting rig, a slide-like staircase and a door. Seen on blue, on white, against a triangle of red light or on a stand, it keeps the same personality.
+  - type: grid
+    columns: 4
+    items:
+      - { file: kineko/character-blue.jpg, alt: The 3D camera character on a blue background }
+      - { file: kineko/character-variations.jpg, alt: Four renders of the character on blue and white backgrounds }
+      - { file: kineko/character-triangle.jpg, alt: A simplified 3D version of the character against a red triangle }
+      - { file: kineko/character-studio.jpg, alt: The character as a model on a stand in a studio }
+  - type: text
+    heading: Modelling in Cinema 4D
+    body: |
+      The character was built piece by piece in Cinema 4D, from grey forms to a library of parts and materials: reels, rings, buttons, cables, grilles and stairs, each with its own colour and finish.
+  - type: pair
+    items:
+      - { file: kineko/modelling.jpg, alt: Grey modelling stages of the character in Cinema 4D }
+      - { file: kineko/parts-and-materials.jpg, alt: Sheet of the character's parts, materials and colours }
+  - type: text
+    heading: A flat graphic language
+    body: |
+      Drawn in Illustrator, the same character becomes a set of simple shapes: circles for reels and numbers, a triangle for the light of the projector, bars for cables. The shapes work as clean vector graphics, as crayon-textured drawings that feel close to a child's hand, and as patterns and long banners that carry the festival's logotype and partners.
+  - type: grid
+    columns: 4
+    items:
+      - { file: kineko/flat-character.jpg, alt: Flat vector version of the character with reel eyes and a smile }
+      - { file: kineko/flat-camera.jpg, alt: Flat vector camera made of circles and triangles }
+      - { file: kineko/flat-column.jpg, alt: Tall flat version of the character as a column }
+      - { file: kineko/mark-38.jpg, alt: The number mark built from yellow circles on blue }
+      - { file: kineko/crayon-1.jpg, alt: Crayon-textured drawing of the character on blue and red }
+      - { file: kineko/crayon-2.jpg, alt: Second crayon-textured drawing of the character }
+      - { file: kineko/pattern.jpg, alt: Pattern of the identity's shapes in yellow, blue, red and green }
+      - { file: kineko/banner-artwork.jpg, alt: Banner artwork with the festival logotype, the character's parts and partner logos }
+  - type: text
+    heading: Across the festival
+    body: |
+      Mockups show how the identity could live across the festival: the character as a statue in a cinema foyer, lightboxes, outdoor seating built from its parts, and hanging banners and scaffold graphics that turn the venue into part of the identity.
+  - type: grid
+    columns: 4
+    caption: Mockups of the identity in use.
+    items:
+      - { file: kineko/statue.jpg, alt: The character as a statue in a cinema foyer and gallery }
+      - { file: kineko/lightboxes.jpg, alt: Three lightbox posters in a station corridor }
+      - { file: kineko/outdoor.jpg, alt: Outdoor seating shaped like the character's parts on a lawn }
+      - { file: kineko/banners-hanging.jpg, alt: Long hanging banners with the pattern in a hall }
+      - { file: kineko/banners-scaffold.jpg, alt: Banners on scaffolding with a visitor sitting in front }
+todo:
+  - Confirm whether this was commissioned by the festival, a competition entry, or a self-initiated proposal, and add the context.
+  - The poster says "38th" and "4 November – 31 October 2025"; the festival's 2026 edition is the 33rd and runs around 30 October – 3 November. Confirm or correct.
+  - Check that the Vimeo video allows embedding.
