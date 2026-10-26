@@ -27,142 +27,76 @@ cover:
 hero:
   kind: image
   media:
-    file: life-below-water/hero.jpg
-    alt: Life Below Water title artwork showing a child at a table in front of a yellow ocean-themed backdrop
-    aspect: 16/9
-    fit: cover
+    file: life-below-water/board-01-cover.jpg
+    alt: "Cover board: the title beside the four-metre map running from shore to deep sea"
 blocks:
-- type: grid
-  columns: 4
-  caption: The four connected stages of the 4 × 1 metre illustrated map, progressing from the shoreline into deeper
-    water.
-  items:
-  - file: life-below-water/lesson-1-original.jpg
-    alt: 'Lesson 1: Discovering the ocean'
-    fit: contain
-  - file: life-below-water/lesson-2-original.jpg
-    alt: 'Lesson 2: Meeting marine life'
-    fit: contain
-  - file: life-below-water/lesson-3-original.jpg
-    alt: 'Lesson 3: Understanding pollution'
-    fit: contain
-  - file: life-below-water/lesson-4-original.jpg
-    alt: 'Lesson 4: Learning to recycle'
-    fit: contain
 - type: text
-  heading: A story that gives learning a purpose
-  body: 'The adventure begins with a shell asking for help: its underwater home is threatened by pollution. Children
-    become ocean defenders, following a route through the map and completing activities to progress. The proposed
-    experience combines movement of the Sphero robot with QR-triggered content, teacher guidance, stories, puzzles,
-    drawing, and questions. Each interaction connects the illustrated environment to a learning task.'
-- type: text
-  heading: 1. Discovering the ocean
-  body: Introducing its importance to life on Earth, including climate, food, habitats, and livelihoods.
+  heading: A whole programme, for nine-year-olds
+  body: |
+    The starting point was a substantial teaching programme: why oceans matter, what lives in them, what pollutes them and how recycling helps. The design challenge was to turn it into a journey a child can understand and wants to explore, so that children around age nine meet marine pollution and sustainability as something they experience, not a lecture they sit through.
+
+    The game arrives as a box: the four-metre map, a Sphero robot ball, a talking shell with a QR code, a three-sided die, a phone and a guidebook the teacher reads aloud.
 - type: pair
-  align: start
+  tiles: wide
   items:
-  - file: life-below-water/lesson-1-original.jpg
-    alt: Discovering the ocean lesson board
-    fit: contain
-  - file: life-below-water/activity-1.jpg
-    alt: Discovering the ocean activity sheet
-    fit: contain
+  - { file: life-below-water/board-03-the-brief.jpg, alt: "The brief board: the audience, four learning goals and the design challenge" }
+  - { file: life-below-water/board-04-in-the-box.jpg, alt: "In the box board: the map, Sphero, the shell, the die, the phone and the guidebook" }
 - type: text
-  heading: 2. Meeting marine life
-  body: Exploring ocean animals and biodiversity through illustrated stories, colouring, and classification activities.
+  heading: One loop, block by block
+  body: |
+    Each turn had to work for a nine-year-old without instructions on screen: a physical roll, a robot to steer, a picture to scan. The shell calls, the child rolls the die and drives Sphero that many blocks, scans the block, then watches, reads or answers. Each stage is a run of activity blocks closed by a badge.
+
+    The map is the game board and the story at once: four metres, from a sunny beach down into water children have never seen. Its colour darkens with depth, so a child always knows how far they have come and how far is left.
 - type: pair
-  align: start
+  tiles: wide
   items:
-  - file: life-below-water/lesson-2-original.jpg
-    alt: Meeting marine life lesson board
-    fit: contain
-  - file: life-below-water/activity-2.jpg
-    alt: Meeting marine life activity sheet
-    fit: contain
+  - { file: life-below-water/board-05-how-a-turn-works.jpg, alt: "How a turn works board: six storyboard steps from the shell's call to answering a question" }
+  - { file: life-below-water/board-06-the-map.jpg, alt: "The map board: four metres from shore to deep, with the four lessons" }
 - type: text
-  heading: 3. Understanding pollution
-  body: Recognising different types of waste, their effects on marine environments, and how long they can persist.
+  heading: A shell asks for help
+  body: |
+    The whole programme hangs on one message: a shell asking children to save its friends from the big black monster of garbage. Children answer a friend's call, and every lesson becomes a step in a rescue. The cast shows the way: every creature is drawn with flat shapes, soft shading and round, friendly eyes, and many carry the activity with them.
 - type: pair
-  align: start
+  tiles: wide
   items:
-  - file: life-below-water/lesson-3-original.jpg
-    alt: Understanding pollution lesson board
-    fit: contain
-  - file: life-below-water/activity-3.jpg
-    alt: Understanding pollution activity sheet
-    fit: contain
+  - { file: life-below-water/board-07-the-story.jpg, alt: "The story board: the shell's message and the arc from the call to the resolution" }
+  - { file: life-below-water/board-12-characters.jpg, alt: "Characters board: the hermit crab, the shell, the octopus artist, the jellyfish and the rest of the cast" }
 - type: text
-  heading: 4. Learning to recycle
-  body: Introducing material sorting, recycling, and the ways everyday choices can help reduce waste.
+  heading: Four stages, shore to deep
+  body: |
+    Each stage has a tinted lesson board, an activity sheet and a planned pace in minutes: familiarity with the ocean on the yellow shore, ocean animals in the light-blue shallows, types of garbage in the open sea, and recycling in the deep, where the shell comes back, this time happy and laughing.
 - type: pair
-  align: start
+  tiles: wide
   items:
-  - file: life-below-water/lesson-4-original.jpg
-    alt: Learning to recycle lesson board
-    fit: contain
-  - file: life-below-water/activity-4.jpg
-    alt: Learning to recycle activity sheet
-    fit: contain
+  - { file: life-below-water/board-08-stage-1-shore.jpg, alt: "Stage 1 board: familiarity with the ocean, with activities and pacing" }
+  - { file: life-below-water/board-09-stage-2-shallows.jpg, alt: "Stage 2 board: ocean animals, with activities and pacing" }
+- type: pair
+  tiles: wide
+  items:
+  - { file: life-below-water/board-10-stage-3-open-sea.jpg, alt: "Stage 3 board: types of garbage, with activities" }
+  - { file: life-below-water/board-11-stage-4-the-deep.jpg, alt: "Stage 4 board: recycling, with activities" }
 - type: text
-  heading: An interconnected visual learning experience
-  body: 'The project brings together a large-format map, four lesson boards, four activity sheets, an original collection
-    of illustrated characters and objects, and storyboards explaining the proposed interactions. Illustration serves
-    both an expressive and a practical purpose: it introduces characters, guides attention, and makes environmental
-    topics approachable for young learners.'
-- type: grid
-  columns: 3
-  caption: Original characters and objects from the illustrated ocean world.
+  heading: Colour and process
+  body: |
+    Four colours carry the journey, warm yellow on the beach, light blue in the shallows, deep blue in open water and violet-navy at the bottom, so colour alone tells a child which part of the sea they are in. The project took eight months across 2020 and 2021, in eight steps where each fed the next: the story decided what the map needed to show, and the map decided what had to be drawn.
+- type: pair
+  tiles: wide
   items:
-  - file: life-below-water/character-01.png
-    alt: Hermit crab illustration
-    fit: contain
-  - file: life-below-water/character-02.png
-    alt: Shell illustration
-    fit: contain
-  - file: life-below-water/character-03.png
-    alt: Blue crab illustration
-    fit: contain
-  - file: life-below-water/character-07.png
-    alt: Squid holding a paintbrush illustration
-    fit: contain
-  - file: life-below-water/character-08.png
-    alt: Jellyfish illustration
-    fit: contain
-  - file: life-below-water/character-09.png
-    alt: Seahorse with a compass illustration
-    fit: contain
-  - file: life-below-water/character-10.png
-    alt: Anglerfish illustration
-    fit: contain
-- type: grid
-  columns: 3
-  caption: 'Interaction storyboard: moving the robot, scanning a QR code, answering questions, and discovering the
-    shell’s story.'
-  items:
-  - file: life-below-water/step-1.jpg
-    alt: Rolling dice to progress on the board
-    fit: contain
-  - file: life-below-water/step-2.jpg
-    alt: Using the robotic sphere on the board
-    fit: contain
-  - file: life-below-water/step-3.jpg
-    alt: Scanning a QR code
-    fit: contain
-  - file: life-below-water/step-4.jpg
-    alt: Answering a question on a phone
-    fit: contain
-  - file: life-below-water/step-5.jpg
-    alt: Scanning the shell
-    fit: contain
+  - { file: life-below-water/board-13-colour-wayfinding.jpg, alt: "Colour as a depth gauge board: the four stage colours and lesson boards" }
+  - { file: life-below-water/board-14-process.jpg, alt: "Process board: eight months, eight steps from research to the lesson plan" }
 - type: text
-  heading: Project format
-  body: Educational game concept combining a physical illustrated board with robotic play and digital learning content.
-    The Sphero link provides background on the robot used in the concept.
+  heading: What this project shows
+  body: |
+    Visual storytelling, an illustration system, a learning experience paced for nine-year-olds, and systems thinking: map, robot, QR codes, guidebook and worksheets designed to work as one game. Next steps would be to playtest a full stage with a class, check the four stage colours for colour-blind readers, and make the shell's voice and the videos available offline.
+- type: image
+  media: { file: life-below-water/board-15-reflection.jpg, alt: "Reflection board: what the project shows and where it could go next" }
 todo:
 - Confirm academic or commissioned context and any collaborators before adding institutional credits.
 role: Visual concept development, map and lesson-board design, original marine illustrations, visual storytelling,
   and activity-sheet design.
 links:
+- label: Project presentation (PDF)
+  url: /documents/life-below-water-presentation.pdf
 - label: Game storyboard (PDF)
   url: /documents/life-below-water-storyboard.pdf
 - label: About the Sphero Mini robot
