@@ -21,6 +21,7 @@ cover:
   aspect: "16/9"
   fit: cover
 links:
+  - { label: Game presentation (PDF), url: /documents/chronolens-presentation.pdf }
   - { label: Game design document (PDF), url: /documents/chronolens-game-design-document.pdf }
 hero:
   kind: video
@@ -36,11 +37,23 @@ hero:
       fit: cover
 blocks:
   - type: text
-    heading: Facts
+    heading: A history lesson disguised as a crime
     body: |
-      Project type: game design concept and visual development. Genre: narrative adventure and mystery. Platform: PC (Windows).
+      Nerezza, a history student, takes a photograph with an old camera and wakes up in a distorted, snow-covered Rome. To get home she must solve a photographer's murder, and every clue sends her through real streets, real buildings and real history, with the Pantheon at the centre of it all. The story is written as a detective story so the history is never a lecture: every place the player must visit is a place worth knowing.
+
+      A narrative action-adventure for PC, aimed at players from middle school to university and at fans of story-led, atmospheric games, with subtitles for all dialogue and captions for sound effects.
 
       Created with Farnaz Attar, under the guidance of Prof. Tommaso Empler and Prof. Lauren Ferro at Sapienza University of Rome.
+  - type: pair
+    tiles: wide
+    items:
+      - { file: chronolens/board-01-cover.jpg, alt: "Cover board: ChronoLens, with the snow-covered Pantheon" }
+      - { file: chronolens/board-03-at-a-glance.jpg, alt: "At a glance board: genre, platform, structure, mission, players and accessibility" }
+  - type: pair
+    tiles: wide
+    items:
+      - { file: chronolens/board-04-the-story.jpg, alt: "The story board: summer, winter, the frames and the fire" }
+      - { file: chronolens/board-05-nerezza.jpg, alt: "Nerezza board: the 3D character, the young girl and the city's people" }
   - type: text
     heading: How I built it
     body: |
@@ -50,30 +63,59 @@ blocks:
 
       I did all the coding in Unreal Engine, building the gameplay from the story we had written.
   - type: text
-    heading: Design approach
+    heading: Researching a square kilometre of Rome
     body: |
-      The project explores how history, architecture, and interactive storytelling can come together to create a compelling game environment.
-
-      Historical and visual research informed the development of Rome's urban setting and its architectural landmarks. These references were translated into 3D environments and rendered scenes, including a transformed winter city and a dramatic depiction of the Pantheon in flames.
-
-      Photography serves as the central narrative device, connecting the protagonist's journey to the act of gathering evidence and uncovering hidden stories. The contrast between a familiar summer landscape and an unsettling winter world reinforces the game's atmosphere and sense of temporal disorientation.
-
-      The result is a concept that approaches cultural heritage through exploration and mystery, encouraging players to engage with history by investigating the environment rather than simply observing it.
+      The game is set in the Campus Martius, around the Pantheon. Before modelling anything, the area was mapped twice, on an atlas of ancient Rome and on today's streets, to fix which buildings the player would meet and where. Each landmark on the route was compared across time, the 18th- and 19th-century view against the street today, to decide what the game's Rome should look like: old enough to feel strange, familiar enough to recognise.
   - type: pair
-    caption: The winter Pantheon, and the fire sequence.
+    tiles: wide
     items:
-      - { file: chronolens/pantheon-snow.jpg, alt: Render of the Pantheon surrounded by snowy trees and buildings, fit: contain, background: "#000000" }
-      - { file: chronolens/pantheon-fire.jpg, alt: Render of the Pantheon in flames, fit: contain, background: "#000000" }
+      - { file: chronolens/board-06-the-site.jpg, alt: "The site board: the study area on an atlas of ancient Rome and on today's map" }
+      - { file: chronolens/board-07-the-pantheon.jpg, alt: "The Pantheon board: Piranesi's engraving, plans and the building's history" }
+  - type: pair
+    tiles: wide
+    items:
+      - { file: chronolens/board-08-then-and-now.jpg, alt: "Then and now board: Palazzo Montecitorio, Piazza di Pietra and Piazza Colonna, past and present" }
+      - { file: chronolens/board-09-paper-to-playable.jpg, alt: "From paper to playable board: reference, model, material and scene" }
+  - type: text
+    heading: Building Rome
+    body: |
+      Every building follows the same path: read the history, model it exactly, then let the story change it. The Pantheon goes from an 18th-century engraving to a model in Rhinoceros 3D, then to weathered materials and a scene in Unreal Engine under snow. Details go down to the letters of the frieze, M·AGRIPPA·L·F·COS·TERTIVM·FECIT, modelled rather than painted on, and around it a district of palazzi, a fountain and everyday props makes the streets believable.
+  - type: pair
+    tiles: wide
+    items:
+      - { file: chronolens/board-10-details.jpg, alt: "Details board: the portico, bell towers and the inscription on the frieze" }
+      - { file: chronolens/board-11-the-city.jpg, alt: "The city board: palazzi, the fountain, props and the full level from above" }
+  - type: text
+    heading: Play
+    body: |
+      The time jump is told through weather: the story opens in midsummer heat and wakes in a winter that Rome almost never sees. The soundscape stays deliberately bare, with no music, so silence keeps attention on the story. A tutorial level teaches every control in one walk along the route, the trailer was storyboarded shot by shot in the engine, and every menu sits on a blurred, sepia view of the city, like an old photograph laid over the game.
+  - type: pair
+    tiles: wide
+    items:
+      - { file: chronolens/board-12-atmosphere.jpg, alt: "Atmosphere board: Rome under snow, before and after, and the sound design" }
+      - { file: chronolens/board-13-tutorial-level.jpg, alt: "Tutorial level board: every control taught along one route" }
+  - type: pair
+    tiles: wide
+    items:
+      - { file: chronolens/board-14-trailer.jpg, alt: "Trailer board: thirty storyboarded shots" }
+      - { file: chronolens/board-15-game-ui.jpg, alt: "Game UI board: the main menu and its screens" }
+  - type: video
+    video:
+      provider: youtube
+      url: https://youtu.be/9i83SRw2RQw
+      title: ChronoLens — tutorial
+      aspect: '16/9'
+      caption: Tutorial.
+      poster:
+        file: chronolens/tutorial-frame.jpg
+        alt: Frame from the tutorial, Nerezza in front of the Pantheon in the snow
+        fit: cover
+  - type: text
+    heading: The city at peace
+    body: |
+      The climax burns the very building the game began with. Behind it: a story, a researched city, hand-built models and the code that makes it play, all within one studio course.
   - type: image
-    size: full
-    media: { file: chronolens/city-snow.jpg, alt: Render of the snow-covered city around the Pantheon, fit: contain, background: "#000000", caption: The snow-covered city. }
-  - type: grid
-    columns: 3
-    caption: 3D models of the Pantheon and the surrounding buildings.
-    items:
-      - { file: chronolens/pantheon-model.jpg, alt: White 3D model of the Pantheon, fit: contain, background: "#000000" }
-      - { file: chronolens/pantheon-portico.jpg, alt: Close view of the 3D model of the Pantheon's portico, fit: contain, background: "#000000" }
-      - { file: chronolens/building-model.jpg, alt: 3D model of a Roman apartment building, fit: contain, background: "#000000" }
+    media: { file: chronolens/board-16-credits.jpg, alt: "Credits board: the Pantheon in flames, with role, tools, context and collaborator" }
   - type: text
     heading: Inside the game
     body: |
@@ -132,31 +174,4 @@ blocks:
       - { file: chronolens/ui-general.jpg, alt: "General settings for quality, display mode, invert look, sprint and zoom" }
       - { file: chronolens/ui-credits.jpg, alt: "Credits screen naming the authors and professors, with Unreal Engine and Sapienza logos" }
       - { file: chronolens/ui-exit.jpg, alt: "Exit confirmation asking whether to abandon the game" }
-  - type: video
-    video:
-      provider: youtube
-      url: https://youtu.be/9i83SRw2RQw
-      title: ChronoLens — tutorial
-      aspect: '16/9'
-      caption: Tutorial.
-      poster:
-        file: chronolens/tutorial-frame.jpg
-        alt: Frame from the tutorial, Nerezza in front of the Pantheon in the snow
-        fit: cover
-  - type: text
-    heading: Project scope
-    body: |
-      Game concept and narrative design: the story premise, protagonist, objectives, and mystery-driven progression.
-
-      Historical and visual research: Rome's architecture, landmarks, and historical imagery, to establish the game's visual context.
-
-      Environment and level development: the main locations, translated from the research into a cohesive game world.
-
-      3D visual development: rendered environmental scenes exploring the atmosphere and dramatic potential of the setting.
-
-      Game design documentation: gameplay objectives, player profiles, controls, accessibility considerations, and audio direction.
-  - type: text
-    heading: Outcome
-    body: |
-      ChronoLens brings together narrative thinking, historical investigation, and digital environment development to explore how a real city's cultural heritage can become the foundation of an immersive fictional experience.
 todo: []
