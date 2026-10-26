@@ -25,6 +25,10 @@ describe('approved launch list', () => {
 });
 
 describe('excluded projects stay drafts', () => {
+  // The list may be empty once excluded projects are deleted outright.
+  it.runIf(manifest.excluded.length === 0)('no projects are currently excluded', () => {
+    expect(manifest.excluded).toEqual([]);
+  });
   it.each(manifest.excluded)('$slug is a draft and not published', ({ slug, status }) => {
     expect(read(slug).status).toBe(status);
   });

@@ -101,13 +101,7 @@
       "note": "Commissioned by the festival (confirmed by the owner, 26 October 2026)"
     }
   ],
-  "excluded": [
-    {
-      "slug": "woman-life-freedom-exhibition",
-      "status": "draft",
-      "note": "Not in the approved launch list"
-    }
-  ],
+  "excluded": [],
   "categories": [
     "brand-identity",
     "graphic-illustration",
