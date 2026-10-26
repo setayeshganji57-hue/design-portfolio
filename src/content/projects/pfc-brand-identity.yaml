@@ -34,61 +34,63 @@ role: Logo and visual identity design, corporate stationery, website wireframing
 links:
 - label: Visit company website
   url: https://parsfoamcut.com
-cover: &id001
-  file: pfc/stationery.jpg
-  alt: Pars Foam Cut corporate stationery mockup with logo and coordinated printed materials
-  fit: contain
+- label: Brand identity presentation (PDF)
+  url: /documents/pars-foam-cut-brand-identity.pdf
+cover:
+  file: pfc/cover-mark.jpg
+  alt: The Pars Foam Cut mark, an oxblood monogram with a graphite square above and two foam squares below
 hero:
   kind: image
-  media: *id001
+  media:
+    file: pfc/board-01-cover.jpg
+    alt: "Cover board: the Pars Foam Cut mark beside the name in English and Persian"
 blocks:
 - type: text
-  heading: Logo and corporate stationery
-  body: A geometric symbol and Persian logotype form the foundation of the identity. The stationery mockups show
-    how the logo and colour palette extend across printed applications.
+  heading: Two letters, two scripts
+  body: |
+    The mark is drawn from a single square module on a three-by-three grid. Read in Latin, it spells F and P, for Foam and Pars. Read in Persian, it spells ف and پ, the first letters of فوم and پارس, and the loose squares do double duty as the dots of the Persian letters: one above for ف, three below for پ. Because every measurement is a multiple of the module, the mark holds at any size.
 - type: pair
+  tiles: wide
   items:
-  - file: pfc/logo.png
-    alt: Pars Foam Cut geometric logo and Persian logotype
-    fit: contain
-  - file: pfc/staff-cards.jpg
-    alt: Pars Foam Cut staff identification card mockups
-    fit: contain
+  - { file: pfc/board-03-logo-construction.jpg, alt: "Logo construction board: the mark on a three-by-three grid, measured in modules" }
+  - { file: pfc/board-06-logo-concept.jpg, alt: "Concept board: F and P in Latin and \u0641 and \u067e in Persian combine into one mark" }
 - type: text
-  heading: Catalogue and brochure
-  body: The identity carries into the company's printed communication, a catalogue presenting its fabrication
-    work and a folded brochure, both set in Persian with the logo and colour palette.
+  heading: Colour and type
+  body: |
+    Four colours come from the workshop floor: oxblood for the mark and headlines, graphite for text, raw foam for supporting shapes, and paper white, the only ground the logo sits on. Every text pairing is checked for WCAG contrast. Chicago Flat sets the Latin and Far Beirut the Persian; both are heavy, low-contrast and built from flat geometric strokes, so the two scripts carry the same weight when they share a line.
 - type: pair
+  tiles: wide
   items:
-  - file: pfc/catalogue.jpg
-    alt: Open Pars Foam Cut catalogue with photographs of CNC-cut foam sculptures and Persian text
-    fit: contain
-  - file: pfc/brochure.jpg
-    alt: Folded Pars Foam Cut brochure with the logo, Persian logotype and text
-    fit: contain
+  - { file: pfc/board-04-colour-palette.jpg, alt: "Colour palette board: oxblood, graphite, raw foam and paper, with contrast pairings" }
+  - { file: pfc/board-05-typography.jpg, alt: "Typography board: Chicago Flat for Latin and Far Beirut for Persian" }
 - type: text
-  heading: Illustration collection
-  body: Selected illustrations created for the 2022 website project. Industrial imagery and simplified symbols share
-    a consistent colour palette and outlined visual style.
+  heading: One family of drawings
+  body: |
+    The illustrations, from single icons to a full workshop scene, follow the same few rules: one heavy oxblood line with rounded ends, paper and foam splitting light from shade, and rounded shadow bars rising at 35 degrees behind each drawing. Three boards take one icon, one tool and one scene apart, step by step.
+- type: pair
+  tiles: wide
+  items:
+  - { file: pfc/board-07-illustration-system.jpg, alt: "Illustration system board: the workshop scene and eight icons in one style" }
+  - { file: pfc/board-08-illustration-light-bulb.jpg, alt: "Light bulb board: the icon built in four steps" }
+- type: pair
+  tiles: wide
+  items:
+  - { file: pfc/board-09-illustration-pen-tool.jpg, alt: "Pen tool board: the icon built in four steps" }
+  - { file: pfc/board-10-illustration-workshop.jpg, alt: "Workshop board: the scene built in four steps" }
+- type: text
+  heading: In use
+  body: |
+    The identity carries into stationery, ID badges, a catalogue, a folded brochure and a set of social icons, all in Persian and all on white, where the mark keeps its three tones.
+- type: image
+  media: { file: pfc/board-11-brand-in-use.jpg, alt: "Brand in use board: stationery, ID badges, brochure, illustration and social icons" }
 - type: grid
   columns: 4
   items:
-  - file: pfc/digital-illustration.jpg
-    alt: Outlined smartphone and geometric shapes
-    fit: contain
-  - file: pfc/cloud-illustration.jpg
-    alt: Cloud and upward arrow illustration
-    fit: contain
-  - file: pfc/idea-illustration.jpg
-    alt: Light bulb illustration
-    fit: contain
-  - file: pfc/vector-illustration.jpg
-    alt: Vector editing symbol illustration
-    fit: contain
-  - file: pfc/industrial-scene.jpg
-    alt: A worker giving a thumbs up beside a robotic arm on a conveyor
-    fit: contain
+  - { file: pfc/stationery.jpg, alt: "Stationery set with letterhead, cards, envelope, notebook and mug" }
+  - { file: pfc/staff-cards.jpg, alt: Staff identification card mockups }
+  - { file: pfc/catalogue.jpg, alt: Open Pars Foam Cut catalogue with photographs of CNC-cut foam sculptures and Persian text }
+  - { file: pfc/brochure.jpg, alt: Folded Pars Foam Cut brochure with the logo, Persian logotype and text }
 todo:
 - Add original wireframes and desktop/mobile UI designs when supplied.
 - Confirm which elements of the current blue-and-orange website retain the 2022 UI work before adding current screenshots.
-- Owner asked (October 2026) to publish all PFC mockups and illustrations; catalogue and brochure added from the files sent on 23 October. Any further mockups still need to be sent.
+- The presentation's cover says "Brand book, May 2023"; the project year here is 2022. Confirm.
