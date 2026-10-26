@@ -25,61 +25,80 @@ role: Concept development, website structure, visual direction, and UI design
 links:
 - label: Visit website
   url: https://www.hamloqmeh.com
+- label: Website case study (PDF)
+  url: /documents/hamloqmeh-presentation.pdf
 - label: Open app (log-in required)
   url: https://hamloqmeh-app.vercel.app
 cover:
-  file: hamloqmeh/website-hero.jpg
-  alt: Hamloqmeh homepage in Persian, with the headline, the waitlist button and three cards showing how a food package is reserved
+  file: hamloqmeh/cover-mark.jpg
+  alt: The Hamloqmeh symbol, a green block with two amber circles
 hero:
   kind: image
   media:
-    file: hamloqmeh/website-hero.jpg
-    alt: Hamloqmeh homepage in Persian, with the headline, the waitlist button and three cards showing how a food package is reserved
+    file: hamloqmeh/board-01-cover.jpg
+    alt: "Cover board: Hamloqmeh, good food from today at a big end-of-day discount, with the symbol"
 blocks:
 - type: text
-  heading: Explaining a new service
+  heading: Explain a service nobody has used yet
   body: |
-    The homepage opens with the offer in one line, good food today with a big end-of-day discount, and a single call to join the waitlist. A small label says the service is in its trial phase. Three stacked cards beside the headline preview the whole journey: a bakery's package available today, reserved at a discount, and collected in a set time window.
+    Hamloqmeh asks people to try something new: buying good food that a shop didn't sell in time. The website had to introduce that idea to a Persian-speaking audience before the product launches, and answer three questions: what is it, how does it work, and why take part. The goal was to bring customers and businesses onto one waitlist, ahead of wider product testing.
 
-    The next sections answer the first questions a visitor has. Why does this food exist? Because good food is still left at closing time. How does it work? Three numbered steps: discover the day's packages, reserve one at a discount, and pick it up in person.
-- type: image
-  media:
-    file: hamloqmeh/website-how-it-works.jpg
-    alt: The problem statement on a pale green band, followed by the three steps of how Hamloqmeh works
-- type: text
-  heading: Two audiences, one page
-  body: |
-    Hamloqmeh needs both customers and food businesses, so the page speaks to each side in its own card: savings and local discovery for customers, extra income and new neighbourhood customers for businesses, with a separate call to partner. A row of labels lists the kinds of business that can join, from bakeries and cafés to supermarkets and greengrocers.
-- type: image
-  media:
-    file: hamloqmeh/website-audiences.jpg
-    alt: Two cards, one for customers and one for food businesses, above the list of business types that can join
-- type: text
-  heading: Values and the waitlist
-  body: |
-    The closing sections explain why the idea matters, that every package chosen means the water, energy and work behind that food were not wasted, and answer common questions in an expandable FAQ. The page ends with a short waitlist form that asks only for a name, an email or mobile number, a city, and whether the person is a customer or a business, with a clear consent line and a link to the privacy policy.
+    "Hamloqmeh" means sharing a bite of food with someone, a feeling that has always belonged to the sofreh, hospitality and empathy in Iranian culture. The symbol is built on the Persian letter ه, the first letter of the name: its two counters become two amber circles, two portions side by side.
 - type: pair
   tiles: wide
   items:
-  - file: hamloqmeh/website-values-faq.jpg
-    alt: Values section with a large statement about food waste, and the FAQ
-  - file: hamloqmeh/website-waitlist.jpg
-    alt: Waitlist form with name, email or mobile, city and user type
+  - { file: hamloqmeh/board-03-the-brief.jpg, alt: "The brief board: three questions the site must answer, for food businesses and for people" }
+  - { file: hamloqmeh/board-04-name-mark.jpg, alt: "Name and mark board: the letter \u0647 becomes the symbol, two amber circles in a green block" }
 - type: text
-  heading: Mobile and app
+  heading: Identity
   body: |
-    The website is fully right-to-left on mobile. The customer app, a separate product, asks people to log in before they can view and reserve food packages.
+    The mark is simple enough to work as a favicon and an app icon: every part hangs off one centre line, and two equal circles sit in a soft, squircle-like block. Deep bakery greens and an amber like a warm crust present surplus food as good food first, never as a bargain bin. Vazirmatn carries the whole site, drawn for Persian, right to left, with a true Black weight that matches the solid shape of the logo.
 - type: pair
+  tiles: wide
   items:
-  - file: hamloqmeh/website-mobile-updated.png
-    alt: Hamloqmeh website on a phone, in Persian, right to left
-  - file: hamloqmeh/app-login-mobile.jpg
-    alt: Hamloqmeh app log-in screen on a phone, in Persian
+  - { file: hamloqmeh/board-05-logo-construction.jpg, alt: "Logo construction board: two circles on one centre line, with proportions and sizes" }
+  - { file: hamloqmeh/board-06-colour.jpg, alt: "Colour board: forest, Hamloqmeh green, amber, cream, leaf tint and sage" }
+- type: pair
+  tiles: wide
+  items:
+  - { file: hamloqmeh/board-07-typography.jpg, alt: "Typography board: Vazirmatn, right to left, with the type scale" }
+  - { file: hamloqmeh/board-08-structure.jpg, alt: "Structure board: eight pages, one destination, and two journeys into one form" }
+- type: text
+  heading: The homepage
+  body: |
+    Eight pages share one destination, the waitlist, with a single persistent button in the header. The homepage is written as an argument, top to bottom: a promise, the problem, how it works, who it is for, who can join, why it matters, common questions, and only then the form.
+
+    The hero makes the promise and previews the product in three stacked cards. How it works fits on one line in three steps, with one card for each audience. Businesses get their own page with four reasons and a four-step process.
+- type: pair
+  tiles: wide
+  items:
+  - { file: hamloqmeh/board-09-the-homepage.jpg, alt: "The homepage board: one page, one story, in eight sections" }
+  - { file: hamloqmeh/board-10-hero.jpg, alt: "Hero board: a promise and a preview, with annotations" }
+- type: pair
+  tiles: wide
+  items:
+  - { file: hamloqmeh/board-11-how-it-works.jpg, alt: "How it works board: three steps and two audiences" }
+  - { file: hamloqmeh/board-12-for-businesses.jpg, alt: "For businesses board: four reasons and a four-step process" }
+- type: text
+  heading: Dignity before discount
+  body: |
+    Discounted surplus food can feel like charity, so the copy works against that: it calls the purchase "a smart choice, not a favour", explains prices before anyone asks, and answers doubts openly in a nine-question FAQ. One form serves both audiences: a single contact field for email or mobile, a customer or business switch that reveals one extra field, explicit consent and helpful errors in plain Persian.
+- type: pair
+  tiles: wide
+  items:
+  - { file: hamloqmeh/board-13-trust.jpg, alt: "Trust board: values, the FAQ and the line about water, energy and effort" }
+  - { file: hamloqmeh/board-14-waitlist.jpg, alt: "Waitlist board: one form for both audiences, with validation" }
+- type: text
+  heading: In the hand
+  body: |
+    On a phone, the sections stack in reading order, the steps turn vertical, cards go full width, and the waitlist button stays in the header at every scroll position. The customer app, a separate product, asks people to log in before they can view and reserve food packages.
 - type: image
-  media:
-    file: hamloqmeh/app-login-desktop.jpg
-    alt: Hamloqmeh app log-in screen on a desktop browser, in Persian
-    caption: Customer app, log-in screen.
+  media: { file: hamloqmeh/board-15-mobile.jpg, alt: "Mobile board: five screens of the site on a phone" }
+- type: pair
+  tiles: wide
+  items:
+  - { file: hamloqmeh/board-16-outcome.jpg, alt: "Outcome board: ready for its first bite, with role, context and stage" }
+  - { file: hamloqmeh/app-login-desktop.jpg, alt: "Hamloqmeh app log-in screen on a desktop browser, in Persian" }
 todo:
 - Confirm the project year.
 context:

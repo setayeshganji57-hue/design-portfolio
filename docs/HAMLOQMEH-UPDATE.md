@@ -12,3 +12,7 @@ Replace the corresponding files in your local portfolio checkout with this updat
 ## 23 October 2026
 
 New homepage screenshots from hamloqmeh.com (hero, how it works, two audiences, values and FAQ, waitlist), cropped to the page. The site link now points to https://www.hamloqmeh.com. Older desktop screenshots removed.
+
+## 26 October 2026
+
+Rebuilt around the website case study presentation (15 boards on the page; the reading guide stays in the PDF). Presentation PDF published between the website and app links. The earlier homepage screenshots and mobile images are replaced by the boards; the desktop app log-in screen stays. New square cover from the cover board.
