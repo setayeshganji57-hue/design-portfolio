@@ -20,9 +20,11 @@ overview: 'Audience: Drivers looking for parking near their destination
   A dark navy foundation, cyan highlights, and colour-coded availability indicators establish the visual language. Beyond the map, the prototype includes destination search, parking activity, saved locations, and profile settings, exploring how the experience could support both occasional and returning users.
 
 
-  Project stage: App interface prototype using sample data to demonstrate the proposed experience.'
+  Project stage: Working app prototype using sample data to demonstrate the proposed experience.'
 role: UI/UX design, app navigation, information hierarchy, and visual interface design.
 links:
+- label: Open live app
+  url: https://v0-parkscanner.vercel.app
 - label: Visit company website
   url: https://parkscannerai.com
 cover:
@@ -102,6 +104,5 @@ blocks:
   - { file: parkscanner/notifications.jpg, alt: "Notification settings with toggles" }
   - { file: parkscanner/saved-spots.jpg, alt: "Saved Spots screen with availability bars" }
 todo:
-- Add the public prototype link once it opens without a Vercel sign-in (the link supplied on 23 October redirects to the Vercel login).
 - Walkthrough video (Vimeo 1238791267) refused embedding on 23 October; check its Vimeo embed setting if the player does not load.
 - Prototype statistics and availability are sample data, not measured outcomes.
