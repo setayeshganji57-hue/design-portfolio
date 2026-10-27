@@ -175,3 +175,5 @@ blocks:
       - { file: chronolens/ui-credits.jpg, alt: "Credits screen naming the authors and professors, with Unreal Engine and Sapienza logos" }
       - { file: chronolens/ui-exit.jpg, alt: "Exit confirmation asking whether to abandon the game" }
 todo: []
+location: "Rome, Italy"
+audience: "Players from middle school to university, and fans of story-led, atmospheric games"

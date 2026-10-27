@@ -94,3 +94,7 @@ todo:
 - Add original wireframes and desktop/mobile UI designs when supplied.
 - Confirm which elements of the current blue-and-orange website retain the 2022 UI work before adding current screenshots.
 - The presentation's cover says "Brand book, May 2023"; the project year here is 2022. Confirm.
+context: { type: "commissioned", institution: "Pars Foam Cut" }
+location: "Tehran, Iran"
+tools: [Adobe InDesign, Adobe Illustrator, Adobe Photoshop, Adobe XD, CAD (mockup renders)]
+audience: "Architects, designers, advertising agencies and industrial clients looking for CNC cutting, large-scale models and fabrication"

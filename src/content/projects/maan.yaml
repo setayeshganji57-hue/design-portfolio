@@ -3,7 +3,6 @@ status: published
 categories: [brand-identity]
 order: 8
 tags: [Brand identity, Packaging, Bilingual typography, Café]
-context: { type: commissioned, institution: "Maan, Tehran" }
 summary: Complete visual identity for Maan, a bakery, pastry shop and coffee house in Tehran, from the bilingual logo to packaging, cups, menus, signage and social media.
 overview: |
   Maan (مان) is a bakery, pastry shop and coffee house in Tehran. I designed its complete visual identity, from the logo and colour palette to the packaging, cups, menus, signage and social media.
@@ -95,4 +94,8 @@ blocks:
   - type: image
     media: { file: maan/board-18-credits.jpg, alt: "Credits board: client, design and role, with bilingual logo, graphic system, packaging and application" }
 todo:
-  - Confirm the year and the tools used.
+  - Confirm the year.
+context: { type: "commissioned", institution: "Maan" }
+location: "Tehran, Iran"
+tools: [Adobe Illustrator, Adobe Photoshop, Adobe InDesign]
+audience: "Neighbourhood customers in Tehran: coffee drinkers, families buying fresh bread and pastry, and the café's followers on Instagram"

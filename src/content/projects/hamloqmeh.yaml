@@ -6,12 +6,9 @@ order: 10
 tags:
 - Website design
 - UI/UX
-- Independent startup project
+- Startup project
 summary: A food-saving platform connecting consumers and food businesses in Iran.
-overview: 'Audience: Consumers and food businesses in Iran
-
-
-  Hamloqmeh is a food-saving platform to connect people with bakeries, restaurants, and supermarkets offering surplus food at reduced prices. The idea brings together two everyday needs: helping businesses reduce food waste and making good food more affordable.
+overview: 'Hamloqmeh is a food-saving platform to connect people with bakeries, restaurants, and supermarkets offering surplus food at reduced prices. The idea brings together two everyday needs: helping businesses reduce food waste and making good food more affordable.
 
 
   For its marketing website, I worked from the initial concept through the interface design, shaping how the platform introduces itself to both customers and potential business partners. The design challenge was to communicate an unfamiliar service clearly: what Hamloqmeh offers, how it works, and why someone would want to take part.
@@ -101,5 +98,7 @@ blocks:
   - { file: hamloqmeh/app-login-desktop.jpg, alt: "Hamloqmeh app log-in screen on a desktop browser, in Persian" }
 todo:
 - Confirm the project year.
-context:
-  type: independent
+context: { type: "startup", institution: "Hamloqmeh", course: "MVP phase" }
+location: "Iran"
+tools: [Figma, Adobe XD, Adobe Illustrator, Adobe InDesign]
+audience: "Consumers and food businesses in Iran"

@@ -79,5 +79,8 @@ blocks:
   - type: image
     media: { file: soundscape-of-iran/board-14-credits.jpg, alt: "Credits board: the exhibition team as credited on the poster, and my work" }
 todo:
-  - Confirm context (commissioned by the organisers, or another arrangement) and tools used.
   - Confirm whether the people in the last photograph agree to appear on the site.
+context: { type: "commissioned", institution: "Soundscape of Iran exhibition", course: "supported by Divar, one of Iran's largest consumer platforms" }
+location: "Tehran, Iran"
+tools: [Adobe InDesign, Adobe Illustrator, Adobe Photoshop, Adobe XD, Rhinoceros 3D]
+audience: "Tehran's general public, from families to music and culture lovers, invited to a free exhibition"

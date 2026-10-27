@@ -90,8 +90,6 @@ blocks:
     Visual storytelling, an illustration system, a learning experience paced for nine-year-olds, and systems thinking: map, robot, QR codes, guidebook and worksheets designed to work as one game. Next steps would be to playtest a full stage with a class, check the four stage colours for colour-blind readers, and make the shell's voice and the videos available offline.
 - type: image
   media: { file: life-below-water/board-15-reflection.jpg, alt: "Reflection board: what the project shows and where it could go next" }
-todo:
-- Confirm academic or commissioned context and any collaborators before adding institutional credits.
 role: Visual concept development, map and lesson-board design, original marine illustrations, visual storytelling,
   and activity-sheet design.
 links:
@@ -101,3 +99,6 @@ links:
   url: /documents/life-below-water-storyboard.pdf
 - label: About the Sphero Mini robot
   url: https://sphero.com/products/sphero-mini/
+context: { type: "commissioned", institution: "Sphero", course: "maker of the Sphero Mini robot" }
+tools: [Adobe InDesign, Adobe Illustrator, Adobe Photoshop, Rhinoceros 3D]
+audience: "Children around age nine and their teachers, playing and learning together in the classroom"

@@ -10,10 +10,7 @@ tags:
 context:
   type: independent
 summary: A Persian-learning platform concept connecting language, stories, and cultural identity.
-overview: 'Audience: Children and teenagers in the Iranian diaspora, alongside global learners interested in Persian language and culture
-
-
-  ParsiTalk is a Persian-learning platform concept that brings language and cultural discovery together. Designed with young learners growing up outside Iran in mind, it explores how digital learning can help people connect with their heritage through stories, everyday vocabulary, celebrations, and creative activities.
+overview: 'ParsiTalk is a Persian-learning platform concept that brings language and cultural discovery together. Designed with young learners growing up outside Iran in mind, it explores how digital learning can help people connect with their heritage through stories, everyday vocabulary, celebrations, and creative activities.
 
 
   I shaped the product experience around an approachable journey, from choosing a learner profile and learning goals to exploring themed lessons. The design challenge was to organise a broad range of activities into an inviting interface that encourages curiosity while giving learners a clear sense of direction.
@@ -49,3 +46,4 @@ blocks:
     fit: contain
 todo:
 - Add further completed learning-screen visuals when available; the story scene currently uses a placeholder image.
+audience: "Children and teenagers in the Iranian diaspora, alongside global learners interested in Persian language and culture"

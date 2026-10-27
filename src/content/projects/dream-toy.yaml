@@ -8,13 +8,7 @@ tags:
 - Illustration
 - Website UI design
 summary: Identity, original illustrations, and website interface design for a cryptocurrency-based fundraising startup.
-overview: 'Context: A startup project spanning Iran and Dubai
-
-
-  Audience: People seeking funding and supporters interested in contributing through cryptocurrency
-
-
-  Drymto was conceived as a cryptocurrency-based fundraising platform, connecting people seeking support for their ideas with potential contributors. Its name combines “dream” and “crypto,” bringing personal ambition into the identity of a technology-led service.
+overview: 'Drymto was conceived as a cryptocurrency-based fundraising platform, connecting people seeking support for their ideas with potential contributors. Its name combines “dream” and “crypto,” bringing personal ambition into the identity of a technology-led service.
 
 
   I designed the brand identity, original illustrations, and website interface. The logo draws on the form of a phoenix, interpreted within the project as a symbol of dreaming and aspiration. A gold-and-blue palette connects the mark with an illustrated world of people, growth, and possibility.
@@ -120,3 +114,8 @@ blocks:
     caption: Website structure and proposed user journeys. Open the PDF for a closer look.
 todo:
 - Verify Vimeo embed playback on the final portfolio domain.
+year: 2021
+context: { type: "commissioned", institution: "Drymto", course: "an independent company at the time, since sold" }
+location: "Tehran, Iran"
+tools: [Adobe InDesign, Adobe Photoshop, Adobe Illustrator, Figma, Adobe XD]
+audience: "People seeking funding for their ideas, and supporters interested in contributing through cryptocurrency"

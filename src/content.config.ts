@@ -101,11 +101,15 @@ const projects = defineCollection({
       /** Only fill in once verified. */
       context: z
         .object({
-          type: z.enum(['academic', 'commissioned', 'independent']),
+          type: z.enum(['academic', 'commissioned', 'startup', 'independent']),
           institution: z.string().optional(),
           course: z.string().optional(),
         })
         .optional(),
+      /** Where the project was made for, e.g. "Tehran, Iran". */
+      location: z.string().optional(),
+      /** Who the work is for, shown in the facts table. */
+      audience: z.string().optional(),
       summary: z.string().optional(),
       overview: z.string().optional(),
       role: z.string().optional(),

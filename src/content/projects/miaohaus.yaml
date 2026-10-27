@@ -9,10 +9,7 @@ tags:
 - Photography
 year: 2022
 summary: Visual identity, event posters, and a photographic fanzine for creative workshops in Ostia.
-overview: 'Context: Art and design workshops at Teatro del Lido, Ostia
-
-
-  For Miaohaus, I created a visual identity and a fanzine documenting a programme of creative workshops. My work brought together the logo, graphic language, event posters, publication layout, and photography.
+overview: 'For Miaohaus, I created a visual identity and a fanzine documenting a programme of creative workshops. My work brought together the logo, graphic language, event posters, publication layout, and photography.
 
 
   A pixel-style cat, stepped shapes, directional arrows, and a bright colour palette give the project its playful character. These elements connect the promotional materials and publication, creating a consistent identity across different activities.
@@ -64,3 +61,7 @@ blocks:
     alt: Workshop participants exploring projected light and hand shadows
     fit: contain
     caption: Shadow-play workshop — photography and editorial layout.
+context: { type: "commissioned", institution: "Miaohaus", course: "art and design workshops at Teatro del Lido" }
+location: "Ostia, Rome, Italy"
+tools: [Adobe InDesign, Adobe Illustrator]
+audience: "Local residents of Ostia, of all ages, taking part in Miaohaus's art and design workshops"

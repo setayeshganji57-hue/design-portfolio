@@ -13,7 +13,6 @@ overview: |
 
   By translating physical movements into graphic scores and animated forms, the project reveals the hidden rhythms of everyday life. These visual explorations culminate in a transmedia exhibition concept that brings the resulting imagery back into the physical environment where the original movements took place.
 role: Site study, visual scores, motion studies and exhibition concept, in a collaborative academic project
-tools: [Cinema 4D]
 links:
   - { label: Project presentation (PDF), url: /documents/sunny-days-between-cubes-presentation.pdf }
 cover:
@@ -89,3 +88,6 @@ blocks:
     media: { file: sunny-days-between-cubes/board-15-credits.jpg, alt: "Credits board: the hidden rhythm of an ordinary day" }
 todo:
   - Replace the Vimeo video with a higher-resolution export when available (current upload is 426 x 240)
+location: "Rome, Italy"
+tools: [Cinema 4D, Adobe After Effects, Adobe Premiere Pro, Adobe InDesign]
+audience: "Students and staff who use the shaded resting area on Sapienza's main campus, and visitors to the proposed exhibition"

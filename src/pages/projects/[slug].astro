@@ -36,6 +36,8 @@ const facts: { term: string; value?: string; links?: { href: string; label: stri
   { term: 'Discipline', links: disciplines.map((c) => ({ href: `/work/${c.slug}`, label: c.title })) },
   { term: 'Year', value: d.year !== undefined ? String(d.year) : undefined },
   { term: 'Context', value: [ctx, d.context?.course].filter(Boolean).join(' — ') || undefined },
+  { term: 'Location', value: d.location },
+  { term: 'Audience', value: d.audience },
   { term: 'Role', value: d.role },
   { term: 'Tools', value: d.tools.length ? d.tools.join(', ') : undefined },
   { term: 'Development', value: d.development },

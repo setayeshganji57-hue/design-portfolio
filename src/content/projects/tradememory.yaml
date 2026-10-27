@@ -7,12 +7,9 @@ tags:
 - Website and application design
 - Brand identity
 - UI/UX
-- Independent startup project
+- Startup project
 summary: A trading journal that helps traders understand their decisions and performance.
-overview: 'Audience: Active traders who want to understand and improve their trading habits
-
-
-  TradeMemory is a trading journal designed to help traders organise their trades, reflect on their decisions, and identify patterns in their performance. The idea grew from my own experience with trading and the difficulty of turning scattered records and manual notes into useful insights.
+overview: 'TradeMemory is a trading journal designed to help traders organise their trades, reflect on their decisions, and identify patterns in their performance. The idea grew from my own experience with trading and the difficulty of turning scattered records and manual notes into useful insights.
 
 
   I worked from the initial product concept through the interface design, focusing on how complex trading information could become easier to record, navigate, and understand. The design challenge was to bring trade history, personal observations, and performance analysis together in a clear and coherent experience.
@@ -21,7 +18,7 @@ overview: 'Audience: Active traders who want to understand and improve their tra
   The interface centres on reviewing trades and adding the context that numbers alone cannot explain: the setup, the reasoning behind an entry, and how a position was managed. Clear information hierarchy and explanations of technical metrics aim to make the journal useful for reflection as well as record-keeping.
 
 
-  Project stage: Independent product in MVP development, with ongoing refinement of its features and user experience.'
+  Project stage: Startup product in MVP development, with ongoing refinement of its features and user experience.'
 role: Concept development, brand identity, information architecture, UX audit, visual direction, and UI design.
 development: AI-assisted development. Concept, product logic, brand, visual direction and interface design by Setayesh Ganji.
 links:
@@ -126,5 +123,6 @@ todo:
 - Walkthrough video (Vimeo 1238796294) shows the personal email in the app header; replace with a version without it if possible.
 - Add the tools used.
 - Confirm the project year.
-context:
-  type: independent
+context: { type: "startup", institution: "TradeMemory", course: "MVP phase" }
+tools: [Figma, Adobe XD, Adobe Illustrator, Adobe InDesign]
+audience: "Traders, and people who work with or are interested in trading, who want to understand and improve their decisions"
