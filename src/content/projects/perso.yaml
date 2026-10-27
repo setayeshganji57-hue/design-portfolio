@@ -15,6 +15,7 @@ overview: |
 role: Game design, narrative development, 3D modelling of every building, environment design in Unreal Engine, all game coding. Designed with the guidance of a professor at Sapienza.
 tools: [Rhinoceros 3D, CAD, Unreal Engine]
 links:
+  - { label: Game presentation (PDF), url: /documents/perso-presentation.pdf }
   - { label: Game design document (PDF), url: 'https://drive.google.com/file/d/1JKm5TaBDs3Us3_nNbwToaH-wKaiSQXYE/view' }
 hero:
   kind: video
@@ -25,14 +26,19 @@ hero:
     aspect: '16/9'
     caption: Trailer.
     poster:
-      file: perso/title-screen.jpg
-      alt: PERSO title screen, the game's name over a line map of Rome
+      file: perso/trailer-frame.jpg
+      alt: Aurelia in front of Santa Maria in Monticelli at night, from the game
       fit: cover
 blocks:
   - type: text
-    heading: Facts
+    heading: Find the one who is lost
     body: |
-      Project type: game design, narrative development, and 3D environment design. Genre: third-person adventure. Year: 2022.
+      Saverio, a treasure hunter, has stolen a treasure from the royal treasury and vanished. His sister Aurelia knows only one thing: he is in Rome. To find him she must complete a series of tasks and collect clues, one by one, across a corner of the city as it was in the 18th century. In the final task the two meet and escape together with the treasure.
+  - type: pair
+    tiles: wide
+    items:
+      - { file: perso/board-01-cover.jpg, alt: "Cover board: PERSO, Aurelia in front of Santa Maria in Monticelli at night" }
+      - { file: perso/board-02-story.jpg, alt: "The story board: Aurelia and Saverio" }
   - type: text
     heading: Reconstructing the historical city
     body: |
@@ -41,6 +47,16 @@ blocks:
       The environment centres on the Regola district and its architectural context: Santa Maria in Monticelli as the primary building, the surrounding convent buildings, and the garden of Palazzo Spada as a secondary environmental element.
 
       I modelled every building in the game myself, from start to finish, in Rhinoceros 3D and CAD, studying their facades, proportions, and defining details. The objective was more than a collection of isolated models: the buildings needed to work together as a recognisable place that players could inhabit and explore.
+  - type: pair
+    tiles: wide
+    items:
+      - { file: perso/board-03-research.jpg, alt: "Reading the old city board: Nolli's 1748 map, an 18th-century engraving and the bell tower today" }
+      - { file: perso/board-04-church.jpg, alt: "Santa Maria in Monticelli board: archive photograph, site survey and the 3D model" }
+  - type: pair
+    tiles: wide
+    items:
+      - { file: perso/board-05-buildings.jpg, alt: "Every facade, every side board: the church block and the convent buildings modelled on all sides" }
+      - { file: perso/board-06-garden.jpg, alt: "Garden of Palazzo Spada board: the garden today and its model, massed in white then detailed" }
   - type: text
     heading: From architectural models to an interactive world
     body: |
@@ -49,12 +65,21 @@ blocks:
       The principal characters, Aurelia and Saverio, and a guard character use Unreal Engine mannequins, which I chose and set up in the engine.
 
       I did all the coding in Unreal Engine, building the gameplay from the story we had written. The city had to work both as a designed visual world and as the setting for play, so the arrangement of buildings, their scale, and the lighting were all used to set the atmosphere and guide the player.
+  - type: pair
+    tiles: wide
+    items:
+      - { file: perso/board-07-characters.jpg, alt: "Three figures board: Aurelia, Saverio and the guard" }
+      - { file: perso/board-08-ingame.jpg, alt: "Rome at night board: the district in Unreal Engine at dusk, with Aurelia in the square" }
   - type: text
     heading: Storytelling through exploration
     body: |
       At the heart of PERSO is a treasure-hunt narrative structured around discovery and gradual progression.
 
       Players move through the environment, interact with objects, and collect clues as they get closer to finding Saverio. Collectibles become progressively harder to find, giving the exploration a sense of development and bringing the player closer to the story's resolution.
+
+      The controls are kept simple, W A S D to move, Space to jump and E to interact and solve puzzles, and an instrumental soundtrack of violin, flute and drums plays under footsteps, distant voices and weather.
+  - type: image
+    media: { file: perso/board-09-play.jpg, alt: "Clue by clue board: controls, music and sound, with Aurelia in a street at night" }
   - type: video
     video:
       provider: vimeo
@@ -73,7 +98,6 @@ blocks:
 
       PERSO brings together historical investigation, architectural modelling, narrative design, and real-time environment development to explore how a historically grounded urban setting can become an interactive story.
 todo:
-  - Add in-game screenshots or renders; only the title screen is available so far (the trailer's own Vimeo thumbnail is a black frame)
   - Confirm the professor's name and the course, if they should be credited
 location: "Rome, Italy"
 audience: "Players who enjoy exploration and story-led adventures, and anyone curious about the history and architecture of Rome"
