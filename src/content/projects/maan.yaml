@@ -1,0 +1,98 @@
+title: Maan — One line, three circles, a brand for coffee, pastry and bread
+status: published
+categories: [brand-identity]
+order: 8
+tags: [Brand identity, Packaging, Bilingual typography, Café]
+context: { type: commissioned, institution: "Maan, Tehran" }
+summary: Complete visual identity for Maan, a bakery, pastry shop and coffee house in Tehran, from the bilingual logo to packaging, cups, menus, signage and social media.
+overview: |
+  Maan (مان) is a bakery, pastry shop and coffee house in Tehran. I designed its complete visual identity, from the logo and colour palette to the packaging, cups, menus, signage and social media.
+
+  The challenge was to bring three different crafts under one name, in two scripts. The logo stacks the Persian مان above the Latin maan. Both are drawn with the same single straight line and fitted to exactly the same width, so they read as one mark rather than a translation. A wide monospace tagline, Coffee Pastry Bread, names the three things the shop makes.
+
+  Each product became a circle with one simple cut: parallel lines for bread, eight slices for pastry, and a split down the middle for a coffee bean. Together the three circles work as a second logo. They also grew into a library of about fifteen round patterns used on tape, boxes and backgrounds. The palette is a deep green on white and natural kraft, with a single red kept for the round stamp that seals each bag.
+
+  For the shop's three roasted house blends, the name became the label. 50, 80 and 100 stand for the share of Arabica in each blend. Each number is drawn in the logo's stroke, with the brand's patterns inside its loops, and each label carries a short description and a five-square scale for acidity, bitterness, sweetness, body and roast, so customers can compare the blends at a glance. A single-origin edition and a Turkish coffee bag extend the same system.
+role: Logo, colour palette, typography, icons and patterns, stamps and stickers, coffee packaging and labels, cups, menus, signage, social media
+links:
+  - { label: Brand identity case study (PDF), url: /documents/maan-brand-identity.pdf }
+cover:
+  file: maan/cover-mark.jpg
+  alt: The Maan logo, Persian مان above Latin maan, in white on deep green
+hero:
+  kind: image
+  media:
+    file: maan/board-01-cover.jpg
+    alt: "Cover board: the Maan logo on green, a neighbourhood bakery and coffee house in Tehran"
+blocks:
+  - type: text
+    heading: Three crafts, one name
+    body: |
+      Maan sells three things, coffee, pastry and bread, and needed one identity to hold them together, in two scripts, on everything from a five-centimetre sticker to a shop sign, and make three very different products feel like they come from the same kitchen.
+
+      The wordmark sets the Persian name directly above the Latin one. Both are measured from the master artwork: one stroke weight everywhere, square ends and corners, the same width, stems that sit one unit apart, and a tagline set in a wide monospace a full unit below.
+  - type: pair
+    tiles: wide
+    items:
+      - { file: maan/board-03-the-brief.jpg, alt: "The brief board: coffee, pastry and bread, and everything designed" }
+      - { file: maan/board-04-logo.jpg, alt: "Logo board: two scripts, one line, with the reversed and horizontal versions" }
+  - type: pair
+    tiles: wide
+    items:
+      - { file: maan/board-05-construction.jpg, alt: "Construction board: one stroke, one width, with the measurements" }
+      - { file: maan/board-06-colour-type.jpg, alt: "Colour and type board: Maan green, paper white, kraft and stamp red, with the monospace and the numerals" }
+  - type: text
+    heading: A graphic language of circles
+    body: |
+      Each product is one circle with one cut: parallel lines like the scoring on a loaf, a round cake cut into eight slices, and a single line down the middle like the crease of a coffee bean. Stacked, the three marks run down the side of a cup. From them grew a tray of about fifteen round tiles, grids, rings, dots, sprinkles, half-moons and a flower, used as wrapping paper, tape, box sides and backgrounds.
+
+      A long panorama drawn with the logo's single stroke, a Tehran street with the bakery shelves, an art gallery, a steaming cup and the menu written into the city as shop signs, runs around the white cups and the wrapping. Small pieces close the bags and boxes: a red round stamp, a circular Persian seal, a square monospace tag and long strips of tape.
+  - type: pair
+    tiles: wide
+    items:
+      - { file: maan/board-07-three-marks.jpg, alt: "Three marks board: bread, pastry and coffee as circles" }
+      - { file: maan/board-08-patterns.jpg, alt: "Pattern library board: a tray of round tiles" }
+  - type: pair
+    tiles: wide
+    items:
+      - { file: maan/board-09-street-illustration.jpg, alt: "Street illustration board: a Tehran street drawn in one line" }
+      - { file: maan/board-10-stamps-stickers.jpg, alt: "Stamps and stickers board: round stamp, Persian seal, tag and tape" }
+  - type: text
+    heading: The blend is the name
+    body: |
+      Each blend's number is drawn in the logo's stroke with its counters filled from the pattern library: dots and an arrow in the 50, a plus and a times sign in the 80, lines and a grid of dots in the 100, so every bag is different but obviously family. Stand-up kraft bags carry the blend on one face and the full label on the other; the single-origin Colombia edition uses a green panel instead of a number.
+  - type: pair
+    tiles: wide
+    items:
+      - { file: maan/board-11-the-numbers.jpg, alt: "The numbers board: 50, 80 and 100 drawn as labels" }
+      - { file: maan/board-12-labels.jpg, alt: "Labels board: reading a blend at a glance with the five-square taste scale" }
+  - type: image
+    media: { file: maan/board-13-packaging.jpg, alt: "Packaging board: kraft bags for the three blends, the Turkish coffee bag and the Colombia single origin" }
+  - type: text
+    heading: In the café
+    body: |
+      Two cup families: green take-away cups carry the three marks and the logo, while white cups carry the street drawing, a small story for people who sit down. The menu is a white sheet clipped to a green board, with pastry, bread and drinks listed in Persian and English and priced on a ruled line, as plain and orderly as a baker's order book. On the street, the long horizontal logo runs along the shop sign, and the stacked logo and three marks sit on the glass door in white, above a monospace OPEN panel with the opening hours. Posts for the café's Instagram mix designed graphics with photographs of the packaging, cups and boxes in use.
+  - type: pair
+    tiles: wide
+    items:
+      - { file: maan/board-14-cups.jpg, alt: "Cups board: green to go, white to stay" }
+      - { file: maan/board-15-menu.jpg, alt: "Menu board: a menu like a ledger on a green clipboard" }
+  - type: pair
+    tiles: wide
+    items:
+      - { file: maan/board-16-storefront.jpg, alt: "Storefront board: the shop sign and the door" }
+      - { file: maan/board-17-social-media.jpg, alt: "Social media board: the brand in use on Instagram" }
+  - type: grid
+    columns: 3
+    caption: Selected applications.
+    items:
+      - { file: maan/colombia-bag.jpg, alt: "Kraft Colombia single-origin coffee bag with a green label, on coffee beans" }
+      - { file: maan/cup-in-hand.jpg, alt: Green Maan take-away cup with the three marks held in a hand }
+      - { file: maan/cups-street.jpg, alt: "A green cup on a white cup printed with the line drawing of a Tehran street" }
+      - { file: maan/door.jpg, alt: "Glass door with the stacked logo, the three marks and the OPEN panel" }
+      - { file: maan/pattern-library.jpg, alt: Grid of round green pattern tiles }
+      - { file: maan/stamps.jpg, alt: "Stickers, tags, a red round stamp and tape with the Maan logo" }
+  - type: image
+    media: { file: maan/board-18-credits.jpg, alt: "Credits board: client, design and role, with bilingual logo, graphic system, packaging and application" }
+todo:
+  - Confirm the year and the tools used.
