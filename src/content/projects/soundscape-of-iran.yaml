@@ -2,16 +2,16 @@ title: Soundscape of Iran — A poster built like a sound machine
 status: published
 categories: [graphic-illustration]
 order: 5
-tags: [Poster design, Persian lettering, Illustration, Exhibition]
+tags: [Poster design, Persian lettering, Illustration, Social media, Exhibition]
 year: January 2025
-summary: Poster, Persian lettering and illustrations for Soundscape of Iran, a sound exhibition in Tehran supported by Divar.
+summary: Poster, Persian lettering, illustrations and social media for Soundscape of Iran, a sound exhibition in Tehran supported by Divar.
 overview: |
   Soundscape of Iran (صحنهٔ صدای ایران) was a sound exhibition held at the Karestan Building in Tehran from 10 January to 7 February 2025, supported by Divar. I designed its poster and a family of illustrations around one idea: if the exhibition is about sound, the poster should look like the machine that makes it.
 
   The Persian title is lettered out of pipes, horns, cables, gears and speaker parts, so the words read as a working apparatus that sound could travel through. A muted red ground and a kraft-paper texture give it the feel of an old printed technical drawing, and the event information is set inside the machine's own boxes and panels, in Persian and English, rather than placed on top of it.
 
-  The same parts became stand-alone illustrations: square compositions of pipes, a vintage radio emblem, a gear train and a sound machine, made to extend the identity across social media and print. The poster was printed and posted around the city.
-role: Poster design, Persian lettering and illustration.
+  The same parts became stand-alone illustrations: square compositions of pipes, a vintage radio emblem, a gear train and a sound machine, made to extend the identity across social media and print. The poster was printed and posted around the city, and I designed and wrote posts for the exhibition's Instagram account.
+role: Poster design, Persian lettering, illustration, and social media design and copywriting.
 cover:
   file: soundscape-of-iran/poster.jpg
   alt: Soundscape of Iran poster, the Persian title built from kraft-coloured pipes and machine parts on red
@@ -53,6 +53,29 @@ blocks:
     items:
       - { file: soundscape-of-iran/street-poster-wall.jpg, alt: The poster among other event posters on a wall }
       - { file: soundscape-of-iran/held-poster.jpg, alt: "Black-and-white photograph of two people in a park, one holding the poster" }
+  - type: text
+    heading: Social media
+    body: |
+      I designed and wrote posts for the exhibition's Instagram account, @soundscape.iran, carrying the same red, kraft and line drawing into the feed: the poster and illustrations adapted as posts, and a typographic series that introduces the exhibition's sound instruments one by one, each name set in Persian inside a frame of drawn hardware.
+
+      One carousel, published together with Divar, tells the story behind the venue. The Karestan Building on Khark Street was home for nearly four decades to Fakhereh Saba, who went to France in 1937 to study opera and became one of the first Iranian women opera singers. Divar restored the empty house in 2017, and the exhibition, a tribute to her, lets visitors hear the first sounds recorded in Iran through interactive instruments, free of charge.
+  - type: grid
+    columns: 3
+    caption: The exhibition's Instagram feed.
+    items:
+      - { file: soundscape-of-iran/instagram-grid-1.jpg, alt: "Instagram feed with the poster, the lettering, the radio and gear illustrations and exhibition photographs" }
+      - { file: soundscape-of-iran/instagram-grid-2.jpg, alt: "Instagram feed with the typographic instrument series, the Divar post and photographs of visitors" }
+      - { file: soundscape-of-iran/instagram-grid-3.jpg, alt: "Instagram feed with more of the typographic instrument series and photographs of the exhibition" }
+  - type: grid
+    columns: 3
+    caption: A five-slide carousel published with Divar, the exhibition's supporter.
+    items:
+      - { file: soundscape-of-iran/carousel-1-divar.jpg, alt: "Slide 1: Persian text, Divar, supporter of the Soundscape of Iran exhibition, with the two logos" }
+      - { file: soundscape-of-iran/carousel-2-the-house.jpg, alt: "Slide 2: the exhibition room in the historic house, framed in an arch, with Persian text" }
+      - { file: soundscape-of-iran/carousel-3-fakhereh-saba.jpg, alt: "Slide 3: portrait of Fakhereh Saba in an arch, with Persian text about her life in the Karestan Building" }
+      - { file: soundscape-of-iran/carousel-4-the-door.jpg, alt: "Slide 4: the Karestan Building's entrance in an arch, with Persian text about its restoration" }
+      - { file: soundscape-of-iran/carousel-5-the-exhibition.jpg, alt: "Slide 5: the exhibition's lettering in an arch, with Persian text about visiting" }
 todo:
   - Confirm context (commissioned by the organisers, or another arrangement) and tools used.
+  - The Instagram feed screenshots also show photographs and posts by others; confirm which posts were designed by the owner.
   - Confirm whether the people in the last photograph agree to appear on the site.
