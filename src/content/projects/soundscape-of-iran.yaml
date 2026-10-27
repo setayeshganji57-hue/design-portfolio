@@ -1,0 +1,58 @@
+title: Soundscape of Iran — A poster built like a sound machine
+status: published
+categories: [graphic-illustration]
+order: 5
+tags: [Poster design, Persian lettering, Illustration, Exhibition]
+year: January 2025
+summary: Poster, Persian lettering and illustrations for Soundscape of Iran, a sound exhibition in Tehran supported by Divar.
+overview: |
+  Soundscape of Iran (صحنهٔ صدای ایران) was a sound exhibition held at the Karestan Building in Tehran from 10 January to 7 February 2025, supported by Divar. I designed its poster and a family of illustrations around one idea: if the exhibition is about sound, the poster should look like the machine that makes it.
+
+  The Persian title is lettered out of pipes, horns, cables, gears and speaker parts, so the words read as a working apparatus that sound could travel through. A muted red ground and a kraft-paper texture give it the feel of an old printed technical drawing, and the event information is set inside the machine's own boxes and panels, in Persian and English, rather than placed on top of it.
+
+  The same parts became stand-alone illustrations: square compositions of pipes, a vintage radio emblem, a gear train and a sound machine, made to extend the identity across social media and print. The poster was printed and posted around the city.
+role: Poster design, Persian lettering and illustration.
+cover:
+  file: soundscape-of-iran/poster.jpg
+  alt: Soundscape of Iran poster, the Persian title built from kraft-coloured pipes and machine parts on red
+blocks:
+  - type: pair
+    tiles: wide
+    items:
+      - { file: soundscape-of-iran/poster.jpg, alt: "Soundscape of Iran poster, the Persian title built from kraft-coloured pipes and machine parts on red" }
+      - { file: soundscape-of-iran/poster-on-kraft.jpg, alt: The printed poster on a kraft-paper background }
+  - type: text
+    heading: Lettering as machinery
+    body: |
+      Each letter of صحنهٔ صدای ایران is assembled from plumbing and audio hardware: elbows and joints for the strokes, horns where sound would come out, coiled cables linking one word to the next. Below the title the pipes keep running into a larger machine, and the poster's practical information sits inside it: the dates, the opening hours, the venue, the credits and the supporter, all in the same drawn line.
+  - type: text
+    heading: A family of illustrations
+    body: |
+      The parts of the poster were drawn again as square illustrations for the exhibition's social media: three pipe compositions in the identity's three colourways, kraft on red, red on black and line on kraft, and three mechanical emblems, a sound machine, a vintage valve radio carrying the English title, and a gear train inside a toothed ring.
+  - type: grid
+    columns: 3
+    items:
+      - { file: soundscape-of-iran/pipes-red.jpg, alt: Square pipe composition in kraft on a red background }
+      - { file: soundscape-of-iran/pipes-black.jpg, alt: Square pipe composition in red on a black background }
+      - { file: soundscape-of-iran/pipes-kraft.jpg, alt: Square pipe composition drawn in red line on kraft paper }
+      - { file: soundscape-of-iran/machine.jpg, alt: Illustration of a sound machine with a horn, records and cables inside a toothed ring }
+      - { file: soundscape-of-iran/radio-emblem.jpg, alt: Emblem of a vintage valve radio with the title Soundscape of Iran inside a toothed ring }
+      - { file: soundscape-of-iran/gears.jpg, alt: Gear train linked by chains inside a large toothed ring }
+  - type: text
+    heading: In the city
+    body: |
+      The poster was printed and posted on walls and shutters around the city during the exhibition.
+  - type: grid
+    columns: 3
+    items:
+      - { file: soundscape-of-iran/street-14th.jpg, alt: The poster on a white wall under a 14th Street sign }
+      - { file: soundscape-of-iran/street-wide.jpg, alt: Wide view of the poster on a street wall }
+      - { file: soundscape-of-iran/street-shutter.jpg, alt: The poster on a corrugated metal shutter }
+  - type: pair
+    tiles: wide
+    items:
+      - { file: soundscape-of-iran/street-poster-wall.jpg, alt: The poster among other event posters on a wall }
+      - { file: soundscape-of-iran/held-poster.jpg, alt: "Black-and-white photograph of two people in a park, one holding the poster" }
+todo:
+  - Confirm context (commissioned by the organisers, or another arrangement) and tools used.
+  - Confirm whether the people in the last photograph agree to appear on the site.

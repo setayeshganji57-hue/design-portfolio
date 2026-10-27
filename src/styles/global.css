@@ -1184,6 +1184,10 @@ a.scissors:hover {
   .gallery {
     grid-template-columns: repeat(4, minmax(0, 1fr));
   }
+
+  .gallery--3 {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
 }
 
 .g-tile--wide {

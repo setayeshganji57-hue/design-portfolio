@@ -17,6 +17,7 @@ const { blocks } = Astro.props;
 // the viewer shows them large. A single image spans two columns.
 const tileSizes = '(min-width: 900px) 15rem, 45vw';
 const wideTileSizes = '(min-width: 900px) 30rem, 92vw';
+const thirdTileSizes = '(min-width: 900px) 20rem, 45vw';
 const isPortrait = (aspect: string) => {
   const [w, h] = aspect.split('/').map(Number);
   return w < h;
@@ -53,12 +54,14 @@ const isPortrait = (aspect: string) => {
           case 'pair':
           case 'grid': {
             const shape = tileRatio(b.items.map((m) => m.file));
+            // A grid that asks for three columns gets them; everything else uses the four-column gallery.
+            const threeUp = b.type === 'grid' && b.columns === 3;
             return (
               <div class="b-gallery">
-                <div class="gallery">
+                <div class:list={['gallery', threeUp && 'gallery--3']}>
                   {b.items.map((m) => (
                     <div class:list={['g-tile', b.tiles === 'wide' && 'g-tile--wide']}>
-                      <Media media={m} zoom tile tileAspect={shape.aspect} sizes={b.tiles === 'wide' ? wideTileSizes : tileSizes} small />
+                      <Media media={m} zoom tile tileAspect={shape.aspect} sizes={b.tiles === 'wide' ? wideTileSizes : threeUp ? thirdTileSizes : tileSizes} small />
                     </div>
                   ))}
                 </div>
