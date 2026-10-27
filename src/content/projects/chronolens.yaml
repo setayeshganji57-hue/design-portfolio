@@ -15,11 +15,6 @@ overview: |
 role: Game concept, narrative design, historical and visual research, 3D modelling of every building, environment and level development in Unreal Engine, all game coding, game design documentation
 collaborators: [Farnaz Attar]
 tools: [Rhinoceros 3D, CAD, Unreal Engine 4.27 and 5.2, Adobe Photoshop, Adobe Illustrator, Adobe Premiere Pro, Adobe After Effects]
-cover:
-  file: chronolens/pantheon-fire.jpg
-  alt: Render of the Pantheon in flames in a snow-covered Rome
-  aspect: "16/9"
-  fit: cover
 links:
   - { label: Game presentation (PDF), url: /documents/chronolens-presentation.pdf }
   - { label: Game design document (PDF), url: /documents/chronolens-game-design-document.pdf }
@@ -177,3 +172,4 @@ blocks:
 todo: []
 location: "Rome, Italy"
 audience: "Players from middle school to university, and fans of story-led, atmospheric games"
+cover: { file: chronolens/cover-snow-pantheon.jpg, alt: "The Pantheon in a snow-covered Rome, from the game" }

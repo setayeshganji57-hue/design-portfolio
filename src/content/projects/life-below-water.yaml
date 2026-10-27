@@ -20,10 +20,6 @@ overview: 'Life Below Water is an educational game concept that invites children
   four connected stages. The design challenge was to translate a substantial educational programme into a journey
   children could understand and want to explore. Characters, activity markers, and a colour palette that shifts
   from warm yellow to deep blue and violet give each stage its own identity while holding the experience together.'
-cover:
-  file: life-below-water/lesson-1-original.jpg
-  alt: Yellow shoreline illustration introducing the first ocean lesson
-  fit: contain
 hero:
   kind: image
   media:
@@ -102,3 +98,4 @@ links:
 context: { type: "commissioned", institution: "Sphero", course: "maker of the Sphero Mini robot" }
 tools: [Adobe InDesign, Adobe Illustrator, Adobe Photoshop, Rhinoceros 3D]
 audience: "Children around age nine and their teachers, playing and learning together in the classroom"
+cover: { file: life-below-water/cover-characters.jpg, alt: "Six characters from the game: hermit crab, shell, blue crab, life ring, octopus artist and jellyfish" }

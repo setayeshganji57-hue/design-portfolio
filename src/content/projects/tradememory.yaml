@@ -26,9 +26,6 @@ links:
   url: https://tradememory-sigma.vercel.app
 - label: Brand & UX presentation (PDF)
   url: /documents/tradememory-brand-ux-presentation.pdf
-cover:
-  file: tradememory/board-02-logo-concept-versions.jpg
-  alt: TradeMemory symbol concept on navy, one trade in two halves, with logo versions
 hero:
   kind: image
   media:
@@ -126,3 +123,4 @@ todo:
 context: { type: "startup", institution: "TradeMemory", course: "MVP phase" }
 tools: [Figma, Adobe XD, Adobe Illustrator, Adobe InDesign]
 audience: "Traders, and people who work with or are interested in trading, who want to understand and improve their decisions"
+cover: { file: tradememory/cover-phones.jpg, alt: "Three TradeMemory screens on phones: overview, review queue and trade detail" }

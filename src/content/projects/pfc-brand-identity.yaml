@@ -36,9 +36,6 @@ links:
   url: https://parsfoamcut.com
 - label: Brand identity presentation (PDF)
   url: /documents/pars-foam-cut-brand-identity.pdf
-cover:
-  file: pfc/cover-mark.jpg
-  alt: The Pars Foam Cut mark, an oxblood monogram with a graphite square above and two foam squares below
 hero:
   kind: image
   media:
@@ -98,3 +95,4 @@ context: { type: "commissioned", institution: "Pars Foam Cut" }
 location: "Tehran, Iran"
 tools: [Adobe InDesign, Adobe Illustrator, Adobe Photoshop, Adobe XD, CAD (mockup renders)]
 audience: "Architects, designers, advertising agencies and industrial clients looking for CNC cutting, large-scale models and fabrication"
+cover: { file: pfc/cover-illustrations.jpg, alt: "Pars Foam Cut illustrations: a workshop scene with a robotic arm and eight icons" }

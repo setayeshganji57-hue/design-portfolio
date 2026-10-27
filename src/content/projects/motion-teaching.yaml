@@ -14,11 +14,6 @@ role: Teaching assistant. Lesson structure and slide design.
 links:
   - { label: "Lesson slides: preproduction (PDF)", url: /documents/preproduction-process-to-outcome.pdf }
   - { label: "Lesson slides: stop-motion (PDF, 28 MB)", url: /documents/stop-motion-animation.pdf }
-cover:
-  file: motion-teaching/cover.jpg
-  alt: "Title slide: Preproduction, process-to-outcome spectrum"
-  aspect: "16/9"
-  fit: cover
 hero:
   kind: image
   media: { file: motion-teaching/cover.jpg, alt: "Title slide: Preproduction, process-to-outcome spectrum, with the Sapienza DCVM logo", aspect: "16/9", fit: cover }
@@ -75,3 +70,4 @@ todo:
   - Confirm whether the drawn shot examples are your own drawings or reference images, and credit them if needed
 location: "Rome, Italy"
 audience: "Students of the Multimedia Design Studio at Sapienza University of Rome"
+cover: { file: motion-teaching/cover-lessons.jpg, alt: "Six slides from the two lessons on preproduction and stop-motion animation" }

@@ -26,9 +26,6 @@ links:
   url: /documents/hamloqmeh-presentation.pdf
 - label: Open app (log-in required)
   url: https://hamloqmeh-app.vercel.app
-cover:
-  file: hamloqmeh/cover-mark.jpg
-  alt: The Hamloqmeh symbol, a green block with two amber circles
 hero:
   kind: image
   media:
@@ -102,3 +99,4 @@ context: { type: "startup", institution: "Hamloqmeh", course: "MVP phase" }
 location: "Iran"
 tools: [Figma, Adobe XD, Adobe Illustrator, Adobe InDesign]
 audience: "Consumers and food businesses in Iran"
+cover: { file: hamloqmeh/cover-homepage.jpg, alt: "The Hamloqmeh homepage in Persian, with the headline, the waitlist button and three cards" }

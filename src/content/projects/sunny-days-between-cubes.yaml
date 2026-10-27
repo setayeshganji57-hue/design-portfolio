@@ -15,11 +15,6 @@ overview: |
 role: Site study, visual scores, motion studies and exhibition concept, in a collaborative academic project
 links:
   - { label: Project presentation (PDF), url: /documents/sunny-days-between-cubes-presentation.pdf }
-cover:
-  file: sunny-days-between-cubes/combined-motion.jpg
-  alt: Red grid and wave forms layered over the grey table surface
-  aspect: "1/1"
-  fit: cover
 hero:
   kind: video
   video:
@@ -91,3 +86,4 @@ todo:
 location: "Rome, Italy"
 tools: [Cinema 4D, Adobe After Effects, Adobe Premiere Pro, Adobe InDesign]
 audience: "Students and staff who use the shaded resting area on Sapienza's main campus, and visitors to the proposed exhibition"
+cover: { file: sunny-days-between-cubes/cover-spheres.jpg, alt: "Glass spheres and red points floating on grey, from the motion piece" }

@@ -16,11 +16,6 @@ role: Game design, narrative development, 3D modelling of every building, enviro
 tools: [Rhinoceros 3D, CAD, Unreal Engine]
 links:
   - { label: Game design document (PDF), url: 'https://drive.google.com/file/d/1JKm5TaBDs3Us3_nNbwToaH-wKaiSQXYE/view' }
-cover:
-  file: perso/title-screen.jpg
-  alt: PERSO title screen, the game's name over a line map of Rome
-  aspect: "16/9"
-  fit: cover
 hero:
   kind: video
   video:
@@ -82,3 +77,4 @@ todo:
   - Confirm the professor's name and the course, if they should be credited
 location: "Rome, Italy"
 audience: "Players who enjoy exploration and story-led adventures, and anyone curious about the history and architecture of Rome"
+cover: { file: perso/cover-render.jpg, alt: "3D model of Santa Maria in Monticelli, the game's primary building, rendered on white" }
