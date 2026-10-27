@@ -12,70 +12,72 @@ overview: |
 
   The same parts became stand-alone illustrations: square compositions of pipes, a vintage radio emblem, a gear train and a sound machine, made to extend the identity across social media and print. The poster was printed and posted around the city, and I designed and wrote posts for the exhibition's Instagram account.
 role: Poster design, Persian lettering, illustration, and social media design and copywriting.
+links:
+  - { label: Case study (PDF), url: /documents/soundscape-of-iran-presentation.pdf }
 cover:
   file: soundscape-of-iran/poster.jpg
   alt: Soundscape of Iran poster, the Persian title built from kraft-coloured pipes and machine parts on red
+hero:
+  kind: image
+  media:
+    file: soundscape-of-iran/board-01-cover.jpg
+    alt: "Cover board: Soundscape of Iran, with the poster on red"
 blocks:
-  - type: pair
-    tiles: wide
-    items:
-      - { file: soundscape-of-iran/poster.jpg, alt: "Soundscape of Iran poster, the Persian title built from kraft-coloured pipes and machine parts on red" }
-      - { file: soundscape-of-iran/poster-on-kraft.jpg, alt: The printed poster on a kraft-paper background }
   - type: text
-    heading: Lettering as machinery
+    heading: A singer's house full of sound
     body: |
-      Each letter of صحنهٔ صدای ایران is assembled from plumbing and audio hardware: elbows and joints for the strokes, horns where sound would come out, coiled cables linking one word to the next. Below the title the pipes keep running into a larger machine, and the poster's practical information sits inside it: the dates, the opening hours, the venue, the credits and the supporter, all in the same drawn line.
-  - type: text
-    heading: A family of illustrations
-    body: |
-      The parts of the poster were drawn again as square illustrations for the exhibition's social media: three pipe compositions in the identity's three colourways, kraft on red, red on black and line on kraft, and three mechanical emblems, a sound machine, a vintage valve radio carrying the English title, and a gear train inside a toothed ring.
-  - type: grid
-    columns: 3
-    items:
-      - { file: soundscape-of-iran/pipes-red.jpg, alt: Square pipe composition in kraft on a red background }
-      - { file: soundscape-of-iran/pipes-black.jpg, alt: Square pipe composition in red on a black background }
-      - { file: soundscape-of-iran/pipes-kraft.jpg, alt: Square pipe composition drawn in red line on kraft paper }
-      - { file: soundscape-of-iran/machine.jpg, alt: Illustration of a sound machine with a horn, records and cables inside a toothed ring }
-      - { file: soundscape-of-iran/radio-emblem.jpg, alt: Emblem of a vintage valve radio with the title Soundscape of Iran inside a toothed ring }
-      - { file: soundscape-of-iran/gears.jpg, alt: Gear train linked by chains inside a large toothed ring }
-  - type: text
-    heading: In the city
-    body: |
-      The poster was printed and posted on walls and shutters around the city during the exhibition.
-  - type: grid
-    columns: 3
-    items:
-      - { file: soundscape-of-iran/street-14th.jpg, alt: The poster on a white wall under a 14th Street sign }
-      - { file: soundscape-of-iran/street-wide.jpg, alt: Wide view of the poster on a street wall }
-      - { file: soundscape-of-iran/street-shutter.jpg, alt: The poster on a corrugated metal shutter }
-  - type: pair
-    tiles: wide
-    items:
-      - { file: soundscape-of-iran/street-poster-wall.jpg, alt: The poster among other event posters on a wall }
-      - { file: soundscape-of-iran/held-poster.jpg, alt: "Black-and-white photograph of two people in a park, one holding the poster" }
-  - type: text
-    heading: Social media
-    body: |
-      I designed and wrote posts for the exhibition's Instagram account, @soundscape.iran, carrying the same red, kraft and line drawing into the feed: the poster and illustrations adapted as posts, and a typographic series that introduces the exhibition's sound instruments one by one, each name set in Persian inside a frame of drawn hardware.
+      The exhibition took place in a 113-year-old house on Khark Street that had belonged to Fakhereh Saba, who went to France in 1937 to study opera and became one of the first Iranian women opera singers. Divar restored the empty house in 2017; in 2025 the exhibition, a tribute to her, let visitors hear the first sounds recorded in Iran through interactive devices. The brief was not just an event poster: it had to carry the idea of sound, and of a building where Iranian music history had lived.
 
-      One carousel, published together with Divar, tells the story behind the venue. The Karestan Building on Khark Street was home for nearly four decades to Fakhereh Saba, who went to France in 1937 to study opera and became one of the first Iranian women opera singers. Divar restored the empty house in 2017, and the exhibition, a tribute to her, lets visitors hear the first sounds recorded in Iran through interactive instruments, free of charge.
-  - type: grid
-    columns: 3
-    caption: The exhibition's Instagram feed.
+      Sound can't be printed, so instead of picturing a speaker or a sound wave, the poster shows the thing in between: a contraption that sound runs through, from source, along pipes and wires, out of a horn, with the exhibition's own name as its body.
+  - type: pair
+    tiles: wide
     items:
-      - { file: soundscape-of-iran/instagram-grid-1.jpg, alt: "Instagram feed with the poster, the lettering, the radio and gear illustrations and exhibition photographs" }
-      - { file: soundscape-of-iran/instagram-grid-2.jpg, alt: "Instagram feed with the typographic instrument series, the Divar post and photographs of visitors" }
-      - { file: soundscape-of-iran/instagram-grid-3.jpg, alt: "Instagram feed with more of the typographic instrument series and photographs of the exhibition" }
-  - type: grid
-    columns: 3
-    caption: A five-slide carousel published with Divar, the exhibition's supporter.
+      - { file: soundscape-of-iran/board-03-the-house.jpg, alt: "The house and the voice board: Fakhereh Saba, the Karestan door and the exhibition, with a timeline" }
+      - { file: soundscape-of-iran/board-04-the-idea.jpg, alt: "The idea board: source, coupling, signal, output, and three design decisions" }
+  - type: text
+    heading: Every stroke is a part
+    body: |
+      The poster reads from top to bottom: an English arc, the Persian title lettered from pipes, cables wiring the words together, the machine running down into pipes and horns, a large gear, and the information set inside the machine's own boxes, in two calendars and two languages. In the lettering, every feature of a Persian letter is swapped for a mechanical part that does the same job: a dot becomes a cube, a terminal an open pipe, a curve an elbow, a joint a mesh coupling, so the title still reads, but as hardware.
+  - type: pair
+    tiles: wide
     items:
-      - { file: soundscape-of-iran/carousel-1-divar.jpg, alt: "Slide 1: Persian text, Divar, supporter of the Soundscape of Iran exhibition, with the two logos" }
-      - { file: soundscape-of-iran/carousel-2-the-house.jpg, alt: "Slide 2: the exhibition room in the historic house, framed in an arch, with Persian text" }
-      - { file: soundscape-of-iran/carousel-3-fakhereh-saba.jpg, alt: "Slide 3: portrait of Fakhereh Saba in an arch, with Persian text about her life in the Karestan Building" }
-      - { file: soundscape-of-iran/carousel-4-the-door.jpg, alt: "Slide 4: the Karestan Building's entrance in an arch, with Persian text about its restoration" }
-      - { file: soundscape-of-iran/carousel-5-the-exhibition.jpg, alt: "Slide 5: the exhibition's lettering in an arch, with Persian text about visiting" }
+      - { file: soundscape-of-iran/board-05-anatomy.jpg, alt: "Anatomy board: the poster with nine numbered parts" }
+      - { file: soundscape-of-iran/board-06-lettering.jpg, alt: "Lettering board: eight letter features and the parts that replace them" }
+  - type: text
+    heading: Ten parts, one machine
+    body: |
+      Everything in the identity, poster, emblems and social posts, is assembled from the same ten parts drawn in one isometric line style: open pipe, horn, mesh coupling, plates and cube, cables, gear and rack, valve wheel, records and knobs, screen and hand wheel. Signal red, kraft, ink and black give it the look of an old printed technical drawing, and one drawing works in three colourways.
+  - type: pair
+    tiles: wide
+    items:
+      - { file: soundscape-of-iran/board-07-kit-of-parts.jpg, alt: "Kit of parts board: the ten parts of the machine" }
+      - { file: soundscape-of-iran/board-08-colour-and-paper.jpg, alt: "Colour and paper board: signal red, kraft, ink and black, and one drawing in three colourways" }
+  - type: text
+    heading: The system
+    body: |
+      The poster's parts were rebuilt as stand-alone square images, a radio emblem, a gear train and a sound machine, each working as an emblem, a profile picture or a sticker. A five-slide carousel, published jointly with Divar, introduced the exhibition through its sponsor, the house, the singer, the restoration and the invitation. Each of the exhibition's interactive sound devices got its own animated title card, its invented Persian name lettered in heavy kraft type inside a drawn frame, and the other posts reuse the kit of parts so the feed reads as one identity.
+  - type: pair
+    tiles: wide
+    items:
+      - { file: soundscape-of-iran/board-09-illustration-family.jpg, alt: "Illustration family board: radio emblem, gear train and sound machine" }
+      - { file: soundscape-of-iran/board-10-launch-carousel.jpg, alt: "Launch carousel board: five slides, one story" }
+  - type: image
+    media: { file: soundscape-of-iran/board-11-social-posts.jpg, alt: "Social posts board: nine device title cards and six identity posts" }
+  - type: text
+    heading: In the world
+    body: |
+      The poster was printed and pasted around Tehran, on white walls, shop shutters and crowded noticeboards, where one dense machine on a flat red ground stands out. Inside the house, the exhibition used real pipes, horns and wires on bare concrete; visitors put their ears to pipe mouths to hear the first sounds recorded in Iran, the same parts the poster is lettered from. The photographs of the space are the exhibition's own documentation.
+  - type: pair
+    tiles: wide
+    items:
+      - { file: soundscape-of-iran/board-12-in-the-city.jpg, alt: "In the city board: the poster on a street wall, a shop shutter and a noticeboard" }
+      - { file: soundscape-of-iran/board-13-in-the-space.jpg, alt: "In the space board: the poster, wall installation, pipes and visitors inside the exhibition" }
+  - type: pair
+    items:
+      - { file: soundscape-of-iran/street-14th.jpg, alt: "The poster on a white wall under a 14th Street sign" }
+      - { file: soundscape-of-iran/held-poster.jpg, alt: "Black-and-white photograph of two people in a park, one holding the poster" }
+  - type: image
+    media: { file: soundscape-of-iran/board-14-credits.jpg, alt: "Credits board: the exhibition team as credited on the poster, and my work" }
 todo:
   - Confirm context (commissioned by the organisers, or another arrangement) and tools used.
-  - The Instagram feed screenshots also show photographs and posts by others; confirm which posts were designed by the owner.
   - Confirm whether the people in the last photograph agree to appear on the site.
