@@ -3,66 +3,57 @@ status: published
 categories: [graphic-illustration]
 order: 40
 tags: [Poster, Typography, Event design]
-summary: A collection of event and exhibition posters, each shown as a poster and in its setting.
+summary: Five event and exhibition posters, each built around one idea, shown as artwork and in place.
 overview: |
-  A collection of posters for events and exhibitions. Each poster is shown twice: as a printed poster, and at the scale of the street or the room where it would be seen.
-cover:
-  file: poster-collection/mef-street.jpg
-  alt: Blue MEF Leadership Forum poster in a street display case
-  aspect: "1/1"
-  fit: cover
+  Five briefs, five ways of making type and image carry an event: exhibitions, a biennale, a leadership forum and a typography competition. Each poster is built around one idea and one material: extruded letters, neon, marbled ink, balanced shapes and warped lines.
+
+  In every poster the title is also the image, so the event is recognisable before a single word is read. Each one is shown as flat artwork and in place, on a billboard, a street panel, a wall or a frame in a room, where it would actually be seen.
+links:
+  - { label: Posters presentation (PDF), url: /documents/posters-presentation.pdf }
+hero:
+  kind: image
+  media:
+    file: poster-collection/board-01-cover.jpg
+    alt: "Cover board: Posters, with strips of the five posters"
 blocks:
   - type: text
-    heading: MEF Leadership Forum, Rome
+    heading: Extrusion and light
     body: |
-      A poster for the MEF Leadership Forum in Rome on 9 May 2023, at Lungotevere dei 26, The First Musica. The letters "mef" are extruded into deep, fading three-dimensional forms that sweep across a flat blue field, with the event details set small in a technical display face.
+      For the MEF Leadership Forum in Rome, on 9 May 2023 at The First Musica, the name moves forward: the three letters "mef" are pulled into long, fading three-dimensional shadows across a flat blue field, as if they were travelling across the poster. For "No, Neon No Cry" at MAMbo's Project Room, from 12 May to 23 October 2022, the title is neon without the tube, drawn as a single glowing hand-drawn line on deep red, so the poster feels lit from inside.
   - type: pair
-    align: center
+    tiles: wide
     items:
-      - { file: poster-collection/mef-street.jpg, alt: The MEF Leadership Forum poster in a street display case next to a tram stop, fit: contain }
-      - { file: poster-collection/mef-billboard.jpg, alt: The same design adapted to a landscape billboard among trees, fit: contain }
+      - { file: poster-collection/board-03-mef.jpg, alt: "MEF Leadership Forum board: the poster on a billboard and a street panel, with its palette" }
+      - { file: poster-collection/board-04-no-neon.jpg, alt: "No, Neon No Cry board: the framed poster on a chair and a plinth, with its palette" }
   - type: text
-    heading: No, Neon No Cry
+    heading: Texture and balance
     body: |
-      A poster for "No, Neon No Cry" at MAMbo, Project Room, from 12 May to 23 October 2022. The title is written as glowing neon script on a deep red ground, with the venue and dates in the same neon hand below.
+      The call for entries for a 2022 typography competition sets its title above a marbled swirl of teal, grey and charcoal, cut through by rounded bars that carry the information at a right angle, so you have to turn your head to read it: the poster asks for the same attention a typographer gives letters. For the Media Architecture Biennale, from 28 June to 2 July 2021, architecture becomes a balancing act: a circle, two half-circles and three arches stacked into a figure that could be a building, a person or a sculpture.
   - type: pair
-    align: center
+    tiles: wide
     items:
-      - { file: poster-collection/no-neon-plinth.jpg, alt: The framed No Neon No Cry poster standing on stone plinths in warm light, fit: contain }
-      - { file: poster-collection/no-neon-chair.jpg, alt: The framed poster resting on a wooden chair against a sunlit wall, fit: contain }
+      - { file: poster-collection/board-05-typography.jpg, alt: "Typography Competition board: the framed poster by curtains and on a bench, with its palette" }
+      - { file: poster-collection/board-06-mab.jpg, alt: "Media Architecture Biennale board: the poster on a concrete wall and a billboard, with its palette" }
   - type: text
-    heading: Typography Competition 2022
+    heading: One system, three artists
     body: |
-      A call-for-entries poster for a typography competition in 2022. The title sits above a marbled swirl of teal, grey and charcoal, cut through by rounded vertical bars that carry the call for entries and the year, set at a right angle to the reader.
+      Three exhibition posters for The Dubai Mall, from September 2022, share one drawing: horizontal bands that start thin at the top and thicken towards the bottom, bending around four solid circles of different sizes, like weights pressing into a soft surface. Layout, lines, circles and title block stay the same; only the artist's name and one colour change, blue for Kandinsky, ochre for Gaudí and green for Klee. Even the bullet between "September" and "2022" is a small copy of the circles.
   - type: pair
-    align: center
+    tiles: wide
     items:
-      - { file: poster-collection/typography-table.jpg, alt: The framed teal Typography Competition poster lying on a wooden bench in dappled light, fit: contain }
-      - { file: poster-collection/typography-curtain.jpg, alt: The same poster standing on the floor in front of linen curtains, fit: contain }
-  - type: text
-    heading: Media Architecture Biennale, MAB
-    body: |
-      A poster for the Media Architecture Biennale, from 28 June to 2 July 2021. Simple geometric shapes, a circle, two half-circles and three arches, balance on top of one another in navy, violet and olive on a speckled off-white ground, beside the event title in a stencil display face.
-  - type: pair
-    align: center
-    items:
-      - { file: poster-collection/mab-billboard.jpg, alt: The Media Architecture Biennale design on a landscape billboard against blue sky, fit: contain }
-      - { file: poster-collection/mab-wall.jpg, alt: The portrait poster pasted on a concrete wall behind bamboo leaves, fit: contain }
-  - type: text
-    heading: Kandinsky, Gaudí, Klee — The Dubai Mall
-    body: |
-      A series of three exhibition posters for The Dubai Mall, from September 2022. They share one system: bands of lines that warp around solid circles, as if the dots were weighing down the surface. Only the colour changes for each artist, blue for Kandinsky, ochre for Gaudí and green for Klee.
+      - { file: poster-collection/board-07-dubai-system.jpg, alt: "One system, three artists board: the three posters pasted on a wall" }
+      - { file: poster-collection/board-08-dubai-three.jpg, alt: "The three posters side by side: Kandinsky in blue, Gaud\u00ed in ochre, Klee in green" }
   - type: image
-    size: full
-    media: { file: poster-collection/dubai-mall-wall.jpg, alt: The three posters pasted side by side on a grey wall, fit: contain }
-  - type: grid
-    columns: 3
-    items:
-      - { file: poster-collection/dubai-mall-kandinsky.jpg, alt: Blue Kandinsky poster with warped lines and four circles, fit: contain }
-      - { file: poster-collection/dubai-mall-gaudi.jpg, alt: Ochre Gaudí poster with warped lines and four circles, fit: contain }
-      - { file: poster-collection/dubai-mall-klee.jpg, alt: Green Klee poster with warped lines and four circles, fit: contain }
+    media: { file: poster-collection/board-09-lines-with-weight.jpg, alt: "Lines with weight board: the Kandinsky poster and how the system works" }
+  - type: text
+    heading: Type that does more than inform
+    body: |
+      Extrusion, light, texture, balance and system: five ideas, one for each brief.
+  - type: image
+    media: { file: poster-collection/board-10-overview.jpg, alt: "Overview board: the five posters, one idea each" }
 todo:
   - Confirm whether each poster was commissioned, academic or independent
-year: "2022–2023"
+year: "2021–2023"
 tools: [Adobe InDesign, Adobe Photoshop, Adobe Illustrator]
 audience: "Visitors to each event: forum guests, exhibition-goers, competition entrants and people passing in the street"
+cover: { file: poster-collection/cover-strips.jpg, alt: "Strips of the five posters side by side: MEF, No Neon No Cry, Typography Competition, Media Architecture Biennale and Kandinsky" }
