@@ -1,0 +1,93 @@
+title: Lando Pastry — A pastry shop that speaks two languages
+status: published
+categories: [brand-identity]
+order: 9
+tags: [Brand identity, Packaging, Bilingual typography, Pastry shop]
+year: May 2024
+context: { type: commissioned, institution: Lando Pastry }
+location: "Tehran, Iran"
+audience: "Customers of a neighbourhood pastry shop in Tehran, at the counter and on Instagram"
+summary: Bilingual identity for Lando, a pastry shop in Tehran, drawn from one rounded line, from the logo and monogram to cookie icons, patterns, boxes and the Instagram opening.
+overview: |
+  Lando (لاندو) is a pastry shop in Tehran. It needed an identity that feels warm and a little playful. It also had to work as well in Persian as in English, and on everything a pastry shop hands over the counter.
+
+  Everything comes from one rounded line, with an even stroke and soft ends. That line draws the name in both Latin and Persian, so neither version reads as a translation of the other. The same line forms an L inside a speech bubble, a monogram for a shop that greets you before you walk in. It also draws six biscuit shapes: arranged in a circle they make an emblem, and repeated they make nine patterns.
+
+  The palette is soft pink and mint, held together by a deep slate. Pink and mint swap between background and accent from one piece to the next, so a stack of boxes reads as one family. The identity runs across a family of pastry boxes, paper bags, bread wraps, a macaron box, stickers, gift tags, a rubber stamp, and the Instagram posts that announced the opening, including the invitation itself.
+role: Logo and Persian/English lettering, monogram, colour, icon set and emblem, patterns, packaging, print pieces, social media
+links:
+  - { label: Brand identity presentation (PDF), url: /documents/lando-brand-identity.pdf }
+  - { label: Lando on Instagram, url: "https://www.instagram.com/lando_ir/" }
+cover: { file: lando/cover-packaging.jpg, alt: "Lando pastry boxes in mint and pink beside a mint paper bag with the monogram, on pink" }
+hero:
+  kind: image
+  media:
+    file: lando/board-01-cover.jpg
+    alt: "Cover board: the Lando wordmark in Persian and Latin on pink, beside the project title on slate"
+blocks:
+  - type: text
+    heading: One line, two scripts
+    body: |
+      LANDO and لاندو are drawn, not typed. Both are built from the same rounded monoline, an even stroke, soft terminals and an open inner channel, so the two names carry the same weight and neither reads as a translation of the other. The O of the Latin name is drawn as a round maze, the partner of the monogram, an L inside a speech bubble that travels where the full name has no room: onto seals, stamps, ribbons and the corner of every box.
+  - type: pair
+    tiles: wide
+    items:
+      - { file: lando/board-03-the-brief.jpg, alt: "The brief board: a pastry shop that speaks two languages, with boxes and a bag in mint and pink" }
+      - { file: lando/board-04-wordmark.jpg, alt: "Wordmark board: LANDO and \u0644\u0627\u0646\u062f\u0648 drawn with one line, stacked and in the full lockup" }
+  - type: pair
+    tiles: wide
+    items:
+      - { file: lando/board-05-monogram.jpg, alt: "Monogram board: an L inside a speech bubble, on a plate seal, on its own and as a rubber stamp" }
+      - { file: lando/board-06-colour.jpg, alt: "Colour board: Lando pink, Lando mint, slate and white" }
+  - type: video
+    video:
+      provider: local
+      url: /video/lando-logo.mp4
+      title: Lando — logo animation
+      aspect: '720/1280'
+      caption: The logo in motion.
+      poster:
+        file: lando/logo-animation-frame.jpg
+        alt: The Lando lockup, monogram above the Persian and Latin wordmarks, on white
+  - type: text
+    heading: A system of shapes
+    body: |
+      Loosened from the baseline, the letters become a game: strokes tilt, dots scatter and the O turns into a maze, a looser version kept for moments of celebration, while the upright wordmark does the everyday work. Six biscuit shapes drawn with the same stroke, a dotted square, a dotted round, twin fingers, a layered bar, a flower and a ring, become an emblem when arranged in a radial burst and patterns when repeated. Nine patterns grow from parts already in the system, light versions to sit behind text and dense ones to cover whole surfaces, and the smallest pieces, round stickers, hanging tags and a rubber stamp, carry the monogram, the wordmarks and the playful lettering.
+  - type: pair
+    tiles: wide
+    items:
+      - { file: lando/board-07-playful-lettering.jpg, alt: "Playful lettering board: the name taken apart" }
+      - { file: lando/board-08-icons-emblem.jpg, alt: "Icons and emblem board: six cookies, one stroke" }
+  - type: pair
+    tiles: wide
+    items:
+      - { file: lando/board-09-patterns.jpg, alt: "Patterns board: nine repeats, one family" }
+      - { file: lando/board-10-small-print.jpg, alt: "Small print board: stickers, seals and gift tags" }
+  - type: text
+    heading: On the counter
+    body: |
+      Pink and mint swap roles from one box to the next, a pink lid on a mint base, then the reverse, in five formats for cookies, pastries and cakes, each lined inside with the brand stripes. Takeaway pieces use the identity at its simplest: a pink paper bag with the stacked wordmark, a mint pouch, bread sleeves printed with the lettering and the bubble pattern, and a slim sliding box for macarons tied with a ribbon. The Instagram grid introduced the identity piece by piece, and one post is the opening invitation itself: Lando invites you to the opening at 18:00 on 5 Tir 1403 (25 June 2024).
+  - type: pair
+    tiles: wide
+    items:
+      - { file: lando/board-11-packaging.jpg, alt: "Packaging board: a box for every size of order" }
+      - { file: lando/board-12-the-box-family.jpg, alt: "Box family board: long, square, deep and flat" }
+  - type: pair
+    tiles: wide
+    items:
+      - { file: lando/board-13-to-go.jpg, alt: "To go board: bags, bread wraps and a macaron sleeve" }
+      - { file: lando/board-14-opening-day.jpg, alt: "Opening day board: announcing the shop on Instagram" }
+  - type: grid
+    columns: 3
+    caption: Selected applications.
+    items:
+      - { file: lando/macaron-sleeve.jpg, alt: "Slim sliding macaron box in pink and mint, tied with a ribbon, beside macarons" }
+      - { file: lando/bread-wraps.jpg, alt: Baguettes in paper wraps printed with the LANDO lettering and the bubble pattern }
+      - { file: lando/bread-paper.jpg, alt: "Bread wrapped in printed paper with a gift tag and a sheaf of wheat" }
+      - { file: lando/pattern-monogram.jpg, alt: Pattern of monogram tiles in pink and mint }
+      - { file: lando/gift-tags.jpg, alt: Round hanging gift tags in mint and pink with the monogram and lettering }
+      - { file: lando/rubber-stamp.jpg, alt: Rubber stamp with the monogram and its print on white paper }
+  - type: image
+    media: { file: lando/board-15-credits.jpg, alt: "Credits board: Lando Pastry, with project, location, designer, scope and year" }
+todo:
+  - Confirm the tools used.
