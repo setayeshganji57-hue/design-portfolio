@@ -46,3 +46,5 @@ blocks:
       - { file: moa-motion/logotype-construction.jpg, alt: "The MOA logotype and Coffee Roasters on their construction grid" }
       - { file: moa-motion/lockup-cream.jpg, alt: "The full lockup in red on cream: symbol, logotype and Coffee Roasters" }
       - { file: moa-motion/lockup-red.jpg, alt: "The full lockup reversed in cream on red" }
+links:
+  - { label: MOA on Instagram, url: "https://www.instagram.com/moa.coffee/" }

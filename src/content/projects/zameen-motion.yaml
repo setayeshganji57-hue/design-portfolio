@@ -53,3 +53,5 @@ todo:
   - Confirm the year and where the films were published.
   - Vimeo's default thumbnails are each film's first frame; set a stronger thumbnail on Vimeo (Settings → Thumbnail) and send it if you want richer posters.
 tools: [Adobe Premiere Pro, Adobe After Effects, Adobe Audition]
+links:
+  - { label: Zameen on Instagram, url: "https://www.instagram.com/zameen.art/" }
