@@ -72,6 +72,7 @@ export const categories: Category[] = [
     intro: 'Moving image: animation, motion design and short film.',
     layout: 'stack',
     homeAspect: '16/9',
+    homePreview: { file: 'moa-motion/cover-2026.jpg', alt: 'MOA Coffee Roasters motion graphics: the logotype above the long-legged bird symbol', position: '50% 0%' },
   },
   {
     slug: 'interactive-3d',
@@ -80,6 +81,7 @@ export const categories: Category[] = [
     intro: 'Games, interactive experiences and three-dimensional worlds.',
     layout: 'stack',
     homeAspect: '16/9',
+    homePreview: { file: 'chronolens/cover-2026.jpg', alt: 'ChronoLens: the snow-covered Pantheon with the game title', position: '50% 0%' },
   },
 ];
 

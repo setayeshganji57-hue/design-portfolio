@@ -13,7 +13,6 @@ overview: |
   The films set that kit in motion: circles, diamonds, arcs and fine construction lines, in the identity's earth sand, sage green and Pacific blue. Made in a vertical 9:16 format, each film is short, between twelve and thirty-seven seconds, so the identity moves the way it is seen most: on a phone, one piece at a time.
 role: Motion design and animation, based on the brand identity I designed
 related: [zameen]
-cover: { file: zameen-motion/cover.jpg, alt: "Four vertical strips from the films: a sage circle on blue, a sage arc rising, a blue diamond on sage, and a sand disc with a hairline ring" }
 blocks:
   - type: videos
     caption: "Four films, A to D. Each one plays from Vimeo when you press Play."
@@ -55,3 +54,4 @@ todo:
 tools: [Adobe Premiere Pro, Adobe After Effects, Adobe Audition]
 links:
   - { label: Zameen on Instagram, url: "https://www.instagram.com/zameen.art/" }
+cover: { file: zameen-motion/cover-2026.jpg, alt: "Zameen Art House motion graphics cover: the name above the logotype stretched across a sage square, on blue" }

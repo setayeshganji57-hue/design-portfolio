@@ -1,4 +1,4 @@
-title: ParsiTalk — Connecting language, culture, and belonging
+title: ParsiTalk — Learning a heritage, not just a language
 status: published
 categories:
 - digital-ui
@@ -6,44 +6,80 @@ order: 30
 tags:
 - Web application design
 - UI/UX
-- Independent product concept
-context:
-  type: independent
-summary: A Persian-learning platform concept connecting language, stories, and cultural identity.
-overview: 'ParsiTalk is a Persian-learning platform concept that brings language and cultural discovery together. Designed with young learners growing up outside Iran in mind, it explores how digital learning can help people connect with their heritage through stories, everyday vocabulary, celebrations, and creative activities.
+- Early-stage startup
+year: 2024
+context: { type: startup, institution: ParsiTalk, course: early-stage startup }
+summary: A web app that teaches Persian through stories, voice, calligraphy and culture, for Iranian children growing up abroad and anyone drawn to the language.
+overview: |
+  ParsiTalk is a web app that teaches Persian through stories, voice, calligraphy and culture, designed for Iranian children growing up abroad and for anyone drawn to the language. Many children of Iranian families grow up hearing Persian at home but rarely reading, writing or speaking it with confidence, and vocabulary drills don't give them a reason to care.
 
+  ParsiTalk teaches Persian through the things that make it worth learning: stories set in real Iranian cities, festivals like Nowruz and Yalda, poetry by Hafez and Rumi, family words and food. Every lesson is wrapped in culture, and every new word can be heard, spoken and written. I worked from the concept through the UX flows, the UI system and an interactive prototype built with v0 by Vercel.
 
-  I shaped the product experience around an approachable journey, from choosing a learner profile and learning goals to exploring themed lessons. The design challenge was to organise a broad range of activities into an inviting interface that encourages curiosity while giving learners a clear sense of direction.
-
-
-  The prototype brings together story-based lessons, Persian text with optional English translations, vocabulary cards, comprehension questions, and calligraphy practice. Colourful activity cards, progress indicators, and rewards support the playful visual direction, while a parent dashboard explores how families could follow and encourage a child’s learning.
-
-
-  Project stage: Interactive prototype demonstrating the proposed learning experience and interface, with further development and user testing planned.'
-role: Concept development, user-flow design, visual direction, and UI design. Interactive prototyping with v0.
+  Project stage: early-stage startup, with a live interactive prototype.
+role: Concept, UX flows, UI design and interactive prototype
+tools: [Figma, Adobe XD, Vercel (v0), Adobe Illustrator, Adobe InDesign]
 links:
 - label: Explore prototype
   url: https://v0-persian-learning-app.vercel.app
-cover:
-  file: parsitalk/home.jpg
-  alt: ParsiTalk homepage introducing Persian heritage and story-based learning
-  aspect: 16/10
-  fit: cover
-  position: 50% 0%
+- label: UX/UI case study (PDF)
+  url: /documents/parsitalk-presentation.pdf
+cover: { file: parsitalk/cover-2026.jpg, alt: "ParsiTalk landing page on a laptop beside the onboarding screen on a phone" }
 hero:
   kind: image
   media:
-    file: parsitalk/home.jpg
-    alt: ParsiTalk homepage with a bilingual welcome and pastel visual identity
-    fit: contain
+    file: parsitalk/board-01-cover.jpg
+    alt: "Cover board: ParsiTalk, پارسی‌تاک, beside the landing page and onboarding on laptop and phone"
 blocks:
+- type: text
+  heading: Three kinds of Persian learner
+  body: |
+    The same app has to work for an eight-year-old in Toronto, a teenager looking for identity, and an adult who fell for Rumi. The design separates them from the very first screen, then adapts content, tone and level: story-led and playful for diaspora kids, guided by a parent; identity, community and voice for second-generation teens; poetry, history and culture for global learners.
+- type: pair
+  tiles: wide
+  items:
+  - { file: parsitalk/board-03-the-idea.jpg, alt: "Learning a heritage, not just a language board: stories first, hear it, say it, write it, belonging" }
+  - { file: parsitalk/board-04-audiences.jpg, alt: "Three kinds of Persian learner board: diaspora kids, second-gen teens and global learners" }
+- type: text
+  heading: Structure
+  body: |
+    Instead of a sign-up form, the app asks five friendly questions, who you are, your age, your level and what you want from Persian, and builds a learning profile from the answers, with a progress bar that keeps the flow short and clear. Every feature then hangs from one home, the dashboard, in four directions: learn, practise, explore and parents, so nothing is more than one tap from the dashboard. The landing page opens on the emotional promise, "Connect with Your Persian Heritage", and greets visitors in Persian and English side by side.
+- type: pair
+  tiles: wide
+  items:
+  - { file: parsitalk/board-05-onboarding.jpg, alt: "Five questions, one personal path board: the five onboarding steps" }
+  - { file: parsitalk/board-06-product-map.jpg, alt: "One home, four directions board: the product map" }
 - type: image
-  size: full
-  media:
-    file: parsitalk/onboarding.jpg
-    alt: ParsiTalk onboarding with choices for diaspora children, second-generation teens, and global learners
-    caption: The first step of the five-step onboarding flow.
-    fit: contain
-todo:
-- Add further completed learning-screen visuals when available; the story scene currently uses a placeholder image.
+  media: { file: parsitalk/board-07-landing-page.jpg, alt: "Welcome in two languages board: the landing page on desktop and phone" }
+- type: text
+  heading: The experience
+  body: |
+    The home screen shows learning as themed journeys, Iranian festivals, animals and nature, family life, poetry and tales, city adventures, each with its level and progress, plus a daily goal, a streak and a cultural tip. Each story scene combines everything a learner needs in one card: a Persian sentence with listen and show-translation, new words with audio, a comprehension question and a speaking practice. A voice coach shows each word in Persian script, English and transliteration and plays an example; calligraphy practice lets learners trace letters stroke by stroke; an interactive map of Iran unlocks cities as lessons are finished; ParsiWorld is a moderated community for young learners; and a parent dashboard shows each child's weekly progress.
+- type: pair
+  tiles: wide
+  items:
+  - { file: parsitalk/board-08-dashboard.jpg, alt: "A journey, not a syllabus board: the learner dashboard" }
+  - { file: parsitalk/board-09-stories.jpg, alt: "Every scene teaches board: a story scene with words, a question and speaking practice" }
+- type: pair
+  tiles: wide
+  items:
+  - { file: parsitalk/board-10-voice-coach.jpg, alt: "Say it out loud board: the voice coach on desktop and phone" }
+  - { file: parsitalk/board-11-calligraphy.jpg, alt: "Write it by hand board: calligraphy practice" }
+- type: pair
+  tiles: wide
+  items:
+  - { file: parsitalk/board-12-explore-iran.jpg, alt: "A country to unlock board: the interactive map of Iran and the AR explorer" }
+  - { file: parsitalk/board-13-parsiworld.jpg, alt: "A safe place to belong board: the ParsiWorld community" }
+- type: image
+  media: { file: parsitalk/board-14-parent-dashboard.jpg, alt: "Parents in the loop board: the parent dashboard" }
+- type: text
+  heading: System
+  body: |
+    The colours carry Persian names: Safavid blue, pomegranate red, jegari, saffron and ivory, with a gradient from Safavid to pomegranate kept for the main headline and the big calls to action. Geist Sans sets the interface, with Persian always next to its English meaning, and every screen reflows to a single column on a phone, where the main actions stay within thumb reach.
+- type: pair
+  tiles: wide
+  items:
+  - { file: parsitalk/board-15-design-system.jpg, alt: "Colours with Persian names board: the palette, type and components" }
+  - { file: parsitalk/board-16-mobile.jpg, alt: "Made for small hands too board: four mobile screens" }
+- type: image
+  media: { file: parsitalk/board-17-credits.jpg, alt: "Credits board: ParsiTalk, with project, designer, role, tools and link" }
 audience: "Children and teenagers in the Iranian diaspora, alongside global learners interested in Persian language and culture"

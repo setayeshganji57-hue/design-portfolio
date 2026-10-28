@@ -14,7 +14,6 @@ overview: |
   The films take that idea literally. Sound can't be printed, but it can move, so the same machine is set going: the parts of the identity, drawn in one isometric line on red and kraft, are animated as a working mechanism. Made in a vertical 9:16 format for the exhibition's social media, the films run 55 and 36 seconds.
 role: Motion design and animation, based on the poster and identity I designed
 related: [soundscape-of-iran]
-cover: { file: soundscape-motion/cover.jpg, alt: "Two frames from the films: the hand-wheel emblem with its chain and circular title, and kraft pipes on red" }
 blocks:
   - type: videos
     caption: "Two films, A and B. Each one plays from Vimeo when you press Play."
@@ -49,3 +48,4 @@ blocks:
 todo:
   - Add a sentence on what happens in each film.
 tools: [Adobe Premiere Pro, Adobe After Effects, Adobe Audition]
+cover: { file: soundscape-motion/cover-2026.jpg, alt: "Soundscape of Iran motion graphics cover: the Persian and English title above the radio emblem in its gear ring, on red" }

@@ -13,43 +13,45 @@ overview: |
 
   The design uses two "X" symbols and one "I" symbol, drawn from the MAXXI identity. They make the message clearer when read with the slogan "Manchi tu, per essere al completo" (You are needed here to be complete).
 cover:
-  file: mymaxxi-welcome-days/night-bus-stop.jpg
-  alt: Illuminated outdoor poster of myMAXXI welcome days at a bus stop at night
-  aspect: "4/3"
-  fit: cover
+  file: mymaxxi-welcome-days/cover-storyboard.jpg
+  alt: "Storyboard frame: rows of green, orange, blue and pink X and I characters, with one pink X dancing away"
 hero:
   kind: image
   media:
     file: mymaxxi-welcome-days/billboard.jpg
     alt: Roadside billboard advertising myMAXXI welcome days, 30 to 31 October 2022
-    aspect: "21/9"
-    fit: contain
-    background: "#ffffff"
 blocks:
   - type: pair
-    align: start
+    tiles: wide
     items:
-      - { file: mymaxxi-welcome-days/totem.jpg, alt: Two freestanding totem displays with the myMAXXI welcome days artwork, fit: contain }
-      - { file: mymaxxi-welcome-days/hanging-poster.jpg, alt: A hanging poster of the campaign against a grey wall, fit: contain }
+      - { file: mymaxxi-welcome-days/night-bus-stop.jpg, alt: Illuminated outdoor poster of myMAXXI welcome days at a bus stop at night }
+      - { file: mymaxxi-welcome-days/posters-dark.jpg, alt: Two campaign posters on a dark textured background }
   - type: pair
-    align: center
+    tiles: wide
     items:
-      - { file: mymaxxi-welcome-days/roll-up.jpg, alt: A roll-up banner with the campaign artwork and event information, fit: contain }
-      - { file: mymaxxi-welcome-days/stand.jpg, alt: Exhibition stand with the myMAXXI artwork at its base, fit: contain }
-  - type: image
-    size: wide
-    media: { file: mymaxxi-welcome-days/posters-dark.jpg, alt: Two campaign posters on a dark textured background, fit: contain }
+      - { file: mymaxxi-welcome-days/totem.jpg, alt: Two freestanding totem displays with the myMAXXI welcome days artwork }
+      - { file: mymaxxi-welcome-days/roll-up.jpg, alt: A roll-up banner with the campaign artwork and event information }
+  - type: pair
+    tiles: wide
+    items:
+      - { file: mymaxxi-welcome-days/hanging-poster.jpg, alt: A hanging poster of the campaign against a grey wall }
+      - { file: mymaxxi-welcome-days/stand.jpg, alt: Exhibition stand with the myMAXXI artwork at its base }
   - type: text
     heading: Motion
     body: |
-      Short motion studies were developed alongside the print work. The storyboards below show how the coloured X shapes move across the screen, sliding in from the left and right and filling the frame.
-  - type: grid
-    columns: 2
-    items:
-      - { file: mymaxxi-welcome-days/storyboard-1.jpg, alt: Storyboard frame with camera movement notes and a scene plan, fit: contain }
-      - { file: mymaxxi-welcome-days/storyboard-2.jpg, alt: Storyboard frames showing coloured X shapes across three scenes, fit: contain }
-      - { file: mymaxxi-welcome-days/storyboard-3.jpg, alt: Storyboard scenes showing the growing pattern of X shapes, fit: contain }
-      - { file: mymaxxi-welcome-days/storyboard-4.jpg, alt: Final storyboard scenes with the completed pattern, fit: contain }
+      Short motion studies were developed alongside the print work. The storyboard shows how the X and I symbols come to life as characters: they appear one by one, slide in from the left and right in the four card colours, and fill the screen row by row, until the pattern is complete, the visual form of the slogan "You are needed here to be complete".
+  - type: image
+    size: large
+    media: { file: mymaxxi-welcome-days/storyboard-1.jpg, alt: "Storyboard, scene 1: the characters appearing, with notes on camera, transitions and action" }
+  - type: image
+    size: large
+    media: { file: mymaxxi-welcome-days/storyboard-2.jpg, alt: "Storyboard, scenes 1 to 3: more X and I characters arriving" }
+  - type: image
+    size: large
+    media: { file: mymaxxi-welcome-days/storyboard-3.jpg, alt: "Storyboard, scenes 4 to 6: the rows filling, with one pink X dancing away" }
+  - type: image
+    size: large
+    media: { file: mymaxxi-welcome-days/storyboard-4.jpg, alt: "Storyboard, scenes 7 to 9: the completed pattern of X and I in four colours" }
 todo:
   - Confirm the year and whether the campaign was for a real museum brief or a studio brief (text says it was for MAXXI)
   - Confirm my role

@@ -1,7 +1,7 @@
 title: MOA Coffee Roasters — A logo built on a grid, then set in motion
 status: published
 categories: [motion-film]
-order: 8
+order: 4
 tags: [Motion graphics, Animation, Logo, Brand identity, Social media]
 context: { type: commissioned, institution: MOA Coffee Roasters }
 location: "Tehran, Iran"
@@ -14,7 +14,6 @@ overview: |
   Both marks are built on construction grids of fine guide lines, and the motion films use that structure: they show the logo drawn on its grid and the brand in use, made in a vertical 9:16 format for social media. There are three films, between twelve and fifty-seven seconds long, in the identity's signal red and warm cream.
 role: Brand identity, logo and symbol design, motion design and animation
 year: April 2017
-cover: { file: moa-motion/cover.jpg, alt: "MOA Coffee Roasters motion graphics cover: the red logotype above the long-legged bird symbol with Proudly Roasted in Tehran Iran" }
 blocks:
   - type: videos
     caption: "Three films, 1 to 3. Each one plays from Vimeo when you press Play."
@@ -48,3 +47,4 @@ blocks:
       - { file: moa-motion/lockup-red.jpg, alt: "The full lockup reversed in cream on red" }
 links:
   - { label: MOA on Instagram, url: "https://www.instagram.com/moa.coffee/" }
+cover: { file: moa-motion/cover-2026.jpg, alt: "MOA Coffee Roasters motion graphics cover: the Persian and Latin logotype above the long-legged bird symbol with Proudly Roasted in Tehran Iran" }

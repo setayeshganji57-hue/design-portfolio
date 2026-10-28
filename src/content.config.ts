@@ -55,7 +55,8 @@ const block = z.discriminatedUnion('type', [
   z.object({
     type: z.literal('image'),
     /** full = edge to edge of the content column, wide = slightly inset, inset = narrower and centred. */
-    size: z.enum(['full', 'wide', 'inset']).default('full'),
+    /** large = the full width of the gallery; other sizes follow the image's own shape. */
+    size: z.enum(['full', 'wide', 'inset', 'large']).default('full'),
     media,
   }),
   z.object({

@@ -44,8 +44,8 @@ const isPortrait = (aspect: string) => {
             return (
               <div class="b-gallery">
                 <div class="gallery">
-                  <div class:list={['g-tile', shape.wide && 'g-tile--wide']}>
-                    <Media media={b.media} zoom tile tileAspect={shape.aspect} sizes={shape.wide ? wideTileSizes : tileSizes} small />
+                  <div class:list={['g-tile', b.size === 'large' ? 'g-tile--full' : shape.wide && 'g-tile--wide']}>
+                    <Media media={b.media} zoom tile tileAspect={shape.aspect} sizes={b.size === 'large' ? '(min-width: 900px) 58rem, 92vw' : shape.wide ? wideTileSizes : tileSizes} small />
                   </div>
                 </div>
               </div>

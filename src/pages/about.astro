@@ -9,21 +9,19 @@ const portrait = site.portrait && resolveImage(site.portrait.file) ? site.portra
 ---
 
 <Base title="About" description={site.about[0]}>
-  <div class="split">
-    <div class="split-head">
-      <h1 class="split-title">About</h1>
+  <div class="about">
+    <h1 class="split-title">About</h1>
+    <!-- Portrait and text share one top line: the photo's frame and the first line of text start together. -->
+    <div class="about-row">
       <div class="about-portrait">
         {
           portrait ? (
-            <Media media={{ file: portrait.file, alt: portrait.alt, aspect: '4/5', fit: 'cover' }} sizes="(min-width: 900px) 30vw, 100vw" eager />
+            <Media media={{ file: portrait.file, alt: portrait.alt, aspect: '3/4', fit: 'cover' }} sizes="(min-width: 900px) 24rem, 100vw" eager />
           ) : (
-            <Placeholder label="Portrait to come" aspect="4/5" glyph="SG" />
+            <Placeholder label="Portrait to come" aspect="3/4" glyph="SG" />
           )
         }
       </div>
-    </div>
-
-    <div class="split-body">
       <div class="about-intro">
         {site.about.map((p) => <p>{p}</p>)}
       </div>
