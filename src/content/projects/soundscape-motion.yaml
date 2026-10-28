@@ -1,0 +1,50 @@
+title: Soundscape of Iran — The sound machine in motion
+status: published
+categories: [motion-film]
+order: 6
+tags: [Motion graphics, Animation, Exhibition, Social media]
+year: January 2025
+context: { type: commissioned, institution: "Soundscape of Iran exhibition", course: "supported by Divar" }
+location: "Tehran, Iran"
+audience: "Tehran's general public and the exhibition's followers on Instagram, invited to a free sound exhibition"
+summary: Two vertical motion films for Soundscape of Iran, a sound exhibition in Tehran, animating the poster's machine of pipes, gears, chains and horns.
+overview: |
+  Two motion films for Soundscape of Iran (صحنهٔ صدای ایران), a sound exhibition held at the Karestan Building in Tehran from 10 January to 7 February 2025, supported by Divar. For the exhibition I designed a poster built like a sound machine: the Persian title lettered out of pipes, horns, cables and gears, so the words read as an apparatus that sound could travel through.
+
+  The films take that idea literally. Sound can't be printed, but it can move, so the same machine is set going: the parts of the identity, drawn in one isometric line on red and kraft, are animated as a working mechanism. Made in a vertical 9:16 format for the exhibition's social media, the films run 55 and 36 seconds.
+role: Motion design and animation, based on the poster and identity I designed
+related: [soundscape-of-iran]
+cover: { file: soundscape-motion/cover.jpg, alt: "Two frames from the films: the hand-wheel emblem with its chain and circular title, and kraft pipes on red" }
+blocks:
+  - type: videos
+    caption: "Two films, A and B. Each one plays from Vimeo when you press Play."
+    items:
+      - provider: vimeo
+        url: https://vimeo.com/1240166034
+        title: Soundscape of Iran — motion A
+        aspect: '1080/1920'
+        poster: { file: soundscape-motion/film-a.jpg, alt: "Frame from film A: the hand-wheel emblem with a chain, inside the circular Persian and English title" }
+      - provider: vimeo
+        url: https://vimeo.com/1240166035
+        title: Soundscape of Iran — motion B
+        aspect: '1080/1920'
+        poster: { file: soundscape-motion/film-b.jpg, alt: "Frame from film B: isometric kraft pipes and an open pipe mouth on red" }
+  - type: text
+    heading: A machine built from ten parts
+    body: |
+      Everything in the identity is assembled from the same ten parts, drawn in one isometric line style: open pipe, horn, mesh coupling, plates and cube, cables, gear and rack, valve wheel, records and knobs, screen and hand wheel. In the poster they stand still as letters; in the films the same kit becomes a mechanism, so the motion never needs a new visual language, only the parts already designed.
+
+      Every feature of the Persian lettering was swapped for a part that does the same job, a dot for a cube, a terminal for an open pipe, a curve for an elbow, a joint for a mesh coupling, which is what lets the title come apart and come back together as hardware.
+  - type: pair
+    tiles: wide
+    items:
+      - { file: soundscape-of-iran/board-07-kit-of-parts.jpg, alt: "Kit of parts board: the ten parts of the machine" }
+      - { file: soundscape-of-iran/board-06-lettering.jpg, alt: "Lettering board: eight letter features and the parts that replace them" }
+  - type: text
+    heading: Part of a wider system
+    body: |
+      The films sit alongside the rest of the exhibition's social media: animated title cards for each of the exhibition's interactive sound devices, their invented Persian names lettered in heavy kraft type, and posts that reuse the kit of parts so the feed reads as one identity.
+  - type: image
+    media: { file: soundscape-of-iran/board-11-social-posts.jpg, alt: "Social posts board: nine device title cards and six identity posts" }
+todo:
+  - Confirm the tools used for the motion (After Effects?) and add a sentence on what happens in each film.

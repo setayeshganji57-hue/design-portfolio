@@ -70,12 +70,13 @@ const isPortrait = (aspect: string) => {
             );
           }
           case 'videos':
+            // Two or three films get a three-column row so each plays larger.
             return (
               <div class="b-gallery">
-                <div class="gallery">
+                <div class:list={['gallery', b.items.length <= 3 && 'gallery--3']}>
                   {b.items.map((v) => (
                     <div class="g-tile">
-                      <VideoEmbed video={v} sizes="(min-width: 900px) 15rem, 45vw" />
+                      <VideoEmbed video={v} sizes={b.items.length <= 3 ? thirdTileSizes : '(min-width: 900px) 15rem, 45vw'} />
                     </div>
                   ))}
                 </div>
