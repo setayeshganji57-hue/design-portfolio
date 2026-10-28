@@ -1,0 +1,88 @@
+title: Social Cafe — A logo drawn from the table
+status: published
+categories: [brand-identity]
+order: 12
+tags: [Brand identity, Bilingual logotype, Packaging, Café]
+year: 2021
+context: { type: commissioned, institution: Social Cafe }
+location: "Tehran, Iran"
+audience: "Café-goers in Tehran, including strangers who come to share the long table"
+summary: Identity for Social Cafe in Tehran, a café built around one long communal table, with a logo drawn from the table and chairs seen from above.
+overview: |
+  Social Cafe opened in Tehran in 2021 and is still open today. Its name is its idea: a place where people sit together. The heart of the space is a long, rounded table in lacquered blue, where strangers share one surface with orange chairs gathered around it.
+
+  Instead of inventing a symbol, the logo takes the furniture itself. Seen from above, the table becomes a stadium shape, the chair backs become half circles, three on each side, and six small rings mark one place for each guest: a table that is already full, a small picture of being social. The Persian name, کافه سوشال, and the Latin SOCIAL CAFE are drawn as one pair on the same grid, with heavy, rounded strokes the same thickness as the table edge; in the Persian line, the long stroke between the words stretches like the tabletop itself.
+
+  The colours are taken from the room: table blue, chair terracotta, cup cream and plaster stone. From the same few shapes come a pattern of chair backs, a set of menu icons, round seals, menus and price tags, cups, bags, coffee packaging, cards, signage and uniforms.
+role: Logo and symbol, Persian and Latin logotype, colour, pattern, icons, stickers, menus, packaging, stationery, signage and uniforms
+related: [social-cafe-motion]
+links:
+  - { label: Brand identity presentation (PDF), url: /documents/social-cafe-brand-identity.pdf }
+cover: { file: social-cafe/cover-table.jpg, alt: "The long blue lacquered table at Social Cafe with orange chairs on both sides" }
+hero:
+  kind: image
+  media:
+    file: social-cafe/board-01-cover.jpg
+    alt: "Cover board: the blue table with orange chairs, beside the Social Cafe logo on blue"
+blocks:
+  - type: text
+    heading: A café built around one long table
+    body: |
+      The table and chairs were designed for the café, and the identity was designed alongside them, so the brand on a cup, a bag or a sign is the same thing guests sit at. The mark uses only two shapes, both taken from the furniture: a rectangle closed by two half circles for the table, and half circles for the chair backs. Everything sits on one grid, with the chairs spaced at the same rhythm as the seats, and the heavy, rounded forms keep the friendliness of real, sat-on furniture rather than a sharp corporate symbol.
+  - type: pair
+    tiles: wide
+    items:
+      - { file: social-cafe/board-03-brief.jpg, alt: "The brief board: a caf\u00e9 built around one long table, with the busy caf\u00e9" }
+      - { file: social-cafe/board-04-table-to-logo.jpg, alt: "From table to logo board: the table, seen from above, and the mark" }
+  - type: pair
+    tiles: wide
+    items:
+      - { file: social-cafe/board-05-mark.jpg, alt: "Built with a compass board: the mark on its construction grid" }
+      - { file: social-cafe/board-06-logotype.jpg, alt: "Two scripts, one set of furniture board: the Persian and Latin logotypes on one grid" }
+  - type: pair
+    tiles: wide
+    items:
+      - { file: social-cafe/board-07-lockups.jpg, alt: "One family of logos board: primary, reversed, stacked and the mark alone" }
+      - { file: social-cafe/board-08-colour.jpg, alt: "Colours taken from the room board: table blue, chair terracotta, cup cream and plaster stone" }
+  - type: text
+    heading: The language
+    body: |
+      The pattern takes the half circle of the chair back and repeats it, rows of seats pushed in and pulled out, like a busy café seen from the ceiling; where two half circles meet they close into a full circle, two people sitting face to face. The menu icons, croissant, bread, toast, sandwich, salad, egg and cup, are drawn in the same rounded line inside the two shapes of the logo, and the tall hang tags take the arched end of the table and turn it upright. Round stickers close bags, cups and boxes. The tone of voice is warm and direct, and every line ends at the same place: "At Social, life comes with a cup of coffee."
+  - type: pair
+    tiles: wide
+    items:
+      - { file: social-cafe/board-09-pattern.jpg, alt: "A room full of chairs board: the chair-back pattern" }
+      - { file: social-cafe/board-10-icons.jpg, alt: "Every icon sits at the table board: menu icons and hang tags" }
+  - type: pair
+    tiles: wide
+    items:
+      - { file: social-cafe/board-11-stickers.jpg, alt: "Round seals for everything board: stickers in three colours" }
+      - { file: social-cafe/board-12-voice.jpg, alt: "Talking like a friend at the table board: the stacked logotype and the caf\u00e9's lines" }
+  - type: text
+    heading: In the café
+    body: |
+      Menus are framed in the table's arched shape, with Persian headings and prices in the brand's colours, and small folded price cards stand next to each pastry. Cups wear sleeves in cream, terracotta and blue; takeaway bags and coffee pouches carry the logotype and the pattern; business cards come in all three colours. In the space itself the mark is a blue sign on the shopfront, the table's rounded end becomes the door, and the logo sits on the staff's uniforms and bandanas.
+  - type: pair
+    tiles: wide
+    items:
+      - { file: social-cafe/board-13-menu.jpg, alt: "Menus and price tags board" }
+      - { file: social-cafe/board-14-packaging.jpg, alt: "Cups, bags and coffee board" }
+  - type: pair
+    tiles: wide
+    items:
+      - { file: social-cafe/board-15-cards.jpg, alt: "Cards to take home board: business cards in three colours" }
+      - { file: social-cafe/board-16-in-the-cafe.jpg, alt: "The table, everywhere board: storefront, counter, uniform and door" }
+  - type: grid
+    columns: 3
+    caption: The café and its applications.
+    items:
+      - { file: social-cafe/cafe-interior.jpg, alt: "Guests at the long blue table inside Social Cafe" }
+      - { file: social-cafe/storefront.jpg, alt: "Social Cafe storefront with the table mark as a blue sign" }
+      - { file: social-cafe/cups.jpg, alt: "Iced coffee cups with sleeves in cream, terracotta and blue" }
+      - { file: social-cafe/bags.jpg, alt: "Kraft takeaway bag and a coffee pouch with the Social Cafe logotype" }
+      - { file: social-cafe/cards.jpg, alt: "Business cards in blue, terracotta and cream scattered on black" }
+      - { file: social-cafe/voice.jpg, alt: "The Latin logotype stacked and stretched, above the line At Social, life comes with a cup of coffee" }
+  - type: image
+    media: { file: social-cafe/board-17-credits.jpg, alt: "Credits board: Social Cafe, Tehran, with the logo on a uniform" }
+todo:
+  - Confirm the tools used.
