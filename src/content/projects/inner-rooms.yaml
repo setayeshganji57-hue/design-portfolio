@@ -1,0 +1,67 @@
+title: Inner Rooms — Seven illustrations about what happens inside a head
+status: published
+categories: [graphic-illustration]
+order: 25
+tags: [Illustration, Ink drawing, Exhibition, Series]
+year: 2020
+context: { type: academic, institution: "University of Fine Arts, Tehran" }
+location: "Tehran, Iran"
+audience: "Visitors to a modern art gallery in Tehran, where the series was exhibited"
+summary: Seven ink illustrations about what happens inside a head, drawn in three colours for an exhibition at a modern art gallery in Tehran.
+overview: |
+  Seven illustrations about what happens inside a head, made as an academic project at the University of Fine Arts in Tehran and shown at a modern art gallery in the city. Each drawing opens the head in a different way: a mask hiding a black void, with a hand pressing out from inside; a man face to face with his own face struck on a coin; an old face cut into slipping slices; a profile melting into currents; a figure on a wireframe globe whose head turns to smoke; a reader whose head blooms into flowers; and an elephant carrying a mountain range under a coral sun.
+
+  The set shares one visual language: fine hand-hatched line, solid black, and a single coral on a warm paper ground. Read in order, it moves from closed to open, from a masked head to something patiently carried.
+role: Concept and illustration
+cover: { file: inner-rooms/cover-drift.jpg, alt: "Drift: a young man's profile melting into coral currents and leaves, in fine ink line" }
+hero:
+  kind: image
+  media:
+    file: inner-rooms/board-01-cover.jpg
+    alt: "Cover board: Inner Rooms, beside the Drift illustration"
+blocks:
+  - type: text
+    heading: Three colours, one line
+    body: |
+      Most of the figures have no clear face to read; the feeling is carried by what replaces it. All seven pieces follow the same few rules, which is what makes them read as one series rather than seven separate drawings: fine-pen hatching for skin, cloth and hair, the realistic half of each image; solid black for voids, hair and smoke, where the image stops being realistic; coral as the only colour, kept for the most human parts, skin, hands, a sun; and one figure, centred, on an empty paper ground.
+  - type: pair
+    tiles: wide
+    items:
+      - { file: inner-rooms/board-03-brief.jpg, alt: "The brief board: drawing the inside of a head, with the Behind the Mask illustration" }
+      - { file: inner-rooms/board-04-visual-language.jpg, alt: "Visual language board: paper, coral and ink, with details of hatching and solid black" }
+  - type: text
+    heading: Seven rooms
+    body: |
+      Behind the Mask hollows a head out to pure black, and a single hand presses outward. Two Sides shows one profile twice, once alive and once minted. Layers cuts an old face into slices that have slipped. Drift lets a young profile melt from the eyes backwards into currents and leaves. Burning Out sets a crouching figure on a wireframe globe, its head turned to black smoke. In Bloom replaces a reader's head with a bouquet, the quietest and most hopeful piece. What We Carry ends the series not with escape but with weight: an elephant walking under a coral sun with a mountain range on its back.
+  - type: pair
+    tiles: wide
+    items:
+      - { file: inner-rooms/board-05-behind-the-mask.jpg, alt: "Behind the Mask board: a masked head hollowed to black, with a hand pressing out" }
+      - { file: inner-rooms/board-06-two-sides.jpg, alt: "Two Sides board: a man face to face with his own face on a coin" }
+  - type: pair
+    tiles: wide
+    items:
+      - { file: inner-rooms/board-07-layers.jpg, alt: "Layers board: an old face cut into slipping slices" }
+      - { file: inner-rooms/board-08-drift.jpg, alt: "Drift board: a profile melting into currents and leaves" }
+  - type: pair
+    tiles: wide
+    items:
+      - { file: inner-rooms/board-09-burning-out.jpg, alt: "Burning Out board: a figure on a wireframe globe, its head turned to smoke" }
+      - { file: inner-rooms/board-10-in-bloom.jpg, alt: "In Bloom board: a reader whose head blooms into flowers" }
+  - type: image
+    media: { file: inner-rooms/board-11-what-we-carry.jpg, alt: "What We Carry board: an elephant carrying a mountain range under a coral sun" }
+  - type: grid
+    columns: 4
+    caption: The seven illustrations, in order.
+    items:
+      - { file: inner-rooms/illustration-1-behind-the-mask.jpg, alt: "Behind the Mask: a masked head hollowed to black, with a hand pressing out from inside" }
+      - { file: inner-rooms/illustration-2-two-sides.jpg, alt: "Two Sides: a man face to face with his own face struck on a coin" }
+      - { file: inner-rooms/illustration-3-layers.jpg, alt: "Layers: an old face cut into slipping slices" }
+      - { file: inner-rooms/illustration-4-drift.jpg, alt: "Drift: a profile melting into currents and leaves" }
+      - { file: inner-rooms/illustration-5-burning-out.jpg, alt: "Burning Out: a figure on a wireframe globe whose head turns to black smoke" }
+      - { file: inner-rooms/illustration-6-in-bloom.jpg, alt: "In Bloom: a reader whose head blooms into flowers" }
+      - { file: inner-rooms/illustration-7-what-we-carry.jpg, alt: "What We Carry: an elephant carrying a mountain range under a coral sun" }
+  - type: image
+    media: { file: inner-rooms/board-13-credits.jpg, alt: "Credits board: Inner Rooms, illustration series, 2020" }
+todo:
+  - Confirm the tools used, the gallery's name, and the course or professor if they should be credited.
