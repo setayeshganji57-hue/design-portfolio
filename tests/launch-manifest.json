@@ -147,6 +147,12 @@
       "category": "motion-film",
       "status": "published",
       "note": "Added by the owner, October 2026; second film link pending"
+    },
+    {
+      "slug": "moa-motion",
+      "category": "motion-film",
+      "status": "published",
+      "note": "Added by the owner, October 2026; three motion films"
     }
   ],
   "excluded": [],

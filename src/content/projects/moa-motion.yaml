@@ -1,0 +1,49 @@
+title: MOA Coffee Roasters — A logo built on a grid, then set in motion
+status: published
+categories: [motion-film]
+order: 8
+tags: [Motion graphics, Animation, Logo, Brand identity, Social media]
+context: { type: commissioned, institution: MOA Coffee Roasters }
+location: "Tehran, Iran"
+audience: "Coffee drinkers in Tehran and MOA's followers on Instagram, watching on their phones"
+tools: [Adobe Premiere Pro, Adobe After Effects, Adobe Audition]
+summary: Three vertical motion films for MOA Coffee Roasters in Tehran, bringing the brand's logo, its construction grid and its long-legged bird to life.
+overview: |
+  MOA is a coffee roaster in Tehran, and its line "Proudly Roasted in Tehran, Iran" runs around its symbol. The identity rests on two marks. The logotype writes the name in Persian and Latin as one line, in heavy, squared red letters joined by a long horizontal stroke, with small diamond counters cut into the round forms. The symbol is a long-legged bird drawn in a single cream line inside a tilted, angular red shape, with the roaster's line set in a circle around its head.
+
+  Both marks are built on construction grids of fine guide lines, and the motion films use that structure: they show the logo drawn on its grid and the brand in use, made in a vertical 9:16 format for social media. There are three films, between twelve and fifty-seven seconds long, in the identity's signal red and warm cream.
+role: Motion design and animation, based on the brand identity
+cover: { file: moa-motion/cover.jpg, alt: "MOA Coffee Roasters motion graphics cover: the red logotype above the long-legged bird symbol with Proudly Roasted in Tehran Iran" }
+blocks:
+  - type: videos
+    caption: "Three films, 1 to 3. Each one plays from Vimeo when you press Play."
+    items:
+      - provider: vimeo
+        url: https://vimeo.com/1240237154
+        title: MOA Coffee Roasters — motion 1
+        aspect: '1080/1920'
+        poster: { file: moa-motion/poster-1.jpg, alt: "Still from the identity: the bird symbol and the MOA logotype in cream on red" }
+      - provider: vimeo
+        url: https://vimeo.com/1240237153
+        title: MOA Coffee Roasters — motion 2
+        aspect: '1080/1920'
+        poster: { file: moa-motion/poster-2.jpg, alt: "Frame from film 2: the MOA logotype in red on its grid of fine construction lines" }
+      - provider: vimeo
+        url: https://vimeo.com/1240237152
+        title: MOA Coffee Roasters — motion 3
+        aspect: '1080/1920'
+        poster: { file: moa-motion/poster-3.jpg, alt: "Still from the identity: the bird symbol in its red shape, circled by Proudly Roasted in Tehran Iran" }
+  - type: text
+    heading: Built on a grid
+    body: |
+      Every angle in the symbol and every stroke in the logotype sits on a set of guide lines: the bird's neck, back and legs follow the same few slopes as the red shape around it, and the letters share one stroke weight, one baseline and one cap height across both scripts. Drawn this way, the marks can be taken apart and rebuilt line by line, which is what makes them work in motion.
+  - type: grid
+    columns: 4
+    caption: The symbol and the logotype on their grids, and the full lockup on cream and on red.
+    items:
+      - { file: moa-motion/symbol-construction.jpg, alt: "The bird symbol on its construction grid of fine diagonal and horizontal lines" }
+      - { file: moa-motion/logotype-construction.jpg, alt: "The MOA logotype and Coffee Roasters on their construction grid" }
+      - { file: moa-motion/lockup-cream.jpg, alt: "The full lockup in red on cream: symbol, logotype and Coffee Roasters" }
+      - { file: moa-motion/lockup-red.jpg, alt: "The full lockup reversed in cream on red" }
+todo:
+  - Confirm the year, and whether the brand identity (logo and symbol) is also the owner's design.
