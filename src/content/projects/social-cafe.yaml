@@ -7,18 +7,18 @@ year: 2021
 context: { type: commissioned, institution: Social Cafe }
 location: "Tehran, Iran"
 audience: "Café-goers in Tehran, including strangers who come to share the long table"
-summary: Identity for Social Cafe in Tehran, a café built around one long communal table, with a logo drawn from the table and chairs seen from above.
+summary: Identity for Social Cafe in Tehran (2021, still open), a café built around one long communal table, with a logo drawn from the table and chairs seen from above.
 overview: |
-  Social Cafe opened in Tehran in 2021 and is still open today. Its name is its idea: a place where people sit together. The heart of the space is a long, rounded table in lacquered blue, where strangers share one surface with orange chairs gathered around it.
+  Social Cafe is built around one long, rounded blue table where strangers sit side by side. The table and chairs were designed for the café, and the identity was designed with them. Instead of inventing a symbol, the logo is the furniture itself, seen from above. The café opened in Tehran in 2021 and is still open.
 
-  Instead of inventing a symbol, the logo takes the furniture itself. Seen from above, the table becomes a stadium shape, the chair backs become half circles, three on each side, and six small rings mark one place for each guest: a table that is already full, a small picture of being social. The Persian name, کافه سوشال, and the Latin SOCIAL CAFE are drawn as one pair on the same grid, with heavy, rounded strokes the same thickness as the table edge; in the Persian line, the long stroke between the words stretches like the tabletop itself.
+  The table becomes a rounded pill shape, the chair backs become six half circles, and six small rings mark six places: a table that is already full, which is what "social" means. The Persian کافه سوشال and the English SOCIAL CAFE are drawn on one grid, with heavy, rounded strokes as thick as the table's edge, and the long stroke in the Persian line stretches like the tabletop.
 
-  The colours are taken from the room: table blue, chair terracotta, cup cream and plaster stone. From the same few shapes come a pattern of chair backs, a set of menu icons, round seals, menus and price tags, cups, bags, coffee packaging, cards, signage and uniforms.
+  The colours come from the room: table blue, the chairs' orange toned down to terracotta, cream like milk foam and paper, and the grey of the plaster walls. A pattern of repeated chair backs and menu icons set inside the chair circle or the table pill make up the graphic language, and the voice is warm lines that all end the same way: "find it at Social." The identity runs through the whole café: menus, price cards, cup sleeves, bags, coffee labels, business cards, the storefront sign, the door and the staff uniforms.
 role: Logo and symbol, Persian and Latin logotype, colour, pattern, icons, stickers, menus, packaging, stationery, signage and uniforms
 related: [social-cafe-motion]
 links:
   - { label: Brand identity presentation (PDF), url: /documents/social-cafe-brand-identity.pdf }
-cover: { file: social-cafe/cover-table.jpg, alt: "The long blue lacquered table at Social Cafe with orange chairs on both sides" }
+cover: { file: social-cafe/cover-cafe.jpg, alt: "Guests sharing the long blue table at Social Cafe, with orange chairs and plants around them" }
 hero:
   kind: image
   media:
@@ -47,7 +47,7 @@ blocks:
   - type: text
     heading: The language
     body: |
-      The pattern takes the half circle of the chair back and repeats it, rows of seats pushed in and pulled out, like a busy café seen from the ceiling; where two half circles meet they close into a full circle, two people sitting face to face. The menu icons, croissant, bread, toast, sandwich, salad, egg and cup, are drawn in the same rounded line inside the two shapes of the logo, and the tall hang tags take the arched end of the table and turn it upright. Round stickers close bags, cups and boxes. The tone of voice is warm and direct, and every line ends at the same place: "At Social, life comes with a cup of coffee."
+      The pattern takes the half circle of the chair back and repeats it, rows of seats pushed in and pulled out, like a busy café seen from the ceiling; where two half circles meet they close into a full circle, two people sitting face to face. The menu icons, croissant, bread, toast, sandwich, salad, egg and cup, are drawn in the same rounded line inside the two shapes of the logo, and the tall hang tags take the arched end of the table and turn it upright. Round stickers close bags, cups and boxes. The tone of voice is warm and direct, and its lines all end the same way: "find it at Social."
   - type: pair
     tiles: wide
     items:
