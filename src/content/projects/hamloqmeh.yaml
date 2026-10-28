@@ -93,10 +93,9 @@ blocks:
   items:
   - { file: hamloqmeh/board-16-outcome.jpg, alt: "Outcome board: ready for its first bite, with role, context and stage" }
   - { file: hamloqmeh/app-login-desktop.jpg, alt: "Hamloqmeh app log-in screen on a desktop browser, in Persian" }
-todo:
-- Confirm the project year.
 context: { type: "startup", institution: "Hamloqmeh", course: "MVP phase" }
 location: "Iran"
 tools: [Figma, Adobe XD, Adobe Illustrator, Adobe InDesign]
 audience: "Consumers and food businesses in Iran"
-cover: { file: hamloqmeh/cover-homepage.jpg, alt: "The Hamloqmeh homepage in Persian, with the headline, the waitlist button and three cards" }
+cover: { file: hamloqmeh/cover-2026.jpg, alt: "Hamloqmeh cover: the homepage on a phone beside the green and amber symbol and the Persian name" }
+year: 2026

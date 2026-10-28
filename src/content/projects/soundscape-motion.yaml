@@ -47,4 +47,5 @@ blocks:
   - type: image
     media: { file: soundscape-of-iran/board-11-social-posts.jpg, alt: "Social posts board: nine device title cards and six identity posts" }
 todo:
-  - Confirm the tools used for the motion (After Effects?) and add a sentence on what happens in each film.
+  - Add a sentence on what happens in each film.
+tools: [Adobe Premiere Pro, Adobe After Effects, Adobe Audition]

@@ -9,7 +9,7 @@
  * loading. Set CHROMIUM_PATH to use a specific browser binary.
  */
 import { spawn } from 'node:child_process';
-import { existsSync, readdirSync } from 'node:fs';
+import { existsSync, readdirSync, readFileSync } from 'node:fs';
 import { chromium } from 'playwright';
 
 const PORT = 4329;
@@ -18,7 +18,8 @@ const BASE = `http://localhost:${PORT}`;
 const htmlSlugs = dir => (existsSync(dir) ? readdirSync(dir).filter(f => f.endsWith('.html')).map(f => f.replace(/\.html$/, '')) : []);
 const projectSlugs = htmlSlugs('dist/projects');
 const essaySlugs = htmlSlugs('dist/essays');
-const drafts = existsSync('dist/projects/littledetour.html'); // only draft builds contain this draft record
+// Draft preview builds mark every page noindex; the production homepage never is.
+const drafts = readFileSync('dist/index.html', 'utf8').includes('noindex');
 
 const candidates = [process.env.CHROMIUM_PATH, '/opt/pw-browsers/chromium-1194/chrome-linux/chrome'].filter(Boolean);
 const executablePath = candidates.find((p) => existsSync(p));

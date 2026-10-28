@@ -7,23 +7,28 @@ year: 2021
 context: { type: commissioned, institution: Social Cafe }
 location: "Tehran, Iran"
 audience: "Social Cafe's followers and café-goers in Tehran, watching on their phones"
-summary: A vertical motion film for Social Cafe in Tehran, animating the identity drawn from the café's long communal table.
+summary: Two vertical motion films for Social Cafe in Tehran, animating the identity drawn from the café's long communal table.
 overview: |
   Motion work for Social Cafe, a café in Tehran built around one long communal table, whose identity I also designed. The logo is the table itself seen from above: a rounded stadium shape, six half-circle chair backs and six small rings, one place for each guest.
 
-  The film sets that furniture in motion, in the identity's table blue, chair terracotta and cup cream, in a vertical 9:16 format for the café's social media. Because every part of the brand is built from the same two shapes, the table and the chair back, the motion needs no new language: the logo, the pattern of chairs and the café's lines are all made from pieces that can move.
+  The two films set that furniture in motion, in the identity's table blue, chair terracotta and cup cream, in a vertical 9:16 format for the café's social media. Because every part of the brand is built from the same two shapes, the table and the chair back, the motion needs no new language: the logo, the pattern of chairs and the café's lines are all made from pieces that can move.
 role: Motion design and animation, based on the brand identity I designed
 related: [social-cafe]
 cover: { file: social-cafe-motion/cover.jpg, alt: "The Social Cafe mark, the table and chairs seen from above, in white on terracotta" }
 blocks:
-  - type: video
-    video:
-      provider: vimeo
-      url: https://vimeo.com/1240205691
-      title: Social Cafe — motion
-      aspect: '1080/1920'
-      caption: "Social Cafe, motion. Plays from Vimeo when you press Play."
-      poster: { file: social-cafe-motion/poster.jpg, alt: "Still from the identity: the Social Cafe mark in white on terracotta" }
+  - type: videos
+    caption: "Two films, 1 and 2. Each one plays from Vimeo when you press Play."
+    items:
+      - provider: vimeo
+        url: https://vimeo.com/1240205690
+        title: Social Cafe — motion 1
+        aspect: '1080/1920'
+        poster: { file: social-cafe-motion/poster-1.jpg, alt: "Still from the identity: the Social Cafe logotype in cream on table blue" }
+      - provider: vimeo
+        url: https://vimeo.com/1240205691
+        title: Social Cafe — motion 2
+        aspect: '1080/1920'
+        poster: { file: social-cafe-motion/poster-2.jpg, alt: "Still from the identity: the Social Cafe mark in white on terracotta" }
   - type: text
     heading: From furniture to motion
     body: |
@@ -35,6 +40,4 @@ blocks:
       - { file: social-cafe/board-09-pattern.jpg, alt: "A room full of chairs board: the chair-back pattern" }
   - type: image
     media: { file: social-cafe/board-12-voice.jpg, alt: "Talking like a friend at the table board: the stacked logotype and the caf\u00e9's lines" }
-todo:
-  - Add the second film when its Vimeo link is sent (both embed codes received pointed to the same video, 1240205691).
-  - Confirm the tools used for the motion.
+tools: [Adobe Premiere Pro, Adobe After Effects, Adobe Audition]

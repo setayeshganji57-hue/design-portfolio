@@ -106,3 +106,4 @@ todo:
 context: { type: "startup", institution: "ParkScanner AI" }
 tools: [Figma, Adobe XD, Adobe Illustrator, Adobe InDesign]
 audience: "Drivers who need a parking space near their destination, especially in busy city centres, and want to compare availability, distance and price before they arrive"
+year: 2025

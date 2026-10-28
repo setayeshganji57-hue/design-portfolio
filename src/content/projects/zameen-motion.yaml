@@ -50,5 +50,6 @@ blocks:
       - { file: zameen/board-06-circle-and-diamond.jpg, alt: "A circle and a seed board: the diamond from the calligraphic dot, the circle as the earth" }
       - { file: zameen/board-11-one-line.jpg, alt: "The keshideh board: three posts as separate tiles and joined as one image" }
 todo:
-  - Confirm the year, the tools used, and where the films were published.
+  - Confirm the year and where the films were published.
   - Vimeo's default thumbnails are each film's first frame; set a stronger thumbnail on Vimeo (Settings → Thumbnail) and send it if you want richer posters.
+tools: [Adobe Premiere Pro, Adobe After Effects, Adobe Audition]

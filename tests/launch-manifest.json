@@ -14,12 +14,6 @@
       "note": "Digital & UI, added by the owner"
     },
     {
-      "slug": "littledetour",
-      "category": "digital-ui",
-      "status": "draft",
-      "note": "Login-protected (HTTP 401); not public yet"
-    },
-    {
       "slug": "dream-toy",
       "category": "brand-identity",
       "status": "published",

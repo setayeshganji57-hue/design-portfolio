@@ -119,8 +119,8 @@ blocks:
 todo:
 - Walkthrough video (Vimeo 1238796294) shows the personal email in the app header; replace with a version without it if possible.
 - Add the tools used.
-- Confirm the project year.
 context: { type: "startup", institution: "TradeMemory", course: "MVP phase" }
 tools: [Figma, Adobe XD, Adobe Illustrator, Adobe InDesign]
 audience: "Traders, and people who work with or are interested in trading, who want to understand and improve their decisions"
 cover: { file: tradememory/cover-phones.jpg, alt: "Three TradeMemory screens on phones: overview, review queue and trade detail" }
+year: 2026
