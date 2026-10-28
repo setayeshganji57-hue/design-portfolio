@@ -7,12 +7,13 @@ context: { type: commissioned, institution: MOA Coffee Roasters }
 location: "Tehran, Iran"
 audience: "Coffee drinkers in Tehran and MOA's followers on Instagram, watching on their phones"
 tools: [Adobe Premiere Pro, Adobe After Effects, Adobe Audition]
-summary: Three vertical motion films for MOA Coffee Roasters in Tehran, bringing the brand's logo, its construction grid and its long-legged bird to life.
+summary: Brand identity and three vertical motion films for MOA Coffee Roasters in Tehran, bringing the logo, its construction grid and its long-legged bird to life.
 overview: |
-  MOA is a coffee roaster in Tehran, and its line "Proudly Roasted in Tehran, Iran" runs around its symbol. The identity rests on two marks. The logotype writes the name in Persian and Latin as one line, in heavy, squared red letters joined by a long horizontal stroke, with small diamond counters cut into the round forms. The symbol is a long-legged bird drawn in a single cream line inside a tilted, angular red shape, with the roaster's line set in a circle around its head.
+  MOA is a coffee roaster in Tehran. I designed its complete brand identity, the logotype and the symbol, and then the motion films that set it moving. The identity rests on two marks. The logotype writes the name in Persian and Latin as one line, in heavy, squared red letters joined by a long horizontal stroke, with small diamond counters cut into the round forms. The symbol is a long-legged bird drawn in a single cream line inside a tilted, angular red shape, with the roaster's line, "Proudly Roasted in Tehran, Iran", set in a circle around its head.
 
   Both marks are built on construction grids of fine guide lines, and the motion films use that structure: they show the logo drawn on its grid and the brand in use, made in a vertical 9:16 format for social media. There are three films, between twelve and fifty-seven seconds long, in the identity's signal red and warm cream.
-role: Motion design and animation, based on the brand identity
+role: Brand identity, logo and symbol design, motion design and animation
+year: April 2017
 cover: { file: moa-motion/cover.jpg, alt: "MOA Coffee Roasters motion graphics cover: the red logotype above the long-legged bird symbol with Proudly Roasted in Tehran Iran" }
 blocks:
   - type: videos
@@ -45,5 +46,3 @@ blocks:
       - { file: moa-motion/logotype-construction.jpg, alt: "The MOA logotype and Coffee Roasters on their construction grid" }
       - { file: moa-motion/lockup-cream.jpg, alt: "The full lockup in red on cream: symbol, logotype and Coffee Roasters" }
       - { file: moa-motion/lockup-red.jpg, alt: "The full lockup reversed in cream on red" }
-todo:
-  - Confirm the year, and whether the brand identity (logo and symbol) is also the owner's design.
