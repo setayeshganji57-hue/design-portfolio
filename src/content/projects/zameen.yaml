@@ -1,0 +1,87 @@
+title: Zameen Art House — An identity written with a compass and a ruler
+status: published
+categories: [brand-identity]
+order: 11
+tags: [Brand identity, Persian logotype, Bilingual typography, Social media]
+context: { type: commissioned, institution: Zameen Art House }
+location: "Vancouver, British Columbia, Canada"
+audience: "Vancouver's art and culture community, Persian-speaking and not, who come to the house for exhibitions, events and workshops"
+summary: Complete identity for Zameen Art House in Vancouver, built from the Persian word for earth with a circle, a stroke and a diamond.
+overview: |
+  Zameen (زمین) means "earth" in Persian. Zameen Art House is "a home to celebrate art, culture, and community, where creativity takes root and connections blossom." I designed its complete identity, from first concept to the final system.
+
+  The logo is the Persian word itself, written with only three shapes: a circle, a straight stroke and a diamond. The diamond comes from the dot of Persian calligraphy, which the reed pen cuts as a small rhombus; here it becomes the dots of the letters and a seed at the centre of every circle. The circle is the earth. The long stroke is the keshideh, the stretching stroke of Persian script, which becomes a horizon line.
+
+  For the symbol, the first letters stand upright as a seed, a stem and a root, with the circle rising behind like a sun; placed in an arch, it becomes the doorway of the "house". The English name is set in a thin square typeface inside a stepped frame, like rooms in a floor plan. The colours are earth sand, sage green and Pacific blue, and fine construction lines, like an architect's drawing, make every post look built from the same kit. On Instagram, the logo's long stroke stretches across three posts: each one looks abstract alone, and together they spell زمین.
+role: "Complete brand identity, from concept to final system: Persian logotype, symbol, Latin wordmark, colour, graphic language and social media"
+links:
+  - { label: Brand identity presentation (PDF), url: /documents/zameen-art-house-brand-identity.pdf }
+cover: { file: zameen/cover-grid.jpg, alt: "Zameen Art House Instagram grid: nine posts in sand, sage and blue with the symbol, logotype and diamonds" }
+hero:
+  kind: image
+  media:
+    file: zameen/board-01-cover.jpg
+    alt: "Cover board: the Zameen logotype, a circle, a long stroke and diamonds, on blue and sage"
+blocks:
+  - type: text
+    heading: A home where creativity takes root
+    body: |
+      Zameen Art House is an art house in Vancouver. It commissioned a complete identity from zero: a mark that carries a Persian name in a Canadian city, reads clearly to people who do not read Persian, and can grow into a whole visual language for exhibitions, events and social media. Earth is where things are planted, where roots hold and where people gather, so the brief was already in the name: the logo starts from the word itself, written in Persian, rather than from a picture of the earth.
+  - type: pair
+    tiles: wide
+    items:
+      - { file: zameen/board-03-brief.jpg, alt: "The brief board: a home where creativity takes root, with the symbol in its arch" }
+      - { file: zameen/board-04-the-name.jpg, alt: "The name board: \u0632\u0645\u06cc\u0646, earth, ground, land, beside the logotype" }
+  - type: text
+    heading: Writing زمین with a compass and a ruler
+    body: |
+      Written right to left, every letter of the logotype is reduced until it also reads as pure geometry to anyone else: the zeh is a diamond dot over a stroke that drops and turns into a planted stem, the mim is a full circle with a seed at its centre, the yeh is one upright tooth with two diamond dots below it, the keshideh is drawn as a horizon line, and the nun is a second circle closing the word. Upright, the first two letters become the symbol, set inside the arch of a doorway. The English wordmark is a monoline square capital with the same even weight as the construction lines, stacked inside a stepped frame like rooms in a floor plan.
+  - type: pair
+    tiles: wide
+    items:
+      - { file: zameen/board-05-logotype.jpg, alt: "Logotype board: the five letters of \u0632\u0645\u06cc\u0646 drawn with a circle, a stroke and a diamond" }
+      - { file: zameen/board-06-circle-and-diamond.jpg, alt: "A circle and a seed board: the diamond from the calligraphic dot, the circle as the earth" }
+  - type: pair
+    tiles: wide
+    items:
+      - { file: zameen/board-07-symbol.jpg, alt: "Planted board: the symbol, a seed, stem and root with a sun behind, in its doorway" }
+      - { file: zameen/board-08-wordmark.jpg, alt: "Latin wordmark board: ZAMEEN ART HOUSE in a stepped frame, in four layouts" }
+  - type: text
+    heading: Soil, leaf and water
+    body: |
+      Earth is dry soil, clay and sun-baked brick, the ground everything is planted in. Sage is what grows from the earth, a muted, greyed green from the forests around Vancouver. Pacific blue is water and sky: the coast of British Columbia and the deep blue of Persian tilework, and the anchor colour for most layouts. Around the solid shapes runs a second layer of hairlines, guide lines, small circles, rows of boxes, corners and frames, like the construction lines of an architect's drawing: a house still being built. At least half of every layout is left empty.
+  - type: pair
+    tiles: wide
+    items:
+      - { file: zameen/board-09-colour.jpg, alt: "Colour board: earth, sage and Pacific blue" }
+      - { file: zameen/board-10-graphic-language.jpg, alt: "Drawn like a plan board: solid shapes over a layer of hairline construction lines" }
+  - type: text
+    heading: The keshideh, stretched across the grid
+    body: |
+      In Persian calligraphy the keshideh can stretch a word to fill a line. Here it stretches the logo across three Instagram posts: the nun on the first, the long stroke through the second, the rest of the word on the third. Seen one by one they are three abstract compositions; seen together on the profile, the word زمین appears. The launch grid alternates the three colours like a checkerboard, so the profile reads as one composed surface, and each tile repeats a single idea from the system.
+  - type: grid
+    columns: 3
+    caption: "Three posts, one line: together they spell \u0632\u0645\u06cc\u0646."
+    items:
+      - { file: zameen/keshideh-1.jpg, alt: "First post: the nun, a circle at the start of the long stroke, on blue" }
+      - { file: zameen/keshideh-2.jpg, alt: "Second post: the long stroke crossing a sage field with circles and diamonds" }
+      - { file: zameen/keshideh-3.jpg, alt: "Third post: the end of the word \u0632\u0645\u06cc\u0646 on blue" }
+  - type: pair
+    tiles: wide
+    items:
+      - { file: zameen/board-11-one-line.jpg, alt: "The keshideh board: three posts as separate tiles and joined as one image" }
+      - { file: zameen/board-12-instagram.jpg, alt: "A grid that works as a whole board: the Instagram launch grid as a checkerboard" }
+  - type: grid
+    columns: 3
+    caption: "Selected posts."
+    items:
+      - { file: zameen/post-symbol.jpg, alt: "Post: the symbol, sun and planted stem, on sage" }
+      - { file: zameen/post-doorway.jpg, alt: "Post: the symbol in its arched doorway, on blue" }
+      - { file: zameen/post-logotype.jpg, alt: "Post: the logotype with ZAMEEN ART HOUSE, on blue" }
+      - { file: zameen/post-stamp.jpg, alt: "Post: the stacked wordmark tilted as a stamp beside a blue disc, on sage" }
+      - { file: zameen/post-circles.jpg, alt: "Post: circles, each with a seed at the centre, on blue" }
+      - { file: zameen/post-plan.jpg, alt: "Post: symbol, logotype and wordmark drawn like a plan, on sage" }
+  - type: image
+    media: { file: zameen/board-13-credits.jpg, alt: "Credits board: Zameen Art House, Vancouver, British Columbia" }
+todo:
+  - Confirm the year and the tools used.
