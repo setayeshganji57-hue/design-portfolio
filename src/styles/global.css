@@ -2309,3 +2309,24 @@ a.scissors:hover {
     justify-items: end;
   }
 }
+
+/* Videos in a gallery row: a compact play control that fits a narrow tile. */
+.g-tile .video-play {
+  padding: 0.6rem;
+}
+
+.g-tile .video-play-inner {
+  gap: 0.5rem;
+  min-height: 40px;
+  padding: 0.35rem 0.75rem 0.35rem 0.35rem;
+  font-size: 0.85rem;
+}
+
+.g-tile .video-play-icon {
+  width: 2rem;
+  height: 2rem;
+}
+
+.g-tile .video-play-note {
+  display: none;
+}

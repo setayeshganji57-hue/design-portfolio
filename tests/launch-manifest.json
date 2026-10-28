@@ -129,6 +129,12 @@
       "category": "brand-identity",
       "status": "published",
       "note": "Added by the owner, October 2026; client project"
+    },
+    {
+      "slug": "zameen-motion",
+      "category": "motion-film",
+      "status": "published",
+      "note": "Added by the owner, October 2026; motion films for the Zameen identity"
     }
   ],
   "excluded": [],

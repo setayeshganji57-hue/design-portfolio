@@ -69,6 +69,19 @@ const isPortrait = (aspect: string) => {
               </div>
             );
           }
+          case 'videos':
+            return (
+              <div class="b-gallery">
+                <div class="gallery">
+                  {b.items.map((v) => (
+                    <div class="g-tile">
+                      <VideoEmbed video={v} sizes="(min-width: 900px) 15rem, 45vw" />
+                    </div>
+                  ))}
+                </div>
+                {b.caption && <p class="block-caption">{b.caption}</p>}
+              </div>
+            );
           case 'video':
             return (
               <div class:list={['b-video', isPortrait(b.video.aspect) && 'b-video--portrait']}>

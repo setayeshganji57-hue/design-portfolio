@@ -16,6 +16,7 @@ overview: |
 role: "Complete brand identity, from concept to final system: Persian logotype, symbol, Latin wordmark, colour, graphic language and social media"
 links:
   - { label: Brand identity presentation (PDF), url: /documents/zameen-art-house-brand-identity.pdf }
+related: [zameen-motion]
 cover: { file: zameen/cover-grid.jpg, alt: "Zameen Art House Instagram grid: nine posts in sand, sage and blue with the symbol, logotype and diamonds" }
 hero:
   kind: image

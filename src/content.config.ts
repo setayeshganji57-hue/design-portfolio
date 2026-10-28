@@ -79,6 +79,12 @@ const block = z.discriminatedUnion('type', [
     type: z.literal('video'),
     video,
   }),
+  z.object({
+    /** Several videos side by side, e.g. a set of phone-format films. */
+    type: z.literal('videos'),
+    items: z.array(video).min(2),
+    caption: z.string().optional(),
+  }),
 ]);
 
 /* ------------------------------------------------------------------ */

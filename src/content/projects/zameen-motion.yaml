@@ -1,0 +1,54 @@
+title: Zameen Art House — Four motion films built from one kit
+status: published
+categories: [motion-film]
+order: 5
+tags: [Motion graphics, Animation, Brand identity, Social media]
+context: { type: commissioned, institution: Zameen Art House }
+location: "Vancouver, British Columbia, Canada"
+audience: "Zameen Art House's followers and Vancouver's art and culture community, watching on their phones"
+summary: Four vertical motion films for Zameen Art House in Vancouver, animating the identity's circle, stroke and diamond in sand, sage and Pacific blue.
+overview: |
+  Four motion graphic films for Zameen Art House, an art house in Vancouver whose identity I also designed. Zameen (زمین) means "earth" in Persian, and the logo writes the word with only three shapes: a circle for the earth, a long stroke from the keshideh of Persian script that becomes a horizon line, and a diamond from the calligraphic dot that becomes a seed.
+
+  The films set that kit in motion: circles, diamonds, arcs and fine construction lines, in the identity's earth sand, sage green and Pacific blue. Made in a vertical 9:16 format, each film is short, between twelve and thirty-seven seconds, so the identity moves the way it is seen most: on a phone, one piece at a time.
+role: Motion design and animation, based on the brand identity I designed
+related: [zameen]
+cover: { file: zameen-motion/cover.jpg, alt: "Four vertical strips from the films: a sage circle on blue, a sage arc rising, a blue diamond on sage, and a sand disc with a hairline ring" }
+blocks:
+  - type: videos
+    caption: "Four films, A to D. Each one plays from Vimeo when you press Play."
+    items:
+      - provider: vimeo
+        url: https://vimeo.com/1240184415
+        title: Zameen Art House — motion A
+        aspect: '1080/1920'
+        poster: { file: zameen-motion/film-a.jpg, alt: "Opening frame of film A: a small sage circle on Pacific blue" }
+      - provider: vimeo
+        url: https://vimeo.com/1240184414
+        title: Zameen Art House — motion B
+        aspect: '1080/1920'
+        poster: { file: zameen-motion/film-b.jpg, alt: "Opening frame of film B: a sage arc rising from the bottom of a blue field" }
+      - provider: vimeo
+        url: https://vimeo.com/1240184411
+        title: Zameen Art House — motion C
+        aspect: '1080/1920'
+        poster: { file: zameen-motion/film-c.jpg, alt: "Opening frame of film C: a single blue diamond on sage" }
+      - provider: vimeo
+        url: https://vimeo.com/1240184416
+        title: Zameen Art House — motion D
+        aspect: '1080/1920'
+        poster: { file: zameen-motion/film-d.jpg, alt: "Opening frame of film D: a sand disc inside a hairline ring on blue" }
+  - type: text
+    heading: Animating the kit
+    body: |
+      The identity was designed to be built from parts, solid circles, strokes and diamonds over a second layer of hairline guides, so it already behaves like a set of pieces that can move. In motion, the rules stay the same as in print: one idea per film, at least half of every frame left empty, and only the three colours of the system.
+
+      The logo's long stroke is the clearest example. On Instagram it stretches across three posts, the nun on the first, the line through the second and the rest of the word on the third, so the word زمین only appears when the grid is seen whole. The films carry the same idea from a still grid into time.
+  - type: pair
+    tiles: wide
+    items:
+      - { file: zameen/board-06-circle-and-diamond.jpg, alt: "A circle and a seed board: the diamond from the calligraphic dot, the circle as the earth" }
+      - { file: zameen/board-11-one-line.jpg, alt: "The keshideh board: three posts as separate tiles and joined as one image" }
+todo:
+  - Confirm the year, the tools used, and where the films were published.
+  - Vimeo's default thumbnails are each film's first frame; set a stronger thumbnail on Vimeo (Settings → Thumbnail) and send it if you want richer posters.
