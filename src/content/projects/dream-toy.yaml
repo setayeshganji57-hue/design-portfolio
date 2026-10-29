@@ -23,14 +23,16 @@ overview: 'Drymto was conceived as a cryptocurrency-based fundraising platform, 
   Work shown: Identity assets and website design-stage mockups, including placeholder content from the original project.'
 role: Brand identity, logo design, original illustration, website UI design, wireframes, and user-flow mapping.
 links:
+- label: Brand & website presentation (PDF)
+  url: /documents/drymto-presentation.pdf
 - label: Watch walkthrough on Vimeo
   url: https://vimeo.com/827370125
 - label: View website user-flow map (PDF)
   url: /documents/drymto-user-flow.pdf
 cover:
-  file: drymto/logo-mockup.jpg
-  alt: Drymto phoenix-inspired gold logo on a white card
-  fit: contain
+  file: drymto/board-01-cover.jpg
+  alt: The Drymto phoenix in gold on cobalt
+  position: 20% 50%
 hero:
   kind: video
   video:
@@ -38,80 +40,67 @@ hero:
     url: https://vimeo.com/827370125
     title: Drymto — Website prototype walkthrough
     poster:
-      file: drymto/logo-mockup.jpg
-      alt: Drymto logo
-      fit: contain
+      file: drymto/board-09-home.jpg
+      alt: Drymto home page board with the phoenix and the start button
+      fit: cover
     aspect: 16/9
     caption: Website prototype walkthrough — UI design and original illustrations.
 blocks:
-- type: image
-  size: wide
-  media:
-    file: drymto/logo-mockup.jpg
-    alt: Drymto phoenix-inspired gold logo on a white card
-    fit: contain
-    caption: Brand identity — phoenix-inspired mark.
-- type: image
-  size: full
-  media:
-    file: drymto/screen-1.png
-    alt: Drymto homepage with gold phoenix mark and blue-and-gold illustrations
-    fit: contain
-    caption: Homepage design. Original design-stage mockup with placeholder copy.
-- type: image
-  size: wide
-  media:
-    file: drymto/screen-5.jpg
-    alt: Drymto registration interface with original character illustrations
-    fit: contain
-    caption: Registration — illustration and interface design.
 - type: text
-  heading: Creating a fundraiser
-  body: Selected design-stage screens show the proposed sequence from location and beneficiary to a funding target, story, and submission review.
+  heading: A phoenix for every dream
+  body: |
+    The mark is a phoenix drawn from one circle: a single S-curve running tip to tip carves the neck and the raised head, and a thin tapered echo follows the cut like a trailing feather. Gold carries value and every call to action; cobalt is the dream-world of the illustrations; charcoal sets the text and a soft mist grey keeps the screens calm. One bilingual type family, Yekan Bakh, sets both versions of the product: the Persian wireframes and the English interface.
+- type: pair
+  tiles: wide
+  items:
+  - { file: drymto/board-01-cover.jpg, alt: "Cover board: the Drymto phoenix in gold on cobalt" }
+  - { file: drymto/board-03-logo-construction.jpg, alt: "Logo construction board: the phoenix drawn from one circle, with measurements" }
+- type: pair
+  tiles: wide
+  items:
+  - { file: drymto/board-04-logo-concept-versions.jpg, alt: "A phoenix for every dream board: the concept and the logo versions" }
+  - { file: drymto/board-05-colour.jpg, alt: "Gold coin, night sky board: dream gold, night cobalt, charcoal and mist" }
 - type: image
-  size: wide
-  media:
-    file: drymto/screen-22.jpg
-    alt: Location selection with illustrated map
-    fit: contain
+  media: { file: drymto/board-06-typography.jpg, alt: "Typography board: Yekan Bakh in Latin and Persian, with the type hierarchy" }
+- type: text
+  heading: Three people, one dream
+  body: |
+    Mapped from the project's own website roadmap: someone creates a fundraiser, a supporter contributes in crypto, and the beneficiary sets up a payout, each journey one question per screen. The structure was settled in Persian first, right to left, then carried into an English interface; what survived the move is what the brand stands on.
+- type: pair
+  tiles: wide
+  items:
+  - { file: drymto/board-07-user-flows.jpg, alt: "Three people, one dream board: the three user flows across 28 screens" }
+  - { file: drymto/board-08-wireframe-to-ui.jpg, alt: "From a Persian wireframe to the UI board" }
+- type: text
+  heading: The screens
+  body: |
+    The home page is a long scroll told as a story, with the phoenix at full size and one START button. Log-in and sign-up split the screen in two, with the brand on one side and soft pill-shaped fields on the other. A dream card puts the goal, the amount and the donate button in one place; "Be a dreamer" invites people to tell their story; a wizard creates a fundraiser one question per screen; and a payout setup carries the money to the dream.
+- type: pair
+  tiles: wide
+  items:
+  - { file: drymto/board-09-home.jpg, alt: "A long scroll told as a story board: the home page" }
+  - { file: drymto/board-10-log-in-sign-up.jpg, alt: "Split screens, soft pills board: log in and sign up" }
+- type: pair
+  tiles: wide
+  items:
+  - { file: drymto/board-11-dreamers-donate.jpg, alt: "Funding a stranger's dream board: the dream card and donation" }
+  - { file: drymto/board-12-be-a-dreamer.jpg, alt: "The invitation to dream out loud board" }
+- type: pair
+  tiles: wide
+  items:
+  - { file: drymto/board-13-dream-wizard.jpg, alt: "Creating a fundraiser, one question a screen board: the dream wizard" }
+  - { file: drymto/board-14-payout-setup.jpg, alt: "Getting the money to the dream board: the payout setup" }
+- type: text
+  heading: From concept to product
+  body: |
+    The screens shown are design-stage mockups with the original project's placeholder content. The last board sets out what the next pass would change, grouped as brand, content and trust, and usability, with each item pointing back to its board.
 - type: image
-  size: wide
-  media:
-    file: drymto/screen-24.jpg
-    alt: Beneficiary selection with gift illustration
-    fit: contain
+  media: { file: drymto/board-15-next-iteration.jpg, alt: "From concept to product board: the next iteration" }
 - type: image
-  size: wide
-  media:
-    file: drymto/screen-25.jpg
-    alt: Fundraising target with chart illustration
-    fit: contain
-- type: image
-  size: wide
-  media:
-    file: drymto/screen-27.jpg
-    alt: Fundraiser title and story with tree and cloud illustration
-    fit: contain
-- type: image
-  size: wide
-  media:
-    file: drymto/screen-28.jpg
-    alt: Submission review confirmation
-    fit: contain
-- type: image
-  size: wide
-  media:
-    file: drymto/screen-11.jpg
-    alt: Drymto donation interface with funding goal and progress indicator
-    fit: contain
-    caption: Donation interface — design-stage mockup with placeholder content.
-- type: image
-  size: full
   media:
     file: drymto/roadmap.png
     alt: Drymto website user-flow map connecting homepage, registration, fundraiser creation and donation screens
-    fit: contain
-    caption: Website structure and proposed user journeys. Open the PDF for a closer look.
+    caption: The project's original website roadmap. Open the user-flow PDF for a closer look.
 todo:
 - Verify Vimeo embed playback on the final portfolio domain.
 year: 2021

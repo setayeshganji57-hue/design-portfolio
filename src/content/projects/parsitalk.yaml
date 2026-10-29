@@ -21,7 +21,7 @@ tools: [Figma, Adobe XD, Vercel (v0), Adobe Illustrator, Adobe InDesign]
 links:
 - label: Explore prototype
   url: https://v0-persian-learning-app.vercel.app
-- label: UX/UI case study (PDF)
+- label: Product presentation (PDF)
   url: /documents/parsitalk-presentation.pdf
 cover: { file: parsitalk/cover-2026.jpg, alt: "ParsiTalk landing page on a laptop beside the onboarding screen on a phone" }
 hero:

@@ -41,7 +41,11 @@ export const site: SiteConfig = {
   intro:
     'Visual and multimedia designer based in Italy, working across identity, illustration, interfaces, motion, film and interactive 3D.',
   about: [
-    'I’m Setayesh Ganji, a visual and multimedia designer working across branding, digital experiences, and creative storytelling. I combine multidisciplinary thinking with a strong visual perspective to turn ideas into meaningful design.',
+    'Hi! I’m Setayesh Ganji, a 29-year-old visual and multimedia designer based in Italy.',
+    'With more than eight years of experience across design education and practice, my journey began with a Bachelor degree in Graphic Design at the University of Tehran and continued with a Master’s in Design, Multimedia and Visual Communication at Sapienza University of Rome. Exposure to diverse creative and cultural contexts—from Tehran and Dubai to Rome, Amsterdam, Tokyo, Istanbul and other cities—has shaped the way I see, think, and approach design: with curiosity, adaptability, and an appreciation for different perspectives.',
+    'I work at the intersection of visual communication, digital experiences, and creative storytelling. From building distinctive brand identities to designing digital products, developing visual narratives, and experimenting with motion and interactive media, I bring ideas to life through thoughtful concepts and cohesive visual systems.',
+    'I look beyond individual visuals and screens to understand the people using a product, the problems it needs to solve, and the goals behind it. For me, good design is where these perspectives meet—combining clarity, character, and purpose.',
+    'I bring a hands-on, detail-oriented, analytic approach to every project, from the first idea to the final execution. I’m currently open to design opportunities and freelance collaborations in Europe and internationally.',
   ],
   availability: 'Open to design employment and freelance work.',
   email: 'Setayeesh.ganji@gmail.com',

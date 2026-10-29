@@ -8,9 +8,9 @@ import { resolveImage } from '../lib/content';
 const portrait = site.portrait && resolveImage(site.portrait.file) ? site.portrait : null;
 ---
 
-<Base title="About" description={site.about[0]}>
+<Base title="About me" description={site.about[0]}>
   <div class="about">
-    <h1 class="split-title">About</h1>
+    <h1 class="split-title">About me</h1>
     <!-- Portrait and text share one top line: the photo's frame and the first line of text start together. -->
     <div class="about-row">
       <div class="about-portrait">

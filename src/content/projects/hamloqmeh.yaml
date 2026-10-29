@@ -22,7 +22,7 @@ role: Concept development, website structure, visual direction, and UI design
 links:
 - label: Visit website
   url: https://www.hamloqmeh.com
-- label: Website case study (PDF)
+- label: Website presentation (PDF)
   url: /documents/hamloqmeh-presentation.pdf
 - label: Open app (log-in required)
   url: https://hamloqmeh-app.vercel.app
@@ -97,5 +97,5 @@ context: { type: "startup", institution: "Hamloqmeh", course: "MVP phase" }
 location: "Iran"
 tools: [Figma, Adobe XD, Adobe Illustrator, Adobe InDesign]
 audience: "Consumers and food businesses in Iran"
-cover: { file: hamloqmeh/cover-2026.jpg, alt: "Hamloqmeh cover: the homepage on a phone beside the green and amber symbol and the Persian name" }
 year: 2026
+cover: { file: hamloqmeh/cover-brand.jpg, alt: "Hamloqmeh: the homepage on a phone beside the symbol on its construction grid and the Persian and Latin name" }

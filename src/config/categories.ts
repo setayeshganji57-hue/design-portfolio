@@ -63,7 +63,7 @@ export const categories: Category[] = [
     displayLines: ['Digital', '& UI'],
     intro: 'Interfaces and screen-based design.',
     layout: 'grid',
-    homeAspect: '4/3',
+    homeAspect: '1/1',
   },
   {
     slug: 'motion-film',
@@ -71,8 +71,7 @@ export const categories: Category[] = [
     displayLines: ['Motion', '& Film'],
     intro: 'Moving image: animation, motion design and short film.',
     layout: 'stack',
-    homeAspect: '16/9',
-    homePreview: { file: 'moa-motion/cover-2026.jpg', alt: 'MOA Coffee Roasters motion graphics: the logotype above the long-legged bird symbol', position: '50% 0%' },
+    homeAspect: '1/1',
   },
   {
     slug: 'interactive-3d',

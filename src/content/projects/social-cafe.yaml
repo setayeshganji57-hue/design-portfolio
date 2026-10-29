@@ -18,7 +18,6 @@ role: Logo and symbol, Persian and Latin logotype, colour, pattern, icons, stick
 related: [social-cafe-motion]
 links:
   - { label: Brand identity presentation (PDF), url: /documents/social-cafe-brand-identity.pdf }
-cover: { file: social-cafe/cover-cafe.jpg, alt: "Guests sharing the long blue table at Social Cafe, with orange chairs and plants around them" }
 hero:
   kind: image
   media:
@@ -86,3 +85,4 @@ blocks:
     media: { file: social-cafe/board-17-credits.jpg, alt: "Credits board: Social Cafe, Tehran, with the logo on a uniform" }
 todo:
   - Confirm the tools used.
+cover: { file: social-cafe/cover-brand.jpg, alt: "Social Cafe: the table logo and Persian and Latin logotype in terracotta on blue, above the name and the four colours" }
