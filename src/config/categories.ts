@@ -71,7 +71,8 @@ export const categories: Category[] = [
     displayLines: ['Motion', '& Film'],
     intro: 'Moving image: animation, motion design and short film.',
     layout: 'stack',
-    homeAspect: '1/1',
+    homeAspect: '5/3',
+    homePreview: { file: 'moa-motion/home-preview.jpg', alt: 'MOA Coffee Roasters: the red logotype on cream beside the long-legged bird symbol on red' },
   },
   {
     slug: 'interactive-3d',

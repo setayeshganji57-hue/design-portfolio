@@ -1488,7 +1488,8 @@ a.scissors:hover {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
-  .tile--1 {
+  .tile--1,
+  .tile--4 {
     grid-column: 1 / -1;
   }
 }
@@ -1502,8 +1503,7 @@ a.scissors:hover {
   .tile--1 { grid-column: 1 / 8; }
   .tile--2 { grid-column: 8 / 13; margin-top: clamp(3rem, 8vw, 7rem); }
   .tile--3 { grid-column: 1 / 6; }
-  /* Square covers in full: Digital & UI and a smaller Motion & Film tile, the same width. */
-  .tile--4 { grid-column: 8 / 13; margin-top: clamp(2rem, 5vw, 4rem); }
+  .tile--4 { grid-column: 6 / 13; margin-top: clamp(2rem, 5vw, 4rem); }
   .tile--5 { grid-column: 1 / 8; }
 }
 
