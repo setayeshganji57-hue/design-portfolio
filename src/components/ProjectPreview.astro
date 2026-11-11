@@ -9,6 +9,8 @@ interface Props {
 
 const { project, index } = Astro.props;
 const d = project.data;
+// Phones show only the project's name: the part of the title before its dash or colon.
+const shortTitle = d.title.split(/\s+—\s+|:\s+/)[0];
 ---
 
 <li class="pp">
@@ -25,7 +27,8 @@ const d = project.data;
       />
     </div>
     <span class="pp-meta">
-      <span class="pp-title">{d.title}</span>
+      <span class="pp-title pp-title--full">{d.title}</span>
+      <span class="pp-title pp-title--short" aria-hidden="true">{shortTitle}</span>
     </span>
   </a>
 </li>

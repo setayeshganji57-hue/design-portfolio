@@ -1633,6 +1633,45 @@ a.scissors:hover {
   }
 }
 
+/* Phones: just the project's name, small, so the cover carries the card.
+   The full title stays in the link for screen readers. */
+.pp-title--short {
+  display: none;
+}
+
+@media (max-width: 639.98px) {
+  .pp-title--full {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    white-space: nowrap;
+  }
+
+  .pp-title--short {
+    display: block;
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+  }
+
+  /* The name sits under the cover, not on it, so the image stays clear. */
+  .pp-meta {
+    position: static;
+    display: block;
+    padding: 0.45rem 0 0;
+    background: none;
+    text-align: start;
+    opacity: 1;
+  }
+
+  /* No scissors on phones. */
+  .scissors {
+    display: none;
+  }
+}
+
 /* A discipline with no approved projects yet. */
 .coming-soon {
   display: grid;
