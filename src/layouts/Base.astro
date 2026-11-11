@@ -10,6 +10,7 @@ import Scissors from '../components/Scissors.astro';
 import { deckLayout } from '../lib/deck';
 import { site } from '../config/site';
 import { SHOW_DRAFTS } from '../lib/content';
+import Analytics from '@vercel/analytics/astro';
 
 interface Props {
   /** Page title; the site name is appended. Omit on the homepage. */
@@ -50,6 +51,7 @@ const deck = deckLayout(section);
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="theme-color" content="#F3F0E9" />
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <Analytics />
   </head>
   <body>
     <a class="skip-link" href="#content">Skip to content</a>
